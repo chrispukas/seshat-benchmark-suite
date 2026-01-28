@@ -1,0 +1,46 @@
+import os
+import polars as pl
+
+from typing import Any, Dict, List, Optional, Tuple
+
+from llm_benchmark import config as cfg
+
+from llm_benchmark.utils.llm_interface.query_core import QuestionGenerationModule
+from llm_benchmark.utils.llm_interface import generation_utils as gen_utils 
+
+
+
+class DeepSeekQuestionGenerationModule(QuestionGenerationModule):
+    def __init__(self,
+                 model_name: str = "deepseek-moe-16b-base",
+                 trust_remote_code: Optional[bool] = True,
+                 local: Optional[bool] = True,
+                 ) -> None:
+        
+        if model_name is None:
+            raise ValueError("Model name must be provided.")
+        
+        super().__init__()
+
+        self.model_name = model_name
+        self.trust_remote_code = trust_remote_code
+        self.tokenizer, self.model = self.initialize_client()
+
+
+    def initialize_client(self, 
+                          ) -> Any:
+        return self.hugging_face_model_load(self.model_name, trust_remote_code=self.trust_remote_code)
+    
+    def query_model(self, 
+                    message: Dict[str, Any],
+                    temperature: float = 0.7,
+                    max_tokens: int = 300
+                    ) -> str:
+        
+        text = "An attention function can be described as mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. The output is"
+        inputs = self.tokenizer(text, return_tensors="pt")
+        outputs = self.model.generate(**inputs.to(self.model.device), 
+                                      max_new_tokens=max_tokens, 
+                                      temperature=temperature)
+
+        return self.tokenizer.decode(outputs[0], skip_special_tokens=True)

@@ -1,70 +1,5 @@
 from typing import Dict, List, Any
 
-def abs_pres_message(prompt: dict) -> list[dict[str, str]]:
-    ABS_PRES_INSTRUCTIONS = """
-    Your task is to create a challenging yet well-defined historical exam question based on a variable definition. Follow these requirements:
-
-    1. Start with a concise explanation of the variable's definition, strictly adhering to the provided description
-    2. Formulate a question template where <polity> marks the location for polity names (e.g., "the Papal States")
-    3. Include temporal scope markers: <time-start> and <time-end>
-    4. The only allowed answers can be either exactly "absent" or exactly "present".
-    The question should make abundantly clear what the format of the desired response is and that only that response should be given
-
-    Structure your response with clear question template.
-    """
-    ATLATL_EXPLANATION = (
-        "The absence or presence of atlatl as a military technology used in warfare."
-    )
-    ATLATL = "Consider the period from <time-start> to <time-end> in the context of '<polity>'. Was the atlatl, defined as a spear-throwing device used to increase the range and force of a projectile, absent or present as a 'military technology during this time? The answer should be strictly 'absent' or 'present'."
-
-    DITCH = "During the period from <time-start> to <time-end>, was the use of ditches as a military technology present or absent in the warfare strategies of '<polity>'? Respond with either 'present' or 'absent'."
-    DITCH_EXPLANATION = (
-        "The absence or presence of ditch as a military technology used in warfare."
-    )
-    CHAIN = "During the period from <time-start> to <time-end>, was chainmail, defined as armor made of small metal rings linked together in a pattern to form a mesh, present or absent as a military technology in the warfare practices of '<polity>'? Provide your answer strictly as either 'present' or 'absent'."
-    CHAIN_EXPLANATION = "The absence or presence of chainmail as a military technology used in warfare. We’re using a broad definition of chainmail. Habergeon was the word used to describe the Chinese version and that would qualify as chainmail. Armor that is made of small metal rings linked together in a pattern to form a mesh."
-
-    return [
-        {
-            "role": "system",
-            "content": "You are are history professor writing challenging questions for PhD students.",
-        },
-        {
-            "role": "user",
-            "content": ABS_PRES_INSTRUCTIONS,
-        },
-        {
-            "role": "user",
-            "content": f"""
-        Variable name: atlatl
-        Variable description: {ATLATL_EXPLANATION}""",
-        },
-        {
-            "role": "system",
-            "content": ATLATL,
-        },
-        {
-            "role": "user",
-            "content": f"""
-        Variable name: ditch
-        Variable description: {DITCH_EXPLANATION}""",
-        },
-        {
-            "role": "system",
-            "content": DITCH,
-        },
-        {
-            "role": "user",
-            "content": f"""
-        Variable name: chain
-        Variable description: {CHAIN_EXPLANATION}""",
-        },
-        {
-            "role": "system",
-            "content": CHAIN,
-        },
-        prompt,
-    ]
 
 
 def range_message(prompt: dict) -> list[dict[str, str]]:
@@ -188,7 +123,71 @@ def gen_absent_present_question(
 
 
 def multichoice_question(params: Dict[str, Any]) -> List[Dict[str, str]]:
+    ABS_PRES_INSTRUCTIONS = """
+    Your task is to create a challenging yet well-defined historical exam question based on a variable definition. Follow these requirements:
+
+    1. Start with a concise explanation of the variable's definition, strictly adhering to the provided description
+    2. Formulate a question template where <polity> marks the location for polity names (e.g., "the Papal States")
+    3. Include temporal scope markers: <time-start> and <time-end>
+    4. The only allowed answers can be either exactly "absent" or exactly "present".
+    The question should make abundantly clear what the format of the desired response is and that only that response should be given
+
+    Structure your response with clear question template.
+    """
     
+    ATLATL_EXPLANATION = (
+        "The absence or presence of atlatl as a military technology used in warfare."
+    )
+    ATLATL = "Consider the period from <time-start> to <time-end> in the context of '<polity>'. Was the atlatl, defined as a spear-throwing device used to increase the range and force of a projectile, absent or present as a 'military technology during this time? The answer should be strictly 'absent' or 'present'."
+
+    DITCH = "During the period from <time-start> to <time-end>, was the use of ditches as a military technology present or absent in the warfare strategies of '<polity>'? Respond with either 'present' or 'absent'."
+    DITCH_EXPLANATION = (
+        "The absence or presence of ditch as a military technology used in warfare."
+    )
+    CHAIN = "During the period from <time-start> to <time-end>, was chainmail, defined as armor made of small metal rings linked together in a pattern to form a mesh, present or absent as a military technology in the warfare practices of '<polity>'? Provide your answer strictly as either 'present' or 'absent'."
+    CHAIN_EXPLANATION = "The absence or presence of chainmail as a military technology used in warfare. We’re using a broad definition of chainmail. Habergeon was the word used to describe the Chinese version and that would qualify as chainmail. Armor that is made of small metal rings linked together in a pattern to form a mesh."
+
+    return [
+        {
+            "role": "system",
+            "content": "You are are history professor writing challenging questions for PhD students.",
+        },
+        {
+            "role": "user",
+            "content": ABS_PRES_INSTRUCTIONS,
+        },
+        {
+            "role": "user",
+            "content": f"""
+        Variable name: atlatl
+        Variable description: {ATLATL_EXPLANATION}""",
+        },
+        {
+            "role": "system",
+            "content": ATLATL,
+        },
+        {
+            "role": "user",
+            "content": f"""
+        Variable name: ditch
+        Variable description: {DITCH_EXPLANATION}""",
+        },
+        {
+            "role": "system",
+            "content": DITCH,
+        },
+        {
+            "role": "user",
+            "content": f"""
+        Variable name: chain
+        Variable description: {CHAIN_EXPLANATION}""",
+        },
+        {
+            "role": "system",
+            "content": CHAIN,
+        },
+        params,
+    ]
     pass
 
 def range_question(params: Dict[str, Any]) -> List[Dict[str, str]]:
