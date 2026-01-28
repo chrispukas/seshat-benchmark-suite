@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=65.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-benchmark"
+version = "0.1.0"
+description = "A benchmarking tool for large language models"
+authors = [
+    { name = "Christopher Pukas", email = "christopher.pukas@gmail.com" }
+]
+readme = "README.md"
+
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["llm_benchmark*"]
+exclude = ["scripts*"]
