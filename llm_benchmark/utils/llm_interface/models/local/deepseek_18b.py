@@ -37,6 +37,10 @@ class DeepSeekQuestionGenerationModule(QuestionGenerationModule):
                     max_tokens: int = 300
                     ) -> str:
         
+        print(f"Querying DeepSeek model, message: {message}")
+
+        return ""
+        
         text = "An attention function can be described as mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. The output is"
         inputs = self.tokenizer(text, return_tensors="pt")
         outputs = self.model.generate(**inputs.to(self.model.device), 

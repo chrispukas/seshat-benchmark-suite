@@ -33,7 +33,8 @@ class QuestionGenerationModule():
     
     def generate_questions(self, 
                            DatasetModule: DatasetModule,
-                           params: Optional[Dict[str, Any]] = None
+                           params: Optional[Dict[str, Any]] = None,
+                           output_path: str = ""
                            ) -> None:
         if params is None:
             print("Warning: No parameters provided for question generation. Using default settings.")
@@ -46,6 +47,9 @@ class QuestionGenerationModule():
         sub_dir = DatasetModule.get_endpoint().split("/")[-2]
         dataset: pl.DataFrame = DatasetModule.get_entries()
 
+        output_df: pl.DataFrame = pl.DataFrame({})
+        question_outputs: List[Any] = []
+
         for idx, row in enumerate(dataset.iter_rows(named=True)):
             if not self.check_if_question_in_filter(row, params):
                 print("Skipping question due to filter settings.")
@@ -56,26 +60,42 @@ class QuestionGenerationModule():
                 row=row,
                 endpoint=sub_dir
                 )
-            print(question_type)
             message: Dict[str, Any] = {}
 
+            remap_row: Dict[str, Any] = gen_utils.remap_question_row(row, sub_dir)
             match question_type:
                 case QuestionType.MULTIPLE_CHOICE:
-                    message: Dict[str, Any] = gen_utils.multichoice_question(row)
+                    message: Dict[str, Any] = gen_utils.multichoice_question(remap_row)
                 case QuestionType.RANGE:
-                    message: Dict[str, Any] = gen_utils.range_question(row)
+                    print(f"Skipping RANGE question for row {idx}.")
+                    continue
+                    message: Dict[str, Any] = gen_utils.range_question(remap_row)
                 case _:
                     print(f"Unimplemented question type for row {idx}, with type {question_type}, skipping.")
                     continue
 
-            self.query_model(message,
+            output: str = self.query_model(message,
                              temperature=params.get("temperature", 0.7),
                              max_tokens=params.get("max_tokens", 150)
                              )
-            
-    def generate_questions(self, 
-                           DatasetModule: Any) -> None:
-        raise NotImplementedError("This method should be overridden by subclasses.")
+            question_outputs.append({
+                "row": row, 
+                "output": output
+                })
+
+            if question_outputs and len(question_outputs) > 10:
+                output_df = output_df.vstack(pl.DataFrame(question_outputs))
+                question_outputs = []
+        
+        if question_outputs:
+            output_df = output_df.vstack(pl.DataFrame(question_outputs))
+        
+        
+        output_df.write_csv(output_path)
+        print(f"Questions generated and saved to {output_path}")
+
+
+
     def query_model(self, 
                     message: Dict[str, Any],
                     temperature: float = 0.7,
@@ -89,7 +109,10 @@ class QuestionGenerationModule():
                                 trust_remote_code: Optional[bool] = False
                                 ) -> Any:
         
+        print(f"Loading model {model_name} from Hugging Face.")
+        
         tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=trust_remote_code)
+        print("Tokenizer loaded successfully.")
         model = AutoModelForCausalLM.from_pretrained(model_name, 
                                                      torch_dtype=torch.bfloat16, 
                                                      device_map="auto", 

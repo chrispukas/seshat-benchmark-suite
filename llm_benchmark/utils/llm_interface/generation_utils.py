@@ -74,53 +74,6 @@ def range_message(prompt: dict) -> list[dict[str, str]]:
     ]
 
 
-def gen_range_question(client: openai.OpenAI, var: dict, model_str: str) -> str:
-    var_name = var["name"]
-    description = var["explanation"]
-    var_unit = var["data_unit"]
-    var_unit = var_unit if var_unit else "not applicable"
-
-    logging.debug(
-        f"generating question using {model_str} for:\n{var_name}\n{description}"
-    )
-    prompt = {
-        "role": "user",
-        "content": f"""
-        Variable name: {var_name},
-        Variable unit: {var_unit}
-        Variable description: {description}""",
-    }
-    message = range_message(prompt)
-    response = client.responses.parse(
-        model=model_str,
-        input=message,
-        text_format=RangeQuestionReply,
-    )
-    return response.output_parsed.model_dump()
-
-
-def gen_absent_present_question(
-    client: openai.OpenAI, var: dict, model_str: str
-) -> str:
-    var_name = var["name"]
-    description = var["explanation"]
-    print(f"generating question using {model_str} for:\n{var_name}\n{description}")
-
-    prompt = {
-        "role": "user",
-        "content": f"""
-        Variable name: {var_name},
-        Variable description: {description}""",
-    }
-    message = abs_pres_message(prompt)
-    response = client.responses.parse(
-        model=model_str,
-        input=message,
-        text_format=AbsPresQuestionReply,
-    )
-    return response.output_parsed.model_dump()
-
-
 
 def multichoice_question(params: Dict[str, Any]) -> List[Dict[str, str]]:
     ABS_PRES_INSTRUCTIONS = """
@@ -186,10 +139,31 @@ def multichoice_question(params: Dict[str, Any]) -> List[Dict[str, str]]:
             "role": "system",
             "content": CHAIN,
         },
-        params,
+        {
+            "role": "user",
+            "content": f"",
+            "variable name": params.get("full_name", "Unknown Variable"),
+            "variable description": params.get("description", "No description available."),
+        },
     ]
     pass
 
 def range_question(params: Dict[str, Any]) -> List[Dict[str, str]]:
     
     pass
+
+
+
+
+def remap_question_row(row: Dict[str, Any], endpoint: str) -> Dict[str, Any]:
+    """Remap question row based on endpoint."""
+    remapped_row: Dict[str, Any] = {}
+    remapped_row["polity"] = row.get("polity_name", "Unknown Polity")
+    remapped_row["short_name"] = row.get("name", "Unknown Short Name")
+    remapped_row["full_name"] = row.get("full_name", "Unknown Full Name")
+    remapped_row["time_start"] = row.get(f"{endpoint}_from", "Unknown Start Time")
+    remapped_row["time_end"] = row.get(f"{endpoint}_to", "Unknown End Time")
+    remapped_row["description"] = row.get("description", "No description available.")
+    remapped_row["data_unit"] = row.get("data_unit", "Not applicable.")
+
+    return remapped_row

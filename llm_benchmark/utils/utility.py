@@ -43,8 +43,8 @@ def question_type_remap(tag: str,
         print("No endpoint provided for question type remapping.")
         return DEFAULT
     
-    endpoint_to: str = f"{endpoint.replace("-", "_")[:-1]}_to"
-    endpoint_from: str = f"{endpoint.replace("-", "_")[:-1]}_from"
+    endpoint_to: str = f"{endpoint.replace('-', '_')[:-1]}_to"
+    endpoint_from: str = f"{endpoint.replace('-', '_')[:-1]}_from"
     
     to_get: Any = row.get(endpoint_to, None)
     from_get: Any = row.get(endpoint_from, None)
