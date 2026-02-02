@@ -54,10 +54,13 @@ def main():
 
     print("DeepSeekQuestionGenerationModule initialized.")
     question_instance.generate_questions(
-        dataset=ds,
+        dataset=ds.dataset_modules["wf/atlatls"],
         params={"max_new_tokens": 256, "temperature": 0.7},
         output_path="/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/29_01_2026_1/run 1_deepseek/deepseek_questions.csv"
     )
 
     print("Question generation completed.")
 
+
+if __name__ == "__main__":
+    main()
