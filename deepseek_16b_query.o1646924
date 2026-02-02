@@ -1,0 +1,599 @@
+Activating conda environment
+Checking Python path:
+/rds/general/user/cp824/home/miniforge3/envs/llm/bin/python
+
+/rds/general/user/cp824/home/neurips_llms/llm-benchmark
+/rds/general/user/cp824/home
+/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python310.zip
+/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10
+/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/lib-dynload
+/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages
+__editable__.llm_benchmark-0.1.0.finder.__path_hook__
+Running DeepSeek 16B query script
+Loaded endpoint identifiers: {'core/macro-regions': 'https://seshat-db.com/api/core/macro-regions/', 'core/regions': 'https://seshat-db.com/api/core/regions/', 'core/ngas': 'https://seshat-db.com/api/core/ngas/', 'core/polities': 'https://seshat-db.com/api/core/polities/', 'core/capitals': 'https://seshat-db.com/api/core/capitals/', 'core/nga-polity-relations': 'https://seshat-db.com/api/core/nga-polity-relations/', 'core/sections': 'https://seshat-db.com/api/core/sections/', 'core/subsections': 'https://seshat-db.com/api/core/subsections/', 'core/variable-hierarchies': 'https://seshat-db.com/api/core/variable-hierarchies/', 'core/references': 'https://seshat-db.com/api/core/references/', 'core/citations': 'https://seshat-db.com/api/core/citations/', 'core/comments': 'https://seshat-db.com/api/core/comments/', 'core/comment-parts': 'https://seshat-db.com/api/core/comment-parts/', 'core/comment-parts-through-citations': 'https://seshat-db.com/api/core/comment-parts-through-citations/', 'core/religions': 'https://seshat-db.com/api/core/religions/', 'core/cliopatria-shapefiles': 'https://seshat-db.com/api/core/cliopatria-shapefiles/', 'crisisdb/us-locations': 'https://seshat-db.com/api/crisisdb/us-locations/', 'crisisdb/us-violence-subtypes': 'https://seshat-db.com/api/crisisdb/us-violence-subtypes/', 'crisisdb/us-violence-data-sources': 'https://seshat-db.com/api/crisisdb/us-violence-data-sources/', 'crisisdb/us-violences': 'https://seshat-db.com/api/crisisdb/us-violences/', 'crisisdb/crisis-consequences': 'https://seshat-db.com/api/crisisdb/crisis-consequences/', 'general/polity-research-assistants': 'https://seshat-db.com/api/general/polity-research-assistants/', 'general/polity-original-names': 'https://seshat-db.com/api/general/polity-original-names/', 'general/polity-alternative-names': 'https://seshat-db.com/api/general/polity-alternative-names/', 'general/polity-durations': 'https://seshat-db.com/api/general/polity-durations/', 'general/polity-peak-years': 'https://seshat-db.com/api/general/polity-peak-years/', 'general/polity-degree-of-centralizations': 'https://seshat-db.com/api/general/polity-degree-of-centralizations/', 'general/polity-suprapolities': 'https://seshat-db.com/api/general/polity-suprapolities/', 'general/polity-utm-timezones': 'https://seshat-db.com/api/general/polity-utm-timezones/', 'general/polity-capitals': 'https://seshat-db.com/api/general/polity-capitals/', 'general/polity-languages': 'https://seshat-db.com/api/general/polity-languages/', 'general/polity-linguistic-families': 'https://seshat-db.com/api/general/polity-linguistic-families/', 'general/polity-language-genuses': 'https://seshat-db.com/api/general/polity-language-genuses/', 'general/polity-religion-genuses': 'https://seshat-db.com/api/general/polity-religion-genuses/', 'general/polity-religion-families': 'https://seshat-db.com/api/general/polity-religion-families/', 'general/polity-religions': 'https://seshat-db.com/api/general/polity-religions/', 'general/polity-relationship-to-preceding-entities': 'https://seshat-db.com/api/general/polity-relationship-to-preceding-entities/', 'general/polity-preceding-entities': 'https://seshat-db.com/api/general/polity-preceding-entities/', 'general/polity-succeeding-entities': 'https://seshat-db.com/api/general/polity-succeeding-entities/', 'general/polity-supracultural-entities': 'https://seshat-db.com/api/general/polity-supracultural-entities/', 'general/polity-scale-of-supracultural-interactions': 'https://seshat-db.com/api/general/polity-scale-of-supracultural-interactions/', 'general/polity-alternate-religion-genuses': 'https://seshat-db.com/api/general/polity-alternate-religion-genuses/', 'general/polity-alternate-religion-families': 'https://seshat-db.com/api/general/polity-alternate-religion-families/', 'general/polity-alternate-religions': 'https://seshat-db.com/api/general/polity-alternate-religions/', 'general/polity-experts': 'https://seshat-db.com/api/general/polity-experts/', 'general/polity-editors': 'https://seshat-db.com/api/general/polity-editors/', 'general/polity-religious-traditions': 'https://seshat-db.com/api/general/polity-religious-traditions/', 'rt/widespread-religions': 'https://seshat-db.com/api/rt/widespread-religions/', 'rt/official-religions': 'https://seshat-db.com/api/rt/official-religions/', 'rt/elites-religions': 'https://seshat-db.com/api/rt/elites-religions/', 'rt/theological-syncretism-of-different-religions': 'https://seshat-db.com/api/rt/theological-syncretism-of-different-religions/', 'rt/syncretism-of-religious-practices-at-the-level-of-individual-believers': 'https://seshat-db.com/api/rt/syncretism-of-religious-practices-at-the-level-of-individual-believers/', 'rt/religious-fragmentations': 'https://seshat-db.com/api/rt/religious-fragmentations/', 'rt/frequency-of-governmental-violence-against-religious-groups': 'https://seshat-db.com/api/rt/frequency-of-governmental-violence-against-religious-groups/', 'rt/government-restrictions-on-public-worships': 'https://seshat-db.com/api/rt/government-restrictions-on-public-worships/', 'rt/government-restrictions-on-public-proselytizings': 'https://seshat-db.com/api/rt/government-restrictions-on-public-proselytizings/', 'rt/government-restrictions-on-conversions': 'https://seshat-db.com/api/rt/government-restrictions-on-conversions/', 'rt/government-pressure-to-converts': 'https://seshat-db.com/api/rt/government-pressure-to-converts/', 'rt/government-restrictions-on-property-ownership-for-adherents-of-any-religious-groups': 'https://seshat-db.com/api/rt/government-restrictions-on-property-ownership-for-adherents-of-any-religious-groups/', 'rt/taxes-based-on-religious-adherence-or-on-religious-activities-and-institutions': 'https://seshat-db.com/api/rt/taxes-based-on-religious-adherence-or-on-religious-activities-and-institutions/', 'rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions': 'https://seshat-db.com/api/rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions/', 'rt/government-restrictions-on-construction-of-religious-buildings': 'https://seshat-db.com/api/rt/government-restrictions-on-construction-of-religious-buildings/', 'rt/government-restrictions-on-religious-educations': 'https://seshat-db.com/api/rt/government-restrictions-on-religious-educations/', 'rt/government-restrictions-on-circulation-of-religious-literatures': 'https://seshat-db.com/api/rt/government-restrictions-on-circulation-of-religious-literatures/', 'rt/government-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions': 'https://seshat-db.com/api/rt/government-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions/', 'rt/frequency-of-societal-violence-against-religious-groups': 'https://seshat-db.com/api/rt/frequency-of-societal-violence-against-religious-groups/', 'rt/societal-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions': 'https://seshat-db.com/api/rt/societal-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions/', 'rt/societal-pressure-to-convert-or-against-conversions': 'https://seshat-db.com/api/rt/societal-pressure-to-convert-or-against-conversions/', 'rt/moralizing-supernatural-punishment-and-reward': 'https://seshat-db.com/api/rt/moralizing-supernatural-punishment-and-reward/', 'rt/moralizing-supernatural-concern-is-primary': 'https://seshat-db.com/api/rt/moralizing-supernatural-concern-is-primary/', 'rt/moralizing-enforcement-is-certain': 'https://seshat-db.com/api/rt/moralizing-enforcement-is-certain/', 'rt/moralizing-enforcement-is-broad': 'https://seshat-db.com/api/rt/moralizing-enforcement-is-broad/', 'rt/moralizing-enforcement-is-targeted': 'https://seshat-db.com/api/rt/moralizing-enforcement-is-targeted/', 'rt/moralizing-enforcement-of-rulers': 'https://seshat-db.com/api/rt/moralizing-enforcement-of-rulers/', 'rt/moralizing-religion-adopted-by-elites': 'https://seshat-db.com/api/rt/moralizing-religion-adopted-by-elites/', 'rt/moralizing-religion-adopted-by-commoners': 'https://seshat-db.com/api/rt/moralizing-religion-adopted-by-commoners/', 'rt/moralizing-enforcement-in-afterlife': 'https://seshat-db.com/api/rt/moralizing-enforcement-in-afterlife/', 'rt/moralizing-enforcement-in-this-life': 'https://seshat-db.com/api/rt/moralizing-enforcement-in-this-life/', 'rt/moralizing-enforcement-is-agentic': 'https://seshat-db.com/api/rt/moralizing-enforcement-is-agentic/', 'rt/human-sacrifices': 'https://seshat-db.com/api/rt/human-sacrifices/', 'sc/research-assistants': 'https://seshat-db.com/api/sc/research-assistants/', 'sc/polity-territories': 'https://seshat-db.com/api/sc/polity-territories/', 'sc/polity-populations': 'https://seshat-db.com/api/sc/polity-populations/', 'sc/population-of-the-largest-settlements': 'https://seshat-db.com/api/sc/population-of-the-largest-settlements/', 'sc/settlement-hierarchies': 'https://seshat-db.com/api/sc/settlement-hierarchies/', 'sc/administrative-levels': 'https://seshat-db.com/api/sc/administrative-levels/', 'sc/religious-levels': 'https://seshat-db.com/api/sc/religious-levels/', 'sc/military-levels': 'https://seshat-db.com/api/sc/military-levels/', 'sc/professional-military-officers': 'https://seshat-db.com/api/sc/professional-military-officers/', 'sc/professional-soldiers': 'https://seshat-db.com/api/sc/professional-soldiers/', 'sc/professional-priesthoods': 'https://seshat-db.com/api/sc/professional-priesthoods/', 'sc/full-time-bureaucrats': 'https://seshat-db.com/api/sc/full-time-bureaucrats/', 'sc/examination-systems': 'https://seshat-db.com/api/sc/examination-systems/', 'sc/merit-promotions': 'https://seshat-db.com/api/sc/merit-promotions/', 'sc/specialized-government-buildings': 'https://seshat-db.com/api/sc/specialized-government-buildings/', 'sc/formal-legal-codes': 'https://seshat-db.com/api/sc/formal-legal-codes/', 'sc/judges': 'https://seshat-db.com/api/sc/judges/', 'sc/courts': 'https://seshat-db.com/api/sc/courts/', 'sc/professional-lawyers': 'https://seshat-db.com/api/sc/professional-lawyers/', 'sc/irrigation-systems': 'https://seshat-db.com/api/sc/irrigation-systems/', 'sc/drinking-water-supplies': 'https://seshat-db.com/api/sc/drinking-water-supplies/', 'sc/markets': 'https://seshat-db.com/api/sc/markets/', 'sc/food-storage-sites': 'https://seshat-db.com/api/sc/food-storage-sites/', 'sc/roads': 'https://seshat-db.com/api/sc/roads/', 'sc/bridges': 'https://seshat-db.com/api/sc/bridges/', 'sc/canals': 'https://seshat-db.com/api/sc/canals/', 'sc/ports': 'https://seshat-db.com/api/sc/ports/', 'sc/mines-or-quarries': 'https://seshat-db.com/api/sc/mines-or-quarries/', 'sc/mnemonic-devices': 'https://seshat-db.com/api/sc/mnemonic-devices/', 'sc/nonwritten-records': 'https://seshat-db.com/api/sc/nonwritten-records/', 'sc/written-records': 'https://seshat-db.com/api/sc/written-records/', 'sc/scripts': 'https://seshat-db.com/api/sc/scripts/', 'sc/non-phonetic-writings': 'https://seshat-db.com/api/sc/non-phonetic-writings/', 'sc/phonetic-alphabetic-writings': 'https://seshat-db.com/api/sc/phonetic-alphabetic-writings/', 'sc/lists-tables-and-classifications': 'https://seshat-db.com/api/sc/lists-tables-and-classifications/', 'sc/calendars': 'https://seshat-db.com/api/sc/calendars/', 'sc/sacred-texts': 'https://seshat-db.com/api/sc/sacred-texts/', 'sc/religious-literatures': 'https://seshat-db.com/api/sc/religious-literatures/', 'sc/practical-literatures': 'https://seshat-db.com/api/sc/practical-literatures/', 'sc/histories': 'https://seshat-db.com/api/sc/histories/', 'sc/philosophies': 'https://seshat-db.com/api/sc/philosophies/', 'sc/scientific-literatures': 'https://seshat-db.com/api/sc/scientific-literatures/', 'sc/fictions': 'https://seshat-db.com/api/sc/fictions/', 'sc/articles': 'https://seshat-db.com/api/sc/articles/', 'sc/tokens': 'https://seshat-db.com/api/sc/tokens/', 'sc/precious-metals': 'https://seshat-db.com/api/sc/precious-metals/', 'sc/foreign-coins': 'https://seshat-db.com/api/sc/foreign-coins/', 'sc/indigenous-coins': 'https://seshat-db.com/api/sc/indigenous-coins/', 'sc/paper-currencies': 'https://seshat-db.com/api/sc/paper-currencies/', 'sc/couriers': 'https://seshat-db.com/api/sc/couriers/', 'sc/postal-stations': 'https://seshat-db.com/api/sc/postal-stations/', 'sc/general-postal-services': 'https://seshat-db.com/api/sc/general-postal-services/', 'sc/communal-buildings': 'https://seshat-db.com/api/sc/communal-buildings/', 'sc/utilitarian-public-buildings': 'https://seshat-db.com/api/sc/utilitarian-public-buildings/', 'sc/symbolic-buildings': 'https://seshat-db.com/api/sc/symbolic-buildings/', 'sc/entertainment-buildings': 'https://seshat-db.com/api/sc/entertainment-buildings/', 'sc/knowledge-or-information-buildings': 'https://seshat-db.com/api/sc/knowledge-or-information-buildings/', 'sc/other-utilitarian-public-buildings': 'https://seshat-db.com/api/sc/other-utilitarian-public-buildings/', 'sc/special-purpose-sites': 'https://seshat-db.com/api/sc/special-purpose-sites/', 'sc/ceremonial-sites': 'https://seshat-db.com/api/sc/ceremonial-sites/', 'sc/burial-sites': 'https://seshat-db.com/api/sc/burial-sites/', 'sc/trading-emporia': 'https://seshat-db.com/api/sc/trading-emporia/', 'sc/enclosures': 'https://seshat-db.com/api/sc/enclosures/', 'sc/length-measurement-systems': 'https://seshat-db.com/api/sc/length-measurement-systems/', 'sc/area-measurement-systems': 'https://seshat-db.com/api/sc/area-measurement-systems/', 'sc/volume-measurement-systems': 'https://seshat-db.com/api/sc/volume-measurement-systems/', 'sc/weight-measurement-systems': 'https://seshat-db.com/api/sc/weight-measurement-systems/', 'sc/time-measurement-systems': 'https://seshat-db.com/api/sc/time-measurement-systems/', 'sc/geometrical-measurement-systems': 'https://seshat-db.com/api/sc/geometrical-measurement-systems/', 'sc/other-measurement-systems': 'https://seshat-db.com/api/sc/other-measurement-systems/', 'sc/debt-and-credit-structures': 'https://seshat-db.com/api/sc/debt-and-credit-structures/', 'sc/stores-of-wealth': 'https://seshat-db.com/api/sc/stores-of-wealth/', 'sc/sources-of-support': 'https://seshat-db.com/api/sc/sources-of-support/', 'sc/occupational-complexities': 'https://seshat-db.com/api/sc/occupational-complexities/', 'sc/special-purpose-houses': 'https://seshat-db.com/api/sc/special-purpose-houses/', 'sc/other-special-purpose-sites': 'https://seshat-db.com/api/sc/other-special-purpose-sites/', 'sc/largest-communication-distances': 'https://seshat-db.com/api/sc/largest-communication-distances/', 'sc/fastest-individual-communications': 'https://seshat-db.com/api/sc/fastest-individual-communications/', 'wf/long-walls': 'https://seshat-db.com/api/wf/long-walls/', 'wf/coppers': 'https://seshat-db.com/api/wf/coppers/', 'wf/bronzes': 'https://seshat-db.com/api/wf/bronzes/', 'wf/irons': 'https://seshat-db.com/api/wf/irons/', 'wf/steels': 'https://seshat-db.com/api/wf/steels/', 'wf/javelins': 'https://seshat-db.com/api/wf/javelins/', 'wf/atlatls': 'https://seshat-db.com/api/wf/atlatls/', 'wf/slings': 'https://seshat-db.com/api/wf/slings/', 'wf/self-bows': 'https://seshat-db.com/api/wf/self-bows/', 'wf/composite-bows': 'https://seshat-db.com/api/wf/composite-bows/', 'wf/crossbows': 'https://seshat-db.com/api/wf/crossbows/', 'wf/tension-siege-engines': 'https://seshat-db.com/api/wf/tension-siege-engines/', 'wf/sling-siege-engines': 'https://seshat-db.com/api/wf/sling-siege-engines/', 'wf/gunpowder-siege-artilleries': 'https://seshat-db.com/api/wf/gunpowder-siege-artilleries/', 'wf/handheld-firearms': 'https://seshat-db.com/api/wf/handheld-firearms/', 'wf/war-clubs': 'https://seshat-db.com/api/wf/war-clubs/', 'wf/battle-axes': 'https://seshat-db.com/api/wf/battle-axes/', 'wf/daggers': 'https://seshat-db.com/api/wf/daggers/', 'wf/swords': 'https://seshat-db.com/api/wf/swords/', 'wf/spears': 'https://seshat-db.com/api/wf/spears/', 'wf/polearms': 'https://seshat-db.com/api/wf/polearms/', 'wf/dogs': 'https://seshat-db.com/api/wf/dogs/', 'wf/donkeys': 'https://seshat-db.com/api/wf/donkeys/', 'wf/horses': 'https://seshat-db.com/api/wf/horses/', 'wf/camels': 'https://seshat-db.com/api/wf/camels/', 'wf/elephants': 'https://seshat-db.com/api/wf/elephants/', 'wf/wood-bark-etc': 'https://seshat-db.com/api/wf/wood-bark-etc/', 'wf/leathers': 'https://seshat-db.com/api/wf/leathers/', 'wf/shields': 'https://seshat-db.com/api/wf/shields/', 'wf/helmets': 'https://seshat-db.com/api/wf/helmets/', 'wf/breastplates': 'https://seshat-db.com/api/wf/breastplates/', 'wf/limb-protections': 'https://seshat-db.com/api/wf/limb-protections/', 'wf/scaled-armors': 'https://seshat-db.com/api/wf/scaled-armors/', 'wf/laminar-armors': 'https://seshat-db.com/api/wf/laminar-armors/', 'wf/plate-armors': 'https://seshat-db.com/api/wf/plate-armors/', 'wf/small-vessel-canoe-etc': 'https://seshat-db.com/api/wf/small-vessel-canoe-etc/', 'wf/merchant-ship-pressed-into-service': 'https://seshat-db.com/api/wf/merchant-ship-pressed-into-service/', 'wf/specialized-military-vessels': 'https://seshat-db.com/api/wf/specialized-military-vessels/', 'wf/settlement-in-defensive-positions': 'https://seshat-db.com/api/wf/settlement-in-defensive-positions/', 'wf/wooden-palisades': 'https://seshat-db.com/api/wf/wooden-palisades/', 'wf/earth-ramparts': 'https://seshat-db.com/api/wf/earth-ramparts/', 'wf/ditches': 'https://seshat-db.com/api/wf/ditches/', 'wf/moats': 'https://seshat-db.com/api/wf/moats/', 'wf/stone-walls-non-mortared': 'https://seshat-db.com/api/wf/stone-walls-non-mortared/', 'wf/stone-walls-mortared': 'https://seshat-db.com/api/wf/stone-walls-mortared/', 'wf/fortified-camps': 'https://seshat-db.com/api/wf/fortified-camps/', 'wf/complex-fortifications': 'https://seshat-db.com/api/wf/complex-fortifications/', 'wf/modern-fortifications': 'https://seshat-db.com/api/wf/modern-fortifications/', 'wf/chainmails': 'https://seshat-db.com/api/wf/chainmails/', 'ec/luxury-precious-metal': 'https://seshat-db.com/api/ec/luxury-precious-metal/', 'ec/luxury-fabrics': 'https://seshat-db.com/api/ec/luxury-fabrics/', 'ec/luxury-manufactured-goods': 'https://seshat-db.com/api/ec/luxury-manufactured-goods/', 'ec/luxury-spices-incense-and-dyes': 'https://seshat-db.com/api/ec/luxury-spices-incense-and-dyes/', 'ec/luxury-drink-alcohol': 'https://seshat-db.com/api/ec/luxury-drink-alcohol/', 'ec/luxury-glass-goods': 'https://seshat-db.com/api/ec/luxury-glass-goods/', 'ec/luxury-fine-ceramic-wares': 'https://seshat-db.com/api/ec/luxury-fine-ceramic-wares/', 'ec/luxury-precious-stone': 'https://seshat-db.com/api/ec/luxury-precious-stone/', 'ec/luxury-statuary': 'https://seshat-db.com/api/ec/luxury-statuary/', 'ec/luxury-food': 'https://seshat-db.com/api/ec/luxury-food/', 'ec/other-luxury-personal-items': 'https://seshat-db.com/api/ec/other-luxury-personal-items/'}
+Attempting dataset refresh. False
+core/macro-regions https://seshat-db.com/api/core/macro-regions/
+Ignoring polity core/macro-regions as per configuration.
+core/regions https://seshat-db.com/api/core/regions/
+Ignoring polity core/regions as per configuration.
+core/ngas https://seshat-db.com/api/core/ngas/
+Ignoring polity core/ngas as per configuration.
+core/polities https://seshat-db.com/api/core/polities/
+Ignoring polity core/polities as per configuration.
+core/capitals https://seshat-db.com/api/core/capitals/
+Ignoring polity core/capitals as per configuration.
+core/nga-polity-relations https://seshat-db.com/api/core/nga-polity-relations/
+Ignoring polity core/nga-polity-relations as per configuration.
+core/sections https://seshat-db.com/api/core/sections/
+Ignoring polity core/sections as per configuration.
+core/subsections https://seshat-db.com/api/core/subsections/
+Ignoring polity core/subsections as per configuration.
+core/variable-hierarchies https://seshat-db.com/api/core/variable-hierarchies/
+Ignoring polity core/variable-hierarchies as per configuration.
+core/references https://seshat-db.com/api/core/references/
+Ignoring polity core/references as per configuration.
+core/citations https://seshat-db.com/api/core/citations/
+Ignoring polity core/citations as per configuration.
+core/comments https://seshat-db.com/api/core/comments/
+Ignoring polity core/comments as per configuration.
+core/comment-parts https://seshat-db.com/api/core/comment-parts/
+Ignoring polity core/comment-parts as per configuration.
+core/comment-parts-through-citations https://seshat-db.com/api/core/comment-parts-through-citations/
+Ignoring polity core/comment-parts-through-citations as per configuration.
+core/religions https://seshat-db.com/api/core/religions/
+Ignoring polity core/religions as per configuration.
+core/cliopatria-shapefiles https://seshat-db.com/api/core/cliopatria-shapefiles/
+Ignoring polity core/cliopatria-shapefiles as per configuration.
+crisisdb/us-locations https://seshat-db.com/api/crisisdb/us-locations/
+Ignoring polity crisisdb/us-locations as per configuration.
+crisisdb/us-violence-subtypes https://seshat-db.com/api/crisisdb/us-violence-subtypes/
+Ignoring polity crisisdb/us-violence-subtypes as per configuration.
+crisisdb/us-violence-data-sources https://seshat-db.com/api/crisisdb/us-violence-data-sources/
+Ignoring polity crisisdb/us-violence-data-sources as per configuration.
+crisisdb/us-violences https://seshat-db.com/api/crisisdb/us-violences/
+Ignoring polity crisisdb/us-violences as per configuration.
+crisisdb/crisis-consequences https://seshat-db.com/api/crisisdb/crisis-consequences/
+Ignoring polity crisisdb/crisis-consequences as per configuration.
+general/polity-research-assistants https://seshat-db.com/api/general/polity-research-assistants/
+Ignoring polity general/polity-research-assistants as per configuration.
+general/polity-original-names https://seshat-db.com/api/general/polity-original-names/
+Ignoring polity general/polity-original-names as per configuration.
+general/polity-alternative-names https://seshat-db.com/api/general/polity-alternative-names/
+Ignoring polity general/polity-alternative-names as per configuration.
+general/polity-durations https://seshat-db.com/api/general/polity-durations/
+Ignoring polity general/polity-durations as per configuration.
+general/polity-peak-years https://seshat-db.com/api/general/polity-peak-years/
+Ignoring polity general/polity-peak-years as per configuration.
+general/polity-degree-of-centralizations https://seshat-db.com/api/general/polity-degree-of-centralizations/
+Ignoring polity general/polity-degree-of-centralizations as per configuration.
+general/polity-suprapolities https://seshat-db.com/api/general/polity-suprapolities/
+Ignoring polity general/polity-suprapolities as per configuration.
+general/polity-utm-timezones https://seshat-db.com/api/general/polity-utm-timezones/
+Ignoring polity general/polity-utm-timezones as per configuration.
+general/polity-capitals https://seshat-db.com/api/general/polity-capitals/
+Ignoring polity general/polity-capitals as per configuration.
+general/polity-languages https://seshat-db.com/api/general/polity-languages/
+Ignoring polity general/polity-languages as per configuration.
+general/polity-linguistic-families https://seshat-db.com/api/general/polity-linguistic-families/
+Ignoring polity general/polity-linguistic-families as per configuration.
+general/polity-language-genuses https://seshat-db.com/api/general/polity-language-genuses/
+Ignoring polity general/polity-language-genuses as per configuration.
+general/polity-religion-genuses https://seshat-db.com/api/general/polity-religion-genuses/
+Ignoring polity general/polity-religion-genuses as per configuration.
+general/polity-religion-families https://seshat-db.com/api/general/polity-religion-families/
+Ignoring polity general/polity-religion-families as per configuration.
+general/polity-religions https://seshat-db.com/api/general/polity-religions/
+Ignoring polity general/polity-religions as per configuration.
+general/polity-relationship-to-preceding-entities https://seshat-db.com/api/general/polity-relationship-to-preceding-entities/
+Ignoring polity general/polity-relationship-to-preceding-entities as per configuration.
+general/polity-preceding-entities https://seshat-db.com/api/general/polity-preceding-entities/
+Ignoring polity general/polity-preceding-entities as per configuration.
+general/polity-succeeding-entities https://seshat-db.com/api/general/polity-succeeding-entities/
+Ignoring polity general/polity-succeeding-entities as per configuration.
+general/polity-supracultural-entities https://seshat-db.com/api/general/polity-supracultural-entities/
+Ignoring polity general/polity-supracultural-entities as per configuration.
+general/polity-scale-of-supracultural-interactions https://seshat-db.com/api/general/polity-scale-of-supracultural-interactions/
+Ignoring polity general/polity-scale-of-supracultural-interactions as per configuration.
+general/polity-alternate-religion-genuses https://seshat-db.com/api/general/polity-alternate-religion-genuses/
+Ignoring polity general/polity-alternate-religion-genuses as per configuration.
+general/polity-alternate-religion-families https://seshat-db.com/api/general/polity-alternate-religion-families/
+Ignoring polity general/polity-alternate-religion-families as per configuration.
+general/polity-alternate-religions https://seshat-db.com/api/general/polity-alternate-religions/
+Ignoring polity general/polity-alternate-religions as per configuration.
+general/polity-experts https://seshat-db.com/api/general/polity-experts/
+Ignoring polity general/polity-experts as per configuration.
+general/polity-editors https://seshat-db.com/api/general/polity-editors/
+Ignoring polity general/polity-editors as per configuration.
+general/polity-religious-traditions https://seshat-db.com/api/general/polity-religious-traditions/
+Ignoring polity general/polity-religious-traditions as per configuration.
+rt/widespread-religions https://seshat-db.com/api/rt/widespread-religions/
+Ignoring polity rt/widespread-religions as per configuration.
+rt/official-religions https://seshat-db.com/api/rt/official-religions/
+Ignoring polity rt/official-religions as per configuration.
+rt/elites-religions https://seshat-db.com/api/rt/elites-religions/
+Ignoring polity rt/elites-religions as per configuration.
+rt/theological-syncretism-of-different-religions https://seshat-db.com/api/rt/theological-syncretism-of-different-religions/
+Ignoring polity rt/theological-syncretism-of-different-religions as per configuration.
+rt/syncretism-of-religious-practices-at-the-level-of-individual-believers https://seshat-db.com/api/rt/syncretism-of-religious-practices-at-the-level-of-individual-believers/
+Ignoring polity rt/syncretism-of-religious-practices-at-the-level-of-individual-believers as per configuration.
+rt/religious-fragmentations https://seshat-db.com/api/rt/religious-fragmentations/
+Ignoring polity rt/religious-fragmentations as per configuration.
+rt/frequency-of-governmental-violence-against-religious-groups https://seshat-db.com/api/rt/frequency-of-governmental-violence-against-religious-groups/
+Ignoring polity rt/frequency-of-governmental-violence-against-religious-groups as per configuration.
+rt/government-restrictions-on-public-worships https://seshat-db.com/api/rt/government-restrictions-on-public-worships/
+Ignoring polity rt/government-restrictions-on-public-worships as per configuration.
+rt/government-restrictions-on-public-proselytizings https://seshat-db.com/api/rt/government-restrictions-on-public-proselytizings/
+Ignoring polity rt/government-restrictions-on-public-proselytizings as per configuration.
+rt/government-restrictions-on-conversions https://seshat-db.com/api/rt/government-restrictions-on-conversions/
+Ignoring polity rt/government-restrictions-on-conversions as per configuration.
+rt/government-pressure-to-converts https://seshat-db.com/api/rt/government-pressure-to-converts/
+Ignoring polity rt/government-pressure-to-converts as per configuration.
+rt/government-restrictions-on-property-ownership-for-adherents-of-any-religious-groups https://seshat-db.com/api/rt/government-restrictions-on-property-ownership-for-adherents-of-any-religious-groups/
+Ignoring polity rt/government-restrictions-on-property-ownership-for-adherents-of-any-religious-groups as per configuration.
+rt/taxes-based-on-religious-adherence-or-on-religious-activities-and-institutions https://seshat-db.com/api/rt/taxes-based-on-religious-adherence-or-on-religious-activities-and-institutions/
+Ignoring polity rt/taxes-based-on-religious-adherence-or-on-religious-activities-and-institutions as per configuration.
+rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions https://seshat-db.com/api/rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions/
+Ignoring polity rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions as per configuration.
+rt/government-restrictions-on-construction-of-religious-buildings https://seshat-db.com/api/rt/government-restrictions-on-construction-of-religious-buildings/
+Ignoring polity rt/government-restrictions-on-construction-of-religious-buildings as per configuration.
+rt/government-restrictions-on-religious-educations https://seshat-db.com/api/rt/government-restrictions-on-religious-educations/
+Ignoring polity rt/government-restrictions-on-religious-educations as per configuration.
+rt/government-restrictions-on-circulation-of-religious-literatures https://seshat-db.com/api/rt/government-restrictions-on-circulation-of-religious-literatures/
+Ignoring polity rt/government-restrictions-on-circulation-of-religious-literatures as per configuration.
+rt/government-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions https://seshat-db.com/api/rt/government-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions/
+Ignoring polity rt/government-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions as per configuration.
+rt/frequency-of-societal-violence-against-religious-groups https://seshat-db.com/api/rt/frequency-of-societal-violence-against-religious-groups/
+Ignoring polity rt/frequency-of-societal-violence-against-religious-groups as per configuration.
+rt/societal-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions https://seshat-db.com/api/rt/societal-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions/
+Ignoring polity rt/societal-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions as per configuration.
+rt/societal-pressure-to-convert-or-against-conversions https://seshat-db.com/api/rt/societal-pressure-to-convert-or-against-conversions/
+Ignoring polity rt/societal-pressure-to-convert-or-against-conversions as per configuration.
+rt/moralizing-supernatural-punishment-and-reward https://seshat-db.com/api/rt/moralizing-supernatural-punishment-and-reward/
+Ignoring polity rt/moralizing-supernatural-punishment-and-reward as per configuration.
+rt/moralizing-supernatural-concern-is-primary https://seshat-db.com/api/rt/moralizing-supernatural-concern-is-primary/
+Ignoring polity rt/moralizing-supernatural-concern-is-primary as per configuration.
+rt/moralizing-enforcement-is-certain https://seshat-db.com/api/rt/moralizing-enforcement-is-certain/
+Ignoring polity rt/moralizing-enforcement-is-certain as per configuration.
+rt/moralizing-enforcement-is-broad https://seshat-db.com/api/rt/moralizing-enforcement-is-broad/
+Ignoring polity rt/moralizing-enforcement-is-broad as per configuration.
+rt/moralizing-enforcement-is-targeted https://seshat-db.com/api/rt/moralizing-enforcement-is-targeted/
+Ignoring polity rt/moralizing-enforcement-is-targeted as per configuration.
+rt/moralizing-enforcement-of-rulers https://seshat-db.com/api/rt/moralizing-enforcement-of-rulers/
+Ignoring polity rt/moralizing-enforcement-of-rulers as per configuration.
+rt/moralizing-religion-adopted-by-elites https://seshat-db.com/api/rt/moralizing-religion-adopted-by-elites/
+Ignoring polity rt/moralizing-religion-adopted-by-elites as per configuration.
+rt/moralizing-religion-adopted-by-commoners https://seshat-db.com/api/rt/moralizing-religion-adopted-by-commoners/
+Ignoring polity rt/moralizing-religion-adopted-by-commoners as per configuration.
+rt/moralizing-enforcement-in-afterlife https://seshat-db.com/api/rt/moralizing-enforcement-in-afterlife/
+Ignoring polity rt/moralizing-enforcement-in-afterlife as per configuration.
+rt/moralizing-enforcement-in-this-life https://seshat-db.com/api/rt/moralizing-enforcement-in-this-life/
+Ignoring polity rt/moralizing-enforcement-in-this-life as per configuration.
+rt/moralizing-enforcement-is-agentic https://seshat-db.com/api/rt/moralizing-enforcement-is-agentic/
+Ignoring polity rt/moralizing-enforcement-is-agentic as per configuration.
+rt/human-sacrifices https://seshat-db.com/api/rt/human-sacrifices/
+Ignoring polity rt/human-sacrifices as per configuration.
+sc/research-assistants https://seshat-db.com/api/sc/research-assistants/
+Loaded module sc/research-assistants with 0 entries.
+Initialized SocialComplexityModule.
+sc/polity-territories https://seshat-db.com/api/sc/polity-territories/
+Loaded module sc/polity-territories with 606 entries.
+Initialized SocialComplexityModule.
+sc/polity-populations https://seshat-db.com/api/sc/polity-populations/
+Loaded module sc/polity-populations with 577 entries.
+Initialized SocialComplexityModule.
+sc/population-of-the-largest-settlements https://seshat-db.com/api/sc/population-of-the-largest-settlements/
+Loaded module sc/population-of-the-largest-settlements with 577 entries.
+sc/settlement-hierarchies https://seshat-db.com/api/sc/settlement-hierarchies/
+Loaded module sc/settlement-hierarchies with 563 entries.
+Initialized SocialComplexityModule.
+sc/administrative-levels https://seshat-db.com/api/sc/administrative-levels/
+Loaded module sc/administrative-levels with 570 entries.
+Initialized SocialComplexityModule.
+sc/religious-levels https://seshat-db.com/api/sc/religious-levels/
+Loaded module sc/religious-levels with 446 entries.
+Initialized SocialComplexityModule.
+sc/military-levels https://seshat-db.com/api/sc/military-levels/
+Loaded module sc/military-levels with 448 entries.
+Initialized SocialComplexityModule.
+sc/professional-military-officers https://seshat-db.com/api/sc/professional-military-officers/
+Loaded module sc/professional-military-officers with 473 entries.
+Initialized SocialComplexityModule.
+sc/professional-soldiers https://seshat-db.com/api/sc/professional-soldiers/
+Loaded module sc/professional-soldiers with 500 entries.
+Initialized SocialComplexityModule.
+sc/professional-priesthoods https://seshat-db.com/api/sc/professional-priesthoods/
+Loaded module sc/professional-priesthoods with 464 entries.
+Initialized SocialComplexityModule.
+sc/full-time-bureaucrats https://seshat-db.com/api/sc/full-time-bureaucrats/
+Loaded module sc/full-time-bureaucrats with 493 entries.
+Initialized SocialComplexityModule.
+sc/examination-systems https://seshat-db.com/api/sc/examination-systems/
+Loaded module sc/examination-systems with 385 entries.
+Initialized SocialComplexityModule.
+sc/merit-promotions https://seshat-db.com/api/sc/merit-promotions/
+Loaded module sc/merit-promotions with 398 entries.
+Initialized SocialComplexityModule.
+sc/specialized-government-buildings https://seshat-db.com/api/sc/specialized-government-buildings/
+Loaded module sc/specialized-government-buildings with 479 entries.
+Initialized SocialComplexityModule.
+sc/formal-legal-codes https://seshat-db.com/api/sc/formal-legal-codes/
+Loaded module sc/formal-legal-codes with 509 entries.
+Initialized SocialComplexityModule.
+sc/judges https://seshat-db.com/api/sc/judges/
+Loaded module sc/judges with 472 entries.
+Initialized SocialComplexityModule.
+sc/courts https://seshat-db.com/api/sc/courts/
+Loaded module sc/courts with 435 entries.
+Initialized SocialComplexityModule.
+sc/professional-lawyers https://seshat-db.com/api/sc/professional-lawyers/
+Loaded module sc/professional-lawyers with 415 entries.
+Initialized SocialComplexityModule.
+sc/irrigation-systems https://seshat-db.com/api/sc/irrigation-systems/
+Loaded module sc/irrigation-systems with 468 entries.
+Initialized SocialComplexityModule.
+sc/drinking-water-supplies https://seshat-db.com/api/sc/drinking-water-supplies/
+Loaded module sc/drinking-water-supplies with 398 entries.
+Initialized SocialComplexityModule.
+sc/markets https://seshat-db.com/api/sc/markets/
+Loaded module sc/markets with 501 entries.
+Initialized SocialComplexityModule.
+sc/food-storage-sites https://seshat-db.com/api/sc/food-storage-sites/
+Loaded module sc/food-storage-sites with 447 entries.
+Initialized SocialComplexityModule.
+sc/roads https://seshat-db.com/api/sc/roads/
+Loaded module sc/roads with 466 entries.
+Initialized SocialComplexityModule.
+sc/bridges https://seshat-db.com/api/sc/bridges/
+Loaded module sc/bridges with 373 entries.
+Initialized SocialComplexityModule.
+sc/canals https://seshat-db.com/api/sc/canals/
+Loaded module sc/canals with 368 entries.
+Initialized SocialComplexityModule.
+sc/ports https://seshat-db.com/api/sc/ports/
+Loaded module sc/ports with 448 entries.
+Initialized SocialComplexityModule.
+sc/mines-or-quarries https://seshat-db.com/api/sc/mines-or-quarries/
+Loaded module sc/mines-or-quarries with 366 entries.
+Initialized SocialComplexityModule.
+sc/mnemonic-devices https://seshat-db.com/api/sc/mnemonic-devices/
+Loaded module sc/mnemonic-devices with 243 entries.
+Initialized SocialComplexityModule.
+sc/nonwritten-records https://seshat-db.com/api/sc/nonwritten-records/
+Loaded module sc/nonwritten-records with 339 entries.
+Initialized SocialComplexityModule.
+sc/written-records https://seshat-db.com/api/sc/written-records/
+Loaded module sc/written-records with 584 entries.
+Initialized SocialComplexityModule.
+sc/scripts https://seshat-db.com/api/sc/scripts/
+Loaded module sc/scripts with 578 entries.
+Initialized SocialComplexityModule.
+sc/non-phonetic-writings https://seshat-db.com/api/sc/non-phonetic-writings/
+Loaded module sc/non-phonetic-writings with 349 entries.
+Initialized SocialComplexityModule.
+sc/phonetic-alphabetic-writings https://seshat-db.com/api/sc/phonetic-alphabetic-writings/
+Loaded module sc/phonetic-alphabetic-writings with 496 entries.
+Initialized SocialComplexityModule.
+sc/lists-tables-and-classifications https://seshat-db.com/api/sc/lists-tables-and-classifications/
+Loaded module sc/lists-tables-and-classifications with 483 entries.
+Initialized SocialComplexityModule.
+sc/calendars https://seshat-db.com/api/sc/calendars/
+Loaded module sc/calendars with 531 entries.
+Initialized SocialComplexityModule.
+sc/sacred-texts https://seshat-db.com/api/sc/sacred-texts/
+Loaded module sc/sacred-texts with 546 entries.
+Initialized SocialComplexityModule.
+sc/religious-literatures https://seshat-db.com/api/sc/religious-literatures/
+Loaded module sc/religious-literatures with 561 entries.
+Initialized SocialComplexityModule.
+sc/practical-literatures https://seshat-db.com/api/sc/practical-literatures/
+Loaded module sc/practical-literatures with 500 entries.
+Initialized SocialComplexityModule.
+sc/histories https://seshat-db.com/api/sc/histories/
+Loaded module sc/histories with 489 entries.
+Initialized SocialComplexityModule.
+sc/philosophies https://seshat-db.com/api/sc/philosophies/
+Loaded module sc/philosophies with 461 entries.
+Initialized SocialComplexityModule.
+sc/scientific-literatures https://seshat-db.com/api/sc/scientific-literatures/
+Loaded module sc/scientific-literatures with 482 entries.
+Initialized SocialComplexityModule.
+sc/fictions https://seshat-db.com/api/sc/fictions/
+Loaded module sc/fictions with 499 entries.
+Initialized SocialComplexityModule.
+sc/articles https://seshat-db.com/api/sc/articles/
+Loaded module sc/articles with 465 entries.
+Initialized SocialComplexityModule.
+sc/tokens https://seshat-db.com/api/sc/tokens/
+Loaded module sc/tokens with 394 entries.
+Initialized SocialComplexityModule.
+sc/precious-metals https://seshat-db.com/api/sc/precious-metals/
+Loaded module sc/precious-metals with 398 entries.
+Initialized SocialComplexityModule.
+sc/foreign-coins https://seshat-db.com/api/sc/foreign-coins/
+Loaded module sc/foreign-coins with 448 entries.
+Initialized SocialComplexityModule.
+sc/indigenous-coins https://seshat-db.com/api/sc/indigenous-coins/
+Loaded module sc/indigenous-coins with 521 entries.
+Initialized SocialComplexityModule.
+sc/paper-currencies https://seshat-db.com/api/sc/paper-currencies/
+Loaded module sc/paper-currencies with 459 entries.
+Initialized SocialComplexityModule.
+sc/couriers https://seshat-db.com/api/sc/couriers/
+Loaded module sc/couriers with 410 entries.
+Initialized SocialComplexityModule.
+sc/postal-stations https://seshat-db.com/api/sc/postal-stations/
+Loaded module sc/postal-stations with 388 entries.
+Initialized SocialComplexityModule.
+sc/general-postal-services https://seshat-db.com/api/sc/general-postal-services/
+Loaded module sc/general-postal-services with 387 entries.
+Initialized SocialComplexityModule.
+sc/communal-buildings https://seshat-db.com/api/sc/communal-buildings/
+Loaded module sc/communal-buildings with 132 entries.
+Initialized SocialComplexityModule.
+sc/utilitarian-public-buildings https://seshat-db.com/api/sc/utilitarian-public-buildings/
+Loaded module sc/utilitarian-public-buildings with 161 entries.
+Initialized SocialComplexityModule.
+sc/symbolic-buildings https://seshat-db.com/api/sc/symbolic-buildings/
+Loaded module sc/symbolic-buildings with 126 entries.
+Initialized SocialComplexityModule.
+sc/entertainment-buildings https://seshat-db.com/api/sc/entertainment-buildings/
+Loaded module sc/entertainment-buildings with 86 entries.
+Initialized SocialComplexityModule.
+sc/knowledge-or-information-buildings https://seshat-db.com/api/sc/knowledge-or-information-buildings/
+Loaded module sc/knowledge-or-information-buildings with 127 entries.
+Initialized SocialComplexityModule.
+sc/other-utilitarian-public-buildings https://seshat-db.com/api/sc/other-utilitarian-public-buildings/
+Loaded module sc/other-utilitarian-public-buildings with 10 entries.
+Initialized SocialComplexityModule.
+sc/special-purpose-sites https://seshat-db.com/api/sc/special-purpose-sites/
+Loaded module sc/special-purpose-sites with 105 entries.
+Initialized SocialComplexityModule.
+sc/ceremonial-sites https://seshat-db.com/api/sc/ceremonial-sites/
+Loaded module sc/ceremonial-sites with 105 entries.
+Initialized SocialComplexityModule.
+sc/burial-sites https://seshat-db.com/api/sc/burial-sites/
+Loaded module sc/burial-sites with 102 entries.
+Initialized SocialComplexityModule.
+sc/trading-emporia https://seshat-db.com/api/sc/trading-emporia/
+Loaded module sc/trading-emporia with 95 entries.
+Initialized SocialComplexityModule.
+sc/enclosures https://seshat-db.com/api/sc/enclosures/
+Loaded module sc/enclosures with 67 entries.
+Initialized SocialComplexityModule.
+sc/length-measurement-systems https://seshat-db.com/api/sc/length-measurement-systems/
+Loaded module sc/length-measurement-systems with 125 entries.
+Initialized SocialComplexityModule.
+sc/area-measurement-systems https://seshat-db.com/api/sc/area-measurement-systems/
+Loaded module sc/area-measurement-systems with 112 entries.
+Initialized SocialComplexityModule.
+sc/volume-measurement-systems https://seshat-db.com/api/sc/volume-measurement-systems/
+Loaded module sc/volume-measurement-systems with 125 entries.
+Initialized SocialComplexityModule.
+sc/weight-measurement-systems https://seshat-db.com/api/sc/weight-measurement-systems/
+Loaded module sc/weight-measurement-systems with 139 entries.
+Initialized SocialComplexityModule.
+sc/time-measurement-systems https://seshat-db.com/api/sc/time-measurement-systems/
+Loaded module sc/time-measurement-systems with 111 entries.
+Initialized SocialComplexityModule.
+sc/geometrical-measurement-systems https://seshat-db.com/api/sc/geometrical-measurement-systems/
+Loaded module sc/geometrical-measurement-systems with 88 entries.
+Initialized SocialComplexityModule.
+sc/other-measurement-systems https://seshat-db.com/api/sc/other-measurement-systems/
+Loaded module sc/other-measurement-systems with 25 entries.
+Initialized SocialComplexityModule.
+sc/debt-and-credit-structures https://seshat-db.com/api/sc/debt-and-credit-structures/
+Loaded module sc/debt-and-credit-structures with 96 entries.
+Initialized SocialComplexityModule.
+sc/stores-of-wealth https://seshat-db.com/api/sc/stores-of-wealth/
+Loaded module sc/stores-of-wealth with 73 entries.
+Initialized SocialComplexityModule.
+sc/sources-of-support https://seshat-db.com/api/sc/sources-of-support/
+Loaded module sc/sources-of-support with 108 entries.
+Initialized SocialComplexityModule.
+sc/occupational-complexities https://seshat-db.com/api/sc/occupational-complexities/
+Loaded module sc/occupational-complexities with 75 entries.
+Initialized SocialComplexityModule.
+sc/special-purpose-houses https://seshat-db.com/api/sc/special-purpose-houses/
+Loaded module sc/special-purpose-houses with 69 entries.
+Initialized SocialComplexityModule.
+sc/other-special-purpose-sites https://seshat-db.com/api/sc/other-special-purpose-sites/
+Loaded module sc/other-special-purpose-sites with 29 entries.
+Initialized SocialComplexityModule.
+sc/largest-communication-distances https://seshat-db.com/api/sc/largest-communication-distances/
+Loaded module sc/largest-communication-distances with 73 entries.
+Initialized SocialComplexityModule.
+sc/fastest-individual-communications https://seshat-db.com/api/sc/fastest-individual-communications/
+Loaded module sc/fastest-individual-communications with 49 entries.
+Initialized SocialComplexityModule.
+wf/long-walls https://seshat-db.com/api/wf/long-walls/
+Loaded module wf/long-walls with 273 entries.
+Initialized WarfareFeaturesModule.
+wf/coppers https://seshat-db.com/api/wf/coppers/
+Loaded module wf/coppers with 338 entries.
+Initialized WarfareFeaturesModule.
+wf/bronzes https://seshat-db.com/api/wf/bronzes/
+Loaded module wf/bronzes with 363 entries.
+Initialized WarfareFeaturesModule.
+wf/irons https://seshat-db.com/api/wf/irons/
+Loaded module wf/irons with 378 entries.
+Initialized WarfareFeaturesModule.
+wf/steels https://seshat-db.com/api/wf/steels/
+Loaded module wf/steels with 375 entries.
+Initialized WarfareFeaturesModule.
+wf/javelins https://seshat-db.com/api/wf/javelins/
+Loaded module wf/javelins with 373 entries.
+Initialized WarfareFeaturesModule.
+wf/atlatls https://seshat-db.com/api/wf/atlatls/
+Loaded module wf/atlatls with 365 entries.
+Initialized WarfareFeaturesModule.
+wf/slings https://seshat-db.com/api/wf/slings/
+Loaded module wf/slings with 368 entries.
+Initialized WarfareFeaturesModule.
+wf/self-bows https://seshat-db.com/api/wf/self-bows/
+Loaded module wf/self-bows with 374 entries.
+Initialized WarfareFeaturesModule.
+wf/composite-bows https://seshat-db.com/api/wf/composite-bows/
+Loaded module wf/composite-bows with 369 entries.
+Initialized WarfareFeaturesModule.
+wf/crossbows https://seshat-db.com/api/wf/crossbows/
+Loaded module wf/crossbows with 349 entries.
+Initialized WarfareFeaturesModule.
+wf/tension-siege-engines https://seshat-db.com/api/wf/tension-siege-engines/
+Loaded module wf/tension-siege-engines with 344 entries.
+Initialized WarfareFeaturesModule.
+wf/sling-siege-engines https://seshat-db.com/api/wf/sling-siege-engines/
+Loaded module wf/sling-siege-engines with 353 entries.
+Initialized WarfareFeaturesModule.
+wf/gunpowder-siege-artilleries https://seshat-db.com/api/wf/gunpowder-siege-artilleries/
+Loaded module wf/gunpowder-siege-artilleries with 362 entries.
+Initialized WarfareFeaturesModule.
+wf/handheld-firearms https://seshat-db.com/api/wf/handheld-firearms/
+Loaded module wf/handheld-firearms with 364 entries.
+Initialized WarfareFeaturesModule.
+wf/war-clubs https://seshat-db.com/api/wf/war-clubs/
+Loaded module wf/war-clubs with 363 entries.
+Initialized WarfareFeaturesModule.
+wf/battle-axes https://seshat-db.com/api/wf/battle-axes/
+Loaded module wf/battle-axes with 364 entries.
+Initialized WarfareFeaturesModule.
+wf/daggers https://seshat-db.com/api/wf/daggers/
+Loaded module wf/daggers with 372 entries.
+Initialized WarfareFeaturesModule.
+wf/swords https://seshat-db.com/api/wf/swords/
+Loaded module wf/swords with 375 entries.
+Initialized WarfareFeaturesModule.
+wf/spears https://seshat-db.com/api/wf/spears/
+Loaded module wf/spears with 375 entries.
+Initialized WarfareFeaturesModule.
+wf/polearms https://seshat-db.com/api/wf/polearms/
+Loaded module wf/polearms with 349 entries.
+Initialized WarfareFeaturesModule.
+wf/dogs https://seshat-db.com/api/wf/dogs/
+Loaded module wf/dogs with 333 entries.
+Initialized WarfareFeaturesModule.
+wf/donkeys https://seshat-db.com/api/wf/donkeys/
+Loaded module wf/donkeys with 354 entries.
+Initialized WarfareFeaturesModule.
+wf/horses https://seshat-db.com/api/wf/horses/
+Loaded module wf/horses with 375 entries.
+Initialized WarfareFeaturesModule.
+wf/camels https://seshat-db.com/api/wf/camels/
+Loaded module wf/camels with 362 entries.
+Initialized WarfareFeaturesModule.
+wf/elephants https://seshat-db.com/api/wf/elephants/
+Loaded module wf/elephants with 344 entries.
+Initialized WarfareFeaturesModule.
+wf/wood-bark-etc https://seshat-db.com/api/wf/wood-bark-etc/
+Loaded module wf/wood-bark-etc with 337 entries.
+Initialized WarfareFeaturesModule.
+wf/leathers https://seshat-db.com/api/wf/leathers/
+Loaded module wf/leathers with 354 entries.
+Initialized WarfareFeaturesModule.
+wf/shields https://seshat-db.com/api/wf/shields/
+Loaded module wf/shields with 374 entries.
+Initialized WarfareFeaturesModule.
+wf/helmets https://seshat-db.com/api/wf/helmets/
+Loaded module wf/helmets with 375 entries.
+Initialized WarfareFeaturesModule.
+wf/breastplates https://seshat-db.com/api/wf/breastplates/
+Loaded module wf/breastplates with 362 entries.
+Initialized WarfareFeaturesModule.
+wf/limb-protections https://seshat-db.com/api/wf/limb-protections/
+Loaded module wf/limb-protections with 367 entries.
+Initialized WarfareFeaturesModule.
+wf/scaled-armors https://seshat-db.com/api/wf/scaled-armors/
+Loaded module wf/scaled-armors with 351 entries.
+Initialized WarfareFeaturesModule.
+wf/laminar-armors https://seshat-db.com/api/wf/laminar-armors/
+Loaded module wf/laminar-armors with 347 entries.
+Initialized WarfareFeaturesModule.
+wf/plate-armors https://seshat-db.com/api/wf/plate-armors/
+Loaded module wf/plate-armors with 358 entries.
+Initialized WarfareFeaturesModule.
+wf/small-vessel-canoe-etc https://seshat-db.com/api/wf/small-vessel-canoe-etc/
+Loaded module wf/small-vessel-canoe-etc with 333 entries.
+Initialized WarfareFeaturesModule.
+wf/merchant-ship-pressed-into-service https://seshat-db.com/api/wf/merchant-ship-pressed-into-service/
+Loaded module wf/merchant-ship-pressed-into-service with 314 entries.
+Initialized WarfareFeaturesModule.
+wf/specialized-military-vessels https://seshat-db.com/api/wf/specialized-military-vessels/
+Loaded module wf/specialized-military-vessels with 333 entries.
+Initialized WarfareFeaturesModule.
+wf/settlement-in-defensive-positions https://seshat-db.com/api/wf/settlement-in-defensive-positions/
+Loaded module wf/settlement-in-defensive-positions with 361 entries.
+Initialized WarfareFeaturesModule.
+wf/wooden-palisades https://seshat-db.com/api/wf/wooden-palisades/
+Loaded module wf/wooden-palisades with 369 entries.
+Initialized WarfareFeaturesModule.
+wf/earth-ramparts https://seshat-db.com/api/wf/earth-ramparts/
+Loaded module wf/earth-ramparts with 368 entries.
+Initialized WarfareFeaturesModule.
+wf/ditches https://seshat-db.com/api/wf/ditches/
+Loaded module wf/ditches with 366 entries.
+Initialized WarfareFeaturesModule.
+wf/moats https://seshat-db.com/api/wf/moats/
+Loaded module wf/moats with 370 entries.
+Initialized WarfareFeaturesModule.
+wf/stone-walls-non-mortared https://seshat-db.com/api/wf/stone-walls-non-mortared/
+Loaded module wf/stone-walls-non-mortared with 363 entries.
+Initialized WarfareFeaturesModule.
+wf/stone-walls-mortared https://seshat-db.com/api/wf/stone-walls-mortared/
+Loaded module wf/stone-walls-mortared with 372 entries.
+Initialized WarfareFeaturesModule.
+wf/fortified-camps https://seshat-db.com/api/wf/fortified-camps/
+Loaded module wf/fortified-camps with 360 entries.
+Initialized WarfareFeaturesModule.
+wf/complex-fortifications https://seshat-db.com/api/wf/complex-fortifications/
+Loaded module wf/complex-fortifications with 367 entries.
+Initialized WarfareFeaturesModule.
+wf/modern-fortifications https://seshat-db.com/api/wf/modern-fortifications/
+Loaded module wf/modern-fortifications with 368 entries.
+Initialized WarfareFeaturesModule.
+wf/chainmails https://seshat-db.com/api/wf/chainmails/
+Loaded module wf/chainmails with 354 entries.
+Initialized WarfareFeaturesModule.
+ec/luxury-precious-metal https://seshat-db.com/api/ec/luxury-precious-metal/
+Loaded module ec/luxury-precious-metal with 162 entries.
+ec/luxury-fabrics https://seshat-db.com/api/ec/luxury-fabrics/
+Loaded module ec/luxury-fabrics with 156 entries.
+Initialized EconomicComplexityModule.
+ec/luxury-manufactured-goods https://seshat-db.com/api/ec/luxury-manufactured-goods/
+Loaded module ec/luxury-manufactured-goods with 140 entries.
+Initialized EconomicComplexityModule.
+ec/luxury-spices-incense-and-dyes https://seshat-db.com/api/ec/luxury-spices-incense-and-dyes/
+Loaded module ec/luxury-spices-incense-and-dyes with 117 entries.
+Initialized EconomicComplexityModule.
+ec/luxury-drink-alcohol https://seshat-db.com/api/ec/luxury-drink-alcohol/
+Loaded module ec/luxury-drink-alcohol with 113 entries.
+Initialized EconomicComplexityModule.
+ec/luxury-glass-goods https://seshat-db.com/api/ec/luxury-glass-goods/
+Loaded module ec/luxury-glass-goods with 99 entries.
+Initialized EconomicComplexityModule.
+ec/luxury-fine-ceramic-wares https://seshat-db.com/api/ec/luxury-fine-ceramic-wares/
+Loaded module ec/luxury-fine-ceramic-wares with 110 entries.
+Initialized EconomicComplexityModule.
+ec/luxury-precious-stone https://seshat-db.com/api/ec/luxury-precious-stone/
+Loaded module ec/luxury-precious-stone with 123 entries.
+ec/luxury-statuary https://seshat-db.com/api/ec/luxury-statuary/
+Loaded module ec/luxury-statuary with 83 entries.
+Initialized EconomicComplexityModule.
+ec/luxury-food https://seshat-db.com/api/ec/luxury-food/
+Loaded module ec/luxury-food with 103 entries.
+Initialized EconomicComplexityModule.
+ec/other-luxury-personal-items https://seshat-db.com/api/ec/other-luxury-personal-items/
+Loaded module ec/other-luxury-personal-items with 2 entries.
+Initialized EconomicComplexityModule.
+Dataset refresh complete. Loaded 138 modules.
+Modules: ['sc/research-assistants', 'sc/polity-territories', 'sc/polity-populations', 'sc/population-of-the-largest-settlements', 'sc/settlement-hierarchies', 'sc/administrative-levels', 'sc/religious-levels', 'sc/military-levels', 'sc/professional-military-officers', 'sc/professional-soldiers', 'sc/professional-priesthoods', 'sc/full-time-bureaucrats', 'sc/examination-systems', 'sc/merit-promotions', 'sc/specialized-government-buildings', 'sc/formal-legal-codes', 'sc/judges', 'sc/courts', 'sc/professional-lawyers', 'sc/irrigation-systems', 'sc/drinking-water-supplies', 'sc/markets', 'sc/food-storage-sites', 'sc/roads', 'sc/bridges', 'sc/canals', 'sc/ports', 'sc/mines-or-quarries', 'sc/mnemonic-devices', 'sc/nonwritten-records', 'sc/written-records', 'sc/scripts', 'sc/non-phonetic-writings', 'sc/phonetic-alphabetic-writings', 'sc/lists-tables-and-classifications', 'sc/calendars', 'sc/sacred-texts', 'sc/religious-literatures', 'sc/practical-literatures', 'sc/histories', 'sc/philosophies', 'sc/scientific-literatures', 'sc/fictions', 'sc/articles', 'sc/tokens', 'sc/precious-metals', 'sc/foreign-coins', 'sc/indigenous-coins', 'sc/paper-currencies', 'sc/couriers', 'sc/postal-stations', 'sc/general-postal-services', 'sc/communal-buildings', 'sc/utilitarian-public-buildings', 'sc/symbolic-buildings', 'sc/entertainment-buildings', 'sc/knowledge-or-information-buildings', 'sc/other-utilitarian-public-buildings', 'sc/special-purpose-sites', 'sc/ceremonial-sites', 'sc/burial-sites', 'sc/trading-emporia', 'sc/enclosures', 'sc/length-measurement-systems', 'sc/area-measurement-systems', 'sc/volume-measurement-systems', 'sc/weight-measurement-systems', 'sc/time-measurement-systems', 'sc/geometrical-measurement-systems', 'sc/other-measurement-systems', 'sc/debt-and-credit-structures', 'sc/stores-of-wealth', 'sc/sources-of-support', 'sc/occupational-complexities', 'sc/special-purpose-houses', 'sc/other-special-purpose-sites', 'sc/largest-communication-distances', 'sc/fastest-individual-communications', 'wf/long-walls', 'wf/coppers', 'wf/bronzes', 'wf/irons', 'wf/steels', 'wf/javelins', 'wf/atlatls', 'wf/slings', 'wf/self-bows', 'wf/composite-bows', 'wf/crossbows', 'wf/tension-siege-engines', 'wf/sling-siege-engines', 'wf/gunpowder-siege-artilleries', 'wf/handheld-firearms', 'wf/war-clubs', 'wf/battle-axes', 'wf/daggers', 'wf/swords', 'wf/spears', 'wf/polearms', 'wf/dogs', 'wf/donkeys', 'wf/horses', 'wf/camels', 'wf/elephants', 'wf/wood-bark-etc', 'wf/leathers', 'wf/shields', 'wf/helmets', 'wf/breastplates', 'wf/limb-protections', 'wf/scaled-armors', 'wf/laminar-armors', 'wf/plate-armors', 'wf/small-vessel-canoe-etc', 'wf/merchant-ship-pressed-into-service', 'wf/specialized-military-vessels', 'wf/settlement-in-defensive-positions', 'wf/wooden-palisades', 'wf/earth-ramparts', 'wf/ditches', 'wf/moats', 'wf/stone-walls-non-mortared', 'wf/stone-walls-mortared', 'wf/fortified-camps', 'wf/complex-fortifications', 'wf/modern-fortifications', 'wf/chainmails', 'ec/luxury-precious-metal', 'ec/luxury-fabrics', 'ec/luxury-manufactured-goods', 'ec/luxury-spices-incense-and-dyes', 'ec/luxury-drink-alcohol', 'ec/luxury-glass-goods', 'ec/luxury-fine-ceramic-wares', 'ec/luxury-precious-stone', 'ec/luxury-statuary', 'ec/luxury-food', 'ec/other-luxury-personal-items']
+Dataset initialized.
+Initialized DeepSeekQuestionGenerationModule
+Loading model deepseek-moe-16b-base from Hugging Face.
+
+====================================
+CPU Time used: 00:00:02
+CPU Percent: 6%
+Memory usage: 486184kb
+Approx Power usage: 0.0
+Walltime usage: 00:01:48
+
+====================================

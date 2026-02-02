@@ -1,0 +1,62 @@
+Traceback (most recent call last):
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 402, in hf_raise_for_status
+    response.raise_for_status()
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/deepseek-moe-16b-base/resolve/main/tokenizer_config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/transformers/utils/hub.py", line 479, in cached_files
+    hf_hub_download(
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1007, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1114, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1655, in _raise_on_head_call_error
+    raise head_call_error
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1543, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1460, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+    response = _request_wrapper(
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 452, in hf_raise_for_status
+    raise _format(RepositoryNotFoundError, message, response) from e
+huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-6980d4db-207542ba0ed4934048497547;bedd92a1-391f-4a20-a469-090b260e12b0)
+
+Repository Not Found for url: https://huggingface.co/deepseek-moe-16b-base/resolve/main/tokenizer_config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+Invalid username or password.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/rds/general/user/cp824/home/neurips_llms/llm-benchmark/scripts/python/deepseek_16b_query.py", line 66, in <module>
+    main()
+  File "/rds/general/user/cp824/home/neurips_llms/llm-benchmark/scripts/python/deepseek_16b_query.py", line 49, in main
+    question_instance: DeepSeekQuestionGenerationModule = DeepSeekQuestionGenerationModule(
+  File "/rds/general/user/cp824/home/neurips_llms/llm-benchmark/llm_benchmark/utils/llm_interface/models/local/deepseek_18b.py", line 27, in __init__
+    self.tokenizer, self.model = self.initialize_client()
+  File "/rds/general/user/cp824/home/neurips_llms/llm-benchmark/llm_benchmark/utils/llm_interface/models/local/deepseek_18b.py", line 32, in initialize_client
+    return self.hugging_face_model_load(self.model_name, trust_remote_code=self.trust_remote_code)
+  File "/rds/general/user/cp824/home/neurips_llms/llm-benchmark/llm_benchmark/utils/llm_interface/query_core.py", line 114, in hugging_face_model_load
+    tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=trust_remote_code)
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 1089, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 921, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/transformers/utils/hub.py", line 322, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/rds/general/user/cp824/home/miniforge3/envs/llm/lib/python3.10/site-packages/transformers/utils/hub.py", line 511, in cached_files
+    raise OSError(
+OSError: deepseek-moe-16b-base is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`
