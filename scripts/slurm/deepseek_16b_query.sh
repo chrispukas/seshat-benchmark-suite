@@ -9,8 +9,7 @@ LOCAL_DIR=/rds/general/user/cp824/home
 module load Python/3.12.3-GCCcore-13.3.0
 
 source "${LOCAL_DIR}/miniforge3/etc/profile.d/conda.sh"
-
-conda init
 conda activate llm
 
-python "${LOCAL_DIR}/neurips_llms/llm-benchmark/scripts/python/deepseek_16b_query.py"
+cd "${LOCAL_DIR}/neurips_llms/llm-benchmark/scripts/python/"
+python "deepseek_16b_query.py"
