@@ -1,4 +1,4 @@
-from typing import Dict, Optional, Any
+from typing import Dict, Optional, Any, List
 from llm_benchmark.utils.enums import Tags, Quality, QuestionType
 
 def quality_remap(quality: str, 
@@ -37,9 +37,7 @@ def question_type_remap(tag: str,
     """Remap tag strings to Tags enum values."""
 
     DEFAULT: QuestionType = QuestionType.MULTIPLE_CHOICE
-    print(endpoint)
-
-    if not endpoint or endpoint == "":
+    if endpoint == "":
         print("No endpoint provided for question type remapping.")
         return DEFAULT
     
@@ -54,3 +52,13 @@ def question_type_remap(tag: str,
         return DEFAULT
     
     return QuestionType.RANGE
+
+
+def collapse_prompt(messages: List[Dict[str, str]]) -> str:
+    text = ""
+    for msg in messages:
+        role = msg.get("role", "").upper()
+        content = msg.get("content", "")
+        text += f"{role}:\n{content}\n\n"
+    text += "ASSISTANT:\n"
+    return text

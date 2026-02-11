@@ -5,7 +5,7 @@ from typing import Dict, List, Any
 def range_message(prompt: dict) -> list[dict[str, str]]:
     RANGE_INSTRUCTIONS = """
     Your task is to create a challenging yet well-defined historical exam question based on a variable definition.
-    Follow the following instructions:
+    Follow the rules below, and return ONLY the final question template. Do not include explanations, roles, metadata, or reasoning.
 
     1. Start with a concise explanation of the variable's definition, strictly adhering to the provided description
     2. Variables will always relate to a range, for example the range of area a polity controlled in a certain span of time
@@ -78,7 +78,8 @@ def range_message(prompt: dict) -> list[dict[str, str]]:
 def multichoice_question(params: Dict[str, Any]) -> List[Dict[str, str]]:
     ABS_PRES_INSTRUCTIONS = """
     Your task is to create a challenging yet well-defined historical exam question based on a variable definition. Follow these requirements:
-
+    Follow the rules below, and return ONLY the final question template. Do not include explanations, roles, metadata, or reasoning.
+    
     1. Start with a concise explanation of the variable's definition, strictly adhering to the provided description
     2. Formulate a question template where <polity> marks the location for polity names (e.g., "the Papal States")
     3. Include temporal scope markers: <time-start> and <time-end>

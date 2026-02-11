@@ -45,6 +45,7 @@ class QuestionGenerationModule():
             return None
 
         sub_dir = DatasetModule.get_endpoint().split("/")[-2]
+        print(f"Generating questions for dataset at endpoint: {sub_dir}")
         dataset: pl.DataFrame = DatasetModule.get_entries()
 
         output_df: pl.DataFrame = pl.DataFrame({})
@@ -54,7 +55,7 @@ class QuestionGenerationModule():
             if not self.check_if_question_in_filter(row, params):
                 print("Skipping question due to filter settings.")
                 continue
-
+            
             question_type: QuestionType = util.question_type_remap(
                 row.get("question_type", None), 
                 row=row,
@@ -78,8 +79,9 @@ class QuestionGenerationModule():
                              temperature=params.get("temperature", 0.7),
                              max_tokens=params.get("max_tokens", 150)
                              )
+            print("Query Output:", output)
             question_outputs.append({
-                "row": row, 
+                "row": str(row), 
                 "output": output
                 })
 
@@ -106,17 +108,27 @@ class QuestionGenerationModule():
     
     def hugging_face_model_load(self,
                                 model_name: str,
-                                trust_remote_code: Optional[bool] = False
+                                trust_remote_code: Optional[bool] = False,
+                                local: Optional[bool] = True
                                 ) -> Any:
         
-        print(f"Loading model {model_name} from Hugging Face.")
+        cache="/rds/general/user/cp824/ephemeral/huggingface_cache"
+
+        print(f"Loading model {model_name}.")
         
-        tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=trust_remote_code)
+        tokenizer = AutoTokenizer.from_pretrained(model_name, 
+                                                  trust_remote_code=trust_remote_code,
+                                                  local_files_only=local,
+                                                  cache_dir=cache,
+                                                  )
         print("Tokenizer loaded successfully.")
         model = AutoModelForCausalLM.from_pretrained(model_name, 
-                                                     torch_dtype=torch.bfloat16, 
+                                                     torch_dtype="auto", 
                                                      device_map="auto", 
-                                                     trust_remote_code=trust_remote_code)
+                                                     trust_remote_code=trust_remote_code,
+                                                     cache_dir=cache,
+                                                     local_files_only=local
+                                                     )
         model.generation_config = GenerationConfig.from_pretrained(model_name)
         model.generation_config.pad_token_id = model.generation_config.eos_token_id
 

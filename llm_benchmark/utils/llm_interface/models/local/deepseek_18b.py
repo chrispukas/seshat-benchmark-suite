@@ -7,7 +7,7 @@ from llm_benchmark import config as cfg
 
 from llm_benchmark.utils.llm_interface.query_core import QuestionGenerationModule
 from llm_benchmark.utils.llm_interface import generation_utils as gen_utils 
-
+from llm_benchmark.utils import utility as util
 
 
 class DeepSeekQuestionGenerationModule(QuestionGenerationModule):
@@ -24,12 +24,13 @@ class DeepSeekQuestionGenerationModule(QuestionGenerationModule):
 
         self.model_name = model_name
         self.trust_remote_code = trust_remote_code
+        self.local = local
         self.tokenizer, self.model = self.initialize_client()
 
 
     def initialize_client(self, 
                           ) -> Any:
-        return self.hugging_face_model_load(self.model_name, trust_remote_code=self.trust_remote_code)
+        return self.hugging_face_model_load(self.model_name, local=self.local, trust_remote_code=self.trust_remote_code)
     
     def query_model(self, 
                     message: Dict[str, Any],
@@ -39,10 +40,8 @@ class DeepSeekQuestionGenerationModule(QuestionGenerationModule):
         
         print(f"Querying DeepSeek model, message: {message}")
 
-        return ""
-        
-        text = "An attention function can be described as mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. The output is"
-        inputs = self.tokenizer(text, return_tensors="pt")
+        prompt = util.collapse_prompt(message)
+        inputs = self.tokenizer(prompt, return_tensors="pt", truncation=True)
         outputs = self.model.generate(**inputs.to(self.model.device), 
                                       max_new_tokens=max_tokens, 
                                       temperature=temperature)

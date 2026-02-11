@@ -18,7 +18,7 @@ from llm_benchmark.utils.llm_interface.models.local.deepseek_18b import DeepSeek
 
 def main():
     parser = argparse.ArgumentParser(description="Query DeepSeek 16B Model")
-    parser.add_argument("--model_name", type=str, default="deepseek-moe-16b-base", help="Name of the DeepSeek model to use")
+    parser.add_argument("--model_name", type=str, default="deepseek-ai/deepseek-moe-16b-base", help="Name of the DeepSeek model to use")
     args = parser.parse_args()
 
 
@@ -54,9 +54,9 @@ def main():
 
     print("DeepSeekQuestionGenerationModule initialized.")
     question_instance.generate_questions(
-        dataset=ds.dataset_modules["wf/atlatls"],
+        DatasetModule=ds.dataset_modules["wf/atlatls"],
         params={"max_new_tokens": 256, "temperature": 0.7},
-        output_path="/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/29_01_2026_1/run 1_deepseek/deepseek_questions.csv"
+        output_path="/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/10_02_2026_1/run 1_deepseek/deepseek_questions.csv"
     )
 
     print("Question generation completed.")
