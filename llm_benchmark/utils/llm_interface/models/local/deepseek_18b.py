@@ -38,7 +38,9 @@ class DeepSeekQuestionGenerationModule(QuestionGenerationModule):
                     max_tokens: int = 300
                     ) -> str:
         
+        print(f" /// STARTOF ///")
         print(f"Querying DeepSeek model, message: {message}")
+        print(f" /// ENDOF ///")
 
         prompt = util.collapse_prompt(message)
         inputs = self.tokenizer(prompt, return_tensors="pt", truncation=True)
@@ -46,4 +48,11 @@ class DeepSeekQuestionGenerationModule(QuestionGenerationModule):
                                       max_new_tokens=max_tokens, 
                                       temperature=temperature)
 
-        return self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+        outputs: str = self.tokenizer.decode(outputs[0], skip_special_tokens=True); 
+
+        print(f" /// STARTOF ///")
+        print(f"Output: {outputs}")
+        print(f" /// ENDOF ///")
+
+        return outputs

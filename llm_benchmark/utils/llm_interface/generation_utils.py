@@ -142,9 +142,9 @@ def multichoice_question(params: Dict[str, Any]) -> List[Dict[str, str]]:
         },
         {
             "role": "user",
-            "content": f"",
-            "variable name": params.get("full_name", "Unknown Variable"),
-            "variable description": params.get("description", "No description available."),
+            "content": f"""
+                "variable name": {params.get("full_name", "Unknown Variable")},
+                "variable description": {params.get("description", "No description available.")},""",
         },
     ]
     pass
