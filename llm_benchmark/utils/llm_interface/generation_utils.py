@@ -101,6 +101,10 @@ def multichoice_question(params: Dict[str, Any]) -> List[Dict[str, str]]:
     CHAIN = "During the period from <time-start> to <time-end>, was chainmail, defined as armor made of small metal rings linked together in a pattern to form a mesh, present or absent as a military technology in the warfare practices of '<polity>'? Provide your answer strictly as either 'present' or 'absent'."
     CHAIN_EXPLANATION = "The absence or presence of chainmail as a military technology used in warfare. We’re using a broad definition of chainmail. Habergeon was the word used to describe the Chinese version and that would qualify as chainmail. Armor that is made of small metal rings linked together in a pattern to form a mesh."
 
+    variable_name = params.get("full_name", "Unknown")
+    if variable_name.lower() == "unknown":
+        variable_name = params.get("short_name", "Unknown")
+
     return [
         {
             "role": "system",
@@ -133,8 +137,8 @@ def multichoice_question(params: Dict[str, Any]) -> List[Dict[str, str]]:
         {
             "role": "user",
             "content": f"""
-        Variable name: chain
-        Variable description: {CHAIN_EXPLANATION}""",
+            Variable name: chain
+            Variable description: {CHAIN_EXPLANATION}""",
         },
         {
             "role": "system",
@@ -143,7 +147,7 @@ def multichoice_question(params: Dict[str, Any]) -> List[Dict[str, str]]:
         {
             "role": "user",
             "content": f"""
-                "variable name": {params.get("full_name", "Unknown Variable")},
+                "variable name": {variable_name},
                 "variable description": {params.get("description", "No description available.")},""",
         },
     ]
@@ -159,12 +163,12 @@ def range_question(params: Dict[str, Any]) -> List[Dict[str, str]]:
 def remap_question_row(row: Dict[str, Any], endpoint: str) -> Dict[str, Any]:
     """Remap question row based on endpoint."""
     remapped_row: Dict[str, Any] = {}
-    remapped_row["polity"] = row.get("polity_name", "Unknown Polity")
-    remapped_row["short_name"] = row.get("name", "Unknown Short Name")
-    remapped_row["full_name"] = row.get("full_name", "Unknown Full Name")
-    remapped_row["time_start"] = row.get(f"{endpoint}_from", "Unknown Start Time")
-    remapped_row["time_end"] = row.get(f"{endpoint}_to", "Unknown End Time")
-    remapped_row["description"] = row.get("description", "No description available.")
-    remapped_row["data_unit"] = row.get("data_unit", "Not applicable.")
+    remapped_row["polity"] = row.get("polity_name", "Unknown")
+    remapped_row["short_name"] = row.get("name", "Unknown")
+    remapped_row["full_name"] = row.get("full_name", "Unknown")
+    remapped_row["time_start"] = row.get(f"{endpoint}_from", "Unknown")
+    remapped_row["time_end"] = row.get(f"{endpoint}_to", "Unknown")
+    remapped_row["description"] = row.get("description", "Unknown")
+    remapped_row["data_unit"] = row.get("data_unit", "Unknown")
 
     return remapped_row

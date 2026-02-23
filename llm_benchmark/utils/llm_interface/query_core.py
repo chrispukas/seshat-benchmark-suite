@@ -81,8 +81,9 @@ class QuestionGenerationModule():
                              )
             print("Query Output:", output)
             question_outputs.append({
-                "row": str(row), 
-                "output": output
+                "endpoint_identifier": DatasetModule.get_endpoint(), 
+                "entry_idx": idx,
+                "output": output,
                 })
 
             if question_outputs and len(question_outputs) > 10:

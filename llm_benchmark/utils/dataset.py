@@ -5,7 +5,7 @@ import polars as pl
 
 import llm_benchmark.utils.seshat_requests as seshat_requests
 
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple, Set
 from llm_benchmark.utils.enums import DatasetType
 
 
@@ -22,6 +22,8 @@ class Dataset():
 
         self.identifers = list(identifiers_endpoints.keys())
         self.endpoints = list(identifiers_endpoints.values())
+        
+        self.endpoints_by_parent, self.parent_identifiers = self.parent_identifier_mapping()
 
         self.module_dir = module_dir
         self.main_dir = main_dir
@@ -41,6 +43,17 @@ class Dataset():
 
         self.refresh(override=self.override, 
                      polity_mapping=self.polity_mapping)
+        
+    def parent_identifier_mapping(self
+                                  ) -> Tuple[Dict[str, List[str]], Set[str]]:
+        """Create a mapping of parent identifiers to their corresponding full identifiers."""
+        mapping: Dict[str, List[str]] = {}
+        parent_identifiers: Set[str] = set()
+        for identifier in self.identifers:
+            parent_id = identifier.split("/")[0]
+            parent_identifiers.add(parent_id)
+            mapping[parent_id] = mapping.get(parent_id, []) + [identifier]
+        return mapping, parent_identifiers
         
     def stratify_by_type(self,
                          dataset_type: DatasetType
@@ -171,7 +184,12 @@ class DatasetModule():
     def get_endpoint(self) -> str:
         return self.seshat_url
     def get_seshat_identifier(self) -> str:
-        return self.seshat_identifiers
+        return self.seshat_identifier
+    def get_identifiers_by_parent(self, parent_identifier: str) -> Dict[str, List[str]]:
+        res: List[str] = self.endpoints_by_parent.get(parent_identifier, [])
+        if not res:
+            print(f"No identifiers found for parent identifier {parent_identifier}. Available parent identifiers: {self.parent_identifiers}")
+        return res
     
     def sanitize_row(self,
                     row: Dict[str, Any]
