@@ -11,15 +11,15 @@ import llm_benchmark.utils.seshat_requests as seshat_requests
 
 import llm_benchmark.config as config
 
-from llm_benchmark.utils.llm_interface.models.local.qwen import QwenQuestionGenerationModule
+from llm_benchmark.utils.llm_interface.models.remote.olmo import OlmoQuestionGenerationModule
 
 
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Query Qwen Model")
-    parser.add_argument("--model_name", type=str, default="Qwen/Qwen-7B-Chat", help="Name of the Qwen model to use")
-    parser.add_argument("--save_path", type=str, default="/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/10_02_2026_1/run 1_qwen/", help="Path to save the generated questions")
+    parser = argparse.ArgumentParser(description="Query Olmo Model")
+    parser.add_argument("--model_name", type=str, default="allenai/Olmo-3-1025-7B", help="Name of the Olmo model to use")
+    parser.add_argument("--save_path", type=str, default="/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/02_03_2026_1/run 1_olmo/", help="Path to save the generated questions")
     args = parser.parse_args()
 
     polity_mapping: Dict[str, str] = config.polity_mapping
@@ -42,13 +42,14 @@ def main():
         polity_mapping=polity_mapping
     )
 
-    question_instance: QwenQuestionGenerationModule = QwenQuestionGenerationModule(
-        model_name="Qwen/Qwen-7B-Chat",
+    question_instance: OlmoQuestionGenerationModule = OlmoQuestionGenerationModule(
+        model_name=args.model_name,
         local = True,
         trust_remote_code=True
     )
 
     wf_identifiers: List[str] = ds.get_identifiers_by_parent("wf")
+    wf_identifiers = [wf_identifiers[0]]
 
     for identifier in wf_identifiers:
         print(f"Processing identifier: {identifier}")

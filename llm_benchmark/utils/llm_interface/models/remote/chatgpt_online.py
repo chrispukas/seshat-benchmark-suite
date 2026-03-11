@@ -13,8 +13,6 @@ from llm_benchmark.utils.llm_interface.query_core import QuestionGenerationModul
 
 from llm_benchmark.utils.llm_interface import generation_utils as gen_utils 
 
-
-
 class ChatGPTQuestionGenerationModule(QuestionGenerationModule):
     def __init__(self,
                  model_name: str = "gpt-3.5-turbo",

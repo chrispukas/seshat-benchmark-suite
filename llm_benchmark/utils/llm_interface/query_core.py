@@ -1,3 +1,4 @@
+import os
 import torch
 import polars as pl
 
@@ -10,7 +11,6 @@ from llm_benchmark.utils import utility as util
 from llm_benchmark.utils.dataset import DatasetModule
 from llm_benchmark.utils.enums import DatasetType, Tags, Quality, QuestionType
 from llm_benchmark.utils.llm_interface import generation_utils as gen_utils 
-
 
 
 class QuestionGenerationModule():
@@ -43,6 +43,10 @@ class QuestionGenerationModule():
         if DatasetModule.get_endpoint() is None:
             print("No Endpoint Specified")
             return None
+
+        output_dirname: str = os.path.dirname(output_path)
+        os.makedirs(output_dirname, exist_ok=True)
+
 
         sub_dir = DatasetModule.get_endpoint().split("/")[-2]
         print(f"Generating questions for dataset at endpoint: {sub_dir}")
@@ -110,27 +114,40 @@ class QuestionGenerationModule():
     def hugging_face_model_load(self,
                                 model_name: str,
                                 trust_remote_code: Optional[bool] = False,
-                                local: Optional[bool] = True
-                                ) -> Any:
-        
-        cache="/rds/general/user/cp824/ephemeral/huggingface_cache"
-
+                                local: Optional[bool] = True,
+                                cache_dir: Optional[str] = "/rds/general/user/cp824/ephemeral/huggingface_cache"
+                                ) -> Tuple[AutoTokenizer, AutoModelForCausalLM]:        
         print(f"Loading model {model_name}.")
         
         tokenizer = AutoTokenizer.from_pretrained(model_name, 
                                                   trust_remote_code=trust_remote_code,
                                                   local_files_only=local,
-                                                  cache_dir=cache,
+                                                  cache_dir=cache_dir,
                                                   )
         print("Tokenizer loaded successfully.")
         model = AutoModelForCausalLM.from_pretrained(model_name, 
                                                      torch_dtype="auto", 
                                                      device_map="auto", 
                                                      trust_remote_code=trust_remote_code,
-                                                     cache_dir=cache,
+                                                     cache_dir=cache_dir,
                                                      local_files_only=local
                                                      )
         model.generation_config = GenerationConfig.from_pretrained(model_name)
         model.generation_config.pad_token_id = model.generation_config.eos_token_id
 
         return tokenizer, model
+
+
+class EvaluationModule():
+    def __init__(self):
+        print(f"Initialized {self.__class__.__name__}")
+        self.DatasetModule = DatasetModule
+
+    def evaluate(self, 
+                 model: QuestionGenerationModule, 
+                 dataframe: pl.DataFrame) -> pl.DataFrame:
+        raise NotImplementedError("This method should be overridden by subclasses.")
+
+    def load_dataframe(self, path: str) -> pl.DataFrame:
+        print(f"Loading dataframe from {path}")
+        return pl.read_csv(path)

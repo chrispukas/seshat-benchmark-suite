@@ -24,6 +24,7 @@ class Dataset():
         self.endpoints = list(identifiers_endpoints.values())
         
         self.endpoints_by_parent, self.parent_identifiers = self.parent_identifier_mapping()
+        print(self.get_identifiers_by_parent("wf"))
 
         self.module_dir = module_dir
         self.main_dir = main_dir
@@ -111,6 +112,14 @@ class Dataset():
                                   dataset_type: DatasetType
                                   ) -> List[str]:
         return self.categorized_endpoints[dataset_type]
+    
+    def get_identifiers_by_parent(self, parent_identifier: str) -> Dict[str, List[str]]:
+        res: List[str] = self.endpoints_by_parent.get(parent_identifier, [])
+        if not res:
+            print(f"No identifiers found for parent identifier {parent_identifier}. Available parent identifiers: {self.parent_identifiers}")
+        return res
+
+
 
 class DatasetModule():
     def __init__(self, 
@@ -185,11 +194,6 @@ class DatasetModule():
         return self.seshat_url
     def get_seshat_identifier(self) -> str:
         return self.seshat_identifier
-    def get_identifiers_by_parent(self, parent_identifier: str) -> Dict[str, List[str]]:
-        res: List[str] = self.endpoints_by_parent.get(parent_identifier, [])
-        if not res:
-            print(f"No identifiers found for parent identifier {parent_identifier}. Available parent identifiers: {self.parent_identifiers}")
-        return res
     
     def sanitize_row(self,
                     row: Dict[str, Any]
@@ -202,9 +206,6 @@ class DatasetModule():
 
 
         pass
-
-
-
 
 # -------------------------------
 # ---- MODULES FOR EACH TYPE ----

@@ -2,26 +2,38 @@ from llm_benchmark.utils.utility import tag_remap, quality_remap, question_type_
 from llm_benchmark.utils.enums import DatasetType, Tags, Quality, QuestionType
 from typing import Dict, Any
 
+# --------------------------
+# --- GENERATION MAPPING ---
+# --------------------------
 
 
-
-
-
-question_generation_params: Dict[str, Any] = \
+hydrate_to_real_mapping: Dict[str, str] = \
     {
-    "temperature": 0.7,
-    "max_tokens": 150,
-    
-    "tag_filter": frozenset([Tags.CONFIDENT]),
-    "quality_filter": frozenset([Quality.UNKNOWN]),
-    "question_type_filter": frozenset([QuestionType.UNKNOWN, QuestionType.MULTIPLE_CHOICE]) 
+        "<time-start>": "start_time",
+        "<time-end>": "end_time",
+        "<polity>": "polity",
+
     }
 
 
 
-# -----------------
-# --- CONSTANTS ---
-# -----------------
+# --------------------------
+# --- GENERATION MAPPING ---
+# --------------------------
+
+question_generation_params: Dict[str, Any] = \
+    {
+        "temperature": 0.7,
+        "max_tokens": 150,
+        
+        "tag_filter": frozenset([Tags.CONFIDENT]),
+        "quality_filter": frozenset([Quality.UNKNOWN]),
+        "question_type_filter": frozenset([QuestionType.UNKNOWN, QuestionType.MULTIPLE_CHOICE]) 
+    }
+
+# ------------------------
+# --- DATABASE MAPPING ---
+# ------------------------
 
 params_to_question_mapping: Dict[str, str] = \
     {
