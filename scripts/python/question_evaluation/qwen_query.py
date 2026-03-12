@@ -3,7 +3,7 @@
 import argparse
 import os
 import subprocess
-
+import polars as pl
 
 from typing import Dict, List, Optional, Any, Tuple
 
@@ -13,6 +13,7 @@ import llm_benchmark.utils.seshat_requests as seshat_requests
 import llm_benchmark.config as config
 
 from llm_benchmark.utils.llm_interface.models.local.qwen import QwenInterfaceModule
+import llm_benchmark.utils.llm_interface.evaluation_utils as eutils
 
 
 
@@ -50,16 +51,21 @@ def main():
     )
 
     wf_identifiers: List[str] = ds.get_identifiers_by_parent("wf")
-    out_dir: str = os.path.join(args.save_path, "wf_hydrated")
-    os.makedirs(out_dir, exist_ok=True)
-
+    hydrated_dir: str = os.path.join(args.save_path, "wf_hydrated")
+    questions_dir: str = os.path.join(args.save_path, "wf_answers")
+    os.makedirs(hydrated_dir, exist_ok=True)
+    os.makedirs(questions_dir, exist_ok=True)
 
     for identifier in wf_identifiers:
         print(f"Processing identifier: {identifier}")
+        hydrated_df: pl.DataFrame = eutils.hydrate(ds, 
+                                           questions_dir,
+                                           link_to_dataset=True,)
+
         question_instance.respond_to_questions(
             DatasetModule = ds.dataset_modules[identifier],
             params = {"max_new_tokens": 512, "temperature": 0.7},
-            output_path = os.path.join(out_dir, f"{identifier.replace('/', '_')}_questions.csv"),
+            output_path = os.path.join(questions_dir, f"{identifier.replace('/', '_')}_questions.csv"),
         )
 
 
