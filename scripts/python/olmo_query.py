@@ -11,7 +11,7 @@ import llm_benchmark.utils.seshat_requests as seshat_requests
 
 import llm_benchmark.config as config
 
-from llm_benchmark.utils.llm_interface.models.remote.olmo import OlmoQuestionGenerationModule
+from llm_benchmark.utils.llm_interface.models.remote.olmo import OlmoInterfaceModule
 
 
 
@@ -42,7 +42,7 @@ def main():
         polity_mapping=polity_mapping
     )
 
-    question_instance: OlmoQuestionGenerationModule = OlmoQuestionGenerationModule(
+    question_instance: OlmoInterfaceModule = OlmoInterfaceModule(
         model_name=args.model_name,
         local = True,
         trust_remote_code=True

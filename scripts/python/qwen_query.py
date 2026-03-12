@@ -11,7 +11,7 @@ import llm_benchmark.utils.seshat_requests as seshat_requests
 
 import llm_benchmark.config as config
 
-from llm_benchmark.utils.llm_interface.models.local.qwen import QwenQuestionGenerationModule
+from llm_benchmark.utils.llm_interface.models.local.qwen import QwenInterfaceModule
 
 
 
@@ -42,7 +42,7 @@ def main():
         polity_mapping=polity_mapping
     )
 
-    question_instance: QwenQuestionGenerationModule = QwenQuestionGenerationModule(
+    question_instance: QwenInterfaceModule = QwenInterfaceModule(
         model_name="Qwen/Qwen-7B-Chat",
         local = True,
         trust_remote_code=True

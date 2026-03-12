@@ -1,21 +1,31 @@
 from llm_benchmark.utils.utility import tag_remap, quality_remap, question_type_remap
 from llm_benchmark.utils.enums import DatasetType, Tags, Quality, QuestionType
-from typing import Dict, Any
+from typing import Dict, Any, Tuple
 
 # --------------------------
 # --- GENERATION MAPPING ---
 # --------------------------
 
 
-hydrate_to_real_mapping: Dict[str, str] = \
-    {
-        "<time-start>": "start_time",
-        "<time-end>": "end_time",
-        "<polity>": "polity",
+def format_year(value: Any) -> str:
+    """Format a year value, handling BCE/CE if necessary."""
+    if isinstance(value, int):
+        if value < 0:
+            return f"{abs(value)} BCE"
+        else:
+            return f"{value} CE"
+    else:
+        raise ValueError(f"Unsupported type for year formatting: {type(value)}")
 
+
+
+
+hydrate_to_real_mapping: Dict[str, Tuple[str, Any]] = \
+    { # "to_hydrate": ("real_key_in_dataset", optional_formatting_function)
+        "<time-start>": ("start_year", format_year),
+        "<time-end>": ("end_year", format_year),
+        "<polity>": ("long_name", None),
     }
-
-
 
 # --------------------------
 # --- GENERATION MAPPING ---

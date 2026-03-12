@@ -2,6 +2,7 @@ import os
 import torch
 import polars as pl
 
+from tqdm import tqdm
 from typing import Any, Dict, List, Optional, Tuple
 from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 
@@ -10,26 +11,14 @@ from llm_benchmark.config import params_to_question_mapping
 from llm_benchmark.utils import utility as util
 from llm_benchmark.utils.dataset import DatasetModule
 from llm_benchmark.utils.enums import DatasetType, Tags, Quality, QuestionType
-from llm_benchmark.utils.llm_interface import generation_utils as gen_utils 
+from llm_benchmark.utils.llm_interface.templates.generation_templates import generation_utils as gen_utils 
+from llm_benchmark.utils.llm_interface.templates.evaluation_templates import evaluation_utils as eval_utils 
 
 
-class QuestionGenerationModule():
+class LLMInterfaceModule():
     def __init__(self):
         print(f"Initialized {self.__class__.__name__}")
         pass
-    
-    def check_if_question_in_filter(self,
-                                    question: Dict[str, Any],
-                                    params: Dict[str, Any]
-                                    ) -> bool:
-        """Check if a question matches the filter parameters."""
-        for param_key, (question_key, remap) in params_to_question_mapping.items(): 
-            param_item: List[Any] = params.get(param_key, [])
-            question_item: Any = remap(question.get(question_key, None), question)
-
-            if param_item and question_item not in param_item:
-                return False
-        return True
     
     def generate_questions(self, 
                            DatasetModule: DatasetModule,
@@ -53,9 +42,9 @@ class QuestionGenerationModule():
         dataset: pl.DataFrame = DatasetModule.get_entries()
 
         output_df: pl.DataFrame = pl.DataFrame({})
-        question_outputs: List[Any] = []
+        question_outputs: List[Any] = [""] * dataset.height
 
-        for idx, row in enumerate(dataset.iter_rows(named=True)):
+        for idx, row in tqdm(enumerate(dataset.iter_rows(named=True))):
             if not self.check_if_question_in_filter(row, params):
                 print("Skipping question due to filter settings.")
                 continue
@@ -84,24 +73,80 @@ class QuestionGenerationModule():
                              max_tokens=params.get("max_tokens", 150)
                              )
             print("Query Output:", output)
-            question_outputs.append({
+            question_outputs[idx] = {
                 "endpoint_identifier": DatasetModule.get_endpoint(), 
                 "entry_idx": idx,
                 "output": output,
-                })
+                }
+        
+        if not question_outputs:
+            print(f"Failed to generate questions for {DatasetModule.get_endpoint()}")
+            return
+        
+        self.write_outputs(question_outputs, output_df)
 
-            if question_outputs and len(question_outputs) > 10:
-                output_df = output_df.vstack(pl.DataFrame(question_outputs))
-                question_outputs = []
+    def respond_to_questions(self,
+                            DatasetModule: DatasetModule,
+                            params: Optional[Dict[str, Any]] = None,
+                            output_path: str = ""
+                            ) -> None:
+        if params is None:
+            print("Warning: No parameters provided for question generation. Using default settings.")
+            params = {}
         
-        if question_outputs:
-            output_df = output_df.vstack(pl.DataFrame(question_outputs))
+        ds_endpoint: str = DatasetModule.get_endpoint()
+        if ds_endpoint is None:
+            print("No Endpoint Specified")
+            return None    
+            
+
+        question_df: pl.DataFrame = DatasetModule.get_questions()
+        if question_df is None:
+            print(f"No questions linked to dataset {ds_endpoint}.")
+            return None
         
+        output_dirname: str = os.path.dirname(output_path)
+        os.makedirs(output_dirname, exist_ok=True)
+
+        output_df: pl.DataFrame = pl.DataFrame({})
+        question_outputs: List[Any] = [""] * question_df.height 
         
+        for idx, row in enumerate(question_df.iter_rows(named=True)):
+            question: str = row.get("output", "")
+            if not question:
+                print(f"No question found in row {idx}, skipping.")
+                continue
+            prompt: Dict[str, Any] = eval_utils.multichoice(question)
+            flatttened_prompt: str = self.flatten_prompt(prompt)
+            output: str = self.query_model(flatttened_prompt,
+                             temperature=params.get("temperature", 0.7),
+                             max_tokens=params.get("max_tokens", 150)
+                             )
+            print("Query Output:", output)
+            question_outputs[idx] = {
+                "endpoint_identifier": ds_endpoint, 
+                "entry_idx": idx,
+                "output": output,
+                }
+        
+        self.write_outputs(question_outputs, output_path=output_path)
+
+    def write_outputs(self, 
+                      raw: Dict[str, Any], 
+                      output_path: str
+                      ) -> None:
+        """Writes the generated questions to a CSV file."""
+        if not output_path:
+            print(f"Output path doesnt exist.")
+            return
+        if not raw:
+            print(f"Failed to generate questions.")
+            return
+        
+        output_df = output_df.vstack(pl.DataFrame(raw))
         output_df.write_csv(output_path)
         print(f"Questions generated and saved to {output_path}")
-
-
+        
 
     def query_model(self, 
                     message: Dict[str, Any],
@@ -109,8 +154,19 @@ class QuestionGenerationModule():
                     max_tokens: int = 150
                     ) -> str:
         raise NotImplementedError("This method should be overridden by subclasses.")
+        
+    
+    def flatten_prompt(self, messages: List[Dict[str, str]]) -> str:
+        prompt = ""
+        for msg in messages:
+            role = msg.get("role", "").upper()
+            content = msg.get("content", "")
+            prompt += f"{role}:\n{content}\n\n"
+        prompt += "ASSISTANT:\n"
+        return prompt
 
     
+    # Utility
     def hugging_face_model_load(self,
                                 model_name: str,
                                 trust_remote_code: Optional[bool] = False,
@@ -136,18 +192,26 @@ class QuestionGenerationModule():
         model.generation_config.pad_token_id = model.generation_config.eos_token_id
 
         return tokenizer, model
+    
+    def pull_remote_weights(self,
+                            model_name: str,
+                            trust_remote_code: Optional[bool] = False,
+                            cache_dir: Optional[str] = "/rds/general/user/cp824/ephemeral/huggingface_cache",
+                            ) -> None:
+        self.hugging_face_model_load(model_name=model_name,
+                                     trust_remote_code=trust_remote_code, 
+                                     local=False,
+                                     cache_dir=cache_dir,)
+        
+    def check_if_question_in_filter(self,
+                                    question: Dict[str, Any],
+                                    params: Dict[str, Any]
+                                    ) -> bool:
+        """Check if a question matches the filter parameters."""
+        for param_key, (question_key, remap) in params_to_question_mapping.items(): 
+            param_item: List[Any] = params.get(param_key, [])
+            question_item: Any = remap(question.get(question_key, None), question)
 
-
-class EvaluationModule():
-    def __init__(self):
-        print(f"Initialized {self.__class__.__name__}")
-        self.DatasetModule = DatasetModule
-
-    def evaluate(self, 
-                 model: QuestionGenerationModule, 
-                 dataframe: pl.DataFrame) -> pl.DataFrame:
-        raise NotImplementedError("This method should be overridden by subclasses.")
-
-    def load_dataframe(self, path: str) -> pl.DataFrame:
-        print(f"Loading dataframe from {path}")
-        return pl.read_csv(path)
+            if param_item and question_item not in param_item:
+                return False
+        return True

@@ -5,14 +5,14 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from llm_benchmark import config as cfg
 
-from llm_benchmark.utils.llm_interface.query_core import QuestionGenerationModule
+from llm_benchmark.utils.llm_interface.query_core import LLMInterfaceModule
 from llm_benchmark.utils.llm_interface import generation_utils as gen_utils 
 from llm_benchmark.utils import utility as util
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 
-class OlmoQuestionGenerationModule(QuestionGenerationModule):
+class OlmoInterfaceModule(LLMInterfaceModule):
     def __init__(self,
                  model_name: str = "allenai/Olmo-3-1025-7B",
                  trust_remote_code: Optional[bool] = True,

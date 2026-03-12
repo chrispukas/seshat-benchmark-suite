@@ -2,13 +2,80 @@ import polars as pl
 
 from typing import Any, Dict, List, Optional, Tuple
 
-
-from llm_benchmark.utils.dataset import Dataset
+from llm_benchmark.utils.dataset import Dataset, DatasetModule
 from llm_benchmark import config
 
 
-def hydrate(Dataset: Dataset, 
-            questions: str) -> pl.DataFrame:
-    
-    return
 
+
+# --------------------
+# --- METRIC UTILS ---
+# --------------------
+
+
+
+
+
+# -----------------------
+# --- HYDRATION UTILS ---
+# -----------------------
+
+def hydrate(Dataset: Dataset, 
+            questions_dir: str,
+            write_path: Optional[str] = None,
+            link_to_dataset: Optional[bool] = False) -> pl.DataFrame:
+    """Hydrate the question entries in the questions dataframe with the corresponding dataset entries."""
+    df: pl.DataFrame = pl.read_csv(questions_dir)
+    df = df.with_columns(
+                        pl.col("endpoint_identifier")
+                                .str.replace("https://seshat-db.com/api/", "")
+                                .str.strip_suffix("/")
+                        )
+
+    unique_endpoints: List[str] = df["endpoint_identifier"].unique().to_list()
+    if len(unique_endpoints) > 1:
+        print(f"Multiple unique endpoints found in questions dataframe: {unique_endpoints}, failed to hydrate.")
+        return pl.DataFrame({})
+    endpoint_module = Dataset.get_module(unique_endpoints[0])
+    endpoint_module_df: Dict[str, pl.DataFrame] = {unique_endpoints[0]: endpoint_module.get_entries()}
+
+    hydrated_dicts: List[Dict[str, Any]] = []
+
+    for row in df.iter_rows(named=True):
+        endpoint_identifier: str = row["endpoint_identifier"]
+        entry_idx: int = int(row["entry_idx"])
+        entry: str = row["output"]
+
+        module_df: pl.DataFrame = endpoint_module_df[endpoint_identifier]
+        entry: pl.DataFrame = module_df.row(entry_idx, named=True)
+
+        hydrated_dicts.append({
+                **row,
+                "output": map_hydrated_to_real(row["output"], entry)
+        })
+        
+    hydrated_df =  pl.DataFrame(hydrated_dicts)
+    if write_path:
+        hydrated_df.write_csv(write_path)
+        print(f"Hydrated dataframe written to {write_path}")
+    if link_to_dataset:
+        endpoint_module.link_hydrated_questions(write_path)
+    return hydrated_df
+        
+
+def map_hydrated_to_real(
+    to_hydrate: str,
+    data: Dict[str, Any],
+    mapping: Optional[Dict[str, Tuple[str, Any]]] = config.hydrate_to_real_mapping
+) -> str:
+    """Replace placeholder keys in a string with real values from the dataset."""
+
+    for key, (real_key, formatting_func) in mapping.items():
+        if real_key in data["polity"]:
+            replace_value = data["polity"][real_key]
+            if formatting_func:
+                replace_value = formatting_func(replace_value)
+            to_hydrate = to_hydrate.replace(key, str(replace_value))
+        else:
+            raise KeyError(f"{real_key} not found in data['polity'].")
+    return to_hydrate

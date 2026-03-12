@@ -11,7 +11,7 @@ import llm_benchmark.utils.seshat_requests as seshat_requests
 
 import llm_benchmark.config as config
 
-from llm_benchmark.utils.llm_interface.models.local.deepseek_18b import DeepSeekQuestionGenerationModule
+from llm_benchmark.utils.llm_interface.models.local.deepseek_18b import DeepSeekInterfaceModule
 
 
 
@@ -46,7 +46,7 @@ def main():
 
     print("Dataset initialized.")
 
-    question_instance: DeepSeekQuestionGenerationModule = DeepSeekQuestionGenerationModule(
+    question_instance: DeepSeekInterfaceModule = DeepSeekInterfaceModule(
         model_name=args.model_name,
         local = True,
         trust_remote_code=True

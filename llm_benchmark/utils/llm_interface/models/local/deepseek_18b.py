@@ -5,12 +5,12 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from llm_benchmark import config as cfg
 
-from llm_benchmark.utils.llm_interface.query_core import QuestionGenerationModule
+from llm_benchmark.utils.llm_interface.query_core import LLMInterfaceModule
 from llm_benchmark.utils.llm_interface import generation_utils as gen_utils 
 from llm_benchmark.utils import utility as util
 
 
-class DeepSeekQuestionGenerationModule(QuestionGenerationModule):
+class DeepSeekInterfaceModule(LLMInterfaceModule):
     def __init__(self,
                  model_name: str = "deepseek-moe-16b-base",
                  trust_remote_code: Optional[bool] = True,

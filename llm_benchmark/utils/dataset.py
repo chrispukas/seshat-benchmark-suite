@@ -24,7 +24,6 @@ class Dataset():
         self.endpoints = list(identifiers_endpoints.values())
         
         self.endpoints_by_parent, self.parent_identifiers = self.parent_identifier_mapping()
-        print(self.get_identifiers_by_parent("wf"))
 
         self.module_dir = module_dir
         self.main_dir = main_dir
@@ -119,6 +118,8 @@ class Dataset():
             print(f"No identifiers found for parent identifier {parent_identifier}. Available parent identifiers: {self.parent_identifiers}")
         return res
 
+    def get_module(self, identifier: str) -> Optional[DatasetModule]:
+        return self.dataset_modules.get(identifier, None)
 
 
 class DatasetModule():
@@ -135,6 +136,7 @@ class DatasetModule():
         self.seshat_identifier = seshat_identifier
         self.seshat_url = seshat_url
         self.dataset_type = dataset_type
+        self.questions = None
 
         if os.path.isfile(parquet_path) and not override:
             self.dataset: pl.DataFrame = pl.read_parquet(parquet_path)
@@ -192,6 +194,8 @@ class DatasetModule():
         return self.dataset
     def get_endpoint(self) -> str:
         return self.seshat_url
+    def get_questions(self) -> pl.DataFrame:
+        return self.questions
     def get_seshat_identifier(self) -> str:
         return self.seshat_identifier
     
@@ -206,6 +210,11 @@ class DatasetModule():
 
 
         pass
+    def link_hydrated_questions(self, 
+                                df: pl.DataFrame
+                            ) -> None:
+        """Link the hydrated questions back to the dataset for evaluation."""
+        self.questions = df
 
 # -------------------------------
 # ---- MODULES FOR EACH TYPE ----

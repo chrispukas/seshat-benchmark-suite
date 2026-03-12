@@ -9,11 +9,11 @@ from llm_benchmark import config as cfg
 from llm_benchmark.utils import utility as util
 from llm_benchmark.utils.dataset import DatasetModule
 from llm_benchmark.utils.enums import DatasetType, Tags, Quality, QuestionType
-from llm_benchmark.utils.llm_interface.query_core import QuestionGenerationModule
+from llm_benchmark.utils.llm_interface.query_core import LLMInterfaceModule
 
 from llm_benchmark.utils.llm_interface import generation_utils as gen_utils 
 
-class ChatGPTQuestionGenerationModule(QuestionGenerationModule):
+class ChatGPTInterfaceModule(LLMInterfaceModule):
     def __init__(self,
                  model_name: str = "gpt-3.5-turbo",
                  key: str = ""
