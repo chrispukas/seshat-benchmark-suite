@@ -1,0 +1,67 @@
+#!/usr/bin/env python3
+
+import argparse
+import os
+import subprocess
+
+
+from typing import Dict, List, Optional, Any, Tuple
+
+import llm_benchmark.utils.dataset as dataset
+import llm_benchmark.utils.seshat_requests as seshat_requests
+
+import llm_benchmark.config as config
+
+from llm_benchmark.utils.llm_interface.models.local.qwen import QwenInterfaceModule
+
+
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Query Qwen Model")
+    parser.add_argument("--model_name", type=str, default="Qwen/Qwen-7B-Chat", help="Name of the Qwen model to use")
+    parser.add_argument("--save_path", type=str, default="/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/10_02_2026_1/run 1_qwen/", help="Path to save the generated questions")
+    args = parser.parse_args()
+
+    polity_mapping: Dict[str, str] = config.polity_mapping
+
+    module_dir: str = "/rds/general/user/cp824/home/neurips_llms/llm-benchmark/llm_benchmark/db/seshat/modules"
+    main_dir: str = "/rds/general/user/cp824/home/neurips_llms/llm-benchmark/llm_benchmark/db/seshat"
+
+    endpoint_identifiers: Dict[str, str] = seshat_requests.root_search_url(
+        "https://seshat-db.com/api/", 
+        use_cache=True, 
+        cache_url="/rds/general/user/cp824/home/neurips_llms/llm-benchmark/cache/seshat_root_url.pkl"
+    )
+
+    ds: dataset.Dataset = dataset.Dataset(
+        identifiers_endpoints=endpoint_identifiers,
+        module_dir=module_dir,
+        main_dir=main_dir,
+        override=False,
+        ignore_polities=["crisisdb/", "core/", "general/", "rt/"],
+        polity_mapping=polity_mapping
+    )
+
+    question_instance: QwenInterfaceModule = QwenInterfaceModule(
+        model_name="Qwen/Qwen-7B-Chat",
+        local = True,
+        trust_remote_code=True
+    )
+
+    wf_identifiers: List[str] = ds.get_identifiers_by_parent("wf")
+    out_dir: str = os.path.join(args.save_path, "wf_hydrated")
+    os.makedirs(out_dir, exist_ok=True)
+
+
+    for identifier in wf_identifiers:
+        print(f"Processing identifier: {identifier}")
+        question_instance.respond_to_questions(
+            DatasetModule = ds.dataset_modules[identifier],
+            params = {"max_new_tokens": 512, "temperature": 0.7},
+            output_path = os.path.join(out_dir, f"{identifier.replace('/', '_')}_questions.csv"),
+        )
+
+
+if __name__ == "__main__":
+    main()
