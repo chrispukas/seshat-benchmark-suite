@@ -11,8 +11,10 @@ from llm_benchmark.config import params_to_question_mapping
 from llm_benchmark.utils import utility as util
 from llm_benchmark.utils.dataset import DatasetModule
 from llm_benchmark.utils.enums import DatasetType, Tags, Quality, QuestionType
-from llm_benchmark.utils.llm_interface.templates.generation_templates import generation_utils as gen_utils 
-from llm_benchmark.utils.llm_interface.templates.evaluation_templates import evaluation_utils as eval_utils 
+from llm_benchmark.utils.llm_interface.templates import generation_templates as gen_tmps 
+from llm_benchmark.utils.llm_interface.templates import evaluation_templates as eval_tmps 
+from llm_benchmark.utils.llm_interface import evaluation_utils as eval_utils 
+from llm_benchmark.utils.llm_interface import generation_utils as gen_utils 
 
 
 class LLMInterfaceModule():
@@ -59,11 +61,11 @@ class LLMInterfaceModule():
             remap_row: Dict[str, Any] = gen_utils.remap_question_row(row, sub_dir)
             match question_type:
                 case QuestionType.MULTIPLE_CHOICE:
-                    message: Dict[str, Any] = gen_utils.multichoice_question(remap_row)
+                    message: Dict[str, Any] = gen_tmps.multichoice_question(remap_row)
                 case QuestionType.RANGE:
                     print(f"Skipping RANGE question for row {idx}.")
                     continue
-                    message: Dict[str, Any] = gen_utils.range_question(remap_row)
+                    message: Dict[str, Any] = gen_tmps.range_question(remap_row)
                 case _:
                     print(f"Unimplemented question type for row {idx}, with type {question_type}, skipping.")
                     continue
@@ -115,7 +117,7 @@ class LLMInterfaceModule():
             if not question:
                 print(f"No question found in row {idx}, skipping.")
                 continue
-            prompt: Dict[str, Any] = eval_utils.multichoice(question)
+            prompt: Dict[str, Any] = eval_tmps.multichoice(question)
             flatttened_prompt: str = self.flatten_prompt(prompt)
             output: str = self.query_model(flatttened_prompt,
                              temperature=params.get("temperature", 0.7),
