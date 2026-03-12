@@ -108,7 +108,6 @@ class LLMInterfaceModule():
         output_dirname: str = os.path.dirname(output_path)
         os.makedirs(output_dirname, exist_ok=True)
 
-        output_df: pl.DataFrame = pl.DataFrame({})
         question_outputs: List[Any] = [""] * question_df.height 
         
         for idx, row in enumerate(question_df.iter_rows(named=True)):
