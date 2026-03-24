@@ -12,6 +12,7 @@ import llm_benchmark.utils.seshat_requests as seshat_requests
 
 import llm_benchmark.config as config
 
+from llm_benchmark.utils.llm_interface.query_core import LLMInterfaceModule
 from llm_benchmark.utils.llm_interface.models.local.qwen import QwenInterfaceModule
 import llm_benchmark.utils.llm_interface.evaluation_utils as eutils
 
@@ -50,23 +51,43 @@ def main():
         trust_remote_code=True
     )
 
-    wf_identifiers: List[str] = ds.get_identifiers_by_parent("wf")
-    hydrated_dir: str = os.path.join(args.save_path, "wf_hydrated")
-    questions_dir: str = os.path.join(args.save_path, "wf_answers")
+    run_per_polity(
+        save_path=args.save_path,
+        polity="wf",
+        ds=ds,
+        question_instance=question_instance
+    )
+
+    
+
+def run_per_polity(save_path: str, 
+                   polity: str, 
+                   ds: dataset.Dataset, 
+                   question_instance: LLMInterfaceModule
+                   ) -> None :
+    wf_identifiers: List[str] = ds.get_identifiers_by_parent(polity)
+    unhydrated_dir: str = os.path.join(save_path, polity)
+    hydrated_dir: str = os.path.join(save_path, f"{polity}_hydrated")
+    answer_dir: str = os.path.join(save_path, f"{polity}_answers")
     os.makedirs(hydrated_dir, exist_ok=True)
-    os.makedirs(questions_dir, exist_ok=True)
+    os.makedirs(answer_dir, exist_ok=True)
 
     for identifier in wf_identifiers:
         print(f"Processing identifier: {identifier}")
+        csv_questions_name: str = f"{identifier.replace('/', '_')}_questions.csv"
+        csv_answers_name: str = f"{identifier.replace('/', '_')}_answers.csv"
+
         hydrated_df: pl.DataFrame = eutils.hydrate(ds, 
-                                           questions_dir,
+                                           questions_dir=os.path.join(unhydrated_dir, csv_questions_name),
+                                           write_dir=os.path.join(hydrated_dir, csv_questions_name),
                                            link_to_dataset=True,)
 
         question_instance.respond_to_questions(
             DatasetModule = ds.dataset_modules[identifier],
             params = {"max_new_tokens": 512, "temperature": 0.7},
-            output_path = os.path.join(questions_dir, f"{identifier.replace('/', '_')}_questions.csv"),
+            output_path = os.path.join(answer_dir, csv_answers_name),
         )
+
 
 
 if __name__ == "__main__":
