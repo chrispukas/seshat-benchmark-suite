@@ -1,5 +1,15 @@
 from enum import Enum
 
+# ------------------------------
+# ----- HYDRATION OPTIONS ------
+# ------------------------------
+
+class QuestionHydrationOptions(Enum):
+    PRESENT_ABSENT = 0
+    PRESENT_ABSENT_UNKNOWN = 1
+    PRESENT_ABSENT_INFERREDPRESENT_INFERREDABSENT = 2
+    PRESENT_ABSENT_INFERREDPRESENT_INFERREDABSENT_UNKNOWN = 3
+
 # ---------------------
 # ----- DATASETS ------
 # ---------------------

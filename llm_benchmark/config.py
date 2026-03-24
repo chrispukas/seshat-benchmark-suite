@@ -1,10 +1,11 @@
 from llm_benchmark.utils.utility import tag_remap, quality_remap, question_type_remap
-from llm_benchmark.utils.enums import DatasetType, Tags, Quality, QuestionType
+from llm_benchmark.utils.enums import DatasetType, Tags, Quality, QuestionType, QuestionHydrationOptions
+
 from typing import Dict, Any, Tuple
 
-# --------------------------
-# --- GENERATION MAPPING ---
-# --------------------------
+# -------------------------
+# --- HYDRATION MAPPING ---
+# -------------------------
 
 
 def format_year(value: Any) -> str:
@@ -25,6 +26,16 @@ hydrate_to_real_mapping: Dict[str, Tuple[str, Any]] = \
         "<time-start>": ("start_year", format_year),
         "<time-end>": ("end_year", format_year),
         "<polity>": ("long_name", None),
+    }
+
+
+
+hydrate_evaluation_type_to_template_mapping: Dict[QuestionHydrationOptions, str] = \
+    {
+        QuestionHydrationOptions.PRESENT_ABSENT: "Please answer strictly with either 'present' or 'absent'",
+        QuestionHydrationOptions.PRESENT_ABSENT_UNKNOWN: "Please answer strictly with either 'present', 'absent', or 'unknown'",
+        QuestionHydrationOptions.PRESENT_ABSENT_INFERREDPRESENT_INFERREDABSENT: "Please answer strictly with either 'present', 'absent', 'inferred present', or 'inferred absent'",
+        QuestionHydrationOptions.PRESENT_ABSENT_INFERREDPRESENT_INFERREDABSENT_UNKNOWN: "Please answer strictly with either 'present', 'absent', 'inferred present', 'inferred absent', or 'unknown'",
     }
 
 # --------------------------

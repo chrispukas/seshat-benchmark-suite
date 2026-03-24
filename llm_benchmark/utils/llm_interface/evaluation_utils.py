@@ -1,9 +1,9 @@
 import polars as pl
-
 from typing import Any, Dict, List, Optional, Tuple
 
-from llm_benchmark.utils.dataset import Dataset, DatasetModule
 from llm_benchmark import config
+from llm_benchmark.utils.enums import QuestionHydrationOptions
+from llm_benchmark.utils.dataset import Dataset, DatasetModule
 
 
 
@@ -22,6 +22,7 @@ from llm_benchmark import config
 
 def hydrate(Dataset: Dataset, 
             questions_dir: str,
+            EvaluationType: QuestionHydrationOptions,
             write_path: Optional[str] = None,
             link_to_dataset: Optional[bool] = False) -> pl.DataFrame:
     """Hydrate the question entries in the questions dataframe with the corresponding dataset entries, assumes datasets of one type per dataframe."""
@@ -48,10 +49,11 @@ def hydrate(Dataset: Dataset,
 
         module_df: pl.DataFrame = endpoint_module_df[endpoint_identifier]
         entry: pl.DataFrame = module_df.row(entry_idx, named=True)
+        hydrated_row: str = map_hydrated_to_real(to_hydrate=row["output"], data=entry, evaluation_type=EvaluationType)
 
         hydrated_dicts.append({
                 **row,
-                "output": map_hydrated_to_real(row["output"], entry)
+                "output": hydrated_row,
         })
         
     hydrated_df =  pl.DataFrame(hydrated_dicts)
@@ -59,14 +61,16 @@ def hydrate(Dataset: Dataset,
         hydrated_df.write_csv(write_path)
         print(f"Hydrated dataframe written to {write_path}")
     if link_to_dataset:
-        endpoint_module.link_hydrated_questions(write_path)
+        endpoint_module.link_hydrated_questions(hydrated_df)
     return hydrated_df
+    
         
 
 def map_hydrated_to_real(
     to_hydrate: str,
     data: Dict[str, Any],
-    mapping: Optional[Dict[str, Tuple[str, Any]]] = config.hydrate_to_real_mapping
+    evaluation_type: QuestionHydrationOptions = QuestionHydrationOptions.PRESENT_ABSENT,
+    mapping: Optional[Dict[str, Tuple[str, Any]]] = config.hydrate_to_real_mapping,
 ) -> str:
     """Replace placeholder keys in a string with real values from the dataset."""
 
@@ -78,4 +82,6 @@ def map_hydrated_to_real(
             to_hydrate = to_hydrate.replace(key, str(replace_value))
         else:
             raise KeyError(f"{real_key} not found in data['polity'].")
+        
+    to_hydrate = to_hydrate.replace("<answer-options>", config.hydrate_evaluation_type_to_template_mapping.get(evaluation_type, "Please answer strictly with either 'present' or 'absent'"))
     return to_hydrate

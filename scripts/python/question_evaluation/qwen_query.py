@@ -6,7 +6,7 @@ import subprocess
 
 from typing import Dict, List, Optional, Any, Tuple
 from llm_benchmark.utils.llm_interface.models.local.qwen import QwenInterfaceModule
-from llm_benchmark.utils import evaluate
+from llm_benchmark.utils.benchmark import evaluate
 
 
 def main():
@@ -22,7 +22,7 @@ def main():
         trust_remote_code=True
     )
 
-    evaluate.evaluate(
+    evaluate(
         evaluation_save_path=args.save_path,
         LLMInterfaceModule=question_instance,
         seshat_cache_dir=args.cache_dir,

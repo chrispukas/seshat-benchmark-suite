@@ -101,7 +101,6 @@ class LLMInterfaceModule():
             print("No Endpoint Specified")
             return None    
             
-
         question_df: pl.DataFrame = DatasetModule.get_questions()
         if question_df is None:
             print(f"No questions linked to dataset {ds_endpoint}.")
@@ -158,13 +157,12 @@ class LLMInterfaceModule():
         
     
     def flatten_prompt(self, messages: List[Dict[str, str]]) -> str:
-        prompt = ""
+        prompt: List[str] = []
         for msg in messages:
             role = msg.get("role", "").upper()
-            content = msg.get("content", "")
-            prompt += f"{role}:\n{content}\n\n"
-        prompt += "ASSISTANT:\n"
-        return prompt
+            content = msg.get("content", "").strip()
+            prompt.append(f"{role}:\n{content}")
+        return "\n\n".join(prompt) + "\n\nASSISTANT:\n"
 
     
     # Utility
