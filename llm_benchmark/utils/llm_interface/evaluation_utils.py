@@ -24,7 +24,7 @@ def hydrate(Dataset: Dataset,
             questions_dir: str,
             write_path: Optional[str] = None,
             link_to_dataset: Optional[bool] = False) -> pl.DataFrame:
-    """Hydrate the question entries in the questions dataframe with the corresponding dataset entries."""
+    """Hydrate the question entries in the questions dataframe with the corresponding dataset entries, assumes datasets of one type per dataframe."""
     df: pl.DataFrame = pl.read_csv(questions_dir)
     df = df.with_columns(
                         pl.col("endpoint_identifier")
