@@ -55,9 +55,7 @@ class QwenInterfaceModule(LLMInterfaceModule):
         print(f"Querying Qwen model, message: {message}")
         print(f" /// ENDOF ///")
 
-
-        prompt = self.flatten_prompt(message)
-        response, _ = self.model.chat(self.tokenizer, prompt, history=None)
+        response, _ = self.model.chat(self.tokenizer, message, history=None)
 
         print(f" /// STARTOF ///")
         print(f"Output: {response}")
