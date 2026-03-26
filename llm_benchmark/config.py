@@ -1,6 +1,8 @@
 from llm_benchmark.utils.utility import tag_remap, quality_remap, question_type_remap
 from llm_benchmark.utils.enums import DatasetType, Tags, Quality, QuestionType, QuestionHydrationOptions
 
+from llm_benchmark.utils.llm_interface.templates import generation_templates as gen_tmps 
+
 from typing import Dict, Any, Tuple
 
 # -------------------------
@@ -41,6 +43,14 @@ hydrate_evaluation_type_to_template_mapping: Dict[QuestionHydrationOptions, str]
 # --------------------------
 # --- GENERATION MAPPING ---
 # --------------------------
+
+
+question_generation_template_mapping: Dict[QuestionType, object] = \
+    {
+        QuestionType.MULTIPLE_CHOICE: gen_tmps.multichoice_question,
+        QuestionType.RANGE: gen_tmps.range_question,
+    }
+
 
 question_generation_params: Dict[str, Any] = \
     {

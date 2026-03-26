@@ -6,7 +6,7 @@ from tqdm import tqdm
 from typing import Any, Dict, List, Optional, Tuple
 from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 
-from llm_benchmark.config import params_to_question_mapping
+from llm_benchmark.config import params_to_question_mapping, question_generation_template_mapping
 
 from llm_benchmark.utils import utility as util
 from llm_benchmark.utils.dataset import DatasetModule
@@ -31,61 +31,69 @@ class LLMInterfaceModule():
             print("Warning: No parameters provided for question generation. Using default settings.")
             params = {}
 
-        if DatasetModule.get_endpoint() is None:
-            print("No Endpoint Specified")
+        ds_endpoint: str = DatasetModule.get_endpoint()
+
+        if ds_endpoint is None:
+            print("No endpoint found.")
             return None
 
-        output_dirname: str = os.path.dirname(output_path)
-        os.makedirs(output_dirname, exist_ok=True)
-
-
-        sub_dir = DatasetModule.get_endpoint().split("/")[-2]
+        sub_dir: str = ds_endpoint.split("/")[-2]
         print(f"Generating questions for dataset at endpoint: {sub_dir}")
-        dataset: pl.DataFrame = DatasetModule.get_entries()
 
-        output_df: pl.DataFrame = pl.DataFrame({})
+        output_dirname: str = os.path.dirname(output_path)
+        if output_dirname:
+            os.makedirs(output_dirname, exist_ok=True)
+
+        dataset: pl.DataFrame = DatasetModule.get_entries()
         question_outputs: List[Any] = [""] * dataset.height
 
-        for idx, row in tqdm(enumerate(dataset.iter_rows(named=True))):
-            if not self.check_if_question_in_filter(row, params):
-                print("Skipping question due to filter settings.")
+        for idx, row in tqdm(enumerate(dataset.to_dicts())):
+            output: str = self._generate_single(row=row, params=params, sub_dir=sub_dir)
+            if output is None:
                 continue
-            
-            question_type: QuestionType = util.question_type_remap(
-                row.get("question_type", None), 
-                row=row,
-                endpoint=sub_dir
-                )
-            message: Dict[str, Any] = {}
-
-            remap_row: Dict[str, Any] = gen_utils.remap_question_row(row, sub_dir)
-            match question_type:
-                case QuestionType.MULTIPLE_CHOICE:
-                    message: Dict[str, Any] = gen_tmps.multichoice_question(remap_row)
-                case QuestionType.RANGE:
-                    print(f"Skipping RANGE question for row {idx}.")
-                    continue
-                    message: Dict[str, Any] = gen_tmps.range_question(remap_row)
-                case _:
-                    print(f"Unimplemented question type for row {idx}, with type {question_type}, skipping.")
-                    continue
-
-            output: str = self.query_model(message,
-                             temperature=params.get("temperature", 0.7),
-                             max_tokens=params.get("max_tokens", 150)
-                             )
-            print("Query Output:", output)
-            question_outputs[idx] = {
-                "endpoint_identifier": DatasetModule.get_endpoint(), 
-                "entry_idx": idx,
-                "output": output,
-                }
+            entry: Dict[str, Any] = {
+            "endpoint_identifier": ds_endpoint, 
+            "entry_idx": idx,
+            "output": output,
+            }
+            question_outputs[idx] = entry
         
         if not question_outputs:
             print(f"Failed to generate questions for {DatasetModule.get_endpoint()}")
             return
         
-        self.write_outputs(question_outputs, output_df)
+        self.write_outputs(raw=question_outputs, output_path=output_path)
+
+    def _generate_single(self, 
+                         row: Dict[str, Any],
+                         params: Dict[str, Any],
+                         sub_dir: str
+                         ) -> str:
+        
+        if not self.check_if_question_in_filter(row, params):
+            print("Skipping question due to filter settings.")
+            return None
+        
+        question_type: QuestionType = util.question_type_remap(
+            row.get("question_type", None), 
+            row=row,
+            endpoint=sub_dir
+            )
+        template: object = self._get_template(question_type)
+        message: Dict[str, Any] = template(gen_utils.remap_question_row(row, sub_dir)) if template else {}
+
+        output: str = self.query_model(message,
+                            temperature=params.get("temperature", 0.7),
+                            max_tokens=params.get("max_tokens", 150)
+                            )
+        
+        print("Query Output:", output)
+        return output
+        
+
+    def _get_template(self, question_type: QuestionType) -> object:
+        return question_generation_template_mapping.get(question_type, None)
+
 
     def respond_to_questions(self,
                             DatasetModule: DatasetModule,
@@ -109,19 +117,12 @@ class LLMInterfaceModule():
         output_dirname: str = os.path.dirname(output_path)
         os.makedirs(output_dirname, exist_ok=True)
 
-        question_outputs: List[Any] = [""] * question_df.height 
+        question_outputs: List[Dict[str, Any]] = self._create_empty_outputs(question_df.height)
         
-        for idx, row in enumerate(question_df.iter_rows(named=True)):
-            question: str = row.get("output", "")
-            if not question:
-                print(f"No question found in row {idx}, skipping.")
+        for idx, row in tqdm(enumerate(question_df.to_dicts())):
+            output: str = self._respond_single(row=row, params=params)
+            if output is None:
                 continue
-            prompt: Dict[str, Any] = eval_tmps.multichoice(question)
-            flatttened_prompt: str = self.flatten_prompt(prompt)
-            output: str = self.query_model(flatttened_prompt,
-                             temperature=params.get("temperature", 0.7),
-                             max_tokens=params.get("max_tokens", 150)
-                             )
             print("Query Output:", output)
             question_outputs[idx] = {
                 "endpoint_identifier": ds_endpoint, 
@@ -129,10 +130,27 @@ class LLMInterfaceModule():
                 "output": output,
                 }
         
-        self.write_outputs(question_outputs, output_path=output_path)
+        self.write_outputs(raw=question_outputs, output_path=output_path)
+
+
+    def _create_empty_outputs(self, height: int) -> List[Dict[str, Any]]:
+        return [{"endpoint_identifier": None, "entry_idx": None, "output": None} for _ in range(height)]
+
+
+    def _respond_single(self, row: Dict[str, Any], params: Dict[str, Any]) -> str:
+        question: str = row.get("output", "")
+        if not question:
+            return None
+        prompt: Dict[str, Any] = eval_tmps.multichoice(question)
+        flatttened_prompt: str = self.flatten_prompt(prompt)
+        return self.query_model(
+            flatttened_prompt,
+            temperature=params.get("temperature", 0.7),
+            max_tokens=params.get("max_tokens", 150)
+            )
 
     def write_outputs(self, 
-                      raw: Dict[str, Any], 
+                      raw: List[Dict[str, Any]], 
                       output_path: str
                       ) -> None:
         """Writes the generated questions to a CSV file."""
@@ -143,8 +161,7 @@ class LLMInterfaceModule():
             print(f"Failed to generate questions.")
             return
         
-        output_df = output_df.vstack(pl.DataFrame(raw))
-        output_df.write_csv(output_path)
+        pl.DataFrame(raw).write_csv(output_path)
         print(f"Questions generated and saved to {output_path}")
         
 
@@ -156,7 +173,10 @@ class LLMInterfaceModule():
         raise NotImplementedError("This method should be overridden by subclasses.")
         
     
-    def flatten_prompt(self, messages: List[Dict[str, str]]) -> str:
+    def flatten_prompt(self, messages: Dict[str, str]) -> str:
+        if isinstance(messages, dict):
+            messages = [messages]
+
         prompt: List[str] = []
         for msg in messages:
             role = msg.get("role", "").upper()
@@ -187,7 +207,11 @@ class LLMInterfaceModule():
                                                      cache_dir=cache_dir,
                                                      local_files_only=local
                                                      )
-        model.generation_config = GenerationConfig.from_pretrained(model_name)
+        try:
+            model.generation_config = GenerationConfig.from_pretrained(model_name)
+        except Exception as e:
+            print(f"Failed to load generation config for {model_name}. Using default config. Error: {e}")
+            model.generation_config = GenerationConfig()
         model.generation_config.pad_token_id = model.generation_config.eos_token_id
 
         return tokenizer, model
