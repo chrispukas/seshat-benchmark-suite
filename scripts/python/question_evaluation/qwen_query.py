@@ -10,16 +10,20 @@ from llm_benchmark.utils.llm_interface.generation_utils import savepath_formatti
 
 def main():
     model_name: str = "Qwen/Qwen-7B-Chat"
+    default_load_path: str = f"/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/generation/"
     default_save_path: str = f"/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/evaluation/"
     
     parser = argparse.ArgumentParser(description="Query Qwen Model")
     parser.add_argument("--model_name", type=str, default=model_name, help="Name of the Qwen model to use")
-    parser.add_argument("--save_path", type=str, default=None, help="Path to save the generated questions")
+    parser.add_argument("--question_save_path", type=str, default=None, help="Path to save the generated questions")
+    parser.add_argument("--answer_save_path", type=str, default=None, help="Path to save the generated answers")
     parser.add_argument("--cache_dir", type=str, default="/rds/general/user/cp824/home/neurips_llms/llm-benchmark/llm_benchmark/db/seshat", help="Path to the cache directory")
     args = parser.parse_args()
 
-    final_save_path: str = savepath_formatting(model_name, default_save_path) if args.save_path is None else args.save_path
-    os.makedirs(final_save_path, exist_ok=True)
+    final_question_save_path: str = savepath_formatting(model_name, default_save_path) if args.question_save_path is None else default_load_path
+    final_answer_save_path: str = savepath_formatting(model_name, default_save_path) if args.answer_save_path is None else default_save_path
+    os.makedirs(final_question_save_path, exist_ok=True)
+    os.makedirs(final_answer_save_path, exist_ok=True)
 
     question_instance: QwenInterfaceModule = QwenInterfaceModule(
         model_name=args.model_name,
@@ -28,7 +32,8 @@ def main():
     )
 
     evaluate(
-        evaluation_save_path=args.save_path,
+        question_save_path=args.save_path,
+        answer_save_path=args.save_path,
         LLMInterfaceModule=question_instance,
         seshat_cache_dir=args.cache_dir,
         polities_to_evaluate=["wf"],

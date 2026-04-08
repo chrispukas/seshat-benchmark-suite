@@ -18,7 +18,9 @@ from llm_benchmark.utils.llm_interface.models.local.qwen import QwenInterfaceMod
 # ---------------
 
 def evaluate(
-        evaluation_save_path: str,
+        question_save_path: str,
+        answer_save_path: str,
+
         LLMInterfaceModule: LLMInterfaceModule,
         evaluation_type: QuestionHydrationOptions = QuestionHydrationOptions.PRESENT_ABSENT,
         seshat_cache_dir: Optional[str] = None,
@@ -29,7 +31,8 @@ def evaluate(
         LLM evaluation function, checking LLM accuracy based on pre-hydrated questions, and corresponding dataset entries.
 
         Args:
-            evaluation_save_path (str): Path to save the generated questions and answers.
+            question_save_path (str): Path to source the generated questions.
+            answer_save_path (str): Path to save the generated answers.
             LLMInterfaceModule (LLMInterfaceModule): An instance of the LLMInterfaceModule to use for generating answers.
             seshat_cache_dir (Optional[str]): Path for which the SESHAT database is cached to.
             polity_mapping (Optional[Dict[str, str]]): Polity mapping to use for the SESHAT dataset.
@@ -47,7 +50,8 @@ def evaluate(
 
     for polity in polities_to_evaluate:
         _run_per_polity_evaluate(
-            save_path = evaluation_save_path,
+            question_save_path = question_save_path,
+            answer_save_path = answer_save_path,
             polity = polity,
             ds = seshat_ds,
             question_instance=LLMInterfaceModule,
@@ -55,7 +59,8 @@ def evaluate(
         )    
 
 def _run_per_polity_evaluate(
-        save_path: str, 
+        question_save_path: str,
+        answer_save_path: str,
         polity: str, 
         ds: dataset.Dataset, 
         question_instance: LLMInterfaceModule,
@@ -64,9 +69,9 @@ def _run_per_polity_evaluate(
     
     subpolity_identifiers: List[str] = ds.get_identifiers_by_parent(polity)
 
-    unhydrated_dir: str = os.path.join(save_path, polity)
-    hydrated_dir: str = os.path.join(save_path, f"{polity}_hydrated")
-    answer_dir: str = os.path.join(save_path, f"{polity}_answers")
+    unhydrated_dir: str = os.path.join(question_save_path, polity)
+    hydrated_dir: str = os.path.join(answer_save_path, f"{polity}_hydrated")
+    answer_dir: str = os.path.join(answer_save_path, f"{polity}_answers")
 
     os.makedirs(hydrated_dir, exist_ok=True)
     os.makedirs(answer_dir, exist_ok=True)
