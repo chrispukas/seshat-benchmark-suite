@@ -1,4 +1,5 @@
 import requests
+import time
 
 from typing import Dict, List, Any, Optional, Tuple
 
@@ -6,7 +7,10 @@ from llm_benchmark.utils import cache as c
 
 
 def fetch_json_from_url(url: str,
-                        args: Optional[Dict[str, Any]] = None
+                        args: Optional[Dict[str, Any]] = None,
+                        tries: int = 3,
+                        wait_time: int = 2,
+                        _current_try: int = 1,
                         ) -> Dict[str, Any]:
     """
         Fetches JSON data from a specified URL.
@@ -26,8 +30,14 @@ def fetch_json_from_url(url: str,
     
     status_code: int = response.status_code
     if status_code != 200:
-        print(f"Request to {url} failed with status code {status_code}.")
-        return {}
+        print(f"Request to {url} failed with status code {status_code}")
+        if _current_try < tries:
+            print(f"Retrying... Attempt {_current_try + 1} of {tries}")
+            time.sleep(wait_time)  # Wait before retrying
+            return fetch_json_from_url(url, args, tries, wait_time, _current_try + 1)
+        else:
+            print(f"Failed to fetch data from {url} after {tries} attempts.")
+            return {}
 
     return response.json()
 

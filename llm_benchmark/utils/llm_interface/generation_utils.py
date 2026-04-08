@@ -1,5 +1,16 @@
+import os
+from datetime import datetime
+
 from typing import Dict, List, Any
 
+
+def savepath_formatting(model_name: str, default_save_path: str) -> str:
+    """Format the save path for generated questions."""
+    dt: str = datetime.now().strftime("%d_%m_%Y")
+    default_save_path: str = os.path.join(default_save_path, dt)
+    count_savepath: int = len(os.listdir(default_save_path)) + 1 if os.path.exists(default_save_path) else 1
+    run_name: str = f"run_{count_savepath}_{model_name.replace('/', '_')}"
+    return os.path.join(default_save_path, run_name)
 
 def remap_question_row(row: Dict[str, Any], endpoint: str) -> Dict[str, Any]:
     """Remap question row based on endpoint."""
