@@ -22,7 +22,7 @@ def main():
     os.makedirs(final_save_path, exist_ok=True)
 
     question_instance: OlmoInterfaceModule = OlmoInterfaceModule(
-        model_name="allenai/Olmo-3-1025-7B",
+        model_name=args.model_name,
         local = True,
         trust_remote_code=True
     )
