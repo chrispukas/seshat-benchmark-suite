@@ -125,11 +125,11 @@ def _run_per_polity_generate(polity: str,
                     ) -> None:
     
     polity_identifiers: List[str] = ds.get_identifiers_by_parent(polity)
-    
     for identifier in polity_identifiers:
         print(f"Processing identifier: {identifier}")
+        dataset_module: dataset.DatasetModule = ds.dataset_modules[identifier]
         LLMInterfaceModule.generate_questions(
-            DatasetModule = ds.dataset_modules[identifier],
+            DatasetModule = dataset_module,
             params = {"max_new_tokens": 512, "temperature": 0.7},
             output_path = f"{save_path}{polity}/{identifier.replace('/', '_')}_questions.csv",
         )
@@ -151,6 +151,7 @@ def seshat_setup(seshat_cache_dir: str,
 
     os.makedirs(seshat_module_dir, exist_ok=True)
     os.makedirs(seshat_main_dir, exist_ok=True)
+
 
     seshat_ds: dataset.Dataset = dataset.Dataset(
         identifiers_endpoints=seshat_endpoint_identifiers,

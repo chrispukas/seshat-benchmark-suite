@@ -46,7 +46,7 @@ class QwenInterfaceModule(LLMInterfaceModule):
         return tokenizer, model
     
     def query_model(self, 
-                    message: Dict[str, Any],
+                    message: str,
                     temperature: float = 0.7,
                     max_tokens: int = 300
                     ) -> str:
@@ -55,7 +55,8 @@ class QwenInterfaceModule(LLMInterfaceModule):
         print(f"Querying Qwen model, message: {message}")
         print(f" /// ENDOF ///")
 
-        response, _ = self.model.chat(self.tokenizer, message, history=None)
+        prompt = util.collapse_prompt(message)
+        response, _ = self.model.chat(self.tokenizer, prompt, history=None)
 
         print(f" /// STARTOF ///")
         print(f"Output: {response}")

@@ -46,7 +46,6 @@ class LLMInterfaceModule():
 
         dataset: pl.DataFrame = DatasetModule.get_entries()
         question_outputs: List[Any] = [""] * dataset.height
-
         for idx, row in tqdm(enumerate(dataset.to_dicts())):
             output: str = self._generate_single(row=row, params=params, sub_dir=sub_dir)
             if output is None:

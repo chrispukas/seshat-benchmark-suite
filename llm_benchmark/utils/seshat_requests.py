@@ -5,9 +5,13 @@ from typing import Dict, List, Any, Optional, Tuple
 
 from llm_benchmark.utils import cache as c
 
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 \
+    (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+}
 
 def fetch_json_from_url(url: str,
-                        args: Optional[Dict[str, Any]] = None,
+                        args: Optional[Dict[str, Any]] = {},
                         tries: int = 3,
                         wait_time: int = 2,
                         _current_try: int = 1,
@@ -20,17 +24,21 @@ def fetch_json_from_url(url: str,
             args [Optional[Dict[str, Any]]]: Optional arguments for the request, automatically passed to requests.get().
         Returns:
             Dict[str, Any]: A JSON object parsed from the response.
+
     """
+    if args is None:
+        args = {}
 
     try:
-        response: requests.Response = requests.get(url, **(args or {}))
+        args.update({"headers": headers})
+        response: requests.Response = requests.get(url, **(args))
     except requests.exceptions.RequestException as e:
         print(f"An error occurred while making the request to {url}: {e}")
         return {}
     
     status_code: int = response.status_code
     if status_code != 200:
-        print(f"Request to {url} failed with status code {status_code}")
+        print(f"Request to {url} failed with status code {status_code}, response: {response.text}")
         if _current_try < tries:
             print(f"Retrying... Attempt {_current_try + 1} of {tries}")
             time.sleep(wait_time)  # Wait before retrying
@@ -38,6 +46,8 @@ def fetch_json_from_url(url: str,
         else:
             print(f"Failed to fetch data from {url} after {tries} attempts.")
             return {}
+        
+    print(response.json())
 
     return response.json()
 
@@ -102,7 +112,11 @@ def root_search_url(root_url: str,
     if use_cache and c.exists_file(cache_url):
         return c.load_file(cache_url)
 
-    json: Dict[str, Any] = fetch_json_from_url(root_url)
+    try:
+        json: Dict[str, Any] = fetch_json_from_url(root_url)
+    except Exception as e:
+        print(f"An error occurred while fetching the root URL {root_url}: {e}")
+        return []
 
     if use_cache:
         c.save_file(json, cache_url)

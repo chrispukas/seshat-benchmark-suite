@@ -15,7 +15,7 @@ def main():
     parser = argparse.ArgumentParser(description="Query Qwen Model")
     parser.add_argument("--model_name", type=str, default="Qwen/Qwen-7B-Chat", help="Name of the Qwen model to use")
     parser.add_argument("--save_path", type=str, default=None, help="Path to save the generated questions")
-    parser.add_argument("--cache_dir", type=str, default="/rds/general/user/cp824/home/neurips_llms/llm-benchmark/llm_benchmark/db/seshat", help="Path to the cache directory")
+    parser.add_argument("--cache_dir", type=str, default="/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/seshat", help="Path to the cache directory")
     args = parser.parse_args()
 
     final_save_path: str = savepath_formatting(model_name, default_save_path) if args.save_path is None else args.save_path

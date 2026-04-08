@@ -81,6 +81,7 @@ class Dataset():
             print(identifier, endpoint)
             parquet_path: str = os.path.join(self.module_dir, f"{identifier}.parquet")
             os.makedirs(os.path.dirname(parquet_path), exist_ok=True)
+
             if self.check_if_identifier_is_ignored(identifier):
                 print(f"Ignoring polity {identifier} as per configuration.")
                 continue
