@@ -20,7 +20,8 @@ def main():
     parser.add_argument("--cache_dir", type=str, default="/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/seshat", help="Path to the cache directory")
     args = parser.parse_args()
 
-    final_answer_save_path: str = savepath_formatting(model_name, default_save_path) if args.answer_save_path is None else default_save_path
+    final_answer_save_path: str = savepath_formatting(model_name, default_save_path) if args.answer_save_path is None else args.answer_save_path
+    print(final_answer_save_path, args.answer_save_path)
     os.makedirs(final_answer_save_path, exist_ok=True)
 
     question_instance: QwenInterfaceModule = QwenInterfaceModule(
