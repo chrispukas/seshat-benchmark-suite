@@ -28,7 +28,7 @@ def main():
     )
 
     generate(
-        save_path=args.save_path,
+        save_path=final_save_path,
         LLMInterfaceModule=question_instance,
         seshat_cache_dir=args.cache_dir,
         polity_mapping=config.polity_mapping,

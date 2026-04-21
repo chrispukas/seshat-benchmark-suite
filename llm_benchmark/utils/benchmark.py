@@ -131,7 +131,7 @@ def _run_per_polity_generate(polity: str,
         LLMInterfaceModule.generate_questions(
             DatasetModule = dataset_module,
             params = {"max_new_tokens": 512, "temperature": 0.7},
-            output_path = f"{save_path}{polity}/{identifier.replace('/', '_')}_questions.csv",
+            output_path = f"{save_path}/{polity}/{identifier.replace('/', '_')}_questions.csv",
         )
 
 

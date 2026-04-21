@@ -15,14 +15,12 @@ def main():
     
     parser = argparse.ArgumentParser(description="Query Qwen Model")
     parser.add_argument("--model_name", type=str, default=model_name, help="Name of the Qwen model to use")
-    parser.add_argument("--question_save_path", type=str, default=None, help="Path to save the generated questions")
+    parser.add_argument("--question_save_path", type=str, default=default_load_path, help="Path to save the generated questions")
     parser.add_argument("--answer_save_path", type=str, default=None, help="Path to save the generated answers")
     parser.add_argument("--cache_dir", type=str, default="/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/seshat", help="Path to the cache directory")
     args = parser.parse_args()
 
-    final_question_save_path: str = savepath_formatting(model_name, default_save_path) if args.question_save_path is None else default_load_path
     final_answer_save_path: str = savepath_formatting(model_name, default_save_path) if args.answer_save_path is None else default_save_path
-    os.makedirs(final_question_save_path, exist_ok=True)
     os.makedirs(final_answer_save_path, exist_ok=True)
 
     question_instance: QwenInterfaceModule = QwenInterfaceModule(
@@ -32,8 +30,8 @@ def main():
     )
 
     evaluate(
-        question_save_path=args.save_path,
-        answer_save_path=args.save_path,
+        question_save_path=args.question_save_path,
+        answer_save_path=final_answer_save_path,
         LLMInterfaceModule=question_instance,
         seshat_cache_dir=args.cache_dir,
         polities_to_evaluate=["wf"],
