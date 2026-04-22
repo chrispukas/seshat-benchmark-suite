@@ -84,6 +84,7 @@ def _run_per_polity_evaluate(
 
         hydrated_df: pl.DataFrame = eutils.hydrate(ds, 
                                            questions_dir=os.path.join(unhydrated_dir, csv_questions_name),
+                                           EvaluationType=evaluation_type,
                                            write_path=os.path.join(hydrated_dir, csv_questions_name),
                                            link_to_dataset=True,)
 

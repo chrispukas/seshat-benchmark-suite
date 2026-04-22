@@ -54,11 +54,13 @@ def question_type_remap(tag: str,
     return QuestionType.RANGE
 
 
-def collapse_prompt(messages: List[Dict[str, str]]) -> str:
-    text = ""
-    for msg in messages:
-        role = msg.get("role", "").upper()
-        content = msg.get("content", "")
-        text += f"{role}:\n{content}\n\n"
-    text += "ASSISTANT:\n"
-    return text
+def collapse_prompt(messages: Dict[str, str]) -> str:
+        if isinstance(messages, dict):
+            messages = [messages]
+
+        prompt: List[str] = []
+        for msg in messages:
+            role = msg.get("role", "").upper()
+            content = msg.get("content", "").strip()
+            prompt.append(f"{role}:\n{content}")
+        return "\n\n".join(prompt) + "\n\nASSISTANT:\n"

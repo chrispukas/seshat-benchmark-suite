@@ -50,10 +50,15 @@ class QwenInterfaceModule(LLMInterfaceModule):
                     temperature: float = 0.7,
                     max_tokens: int = 300
                     ) -> str:
-        
         print(f" /// STARTOF ///")
         print(f"Querying Qwen model, message: {message}")
         print(f" /// ENDOF ///")
+
+
+        print(message)
+
+        print(f"\n\n\n\n\n\n\n\n")
+
 
         prompt = util.collapse_prompt(message)
         response, _ = self.model.chat(self.tokenizer, prompt, history=None)

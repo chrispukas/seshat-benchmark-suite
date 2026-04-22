@@ -37,7 +37,6 @@ class DeepSeekInterfaceModule(LLMInterfaceModule):
                     temperature: float = 0.7,
                     max_tokens: int = 300
                     ) -> str:
-        
         print(f" /// STARTOF ///")
         print(f"Querying DeepSeek model, message: {message}")
         print(f" /// ENDOF ///")

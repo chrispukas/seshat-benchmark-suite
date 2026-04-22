@@ -141,9 +141,8 @@ class LLMInterfaceModule():
         if not question:
             return None
         prompt: Dict[str, Any] = eval_tmps.multichoice(question)
-        flatttened_prompt: str = self.flatten_prompt(prompt)
         return self.query_model(
-            flatttened_prompt,
+            prompt,
             temperature=params.get("temperature", 0.7),
             max_tokens=params.get("max_tokens", 150)
             )
@@ -171,18 +170,6 @@ class LLMInterfaceModule():
                     ) -> str:
         raise NotImplementedError("This method should be overridden by subclasses.")
         
-    
-    def flatten_prompt(self, messages: Dict[str, str]) -> str:
-        if isinstance(messages, dict):
-            messages = [messages]
-
-        prompt: List[str] = []
-        for msg in messages:
-            role = msg.get("role", "").upper()
-            content = msg.get("content", "").strip()
-            prompt.append(f"{role}:\n{content}")
-        return "\n\n".join(prompt) + "\n\nASSISTANT:\n"
-
     
     # Utility
     def hugging_face_model_load(self,
