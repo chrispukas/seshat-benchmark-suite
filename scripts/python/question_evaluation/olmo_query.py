@@ -9,7 +9,7 @@ from llm_benchmark.utils.llm_interface.generation_utils import savepath_formatti
 
 
 def main():
-    model_name: str = "Qwen/Qwen-7B-Chat"
+    model_name: str = "allenai/Olmo-3-1025-7B"
     default_load_path: str = f"/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/generation/"
     default_save_path: str = f"/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/evaluation/"
 
