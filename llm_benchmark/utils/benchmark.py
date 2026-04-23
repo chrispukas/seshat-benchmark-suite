@@ -138,7 +138,8 @@ def _run_per_polity_generate(polity: str,
 
 
 def seshat_setup(seshat_cache_dir: str, 
-                 polity_mapping: Dict[str, str]
+                 polity_mapping: Dict[str, str] = config.polity_mapping,
+                 force: bool = False,
                  ) -> dataset.Dataset:
     # SESHAT Intialization
     seshat_endpoint_identifiers: Dict[str, str] = seshat_requests.root_search_url(
@@ -158,8 +159,8 @@ def seshat_setup(seshat_cache_dir: str,
         identifiers_endpoints=seshat_endpoint_identifiers,
         module_dir=seshat_module_dir,
         main_dir=seshat_main_dir,
-        override=False,
-        ignore_polities=["crisisdb/", "core/", "general/", "rt/"],
+        override=force,
+        ignore_polities=["crisisdb/", "core/", "general/", "rt/", "sc/", "ec/"],
         polity_mapping=polity_mapping
     )
     return seshat_ds

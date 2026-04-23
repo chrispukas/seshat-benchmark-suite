@@ -46,9 +46,6 @@ def fetch_json_from_url(url: str,
         else:
             print(f"Failed to fetch data from {url} after {tries} attempts.")
             return {}
-        
-    print(response.json())
-
     return response.json()
 
 def get_polity_list(polity_url: str,
