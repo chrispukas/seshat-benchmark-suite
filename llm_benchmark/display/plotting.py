@@ -2,8 +2,9 @@ import numpy as np
 
 from typing import List, Dict, Any, Optional, Tuple
 from matplotlib import pyplot as plt
+from copy import deepcopy
 
-def plot_stacked_bar_chart(data: Dict[str, Tuple[str, int]],
+def plot_stacked_bar_chart(data: Dict[str, List[Tuple[str, int]]],
                            colours: Optional[List[str]] = ['#e377c2', '#7bac4e', '#d4c04c', '#4c70c4', '#8c564b', '#e7c377', '#c7c7c7'], 
                            title: Optional[str] = "", 
                            legend_title: Optional[str] = "",
@@ -14,13 +15,11 @@ def plot_stacked_bar_chart(data: Dict[str, Tuple[str, int]],
                            absolute: bool = False
                            ) -> None:
     plt.figure(figsize=figsize)
-
-
-    categories = list(data.keys())
+    data_copy = deepcopy(data)
+    categories = list(data_copy.keys())
     for i, category in sorted(enumerate(categories)):
-        sub_categories, counts = zip(*data[category])
+        sub_categories, counts = zip(*data_copy[category])
         sum_counts: int = np.sum(counts)
-        print(category, sum_counts)
         bottom: float = 0.0
 
         for j, (sub_category, count) in \

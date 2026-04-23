@@ -164,13 +164,15 @@ class DatasetModule():
             print("Error during sorting dataset:", e)
 
         try:
-            identifier_shorthand: str = results[0]["name"]
+            identifier_shorthand: str = results[0]["name"].lower()
             self.dataset: pl.DataFrame = self.dataset.rename({f"{identifier_shorthand}_from": "polity_from"})
             self.dataset: pl.DataFrame = self.dataset.rename({f"{identifier_shorthand}_to": "polity_to"})
-
-            self.dataset: pl.DataFrame = self.dataset.rename({f"{identifier_shorthand}": "polity"})
         except:
-            print(f"Warning: failed to rename polity: {f"{identifier_shorthand}_from"}. \n\n")
+            try:
+                self.dataset: pl.DataFrame = self.dataset.rename({f"{identifier_shorthand}": "polity_validity"})
+            except:
+                print(f"Warning: failed to rename polity: {identifier_shorthand} -> polity_validity")
+            print(f"Warning: failed to rename polity: {f"{identifier_shorthand}_from"} -> polity_from. \n\n")
 
         self.dataset.write_parquet(self.parquet_path)
         print(f"Dataset refreshed with {self.dataset.height} entries.")
