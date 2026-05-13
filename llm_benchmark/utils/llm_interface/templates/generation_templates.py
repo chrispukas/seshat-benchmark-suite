@@ -22,7 +22,7 @@ def multichoice_question(content: Dict[str, Any]
     )
     ATLATL: str = "Consider the period from <time-start> to <time-end> in the context of '<polity>'. Was the atlatl, defined as a spear-throwing device used to increase the range and force of a projectile, absent or present as a 'military technology during this time? <answer-options>."
 
-    DITCH: str = "During the period from <time-start> to <time-end>, was the use of ditches as a military technology present or absent in the warfare strategies of '<polity>'? <answer-options>."
+    DITCH: str = "During the period from <time-start> to <time-end>, was the use of ditches as a military technology in the warfare strategies of '<polity>'? <answer-options>."
     DITCH_EXPLANATION: Tuple[str, ...] = (
         "The absence or presence of ditch as a military technology used in warfare."
     )

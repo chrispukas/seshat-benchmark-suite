@@ -84,13 +84,13 @@ def validate_row(row: Dict[str, Any]) -> str:
         polity_to: int = row.get("polity_to")
 
         if polity_from is None and polity_to is None:
-            return "Absent"
+            return "absent"
         
         # Specific fix for the "0" values we saw (like Peiligang)
         if polity_from == 0 and polity_to is None:
-            return "Absent"
+            return "absent"
         
-        return "Present"
+        return "present"
 
     except:
         polity_category: str = row.get("polity_validity")
@@ -99,14 +99,14 @@ def validate_row(row: Dict[str, Any]) -> str:
 def compare_answer(model: str, actual: str) -> bool:
     return model.lower() == actual.lower()
 
-valid_outs: Set[str] = {"Absent.", "Present.", "Absent", "Present"}
+valid_outs: Set[str] = {"absent.", "present.", "absent", "present"}
 
 def is_answer_valid(val: str) -> Tuple[str, bool]:
     val: str = val.strip();
     if val == "":
         return None, False
 
-    first: str = val.split(" ")[0]
+    first: str = val.split(" ")[0].lower()
     return first, first in valid_outs
 
 def format_answer(val: str) -> str:
