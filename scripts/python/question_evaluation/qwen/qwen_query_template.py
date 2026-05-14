@@ -12,12 +12,13 @@ def setup_model(model_name: str):
     return QwenInterfaceModule(
         model_name=model_name,
         local = True,
-        trust_remote_code=True
+        trust_remote_code=True,
+        pull_model=False
     )
 
 def query(model_name: str = "Qwen/Qwen-7B-Chat"):
-    question_instance: QwenInterfaceModule = setup_model(model_name=model_name)
-    return
+    #question_instance: QwenInterfaceModule = setup_model(model_name=model_name)
+    #return
 
     default_load_path: str = f"/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/generation/"
     default_save_path: str = f"/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/evaluation/"
