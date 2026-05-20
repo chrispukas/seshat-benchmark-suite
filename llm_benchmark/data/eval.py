@@ -102,12 +102,13 @@ def compare_answer(model: str, actual: str) -> bool:
 valid_outs: Set[str] = {"absent.", "present.", "absent", "present"}
 
 def is_answer_valid(val: str) -> Tuple[str, bool]:
-    val: str = val.strip();
-    if val == "":
-        return None, False
-
-    first: str = val.split(" ")[0].lower()
-    return first, first in valid_outs
+    unique_list: Set[str] = set(val.lower().split("\n"))
+    for item in unique_list:
+        for valid in valid_outs:
+            if valid in item:
+                return valid, True
+            
+    return "", False
 
 def format_answer(val: str) -> str:
     val: str = val.strip()

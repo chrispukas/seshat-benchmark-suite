@@ -64,3 +64,4 @@ def collapse_prompt(messages: Dict[str, str]) -> str:
             content = msg.get("content", "").strip()
             prompt.append(f"{role}:\n{content}")
         return "\n\n".join(prompt) + "\n\nASSISTANT:\n"
+        

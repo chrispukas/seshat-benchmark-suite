@@ -4,6 +4,7 @@ import numpy as np
 import polars as pl
 
 import llm_benchmark.utils.seshat_requests as seshat_requests
+import llm_benchmark.data.groupings as groupings
 
 from typing import Any, Dict, List, Optional, Tuple, Set
 from llm_benchmark.utils.enums import DatasetType
@@ -41,6 +42,8 @@ class Dataset():
         self.ignore_polities = ignore_polities
 
 
+        self.grouping = groupings.Groupings(cache_dir=self.main_dir)
+
         self.refresh(override=self.override, 
                      polity_mapping=self.polity_mapping)
         
@@ -76,6 +79,7 @@ class Dataset():
         print("Attempting dataset refresh.", override)
 
         self.categorized_endpoints: Dict[DatasetType, List[str]] = {}
+        self.dataset_modules: Dict[str, DatasetModule] = {}
         
         for identifier, endpoint in zip(self.identifers, self.endpoints):
             print(identifier, endpoint)
@@ -91,6 +95,7 @@ class Dataset():
             self.dataset_modules[identifier] = DatasetClass(parquet_path=parquet_path,
                                                             seshat_identifier=identifier,
                                                             seshat_url=endpoint,
+                                                            polity_group=self.grouping.get_polity_group(identifier),
                                                             override=override)
             self.categorized_endpoints[dataset_type] = self.categorized_endpoints.get(dataset_type, []) + [identifier]
             
@@ -100,6 +105,7 @@ class Dataset():
     def check_if_identifier_is_ignored(self,
                                         identifier: str
                                         ) -> bool:
+        """Check if the identifier should be ignored based on the ignore_polities list."""
         for ignore_polity in self.ignore_polities or []:
             if ignore_polity in identifier:
                 return True
@@ -126,18 +132,20 @@ class Dataset():
 class DatasetModule():
     def __init__(self, 
                  parquet_path: str,
-                 question_path: Optional[str] = None,
-                 question_generator: Optional[Any] = None,
+                polity_group: Optional[groupings.PolityGroup] = None,
                  dataset_type: DatasetType = DatasetType.NONE,
                  seshat_identifier: Optional[str] = None,
                  seshat_url: Optional[str] = None,
                  override: bool = False,
                  ) -> None:
+        
         self.parquet_path = parquet_path
         self.seshat_identifier = seshat_identifier
         self.seshat_url = seshat_url
         self.dataset_type = dataset_type
         self.questions = None
+
+        self.polity_group = polity_group
 
         if os.path.isfile(parquet_path) and not override:
             self.dataset: pl.DataFrame = pl.read_parquet(parquet_path)
@@ -152,7 +160,9 @@ class DatasetModule():
         results: List[Dict[str, Any]]  = seshat_requests.traverse_polity(self.seshat_url)
         results_collapsed: List[Dict[str, Any]] = self.format_all_entries(results)
         try:
-            self.dataset: pl.DataFrame = pl.DataFrame(results_collapsed)
+            self.dataset: pl.DataFrame = \
+                pl.DataFrame(results_collapsed,
+                             infer_schema_length=2000)
         except Exception as e:
             print("Error during dataset refresh:", e)
             print("Sample of results causing error:", results_collapsed[0:20])
@@ -171,8 +181,8 @@ class DatasetModule():
             try:
                 self.dataset: pl.DataFrame = self.dataset.rename({f"{identifier_shorthand}": "polity_validity"})
             except:
-                print(f"Warning: failed to rename polity: {identifier_shorthand} -> polity_validity")
-            print(f"Warning: failed to rename polity: {f"{identifier_shorthand}_from"} -> polity_from. \n\n")
+                print(f"Warning: failed to rename polity: polity_validity")
+            print(f"Warning: failed to rename polity: -> polity_from. \n\n")
 
         self.dataset.write_parquet(self.parquet_path)
         print(f"Dataset refreshed with {self.dataset.height} entries.")
