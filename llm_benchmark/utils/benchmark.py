@@ -149,7 +149,7 @@ def seshat_setup(seshat_cache_dir: str,
     )
 
     seshat_module_dir: str = os.path.join(seshat_cache_dir, "main/modules")
-    seshat_main_dir: str = os.path.join(seshat_cache_dir, "main")
+    seshat_main_dir: str = os.path.join(seshat_cache_dir)
 
     os.makedirs(seshat_module_dir, exist_ok=True)
     os.makedirs(seshat_main_dir, exist_ok=True)
@@ -158,7 +158,7 @@ def seshat_setup(seshat_cache_dir: str,
     seshat_ds: dataset.Dataset = dataset.Dataset(
         identifiers_endpoints=seshat_endpoint_identifiers,
         module_dir=seshat_module_dir,
-        main_dir=seshat_main_dir,
+        cache_dir=seshat_main_dir,
         override=force,
         ignore_polities=["crisisdb/", "core/", "general/", "rt/", "sc/", "ec/"],
         polity_mapping=polity_mapping

@@ -6,14 +6,18 @@ from typing import List, Dict, Any
 
 
 class Groupings():
+    """Class to manage groupings of polity variables based on Seshat's variable hierarchy."""
     def __init__(self, cache_dir: str):
         self.cache_dir = cache_dir
         
         core_dir: str = os.path.join(self.cache_dir, "main/modules/core")
+        general_dir: str = os.path.join(self.cache_dir, "main/modules/general")
 
         self.variable_heiararchy: pl.DataFrame = self.load_parquet(os.path.join(core_dir, "variable-hierarchies.parquet"))
         self.sections_parquet: pl.DataFrame  = self.load_parquet(os.path.join(core_dir, "sections.parquet"))
         self.subsections_parquet: pl.DataFrame = self.load_parquet(os.path.join(core_dir, "subsections.parquet"))
+
+        self.polity_capitals: pl.DataFrame = self.load_parquet(os.path.join(general_dir, "polity-capitals.parquet"))
 
         self.sections_by_id: Dict[int, Dict[str, Any]] = self.map_section_by_id(self.sections_parquet)
         self.subsections_by_id: Dict[int, Dict[str, Any]] = self.map_section_by_id(self.subsections_parquet)
@@ -22,9 +26,11 @@ class Groupings():
     
 
     def get_polity_group_by_identifier(self, identifier: str) -> PolityGroup:
+        """Get the PolityGroup for a given identifier."""
         return self.groupings.get(identifier, None)
 
     def load_parquet(self, parquet_path: str) -> pl.DataFrame:
+        """Load a parquet file and return a Polars DataFrame."""
         try:
             df = pl.read_parquet(parquet_path)
             return df
@@ -33,6 +39,7 @@ class Groupings():
             raise e
 
     def refresh_groupings(self) -> Dict[str, PolityGroup]:
+        """Refresh the groupings based on the current variable hierarchy and section/subsection data."""
         groupings: Dict[str, PolityGroup] = {}
         
         for row in self.variable_heiararchy.iter_rows(named=True):
@@ -70,8 +77,12 @@ class Groupings():
             sections_by_id.update({idx: row})
 
         return sections_by_id
+    
+    
 
 class PolityGroup():
+    """ Polity Group structre to hold info about polity variable groupings based on Seshat variable heiarchy."""
+
     def __init__(self, 
                  identifier: str,
 
@@ -79,7 +90,11 @@ class PolityGroup():
                  section_name: str = "",
 
                  subsection_id: int = None,
-                 subsection_name: str = ""):
+                 subsection_name: str = "",
+                 
+                 world_region: str = "",
+                 world_subregion: str = ""
+                 ) -> None:
         
         self.identifier = identifier
 
@@ -88,6 +103,9 @@ class PolityGroup():
 
         self.subsection_id: int = subsection_id
         self.subsection_name: str = subsection_name
+
+        self.world_region: str = world_region
+        self.world_subregion: str = world_subregion
 
 
 

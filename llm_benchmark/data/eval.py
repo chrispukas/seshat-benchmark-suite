@@ -120,3 +120,39 @@ def get_actual_row(dataset_df: pl.DataFrame,
                    entry_idx: int
                    ) -> Dict[str, Any]:
     return dataset_df.row(entry_idx, named=True)
+
+
+
+
+
+
+
+
+
+
+def aggregate_entry_per_hierarchy(dataset: Dataset, 
+                                  dir: int
+                                  ) -> Dict[str, Any]:
+    if not os.path.exists(dir):
+        raise ValueError(f"Directory {dir} does not exist!")
+
+    outs: Dict[str, Any] = {}
+
+    dir_list: List[str] = os.listdir(dir)
+    for item in dir_list:
+        origin: str = item.split("_")[0]
+        endpoint: str = os.path.join(origin, item.split('.')[0].replace(f"{origin}_", ""))
+        answer_path: str = os.path.join(dir, item)
+
+        tally: Dict[str] = tally_answers(dataset=dataset, answers_path=answer_path)
+        outs.update({endpoint: tally})
+
+
+    return outs
+
+
+
+def _single_row_tally() -> Dict[str, Any]:
+    return {
+        
+    }

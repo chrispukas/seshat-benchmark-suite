@@ -14,7 +14,7 @@ class Dataset():
     def __init__(self,
                  identifiers_endpoints: Dict[str, str],
                  module_dir: str,
-                 main_dir: str,
+                 cache_dir: str,
                  override: bool = False,
                  cache_endpoints: Optional[bool] = True,
                  ignore_polities: Optional[List[str]] = None,
@@ -27,7 +27,7 @@ class Dataset():
         self.endpoints_by_parent, self.parent_identifiers = self.parent_identifier_mapping()
 
         self.module_dir = module_dir
-        self.main_dir = main_dir
+        self.cache_dir = cache_dir
         self.dataset_modules: Dict[str, DatasetModule] = {}
 
         self.override = override
@@ -42,7 +42,7 @@ class Dataset():
         self.ignore_polities = ignore_polities
 
 
-        self.grouping = groupings.Groupings(cache_dir=self.main_dir)
+        self.grouping = groupings.Groupings(cache_dir=self.cache_dir)
 
         self.refresh(override=self.override, 
                      polity_mapping=self.polity_mapping)
@@ -95,7 +95,7 @@ class Dataset():
             self.dataset_modules[identifier] = DatasetClass(parquet_path=parquet_path,
                                                             seshat_identifier=identifier,
                                                             seshat_url=endpoint,
-                                                            polity_group=self.grouping.get_polity_group(identifier),
+                                                            polity_group=self.grouping.get_polity_group_by_identifier(identifier=identifier),
                                                             override=override)
             self.categorized_endpoints[dataset_type] = self.categorized_endpoints.get(dataset_type, []) + [identifier]
             
@@ -132,7 +132,7 @@ class Dataset():
 class DatasetModule():
     def __init__(self, 
                  parquet_path: str,
-                polity_group: Optional[groupings.PolityGroup] = None,
+                 polity_group: Optional[groupings.PolityGroup] = None,
                  dataset_type: DatasetType = DatasetType.NONE,
                  seshat_identifier: Optional[str] = None,
                  seshat_url: Optional[str] = None,
@@ -246,11 +246,12 @@ class PolityModule(DatasetModule):
     def __init__(self, 
                  parquet_path: str,
                  dataset_type: DatasetType = DatasetType.NONE,
+                 polity_group: Optional[groupings.PolityGroup] = None,
                  seshat_identifier: Optional[str] = None,
                  seshat_url: Optional[str] = None,
                  override: bool = False,
                  ) -> None:
-        super().__init__(parquet_path, DatasetType.POLITY, seshat_identifier, seshat_url, override)
+        super().__init__(parquet_path, polity_group, DatasetType.POLITY, seshat_identifier, seshat_url, override)
 
     def get_polity_by_id(self,
                          polity_id: int
@@ -291,6 +292,7 @@ class PolityModule(DatasetModule):
 class EconomicComplexityModule(DatasetModule):
     def __init__(self, 
                  parquet_path: str,
+                 polity_group: Optional[groupings.PolityGroup] = None,
                  dataset_type: DatasetType = DatasetType.ECONOMIC_COMPLEXITY,
                  seshat_identifier: Optional[str] = None,
                  seshat_url: Optional[str] = None,
@@ -300,7 +302,8 @@ class EconomicComplexityModule(DatasetModule):
                          dataset_type=DatasetType.ECONOMIC_COMPLEXITY, 
                          seshat_identifier=seshat_identifier, 
                          seshat_url=seshat_url, 
-                         override=override)
+                         override=override,
+                         polity_group=polity_group)
                          
         
         print("Initialized EconomicComplexityModule.")
@@ -372,12 +375,14 @@ class SocialComplexityModule(DatasetModule):
                  seshat_identifier: Optional[str] = None,
                  seshat_url: Optional[str] = None,
                  override: bool = False,
+                 polity_group: Optional[groupings.PolityGroup] = None
                  ) -> None:
         super().__init__(parquet_path=parquet_path, 
                          dataset_type=DatasetType.SOCIAL_COMPLEXITY, 
                          seshat_identifier=seshat_identifier, 
                          seshat_url=seshat_url, 
-                         override=override)
+                         override=override,
+                         polity_group=polity_group)
         
         print("Initialized SocialComplexityModule.")
 
@@ -432,12 +437,14 @@ class WarfareFeaturesModule(DatasetModule):
                  seshat_identifier: Optional[str] = None,
                  seshat_url: Optional[str] = None,
                  override: bool = False,
+                 polity_group: Optional[groupings.PolityGroup] = None
                  ) -> None:
         super().__init__(parquet_path=parquet_path, 
                          dataset_type=DatasetType.WARFARE_FEATURES, 
                          seshat_identifier=seshat_identifier, 
                          seshat_url=seshat_url, 
-                         override=override)
+                         override=override,
+                         polity_group=polity_group)
         
         print("Initialized WarfareFeaturesModule.")
 
