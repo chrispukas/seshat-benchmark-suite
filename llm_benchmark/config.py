@@ -5,6 +5,10 @@ from llm_benchmark.utils.llm_interface.templates import generation_templates as 
 
 from typing import Dict, Any, Tuple
 
+
+ENDPOINT_URL: str = "https://seshat-db.com/api/"
+
+
 # -------------------------
 # --- HYDRATION MAPPING ---
 # -------------------------

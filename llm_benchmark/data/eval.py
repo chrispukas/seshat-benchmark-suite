@@ -5,99 +5,8 @@ import polars as pl
 from typing import Dict, Tuple, Any, Optional, Set, List
 from llm_benchmark.utils.dataset import Dataset, DatasetModule
 from llm_benchmark.utils import benchmark
-
-
-def tally_directory(dataset: Dataset, 
-                    dir: str
-                    ) -> List[Dict[str, Any]]:
-    if not os.path.exists(dir):
-        raise ValueError(f"Directory {dir} does not exist!")
-
-    outs: Dict[str, Any] = {}
-
-    dir_list: List[str] = os.listdir(dir)
-    for item in dir_list:
-        origin: str = item.split("_")[0]
-        endpoint: str = os.path.join(origin, item.split('.')[0].replace(f"{origin}_", ""))
-        answer_path: str = os.path.join(dir, item)
-
-        tally: Dict[str] = tally_answers(dataset=dataset, answers_path=answer_path)
-        outs.update({endpoint: tally})
-    return outs
-
-def tally_answers(dataset: Dataset, 
-                  answers_path: str) -> Dict[str]:
-    if not os.path.exists(answers_path):
-        raise ValueError("Path to LLM answers not specified!")
-        return
-    
-    try:
-        df: pl.DataFrame = pl.read_csv(answers_path)
-    except:
-        print(f"Failed to load dataframe with path: {answers_path}")
-        return
-    
-    endpoint_identifier: str = df[1, 0].replace("https://seshat-db.com/api/", "")[:-1]
-    dataset_df: pl.DataFrame = dataset.get_module(identifier=endpoint_identifier.replace("https://seshat-db.com/api/", "",)).get_entries()
-    
-    output: Dict[str, Tuple[int, List[str]]] = {
-        "inconclusive":      (0, []),
-        "correct_present":   (0, []),
-        "correct_absent":    (0, []),
-        "incorrect_present": (0, []),
-        "incorrect_absent":  (0, []),
-    }
-    for row in df.iter_rows(named=True):
-        answer: str = row["output"]
-        clean_answer, is_valid = is_answer_valid(answer)
-        if not is_valid:
-            output["inconclusive"] = reconstruct_output(item=output["inconclusive"], to_append=answer)
-            continue
-        clean_answer: str = format_answer(clean_answer)
-        row: Dict[str, Any] = get_actual_row(dataset_df=dataset_df, entry_idx=row["entry_idx"])
-        actual: str = validate_row(row=row)
-
-        if actual.lower() == "unknown":
-            output["inconclusive"] = reconstruct_output(item=output["inconclusive"], to_append=answer)
-            continue
-
-        truth: bool = compare_answer(model=clean_answer, actual=actual)
-
-        type = "correct" if truth else "incorrect"
-        key: str = f"{type}_{clean_answer.lower()}"
-        output[key] = reconstruct_output(item=output[key], to_append=answer)
-
-    return output
-
-def reconstruct_output(item: Tuple[int, str], to_append: str) -> Tuple[int, str]:
-    count, answers_list = item
-    answers_list.append(to_append)
-    return (count + 1, answers_list)
-
-
-def validate_row(row: Dict[str, Any]) -> str:
-    
-    try:
-        if "polity_from" not in row.keys() or "polity_to" not in row.keys():
-            raise ValueError("Ranged polity not possible")
-        polity_from: int = row.get("polity_from")
-        polity_to: int = row.get("polity_to")
-
-        if polity_from is None and polity_to is None:
-            return "absent"
-        
-        # Specific fix for the "0" values we saw (like Peiligang)
-        if polity_from == 0 and polity_to is None:
-            return "absent"
-        
-        return "present"
-
-    except:
-        polity_category: str = row.get("polity_validity")
-        return polity_category.lower()
-
-def compare_answer(model: str, actual: str) -> bool:
-    return model.lower() == actual.lower()
+from llm_benchmark import config as cfg
+from llm_benchmark.data import groupings
 
 valid_outs: Set[str] = {"absent.", "present.", "absent", "present"}
 
@@ -121,22 +30,14 @@ def get_actual_row(dataset_df: pl.DataFrame,
                    ) -> Dict[str, Any]:
     return dataset_df.row(entry_idx, named=True)
 
-
-
-
-
-
-
-
-
-
 def aggregate_entry_per_hierarchy(dataset: Dataset, 
-                                  dir: int
+                                  dir: str,
+                                  model: str,
                                   ) -> Dict[str, Any]:
     if not os.path.exists(dir):
         raise ValueError(f"Directory {dir} does not exist!")
 
-    outs: Dict[str, Any] = {}
+    outs: List[pl.DataFrame] = []
 
     dir_list: List[str] = os.listdir(dir)
     for item in dir_list:
@@ -144,15 +45,128 @@ def aggregate_entry_per_hierarchy(dataset: Dataset,
         endpoint: str = os.path.join(origin, item.split('.')[0].replace(f"{origin}_", ""))
         answer_path: str = os.path.join(dir, item)
 
-        tally: Dict[str] = tally_answers(dataset=dataset, answers_path=answer_path)
-        outs.update({endpoint: tally})
+        tally: pl.DataFrame = tally_answers(dataset=dataset, answers_path=answer_path)
+        tally: pl.DataFrame = tally.with_columns([
+            pl.lit(endpoint).alias("endpoint"),
+            pl.lit(model).alias("llm_model")
+            ])
+        outs.append(tally)
+    return pl.concat(outs)
 
+def tally_answers(dataset: Dataset, 
+                  answers_path: str) -> Dict[str]:
+    if not os.path.exists(answers_path):
+        raise ValueError("Path to LLM answers not specified!")
+        return
+    try:
+        df: pl.DataFrame = pl.read_csv(answers_path)
+    except:
+        print(f"Failed to load dataframe with path: {answers_path}")
+        return
+    
+    endpoint_identifier: str = df[1, 0].replace(cfg.ENDPOINT_URL, "")[:-1]
+    dataset_module: DatasetModule = dataset.get_module(identifier=endpoint_identifier.replace(cfg.ENDPOINT_URL, "",))
+    dataset_df: pl.DataFrame = dataset_module.get_entries()
+    
+    data: List[Dict[str, str]] = []
+
+    for (question_idx, row) in enumerate(df.iter_rows(named=True)):
+        answer: str = row["output"]
+        clean_answer, is_valid = is_answer_valid(answer.lower())
+        entry_idx: int = row["entry_idx"]
+
+        row_actual: Dict[str, Any] = get_actual_row(dataset_df=dataset_df, entry_idx=entry_idx)
+        predicted: str = classify_quality(answer=answer, is_valid=is_valid)
+        actual: str = row_actual.get("polity_validity", None)
+
+        try:
+            ids: Dict[str, Any] = get_ids_from_row(dataset.grouping, row_actual, endpoint_identifier)
+        except (IndexError, pl.exceptions.ColumnNotFoundError):
+            print("ID ERROR")
+            ids: Dict[str, Any] = {}
+
+        entry: Dict[str, object] = {
+            "seshat_entry_id": entry_idx,
+            "question_entry_id": question_idx,
+            "model_answer": predicted,
+            "actual_answer": actual,
+        }
+        entry.update(ids)
+
+        data.append(entry)
+    
+    if data == [] or data == None:
+        print(f"Warning: polity_validity not found for {answers_path}")
+        return pl.DataFrame({})
+    
+    df_outs: pl.DataFrame = pl.DataFrame(data=data)
+    return df_outs
+
+
+
+def classify_quality(answer: str, 
+                     is_valid: bool
+                     ) -> str:
+    """
+        Classifying question by validation check. 
+        Intentionally returns strings to be compatible with dataframes.
+    """
+    if not is_valid:
+        return "inconclusive"
+    
+    clean_answer: str = format_answer(answer)
+    return clean_answer.split(" ")[0].lower()
+
+
+def get_ids_from_row(groupings: groupings.Groupings, 
+                     row: Dict[str, object],
+                     endpoint: str) -> Dict[str, int]:
+    """Pull grouping information from SESHAT, indexing errors are an intentional failure point."""
+    #try:
+    polity_in_row: Dict[str, object] = row["polity"]
+    polity_idx: int = polity_in_row["id"]
+
+    polity: Dict[str, Any] = groupings.get_table_by_tag(table_name="polities", tag_truthy=polity_idx)
+    region: Dict[str, Any] = groupings.get_table_by_tag(table_name="regions", tag_truthy=polity["home_seshat_region"]["id"])
+    macro_region: Dict[str, Any] = groupings.get_table_by_tag(table_name="macro-regions", tag_truthy=region["mac_region"])
+
+    outs: Dict[str, Any] = {
+        "region_idx": region["id"],
+        "region_str": region["name"],
+
+        "macro_idx": macro_region['id'],
+        "macro_str": macro_region["name"],
+    }
+    variable_hierarchy: Dict[str, Any] = groupings.get_variable_hierarchy_by_endpoint(endpoint=endpoint)
+
+    section_outs: Dict[str, Any] = _pull_outs_single(variable_hierarchy=variable_hierarchy, section_tag="sections", section_func=groupings.get_table_by_tag)
+    subsection_outs: Dict[str, Any] = _pull_outs_single(variable_hierarchy=variable_hierarchy, section_tag="subsections", section_func=groupings.get_table_by_tag)
+    
+    outs.update(section_outs)
+    outs.update(subsection_outs)
 
     return outs
 
+    #except (IndexError, KeyError, TypeError):
+    #    return {}
 
-
-def _single_row_tally() -> Dict[str, Any]:
-    return {
+def _pull_outs_single(variable_hierarchy: Dict[str, Any],
+                      section_tag: str, 
+                      section_func: object) -> Dict[str, Any]:
+    
+    try:
+        section_idx: int = variable_hierarchy[section_tag]
+        section: Dict[int, Any] = section_func(table_name=section_tag, tag_truthy=section_idx, tag="id")
         
-    }
+        if section_idx is None:
+            return {
+                f"{section_tag}_idx": None,
+                f"{section_tag}_str": None,
+                }
+
+        return {
+                f"{section_tag}_idx": section_idx,
+                f"{section_tag}_str": section["name"]
+        }   
+    except (KeyError, IndexError):
+        return {}

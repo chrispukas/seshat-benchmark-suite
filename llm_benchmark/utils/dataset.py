@@ -95,7 +95,7 @@ class Dataset():
             self.dataset_modules[identifier] = DatasetClass(parquet_path=parquet_path,
                                                             seshat_identifier=identifier,
                                                             seshat_url=endpoint,
-                                                            polity_group=self.grouping.get_polity_group_by_identifier(identifier=identifier),
+                                                            polity_group=None,
                                                             override=override)
             self.categorized_endpoints[dataset_type] = self.categorized_endpoints.get(dataset_type, []) + [identifier]
             
@@ -220,7 +220,9 @@ class DatasetModule():
         return self.questions
     def get_seshat_identifier(self) -> str:
         return self.seshat_identifier
-    
+    def get_polity_groupings(self) -> str:
+        return self.polity_group
+
     def sanitize_row(self,
                     row: Dict[str, Any]
                     ) -> Dict[str, Any]:
