@@ -54,7 +54,11 @@ def aggregate_entry_per_hierarchy(dataset: Dataset,
     return pl.concat(outs)
 
 def tally_answers(dataset: Dataset, 
-                  answers_path: str) -> Dict[str]:
+                  answers_path: str) -> pl.DataFrame:
+    """
+        Tallies answers from a given path, returning dataframes of given structures.
+    """
+
     if not os.path.exists(answers_path):
         raise ValueError("Path to LLM answers not specified!")
         return
@@ -102,8 +106,6 @@ def tally_answers(dataset: Dataset,
     df_outs: pl.DataFrame = pl.DataFrame(data=data)
     return df_outs
 
-
-
 def classify_quality(answer: str, 
                      is_valid: bool
                      ) -> str:
@@ -116,7 +118,6 @@ def classify_quality(answer: str,
     
     clean_answer: str = format_answer(answer)
     return clean_answer.split(" ")[0].lower()
-
 
 def get_ids_from_row(groupings: groupings.Groupings, 
                      row: Dict[str, object],
@@ -146,9 +147,6 @@ def get_ids_from_row(groupings: groupings.Groupings,
     outs.update(subsection_outs)
 
     return outs
-
-    #except (IndexError, KeyError, TypeError):
-    #    return {}
 
 def _pull_outs_single(variable_hierarchy: Dict[str, Any],
                       section_tag: str, 
