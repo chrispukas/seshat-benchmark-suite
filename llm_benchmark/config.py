@@ -3,8 +3,7 @@ from llm_benchmark.utils.enums import DatasetType, Tags, Quality, QuestionType, 
 
 from llm_benchmark.utils.llm_interface.templates import generation_templates as gen_tmps 
 
-from typing import Dict, Any, Tuple
-
+from typing import Dict, Any, Tuple, List
 
 ENDPOINT_URL: str = "https://seshat-db.com/api/"
 
@@ -36,12 +35,40 @@ hydrate_to_real_mapping: Dict[str, Tuple[str, Any]] = \
 
 
 
-hydrate_evaluation_type_to_template_mapping: Dict[QuestionHydrationOptions, str] = \
+
+hydration_shuffle_answer_options: bool = True # Positional bias
+hydration_shuffle_answer_option_labels: bool = True # Semantic Bias
+
+hydration_answeroptions_prefix: str = "Strictly choose the correct label from an unordered set"
+
+hydration_answeroptions: Dict[QuestionHydrationOptions, Dict[str, str]] = \
     {
-        QuestionHydrationOptions.PRESENT_ABSENT: "Please answer strictly with either 'present' or 'absent'",
-        QuestionHydrationOptions.PRESENT_ABSENT_UNKNOWN: "Please answer strictly with either 'present', 'absent', or 'unknown'",
-        QuestionHydrationOptions.PRESENT_ABSENT_INFERREDPRESENT_INFERREDABSENT: "Please answer strictly with either 'present', 'absent', 'inferred present', or 'inferred absent'",
-        QuestionHydrationOptions.PRESENT_ABSENT_INFERREDPRESENT_INFERREDABSENT_UNKNOWN: "Please answer strictly with either 'present', 'absent', 'inferred present', 'inferred absent', or 'unknown'",
+        QuestionHydrationOptions.PRESENT_ABSENT: \
+            {
+             "A": "present", 
+             "B": "absent",
+             },
+        QuestionHydrationOptions.PRESENT_ABSENT_UNKNOWN: \
+            {
+             "A": "present", 
+             "B": "absent",
+             "C": "unsure (cannot determine from current evidence)",
+             },
+        QuestionHydrationOptions.PRESENT_ABSENT_INFERREDPRESENT_INFERREDABSENT: \
+            {
+             "A": "present (explicit)", 
+             "B": "absent  (explicit)",
+             "C": "present (inferred)",
+             "D": "absent  (inferred)",
+             },
+        QuestionHydrationOptions.PRESENT_ABSENT_INFERREDPRESENT_INFERREDABSENT_UNKNOWN: \
+            {
+             "A": "present (explicit)", 
+             "B": "absent  (explicit)",
+             "C": "present (inferred)",
+             "D": "absent  (inferred)",
+             "E": "unknown"
+             },
     }
 
 # --------------------------
