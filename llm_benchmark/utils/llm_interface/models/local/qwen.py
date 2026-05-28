@@ -66,25 +66,13 @@ class QwenInterfaceModule(LLMInterfaceModule):
                     temperature: float = 0.7,
                     max_tokens: int = 300
                     ) -> str:
-        print(f" /// STARTOF ///")
-        print(f"Querying Qwen model, message: {message}")
-        print(f" /// ENDOF ///")
-
-
-        print(message)
-
         print(f"\n\n\n\n\n\n\n\n")
-
-
+        print(f"Querying Qwen model, message: {message}")
         try:
             response = old_chat(self, message)
         except:
             response = new_chat(self, messages=message)
-
-        print(f" /// STARTOF ///")
         print(f"Output: {response}")
-        print(f" /// ENDOF ///")
-
         return response
     
 def old_chat(self, message):

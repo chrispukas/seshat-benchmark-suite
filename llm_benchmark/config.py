@@ -37,7 +37,7 @@ hydrate_to_real_mapping: Dict[str, Tuple[str, Any]] = \
 
 
 hydration_shuffle_answer_options: bool = True # Positional bias
-hydration_shuffle_answer_option_labels: bool = True # Semantic Bias
+hydration_shuffle_answer_option_labels: bool = False # Semantic Bias
 
 hydration_answeroptions_prefix: str = "Strictly choose the correct label from an unordered set"
 

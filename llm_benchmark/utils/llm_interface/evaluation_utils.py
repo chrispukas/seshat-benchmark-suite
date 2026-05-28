@@ -6,26 +6,18 @@ from llm_benchmark import config
 from llm_benchmark.utils.enums import QuestionHydrationOptions
 from llm_benchmark.utils.dataset import Dataset, DatasetModule
 
-
-# --------------------
-# --- METRIC UTILS ---
-# --------------------
-
-
-# -----------------------
-# --- HYDRATION UTILS ---
-# -----------------------
-
 def hydrate(Dataset: Dataset, 
             questions_dir: str,
             EvaluationType: QuestionHydrationOptions,
             write_path: Optional[str] = None,
             link_to_dataset: Optional[bool] = False) -> pl.DataFrame:
-    """Hydrate the question entries in the questions dataframe with the corresponding dataset entries, assumes datasets of one type per dataframe."""
+    """
+        Hydrate the question entries in the questions dataframe with the corresponding dataset entries, assuming datasets of one type per dataframe.
+    """
     df: pl.DataFrame = pl.read_csv(questions_dir)
     df = df.with_columns(
                         pl.col("endpoint_identifier")
-                                .str.replace("https://seshat-db.com/api/", "")
+                                .str.replace(config.ENDPOINT_URL, "")
                                 .str.strip_suffix("/")
                         )
 
@@ -37,11 +29,10 @@ def hydrate(Dataset: Dataset,
     endpoint_module_df: Dict[str, pl.DataFrame] = {unique_endpoints[0]: endpoint_module.get_entries()}
 
     hydrated_dicts: List[Dict[str, Any]] = []
-
+ 
     for row in df.iter_rows(named=True):
         endpoint_identifier: str = row["endpoint_identifier"]
         entry_idx: int = int(row["entry_idx"])
-        entry: str = row["output"]
 
         module_df: pl.DataFrame = endpoint_module_df[endpoint_identifier]
         entry: pl.DataFrame = module_df.row(entry_idx, named=True)
@@ -106,6 +97,7 @@ def hydrated_answeroptions_fill(
     # Shuffle Labels if required e.g. {A = absent, B = present, C = unknown} -> {A = present, B = unknwon, C = absent}
     if shuffle_option_labels: 
         _, op_values = zip(*option_items)
+        op_values: List[str] = list(op_values)
         random.shuffle(op_values)
         option_items: List[Tuple[str, str]] = zip(op_keys, op_values)
 
@@ -114,3 +106,10 @@ def hydrated_answeroptions_fill(
     set_string: str = ", ".join(tags)
 
     return f"{prefix}: {{{set_string}}}.\n{option_joined}"
+
+answeroptions_fill: str = hydrated_answeroptions_fill(
+        evaluation_type=QuestionHydrationOptions.PRESENT_ABSENT_UNKNOWN,
+        shuffle_options=config.hydration_shuffle_answer_options,
+        shuffle_option_lwabels=config.hydration_shuffle_answer_option_labels
+    )
+print(answeroptions_fill)
