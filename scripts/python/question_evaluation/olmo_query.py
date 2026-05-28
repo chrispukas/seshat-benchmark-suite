@@ -35,9 +35,9 @@ def main():
     evaluate(
         question_save_path=args.question_save_path,
         answer_save_path=final_answer_save_path,
-        LLMInterfaceModule=question_instance,
+        llm_interface=question_instance,
         seshat_cache_dir=args.cache_dir,
-        polities_to_evaluate=["wf"],
+        categories_to_evaluate=["wf"],
     )
 
 if __name__ == "__main__":

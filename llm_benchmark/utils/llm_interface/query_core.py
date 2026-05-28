@@ -81,6 +81,8 @@ class LLMInterfaceModule():
         template: object = self._get_template(question_type)
         message: Dict[str, Any] = template(gen_utils.remap_question_row(row, sub_dir)) if template else {}
 
+        print(message)
+
         output: str = self.query_model(message,
                             temperature=params.get("temperature", 0.7),
                             max_tokens=params.get("max_tokens", 150)

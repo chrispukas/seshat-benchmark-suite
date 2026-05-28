@@ -37,7 +37,7 @@ def multichoice_question(content: Dict[str, Any]
     ]
 
 
-    examples: List[Dict[str, Any]] = [fewshot_template(example) for example in EXAMPLES]
+    examples: List[Dict[str, str]] = [item for example in EXAMPLES for item in fewshot_template(example)]
     variable_name: str = content.get("full_name", "Unknown")
     if variable_name.lower() == "unknown":
         variable_name: str = content.get("short_name", "Unknown")
@@ -52,7 +52,7 @@ def multichoice_question(content: Dict[str, Any]
         },
     ]
 
-    template.append(examples)
+    template.extend(examples)
     template.append({
                     "role": "user",
                     "content": f""""Variable name": {variable_name}\n"Variable description": {content.get("description", "No description available.")},""",

@@ -1,19 +1,27 @@
 import polars as pl
 import random
+import os
+
 from typing import Any, Dict, List, Optional, Tuple
 
 from llm_benchmark import config
 from llm_benchmark.utils.enums import QuestionHydrationOptions
 from llm_benchmark.utils.dataset import Dataset, DatasetModule
 
-def hydrate(Dataset: Dataset, 
+def hydrate(dataset: Dataset, 
             questions_dir: str,
-            EvaluationType: QuestionHydrationOptions,
+            evaluation_type: QuestionHydrationOptions,
             write_path: Optional[str] = None,
-            link_to_dataset: Optional[bool] = False) -> pl.DataFrame:
+            link_to_dataset: Optional[bool] = False,
+            overwrite: Optional[bool] = False) -> pl.DataFrame:
     """
         Hydrate the question entries in the questions dataframe with the corresponding dataset entries, assuming datasets of one type per dataframe.
     """
+    if questions_dir is None:
+        questions_dir = ""
+    if write_path is None:
+        write_path = ""
+
     df: pl.DataFrame = pl.read_csv(questions_dir)
     df = df.with_columns(
                         pl.col("endpoint_identifier")
@@ -25,7 +33,15 @@ def hydrate(Dataset: Dataset,
     if len(unique_endpoints) > 1:
         print(f"Multiple unique endpoints found in questions dataframe: {unique_endpoints}, failed to hydrate.")
         return pl.DataFrame({})
-    endpoint_module = Dataset.get_module(unique_endpoints[0])
+    endpoint_module = dataset.get_module(unique_endpoints[0])
+
+    if not overwrite and os.path.isfile(write_path):
+        df: pl.DataFrame = pl.read_csv(write_path)
+        if link_to_dataset:
+            endpoint_module.link_hydrated_questions(df)
+
+        return df
+
     endpoint_module_df: Dict[str, pl.DataFrame] = {unique_endpoints[0]: endpoint_module.get_entries()}
 
     hydrated_dicts: List[Dict[str, Any]] = []
@@ -36,7 +52,7 @@ def hydrate(Dataset: Dataset,
 
         module_df: pl.DataFrame = endpoint_module_df[endpoint_identifier]
         entry: pl.DataFrame = module_df.row(entry_idx, named=True)
-        hydrated_row: str = map_hydrated_to_real(to_hydrate=row["output"], data=entry, evaluation_type=EvaluationType)
+        hydrated_row: str = map_hydrated_to_real(to_hydrate=row["output"], data=entry, evaluation_type=evaluation_type)
 
         hydrated_dicts.append({
                 **row,
@@ -45,6 +61,7 @@ def hydrate(Dataset: Dataset,
         
     hydrated_df =  pl.DataFrame(hydrated_dicts)
     if write_path:
+        os.makedirs(os.path.dirname(write_path), exist_ok=True)
         hydrated_df.write_csv(write_path)
         print(f"Hydrated dataframe written to {write_path}")
     if link_to_dataset:
@@ -106,10 +123,3 @@ def hydrated_answeroptions_fill(
     set_string: str = ", ".join(tags)
 
     return f"{prefix}: {{{set_string}}}.\n{option_joined}"
-
-answeroptions_fill: str = hydrated_answeroptions_fill(
-        evaluation_type=QuestionHydrationOptions.PRESENT_ABSENT_UNKNOWN,
-        shuffle_options=config.hydration_shuffle_answer_options,
-        shuffle_option_lwabels=config.hydration_shuffle_answer_option_labels
-    )
-print(answeroptions_fill)

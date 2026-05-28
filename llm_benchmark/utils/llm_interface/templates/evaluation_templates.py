@@ -8,21 +8,26 @@ def multichoice(question: str
         """
     INSTRUCTIONS: str = \
         """
-            Answer the following question to the best of your ability, ensuring that you strictly follow the question instructions, providing only the answer required.
+            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. 
+            Provide a concise reasoning, then answer the questions. 
+            The questions are always followed by the corresponding answer options.
+            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don't continue writing after giving an answer.
+        
+            Follow the output schema:
+            Reasoning: <insert reasoning>
+            Answer only: <selected option letter>
+            
+            Do not output anything after this line.
         """
 
 
     return [
         {
             "role": "system",
-            "content": ROLE,
+            "content": f"""{ROLE}\n{INSTRUCTIONS}""",
         },
         {
             "role": "user",
-            "content": INSTRUCTIONS,
-        },
-        {
-            "role": "assistant",
             "content": question,
         },
     ]
