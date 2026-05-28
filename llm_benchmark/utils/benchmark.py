@@ -167,7 +167,7 @@ def _run_per_polity_generate(polity: str,
         dataset_module: dataset.DatasetModule = ds.dataset_modules[identifier]
         LLMInterfaceModule.generate_questions(
             DatasetModule = dataset_module,
-            params = {"max_new_tokens": 512, "temperature": 0.7},
+            params = {"max_new_tokens": 1024, "temperature": 0.7},
             output_path = f"{save_path}/{polity}/{identifier.replace('/', '_')}_questions.csv",
         )
 
@@ -196,7 +196,7 @@ def seshat_setup(seshat_cache_dir: str,
         module_dir=seshat_module_dir,
         cache_dir=seshat_main_dir,
         override=force,
-        ignore_polities=["crisisdb/", "core/", "general/", "rt/", "sc/", "ec/"],
+        ignore_polities=["crisisdb/", "core/", "general/", "rt/"],
         polity_mapping=polity_mapping
     )
     return seshat_ds

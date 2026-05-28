@@ -4,13 +4,13 @@ import os
 import argparse
 import llm_benchmark.config as config
 
-from typing import Dict
+from typing import Dict, List
 
 from llm_benchmark.utils.llm_interface.models.local.qwen import QwenInterfaceModule
 from llm_benchmark.utils.llm_interface.generation_utils import savepath_formatting
 from llm_benchmark.utils.benchmark import generate
 
-def query(model_name: str = "Qwen/Qwen-7B-Chat"):
+def query(model_name: str = "Qwen/Qwen-7B-Chat", polities_to_evaluate: List[str] = ["wf"]):
     defaults: Dict[str, str] = {
         "unhydrated_question_save_path": "/rds/general/user/cp824/home/neurips_llms/llm-benchmark/db/generation/",
     }
@@ -35,5 +35,5 @@ def query(model_name: str = "Qwen/Qwen-7B-Chat"):
         LLMInterfaceModule=question_instance,
         seshat_cache_dir=args.cache_dir,
         polity_mapping=config.polity_mapping,
-        polities_to_evaluate=["wf"]
+        polities_to_evaluate=polities_to_evaluate
     )

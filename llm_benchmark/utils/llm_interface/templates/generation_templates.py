@@ -6,13 +6,13 @@ def multichoice_question(content: Dict[str, Any]
     Your task is to create a challenging yet well-defined historical exam question based on a variable definition from a historical dataset.
     Follow the rules below, and return ONLY the final question template, based on the examples provided. 
     
-    1. Begin the question with a concise explanation of the variable's definition, strictly adhering to the provided description
+    1. Begin the question with a concise explanation of the variable's definition, strictly adhering to the provided description, if no description is provided, use the variable name as the basis for the question.
     2. Ensure all of the following template markers are used, assume these will be replaced later:
         - '<polity>' for polity names (e.g. 'The Papal States')
         - '<time-start>' and '<time-end>' for temporal scope
     3. The question should make abundantly clear what the format of the desired response is and that only that response should be given.
-    4. Do not include explanations, roles, metadata, or reasoning.
-    5. Ensure that only the information given is used.
+    4. Do not include explanations, roles, metadata, reasoning, or formatting outside plain text.
+    5. Output must be exactly one question.
 
     Structure your answer for maximum clarity.
     """
@@ -38,24 +38,21 @@ def multichoice_question(content: Dict[str, Any]
 
 
     examples: List[Dict[str, str]] = [item for example in EXAMPLES for item in fewshot_template(example)]
-    variable_name: str = content.get("full_name", "Unknown")
+    variable_name: str = content.get("full_name", "NOT PROVIDED")
     if variable_name.lower() == "unknown":
-        variable_name: str = content.get("short_name", "Unknown")
+        variable_name: str = content.get("short_name", "NOT PROVIDED")
 
     template: List[Dict[str, Any]] =  [
         {
             "role": "system",
-            "content": f"""
-                            You are are history professor writing challenging questions for PhD students.\n
-                            {ABS_PRES_INSTRUCTIONS}
-                        """,
+            "content": f"""You are are history professor writing challenging questions for PhD students.\n{ABS_PRES_INSTRUCTIONS}""",
         },
     ]
 
     template.extend(examples)
     template.append({
                     "role": "user",
-                    "content": f""""Variable name": {variable_name}\n"Variable description": {content.get("description", "No description available.")},""",
+                    "content": f""""Variable name": {variable_name}\n"Variable description": {content.get("description", "NOT PROVIDED")}""",
                     })
     return template
 
