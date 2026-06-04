@@ -128,14 +128,11 @@ def classify_quality(
     clean_answer: str = format_answer(answer)
     return clean_answer.split(" ")[0].lower()
 
-
-
-
 def get_ids_from_row(
         groupings: groupings.Groupings, 
         row: Dict[str, object],
         endpoint: str
-        ) -> Dict[str, int]:
+        ) -> Dict[str, Any]:
     """Pull grouping information from SESHAT, indexing errors are an intentional failure point."""
     polity_in_row: Dict[str, object] = row["polity"]
     polity_idx: int = polity_in_row["id"]
@@ -143,19 +140,21 @@ def get_ids_from_row(
     polity: Dict[str, Any] = groupings.get_table_by_tag(table_name="polities", tag_truthy=polity_idx)
     region: Dict[str, Any] = groupings.get_table_by_tag(table_name="regions", tag_truthy=polity["home_seshat_region"]["id"])
     macro_region: Dict[str, Any] = groupings.get_table_by_tag(table_name="macro-regions", tag_truthy=region["mac_region"])
-
-    outs: Dict[str, Any] = {
-        "region_idx": region["id"],
-        "region_str": region["name"],
-
-        "macro_idx": macro_region['id'],
-        "macro_str": macro_region["name"],
-    }
+    
     variable_hierarchy: Dict[str, Any] = groupings.get_variable_hierarchy_by_endpoint(endpoint=endpoint)
-
     section_outs: Dict[str, Any] = _pull_outs_single(variable_hierarchy=variable_hierarchy, section_tag="sections", section_func=groupings.get_table_by_tag)
     subsection_outs: Dict[str, Any] = _pull_outs_single(variable_hierarchy=variable_hierarchy, section_tag="subsections", section_func=groupings.get_table_by_tag)
+
+    def ground_entry(entry: Dict[str, Any], label: str) -> Dict[str, str]:
+        return {
+            f"{label}_idx": entry["id"],
+            f"{label}_str": entry["name"],
+        }
     
+    outs: Dict[str, Any] = {}
+
+    outs.update(ground_entry(region, "region"))
+    outs.update(ground_entry(macro_region, "macro"))
     outs.update(section_outs)
     outs.update(subsection_outs)
 
@@ -182,4 +181,7 @@ def _pull_outs_single(
                 f"{section_tag}_str": section["name"]
         }   
     except (KeyError, IndexError):
-        return {}
+        return {
+                f"{section_tag}_idx": None,
+                f"{section_tag}_str": None,
+                }

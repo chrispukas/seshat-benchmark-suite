@@ -14,7 +14,7 @@ def multichoice_question(
     3. The question should make abundantly clear what the format of the desired response is and that only that response should be given.
     4. The output must be exactly one question.
 
-    Structure your answer for maximum clarity.
+    Structure your response with a clear question template.
     """
 
     # [(description, question), ...]
