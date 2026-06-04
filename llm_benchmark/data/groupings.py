@@ -41,16 +41,21 @@ class Groupings():
     def get_table_by_tag(self, 
                          table_name: str,
                          tag_truthy: Any,
-                         tag: Optional[str] = "id") -> None:
+                         tag: Optional[str] = "id") -> Dict[str, Any]:
         table: pl.DataFrame|None = self.tables.get(table_name)
         if table is None:
             print("Table not found!")
             return None
+        if tag_truthy == None:
+            return None
         
         rows: List[Dict[str, Any]] = table.filter(pl.col(tag) == tag_truthy).to_dicts()
         len_fetchrows: int = len(rows)
-        if len_fetchrows != 1:
-            print(f"Warning, found {rows} entries, returning first entry!")
+        if len_fetchrows > 1:
+            print(f"Warning: {len_fetchrows} entries for tag: {tag} in table: {table_name} for {tag} {tag_truthy}, returning first.")
+        elif len_fetchrows == 0:
+            print(f"Warning: No entries for tag: {tag} in table: {table_name} for {tag} {tag_truthy}.")
+            return None
         return rows[0]
 
     def get_variable_hierarchy_by_endpoint(self, 

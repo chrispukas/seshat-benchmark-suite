@@ -142,8 +142,8 @@ def get_ids_from_row(
     macro_region: Dict[str, Any] = groupings.get_table_by_tag(table_name="macro-regions", tag_truthy=region["mac_region"])
     
     variable_hierarchy: Dict[str, Any] = groupings.get_variable_hierarchy_by_endpoint(endpoint=endpoint)
-    section_outs: Dict[str, Any] = _pull_outs_single(variable_hierarchy=variable_hierarchy, section_tag="sections", section_func=groupings.get_table_by_tag)
-    subsection_outs: Dict[str, Any] = _pull_outs_single(variable_hierarchy=variable_hierarchy, section_tag="subsections", section_func=groupings.get_table_by_tag)
+    section_outs: Dict[str, Any] = _pull_outs_single(variable_hierarchy=variable_hierarchy, table_name="sections", section_tag="section", section_func=groupings.get_table_by_tag)
+    subsection_outs: Dict[str, Any] = _pull_outs_single(variable_hierarchy=variable_hierarchy, table_name="subsections", section_tag="subsection", section_func=groupings.get_table_by_tag)
 
     def ground_entry(entry: Dict[str, Any], label: str) -> Dict[str, str]:
         return {
@@ -162,19 +162,16 @@ def get_ids_from_row(
 
 def _pull_outs_single(
         variable_hierarchy: Dict[str, Any],
+        table_name: str,
         section_tag: str, 
         section_func: object
         ) -> Dict[str, Any]:
     
     try:
-        section_idx: int = variable_hierarchy[section_tag]
-        section: Dict[int, Any] = section_func(table_name=section_tag, tag_truthy=section_idx, tag="id")
-        
-        if section_idx is None:
-            return {
-                f"{section_tag}_idx": None,
-                f"{section_tag}_str": None,
-                }
+        section_idx: int = variable_hierarchy[section_tag]        
+        section: Dict[int, Any] = section_func(table_name=table_name, tag_truthy=section_idx, tag="id")
+        if section is None:
+            raise KeyError("Section params not found.")
 
         return {
                 f"{section_tag}_idx": section_idx,
