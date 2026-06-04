@@ -64,12 +64,13 @@ class QwenInterfaceModule(LLMInterfaceModule):
     def query_model(self, 
                     message: Dict[str, str],
                     temperature: float = 0.7,
-                    max_tokens: int = 300
+                    max_tokens: int = 300,
+                    seed: int = 42,
                     ) -> str:
         print(f"\n\n\n\n\n\n\n\n")
         print(f"Querying Qwen model, message: {message}")
         try:
-            response = new_chat(self, messages=message, temperature=temperature, max_tokens=max_tokens)
+            response = new_chat(self, messages=message, temperature=temperature, max_tokens=max_tokens, seed=seed)
         except:
             response = old_chat(self, messages=message)
         print(f"Output: {response}")
@@ -80,7 +81,7 @@ def old_chat(self, message):
     response, _ = self.model.chat(self.tokenizer, prompt, history=None)
     return response
 
-def new_chat(self, messages, temperature: int, max_tokens: int):
+def new_chat(self, messages, temperature: int, max_tokens: int, seed: int):
     inputs = self.tokenizer.apply_chat_template(
         messages,
         add_generation_prompt=True,
@@ -99,3 +100,4 @@ def new_chat(self, messages, temperature: int, max_tokens: int):
         outputs[0][inputs["input_ids"].shape[-1]:],
         skip_special_tokens=True,
         ).strip()
+

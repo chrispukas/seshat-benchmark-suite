@@ -1,5 +1,10 @@
+import random
+import torch
+import numpy as np
+
 from typing import Dict, Optional, Any, List
 from llm_benchmark.utils.enums import Tags, Quality, QuestionType
+
 
 def quality_remap(quality: str, 
                   row: Dict
@@ -65,3 +70,10 @@ def collapse_prompt(messages: Dict[str, str]) -> str:
             prompt.append(f"\n\n<role>{role}</role>\n<content>{content}</content>")
         return "\n\n".join(prompt)
         
+
+def set_seed(seed: int) -> None:
+     random.seed(seed)
+     np.random.seed(seed=seed)
+     torch.manual_seed(seed=seed)
+     if torch.cuda.is_available():
+          torch.cuda.manual_seed_all(seed=seed)

@@ -85,7 +85,8 @@ class LLMInterfaceModule():
 
         output: str = self.query_model(message,
                             temperature=params.get("temperature", 0.7),
-                            max_tokens=params.get("max_tokens", 150)
+                            max_tokens=params.get("max_tokens", 150),
+                            seed=params.get("seed", 42)
                             )
         
         print("Query Output:", output)

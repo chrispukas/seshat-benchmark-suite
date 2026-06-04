@@ -1,7 +1,8 @@
 from typing import Any, Dict, List, Optional, Tuple
 
-def multichoice_question(content: Dict[str, Any]
-                         ) -> List[Dict[str, str]]:
+def multichoice_question(
+        content: Dict[str, Any]
+        ) -> List[Dict[str, str]]:
     ABS_PRES_INSTRUCTIONS: str = f"""
     Your task is to create a challenging yet well-defined historical exam question based on a variable definition from a historical dataset.
     Follow the rules below, and return ONLY the final question template, based on the examples provided. 
@@ -11,8 +12,7 @@ def multichoice_question(content: Dict[str, Any]
         - '<polity>' for polity names (e.g. 'The Papal States')
         - '<time-start>' and '<time-end>' for temporal scope
     3. The question should make abundantly clear what the format of the desired response is and that only that response should be given.
-    4. Do not include explanations, roles, metadata, reasoning, or formatting outside plain text.
-    5. Output must be exactly one question.
+    4. The output must be exactly one question.
 
     Structure your answer for maximum clarity.
     """
@@ -78,6 +78,7 @@ def fewshot_template(example: Dict[str, str]) -> List[Dict[str, Any]]:
 
 def range_question(content: Dict[str, Any]
                    ) -> List[Dict[str, str]]:
+    return None
     RANGE_INSTRUCTIONS: str = """
     Your task is to create a challenging yet well-defined historical exam question based on a variable definition.
     Follow the rules below, and return ONLY the final question template. Do not include explanations, roles, metadata, or reasoning.

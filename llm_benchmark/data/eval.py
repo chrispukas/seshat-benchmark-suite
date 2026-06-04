@@ -2,15 +2,20 @@ import os
 
 import polars as pl
 
+from tqdm import tqdm
+
 from typing import Dict, Tuple, Any, Optional, Set, List
 from llm_benchmark.utils.dataset import Dataset, DatasetModule
 from llm_benchmark.utils import benchmark
 from llm_benchmark import config as cfg
 from llm_benchmark.data import groupings
 
+
 valid_outs: Set[str] = {"absent.", "present.", "absent", "present"}
 
-def is_answer_valid(val: str) -> Tuple[str, bool]:
+def is_answer_valid(
+        val: str
+        ) -> Tuple[str, bool]:
     unique_list: Set[str] = set(val.lower().split("\n"))
     for item in unique_list:
         for valid in valid_outs:
@@ -19,7 +24,9 @@ def is_answer_valid(val: str) -> Tuple[str, bool]:
             
     return "", False
 
-def format_answer(val: str) -> str:
+def format_answer(
+        val: str
+        ) -> str:
     val: str = val.strip()
     if val[-1] == ".":
         return val[:-1]
@@ -30,17 +37,18 @@ def get_actual_row(dataset_df: pl.DataFrame,
                    ) -> Dict[str, Any]:
     return dataset_df.row(entry_idx, named=True)
 
-def aggregate_entry_per_hierarchy(dataset: Dataset, 
-                                  dir: str,
-                                  model: str,
-                                  ) -> Dict[str, Any]:
+def aggregate_entry_per_hierarchy(
+        dataset: Dataset, 
+        dir: str,
+        model: str,
+        ) -> Dict[str, Any]:
     if not os.path.exists(dir):
         raise ValueError(f"Directory {dir} does not exist!")
 
     outs: List[pl.DataFrame] = []
 
     dir_list: List[str] = os.listdir(dir)
-    for item in dir_list:
+    for item in tqdm(dir_list, desc=f"{model}"):
         origin: str = item.split("_")[0]
         endpoint: str = os.path.join(origin, item.split('.')[0].replace(f"{origin}_", ""))
         answer_path: str = os.path.join(dir, item)
@@ -53,20 +61,20 @@ def aggregate_entry_per_hierarchy(dataset: Dataset,
         outs.append(tally)
     return pl.concat(outs)
 
-def tally_answers(dataset: Dataset, 
-                  answers_path: str) -> pl.DataFrame:
+def tally_answers(
+        dataset: Dataset, 
+        answers_path: str
+        ) -> pl.DataFrame:
     """
         Tallies answers from a given path, returning dataframes of given structures.
     """
 
     if not os.path.exists(answers_path):
         raise ValueError("Path to LLM answers not specified!")
-        return
     try:
         df: pl.DataFrame = pl.read_csv(answers_path)
     except:
-        print(f"Failed to load dataframe with path: {answers_path}")
-        return
+        raise pl.exceptions.SchemaError(f"Failed to load dataframe with path: {answers_path}")
     
     endpoint_identifier: str = df[1, 0].replace(cfg.ENDPOINT_URL, "")[:-1]
     dataset_module: DatasetModule = dataset.get_module(identifier=endpoint_identifier.replace(cfg.ENDPOINT_URL, "",))
@@ -106,9 +114,10 @@ def tally_answers(dataset: Dataset,
     df_outs: pl.DataFrame = pl.DataFrame(data=data)
     return df_outs
 
-def classify_quality(answer: str, 
-                     is_valid: bool
-                     ) -> str:
+def classify_quality(
+        answer: str, 
+        is_valid: bool
+        ) -> str:
     """
         Classifying question by validation check. 
         Intentionally returns strings to be compatible with dataframes.
@@ -119,11 +128,15 @@ def classify_quality(answer: str,
     clean_answer: str = format_answer(answer)
     return clean_answer.split(" ")[0].lower()
 
-def get_ids_from_row(groupings: groupings.Groupings, 
-                     row: Dict[str, object],
-                     endpoint: str) -> Dict[str, int]:
+
+
+
+def get_ids_from_row(
+        groupings: groupings.Groupings, 
+        row: Dict[str, object],
+        endpoint: str
+        ) -> Dict[str, int]:
     """Pull grouping information from SESHAT, indexing errors are an intentional failure point."""
-    #try:
     polity_in_row: Dict[str, object] = row["polity"]
     polity_idx: int = polity_in_row["id"]
 
@@ -148,9 +161,11 @@ def get_ids_from_row(groupings: groupings.Groupings,
 
     return outs
 
-def _pull_outs_single(variable_hierarchy: Dict[str, Any],
-                      section_tag: str, 
-                      section_func: object) -> Dict[str, Any]:
+def _pull_outs_single(
+        variable_hierarchy: Dict[str, Any],
+        section_tag: str, 
+        section_func: object
+        ) -> Dict[str, Any]:
     
     try:
         section_idx: int = variable_hierarchy[section_tag]
