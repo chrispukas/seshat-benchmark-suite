@@ -21,6 +21,9 @@ def hydrate(dataset: Dataset,
         questions_dir = ""
     if write_path is None:
         write_path = ""
+    if not os.path.isfile(questions_dir):
+        print(f"Warning: no filepath found for the directory: {questions_dir} ")
+        return None
 
     df: pl.DataFrame = pl.read_csv(questions_dir)
     df = df.with_columns(

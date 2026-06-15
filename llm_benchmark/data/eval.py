@@ -4,9 +4,11 @@ import polars as pl
 
 from tqdm import tqdm
 
+import llm_benchmark.utils.utility as utils
+import llm_benchmark.utils.benchmark as benchmark
+
 from typing import Dict, Tuple, Any, Optional, Set, List
 from llm_benchmark.utils.dataset import Dataset, DatasetModule
-from llm_benchmark.utils import benchmark
 from llm_benchmark import config as cfg
 from llm_benchmark.data import groupings
 
@@ -28,8 +30,9 @@ def format_answer(
         val: str
         ) -> str:
     val: str = val.strip()
-    if val[-1] == ".":
-        return val[:-1]
+    val = val.replace('.', '')
+    val = val.replace('<|im_end|>', '')
+    val = val.replace('<|endoftext|>', '')
     return val
 
 def get_actual_row(dataset_df: pl.DataFrame,  
@@ -100,8 +103,8 @@ def tally_answers(
         entry: Dict[str, object] = {
             "seshat_entry_id": entry_idx,
             "question_entry_id": question_idx,
-            "model_answer": predicted,
-            "actual_answer": actual,
+            "model_answer": predicted.lower() if predicted is not None else None,
+            "actual_answer": actual.lower() if actual is not None else None,
         }
         entry.update(ids)
 
@@ -157,8 +160,34 @@ def get_ids_from_row(
     outs.update(ground_entry(macro_region, "macro"))
     outs.update(section_outs)
     outs.update(subsection_outs)
+    outs.update({
+        "year_range": \
+            _get_year_range(
+                year_start=polity.get("start_year", None), 
+                year_end=  polity.get("end_year",   None),
+                )
+            })
 
     return outs
+
+def _get_year_range(
+        year_start: int, 
+        year_end: int,
+        ) -> str:
+    """
+    
+    """
+    if year_start is None:
+        return None
+    if year_end is None:
+        return None
+
+    year_ranges: List[str] = cfg.year_ranges
+
+    start_int: int = utils.int_round_nearest_n(year_start, n=500)
+    end_int: int = utils.int_round_nearest_n(year_end, n=500)
+
+    return f"{utils.format_year(start_int)} - {utils.format_year(end_int)}"
 
 def _pull_outs_single(
         variable_hierarchy: Dict[str, Any],

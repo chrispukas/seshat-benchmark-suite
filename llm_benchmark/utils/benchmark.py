@@ -127,7 +127,11 @@ def _run_per_polity_evaluate(
         
         llm_instance.respond_to_questions(
             DatasetModule = dataset.dataset_modules[identifier],
-            params = {"max_new_tokens": 512, "temperature": 0.7},
+            params = \
+                {
+                "max_new_tokens": config.QUERY_TOKENS_PER_PROMPT, 
+                "temperature": config.QUERY_TEMPERATURE
+                },
             output_path = os.path.join(answer_dir, csv_answers_name),
         )
 

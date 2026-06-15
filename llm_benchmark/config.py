@@ -2,29 +2,22 @@ from llm_benchmark.utils.utility import tag_remap, quality_remap, question_type_
 from llm_benchmark.utils.enums import DatasetType, Tags, Quality, QuestionType, QuestionHydrationOptions
 
 from llm_benchmark.utils.llm_interface.templates import generation_templates as gen_tmps 
+from llm_benchmark.utils.utility import format_year
 
 from typing import Dict, Any, Tuple, List
 
 ENDPOINT_URL: str = "https://seshat-db.com/api/"
 
+GENERATE_TOKENS_PER_PROMPT: int = 2048
+GENERATE_TEMPERATURE: int = 0.7
+QUERY_TOKENS_PER_PROMPT: int = 2048
+QUERY_TEMPERATURE: int = 0.0
+
+year_ranges: List[int] = [-10000, -8000, -6000, -4000, -3500, -3000, -2500, -2000, -1500, -1000, -500, 0, 500, 1000, 1500, 2000]
 
 # -------------------------
 # --- HYDRATION MAPPING ---
 # -------------------------
-
-
-def format_year(value: Any) -> str:
-    """Format a year value, handling BCE/CE if necessary."""
-    if isinstance(value, int):
-        if value < 0:
-            return f"{abs(value)} BCE"
-        else:
-            return f"{value} CE"
-    else:
-        raise ValueError(f"Unsupported type for year formatting: {type(value)}")
-
-
-
 
 hydrate_to_real_mapping: Dict[str, Tuple[str, Any]] = \
     { # "to_hydrate": ("real_key_in_dataset", optional_formatting_function)
@@ -32,8 +25,6 @@ hydrate_to_real_mapping: Dict[str, Tuple[str, Any]] = \
         "<time-end>": ("end_year", format_year),
         "<polity>": ("long_name", None),
     }
-
-
 
 
 hydration_shuffle_answer_options: bool = True # Positional bias

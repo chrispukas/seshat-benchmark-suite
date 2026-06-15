@@ -77,3 +77,24 @@ def set_seed(seed: int) -> None:
      torch.manual_seed(seed=seed)
      if torch.cuda.is_available():
           torch.cuda.manual_seed_all(seed=seed)
+
+
+def format_year(
+        value: Any,
+        add_end: str = True,
+        ) -> str:
+    """
+        Format a year value, handling BCE/CE if necessary.
+    """
+    if not isinstance(value, int):
+        raise ValueError(f"Unsupported type for year formatting: {type(value)}")
+    
+    end: str = ("BCE" if value < 0 else "CE")
+    return f"{abs(value)} " + (end if add_end else "")
+
+def int_round_nearest_n(
+          num: float, 
+          n: int = 500
+          ) -> int:
+     return int(round(float(num) / float(n)) * n)
+    

@@ -70,7 +70,12 @@ class QwenInterfaceModule(LLMInterfaceModule):
         print(f"\n\n\n\n\n\n\n\n")
         print(f"Querying Qwen model, message: {message}")
         try:
-            response = new_chat(self, messages=message, temperature=temperature, max_tokens=max_tokens, seed=seed)
+            response = new_chat(
+                self, 
+                messages=message, 
+                temperature=temperature, 
+                max_tokens=max_tokens, 
+                seed=seed)
         except:
             response = old_chat(self, messages=message)
         print(f"Output: {response}")
