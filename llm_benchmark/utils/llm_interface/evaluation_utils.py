@@ -92,7 +92,7 @@ def _map_hydrated_to_real(
     data: Dict[str, Any],
     evaluation_type: QuestionHydrationOptions = QuestionHydrationOptions.PRESENT_ABSENT,
     mapping: Optional[Dict[str, Tuple[str, Any]]] = config.hydrate_to_real_mapping,
-) -> str:
+) -> Tuple[str, bool]:
     """Replace placeholder keys in a string with real values from the dataset."""
 
     if data is None:
@@ -111,7 +111,7 @@ def _map_hydrated_to_real(
         else:
             raise KeyError(f"{real_key} not found in data['polity'].")
     if to_hydrate == "":
-        return ""    
+        return to_hydrate, False    
         
     answeroptions_fill: str = hydrated_answeroptions_fill(
         evaluation_type=evaluation_type,
@@ -119,7 +119,7 @@ def _map_hydrated_to_real(
         shuffle_option_labels=config.hydration_shuffle_answer_option_labels
     )
     to_hydrate: str = f"{to_hydrate.split("?")[0]}? {answeroptions_fill}"
-    return to_hydrate
+    return to_hydrate, True
 
 def _clean_hydrated(
         input: str

@@ -79,7 +79,8 @@ class LLMInterfaceModule():
             endpoint=sub_dir
             )
         template: object = self._get_template(question_type)
-        message: Dict[str, Any] = template(gen_utils.remap_question_row(row, sub_dir)) if template else {}
+        remapped_row: Dict[str, Any] = gen_utils.remap_question_row(row, sub_dir)
+        message: Dict[str, Any] = template(remapped_row) if template else {}
 
         print(message)
 
@@ -95,7 +96,6 @@ class LLMInterfaceModule():
 
     def _get_template(self, question_type: QuestionType) -> object:
         return question_generation_template_mapping.get(question_type, None)
-
 
     def respond_to_questions(self,
                             DatasetModule: DatasetModule,
