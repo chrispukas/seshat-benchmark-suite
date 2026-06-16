@@ -29,6 +29,8 @@ def evaluate(
         unhydrated_question_save_path: str = "",
         hydrated_question_save_path: str = "",
         answer_save_path: str = "",
+
+        overwrite: Optional[bool] = False,
 ) -> None:
     """
         LLM evaluation function, checking LLM accuracy based on pre-hydrated questions, and corresponding dataset entries.
@@ -51,11 +53,14 @@ def evaluate(
 
     seshat_ds: dataset.Dataset = seshat_setup(seshat_cache_dir=seshat_cache_dir, polity_mapping=polity_mapping)
     
-    hydrate_per_polity(dataset=seshat_ds,
-                       evaluation_type=evaluation_type,
-                       unhydrated_save_path=unhydrated_question_save_path,
-                       hydrated_save_path=hydrated_question_save_path,
-                       categories_to_evaluate=categories_to_evaluate)
+    hydrate_per_polity(
+        dataset=seshat_ds,
+        evaluation_type=evaluation_type,
+        unhydrated_save_path=unhydrated_question_save_path,
+        hydrated_save_path=hydrated_question_save_path,
+        categories_to_evaluate=categories_to_evaluate,
+        overwrite=overwrite
+        )
 
 
     for category in categories_to_evaluate:
@@ -75,6 +80,8 @@ def hydrate_per_polity(dataset: dataset.Dataset,
                        hydrated_save_path: str,
 
                        categories_to_evaluate: Optional[List[str]] = ["wf"],
+
+                       overwrite: Optional[bool] = False,
                        ):
     for category in categories_to_evaluate:
         _hydrate_per_category(
@@ -83,7 +90,9 @@ def hydrate_per_polity(dataset: dataset.Dataset,
             polity=category,
 
             unhydrated_question_dir=os.path.join(unhydrated_save_path, category),
-            hydrated_question_dir=os.path.join(hydrated_save_path, f"{category}_hydrated")
+            hydrated_question_dir=os.path.join(hydrated_save_path, f"{category}_hydrated"),
+
+            overwrite=overwrite,
         )
 
 
@@ -92,7 +101,9 @@ def _hydrate_per_category(dataset: dataset.Dataset,
                           polity: str,
 
                           unhydrated_question_dir: str,
-                          hydrated_question_dir: str
+                          hydrated_question_dir: str,
+
+                          overwrite: Optional[bool] = False,
                           ):
     subpolity_identifiers: List[str] = dataset.get_identifiers_by_parent(polity)
 
@@ -105,6 +116,7 @@ def _hydrate_per_category(dataset: dataset.Dataset,
             evaluation_type=evaluation_type,
             write_path=os.path.join(hydrated_question_dir, csv_question_name),
             link_to_dataset=True,
+            overwrite=overwrite
             ) 
 
 

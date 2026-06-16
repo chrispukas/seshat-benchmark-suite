@@ -6,7 +6,7 @@ from tqdm import tqdm
 from typing import Any, Dict, List, Optional, Tuple
 from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 
-from llm_benchmark.config import params_to_question_mapping, question_generation_template_mapping, TOKENS_PER_PROMPT, TEMPERATURE
+from llm_benchmark.config import params_to_question_mapping, question_generation_template_mapping, GENERATE_TEMPERATURE, GENERATE_TOKENS_PER_PROMPT, QUERY_TEMPERATURE, QUERY_TOKENS_PER_PROMPT
 
 from llm_benchmark.utils import utility as util
 from llm_benchmark.utils.dataset import DatasetModule
@@ -84,9 +84,9 @@ class LLMInterfaceModule():
         print(message)
 
         output: str = self.query_model(message,
-                            temperature=params.get("temperature", 0.7),
-                            max_tokens=params.get("max_tokens", cf),
-                            seed=params.get("seed", 42)
+                            temperature = params.get("temperature", GENERATE_TEMPERATURE),
+                            max_tokens = params.get("max_tokens", GENERATE_TOKENS_PER_PROMPT),
+                            seed = params.get("seed", 42)
                             )
         
         print("Query Output:", output)
@@ -146,8 +146,8 @@ class LLMInterfaceModule():
         prompt: Dict[str, Any] = eval_tmps.multichoice(question)
         return self.query_model(
             prompt,
-            temperature=params.get("temperature", 0.7),
-            max_tokens=params.get("max_tokens", 150)
+            temperature=params.get("temperature", QUERY_TEMPERATURE),
+            max_tokens=params.get("max_tokens", QUERY_TOKENS_PER_PROMPT)
             )
 
     def write_outputs(self, 
