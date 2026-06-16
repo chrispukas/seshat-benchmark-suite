@@ -30,13 +30,10 @@ class QwenInterfaceModule(LLMInterfaceModule):
         self.model_name = model_name
         self.trust_remote_code = trust_remote_code
         self.local = local
-        try:
-            self.tokenizer, self.model = self.initialize_client(bf16=True, pull_model=pull_model)
-        except:
-            self.tokenizer, self.model = self.initialize_client(bf16=False, pull_model=pull_model)
+        self.tokenizer, self.model = self._initialize_client(bf16=True, pull_model=pull_model)
 
 
-    def initialize_client(self,
+    def _initialize_client(self,
                           bf16: bool = True,
                           pull_model: bool = False
                           ) -> Any:
@@ -67,7 +64,7 @@ class QwenInterfaceModule(LLMInterfaceModule):
                     max_tokens: int = 300,
                     seed: int = 42,
                     ) -> str:
-        print(f"\n\n\n\n\n\n\n\n")
+        print(f"\n\n\n")
         print(f"Querying Qwen model, message: {message}")
         try:
             response = new_chat(
@@ -78,31 +75,44 @@ class QwenInterfaceModule(LLMInterfaceModule):
                 seed=seed)
         except:
             response = old_chat(self, messages=message)
-        print(f"Output: {response}")
+        print(f"       Output: {response}")
         return response
     
-def old_chat(self, message):
+def old_chat(
+        self, 
+        message
+        ):
     prompt = util.collapse_prompt(message)
     response, _ = self.model.chat(self.tokenizer, prompt, history=None)
     return response
 
-def new_chat(self, messages, temperature: int, max_tokens: int, seed: int):
+def new_chat(
+        self, 
+        temperature: Optional[int], 
+        max_tokens: Optional[int], 
+        batch_messages: List[str] = cfg.BATCH_SIZE, 
+        ):
+    templated_texts: List[Any] = [
+        self.tokenizer.apply_chat_template(messages, add_generation_prompt=True, tokenize=False)
+        for messages in batch_messages
+    ]
     inputs = self.tokenizer.apply_chat_template(
-        messages,
-        add_generation_prompt=True,
+        templated_texts,
         return_tensors="pt",
-        tokenize=True,
+        padding=True,
         return_dict=True
     ).to(self.model.device)
     
-    outputs = self.model.generate(**inputs, 
-                                  max_new_tokens=max_tokens,
-                                  temperature=temperature,
-                                  eos_token_id=self.tokenizer.eos_token_id,
-                                  pad_token_id=self.tokenizer.eos_token_id,
-                                  )
-    return self.tokenizer.decode(
-        outputs[0][inputs["input_ids"].shape[-1]:],
-        skip_special_tokens=True,
-        ).strip()
+    outputs = self.model.generate(
+        **inputs, 
+        max_new_tokens=max_tokens,
+        temperature=temperature,
+        pad_token_id=self.tokenizer.eos_token_id,
+        )
+    input_length = inputs["input_ids"].shape[-1]
+    
+    return [
+        self.tokenizer.decode(output[input_length:], skip_special_tokens=True).strip()
+        for output in outputs
+    ]
 

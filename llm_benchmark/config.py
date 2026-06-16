@@ -13,6 +13,8 @@ GENERATE_TEMPERATURE: int = 0.7
 QUERY_TOKENS_PER_PROMPT: int = 2048
 QUERY_TEMPERATURE: int = 0.0
 
+BATCH_SIZE: int = 32
+
 year_ranges: List[int] = [-10000, -8000, -6000, -4000, -3500, -3000, -2500, -2000, -1500, -1000, -500, 0, 500, 1000, 1500, 2000]
 
 # -------------------------

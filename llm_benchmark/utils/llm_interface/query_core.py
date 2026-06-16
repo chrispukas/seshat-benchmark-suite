@@ -1,9 +1,10 @@
 import os
 import torch
 import polars as pl
+import math
 
 from tqdm import tqdm
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple, Callable
 from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 
 from llm_benchmark.config import params_to_question_mapping, question_generation_template_mapping, GENERATE_TEMPERATURE, GENERATE_TOKENS_PER_PROMPT, QUERY_TEMPERATURE, QUERY_TOKENS_PER_PROMPT
@@ -25,19 +26,22 @@ class LLMInterfaceModule():
     def generate_questions(self, 
                            DatasetModule: DatasetModule,
                            params: Optional[Dict[str, Any]] = None,
-                           output_path: str = ""
+                           output_path: str = "",
+                           batch_size: Optional[int] = 1,
                            ) -> None:
         if params is None:
             print("Warning: No parameters provided for question generation. Using default settings.")
             params = {}
+        if output_path == None or output_path == "":
+            return
 
-        ds_endpoint: str = DatasetModule.get_endpoint()
-
-        if ds_endpoint is None:
-            print("No endpoint found.")
-            return None
-
-        sub_dir: str = ds_endpoint.split("/")[-2]
+        try:
+            ds_endpoint: str = DatasetModule.get_endpoint()
+            sub_dir: str = ds_endpoint.split("/")[-2]
+        except:
+            print("Failed to parse endpoint")
+            return
+        
         print(f"Generating questions for dataset at endpoint: {sub_dir}")
 
         output_dirname: str = os.path.dirname(output_path)
@@ -46,14 +50,41 @@ class LLMInterfaceModule():
 
         dataset: pl.DataFrame = DatasetModule.get_entries()
         question_outputs: List[Any] = [""] * dataset.height
-        for idx, row in tqdm(enumerate(dataset.to_dicts())):
-            output: str = self._generate_single(row=row, params=params, sub_dir=sub_dir)
-            if output is None:
+
+        height: int = dataset.height
+        batch_count: int = height // batch_size
+
+        output_buffer: List[str] = []
+
+        for idx in range(batch_count+1):
+            batch_slice: List[Dict[str, Any]] = dataset.slice(offset=idx * batch_size, length=batch_size).to_dicts()
+
+            if batch_slice == []:
                 continue
+
+            input: List[str] = self._format_batch_input\
+                (
+                    batch=batch_slice,
+                    sub_dir=sub_dir
+                )
+            raw_outs: List[str] = self.query_model\
+                (
+                    input,
+                    temperature = params.get("temperature", GENERATE_TEMPERATURE),
+                    max_tokens = params.get("max_tokens", GENERATE_TOKENS_PER_PROMPT),
+                    seed = params.get("seed", 42)
+                )
+            
+            output_buffer.append(raw_outs)
+
+            
+        for idx, out in tqdm(enumerate(output_buffer)):
+            if out is None:
+                out = ""
             entry: Dict[str, Any] = {
             "endpoint_identifier": ds_endpoint, 
             "entry_idx": idx,
-            "output": output,
+            "output": out,
             }
             question_outputs[idx] = entry
         
@@ -63,36 +94,39 @@ class LLMInterfaceModule():
         
         self.write_outputs(raw=question_outputs, output_path=output_path)
 
-    def _generate_single(self, 
-                         row: Dict[str, Any],
-                         params: Dict[str, Any],
-                         sub_dir: str
-                         ) -> str:
+    def _format_single_input(
+            self,
+            itm: Dict[str, Any],
+            params: Dict[str, Any],
+            sub_dir: str,
+        ) -> List[str]:
         
-        if not self.check_if_question_in_filter(row, params):
+        if not self.check_if_question_in_filter(itm, params):
             print("Skipping question due to filter settings.")
-            return None
+            return ""
         
         question_type: QuestionType = util.question_type_remap(
-            row.get("question_type", None), 
-            row=row,
+            itm.get("question_type", None), 
+            row=itm,
             endpoint=sub_dir
             )
-        template: object = self._get_template(question_type)
-        remapped_row: Dict[str, Any] = gen_utils.remap_question_row(row, sub_dir)
-        message: Dict[str, Any] = template(remapped_row) if template else {}
-
-        print(message)
-
-        output: str = self.query_model(message,
-                            temperature = params.get("temperature", GENERATE_TEMPERATURE),
-                            max_tokens = params.get("max_tokens", GENERATE_TOKENS_PER_PROMPT),
-                            seed = params.get("seed", 42)
-                            )
+        template_method: Optional[Callable] = self._get_template(question_type=question_type)
+        if not template_method:
+            print(f"Warning: template method for question type {question_type} not set in the configuration file.")
+            message_single: str = ""
+        else:
+            message_single: str = template_method(gen_utils.remap_question_row(itm, sub_dir))
         
-        print("Query Output:", output)
-        return output
+        return message_single
         
+
+    def query_model(self, 
+                    message: List[str],
+                    temperature: float = 0.7,
+                    max_tokens: int = 150,
+                    batch_size: int = 1,
+                    ) -> str:
+        raise NotImplementedError("This method should be overridden by subclasses.")
 
     def _get_template(self, question_type: QuestionType) -> object:
         return question_generation_template_mapping.get(question_type, None)
@@ -164,15 +198,6 @@ class LLMInterfaceModule():
         
         pl.DataFrame(raw).write_csv(output_path)
         print(f"Questions generated and saved to {output_path}")
-        
-
-    def query_model(self, 
-                    message: Dict[str, Any],
-                    temperature: float = 0.7,
-                    max_tokens: int = 150
-                    ) -> str:
-        raise NotImplementedError("This method should be overridden by subclasses.")
-        
     
     # Utility
     def hugging_face_model_load(self,
