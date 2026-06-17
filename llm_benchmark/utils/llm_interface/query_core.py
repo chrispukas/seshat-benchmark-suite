@@ -58,18 +58,17 @@ class LLMInterfaceModule():
 
         for idx in range(batch_count+1):
             batch_slice: List[Dict[str, Any]] = dataset.slice(offset=idx * batch_size, length=batch_size).to_dicts()
-
             if batch_slice == []:
                 continue
-
-            input: List[str] = self._format_batch_input\
+            input: List[str] = [self._format_single_input\
                 (
-                    batch=batch_slice,
+                    itm=itm,
+                    params=params,
                     sub_dir=sub_dir
-                )
+                ) for itm in batch_slice]
             raw_outs: List[str] = self.query_model\
                 (
-                    input,
+                    messages=input,
                     temperature = params.get("temperature", GENERATE_TEMPERATURE),
                     max_tokens = params.get("max_tokens", GENERATE_TOKENS_PER_PROMPT),
                     seed = params.get("seed", 42)
@@ -99,7 +98,7 @@ class LLMInterfaceModule():
             itm: Dict[str, Any],
             params: Dict[str, Any],
             sub_dir: str,
-        ) -> List[str]:
+        ) -> str:
         
         if not self.check_if_question_in_filter(itm, params):
             print("Skipping question due to filter settings.")
@@ -121,7 +120,7 @@ class LLMInterfaceModule():
         
 
     def query_model(self, 
-                    message: List[str],
+                    messages: List[str],
                     temperature: float = 0.7,
                     max_tokens: int = 150,
                     batch_size: int = 1,

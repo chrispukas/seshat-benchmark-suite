@@ -2,7 +2,7 @@ from email.mime import message
 import os
 import polars as pl
 
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple, List
 
 from llm_benchmark import config as cfg
 
@@ -30,11 +30,13 @@ class QwenInterfaceModule(LLMInterfaceModule):
         self.model_name = model_name
         self.trust_remote_code = trust_remote_code
         self.local = local
-        self.tokenizer, self.model = self._initialize_client(bf16=True, pull_model=pull_model)
-
+        try:
+            self.tokenizer, self.model = self._initialize_client(bf16=True, pull_model=pull_model)
+        except:
+             self.tokenizer, self.model = self._initialize_client(pull_model=pull_model)
 
     def _initialize_client(self,
-                          bf16: bool = True,
+                          bf16: bool = False,
                           pull_model: bool = False
                           ) -> Any:
         device_map: str = "meta" if pull_model else "auto"
@@ -59,30 +61,30 @@ class QwenInterfaceModule(LLMInterfaceModule):
         return tokenizer, model
     
     def query_model(self, 
-                    message: Dict[str, str],
+                    messages: List[str],
                     temperature: float = 0.7,
                     max_tokens: int = 300,
                     seed: int = 42,
                     ) -> str:
         print(f"\n\n\n")
-        print(f"Querying Qwen model, message: {message}")
+        print(f"Querying Qwen model, message: {messages}")
         try:
             response = new_chat(
                 self, 
-                messages=message, 
+                batch_messages=messages, 
                 temperature=temperature, 
                 max_tokens=max_tokens, 
                 seed=seed)
         except:
-            response = old_chat(self, messages=message)
+            response = old_chat(self, messages=messages)
         print(f"       Output: {response}")
         return response
     
 def old_chat(
         self, 
-        message
+        messages: List[str]
         ):
-    prompt = util.collapse_prompt(message)
+    prompt = util.collapse_prompt(messages[0])
     response, _ = self.model.chat(self.tokenizer, prompt, history=None)
     return response
 
