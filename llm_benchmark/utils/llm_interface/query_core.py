@@ -7,7 +7,7 @@ from tqdm import tqdm
 from typing import Any, Dict, List, Optional, Tuple, Callable
 from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 
-from llm_benchmark.config import params_to_question_mapping, question_generation_template_mapping, GENERATE_TEMPERATURE, GENERATE_TOKENS_PER_PROMPT, QUERY_TEMPERATURE, QUERY_TOKENS_PER_PROMPT
+from llm_benchmark.config import params_to_question_mapping, question_generation_template_mapping, GENERATE_TEMPERATURE, GENERATE_TOKENS_PER_PROMPT, QUERY_TEMPERATURE, QUERY_TOKENS_PER_PROMPT, BATCH_SIZE
 
 from llm_benchmark.utils import utility as util
 from llm_benchmark.utils.dataset import DatasetModule
@@ -27,30 +27,118 @@ class LLMInterfaceModule():
                            DatasetModule: DatasetModule,
                            params: Optional[Dict[str, Any]] = None,
                            output_path: str = "",
-                           batch_size: Optional[int] = 1,
+                           batch_size: Optional[int] = 32,
                            ) -> None:
+
+        try:
+            endpoint: str = DatasetModule.get_endpoint()
+            sub_dir: str = endpoint.split("/")[-2]
+        except:
+            print("Warning: Failed to parse endpoint.")
+            return
+        
+        print(f"Generating questions for dataset at endpoint: {sub_dir}")
+
+        dataset: pl.DataFrame = DatasetModule.get_entries()
+        success: bool = self._query_generic(
+            dataset=dataset,
+            output_path=output_path,
+            endpoint=endpoint,
+
+            single_format_callable=self._format_single_input,
+            params=params,
+
+            batch_size=batch_size,
+            sub_dir=sub_dir
+
+        )
+
+    
+    def respond_to_questions(self,
+                            DatasetModule: DatasetModule,
+                            params: Optional[Dict[str, Any]] = None,
+                            output_path: str = "",
+                            batch_size: int = 32,
+                            ) -> None:
+        endpoint: str = DatasetModule.get_endpoint()
+        dataset: pl.DataFrame = DatasetModule.get_questions()
+
+        success: bool = self._query_generic(
+            dataset=dataset,
+            output_path=output_path,
+            endpoint=endpoint,
+            
+            single_format_callable=self._format_single_response,
+            params=params,
+
+            batch_size=batch_size,
+            sub_dir="",
+        )
+
+    def _query_generic(
+            self,
+            dataset: pl.DataFrame,
+            output_path: str,
+            endpoint: str,
+
+            single_format_callable: Optional[Callable],
+
+            params: Optional[Dict[str, Any]] = None,
+            batch_size: Optional[int] = BATCH_SIZE,
+
+            sub_dir: Optional[str] = "",
+    ) -> Optional[bool]:
         if params is None:
             print("Warning: No parameters provided for question generation. Using default settings.")
             params = {}
         if output_path == None or output_path == "":
-            return
-
-        try:
-            ds_endpoint: str = DatasetModule.get_endpoint()
-            sub_dir: str = ds_endpoint.split("/")[-2]
-        except:
-            print("Failed to parse endpoint")
-            return
-        
-        print(f"Generating questions for dataset at endpoint: {sub_dir}")
+            return False
+        if dataset is None:
+            print(f"Warning: No questions linked to dataset {endpoint}.")
+            return False
+        if endpoint is None or endpoint == "":
+            print("Warning: No endpoint specified.")
+            return False
 
         output_dirname: str = os.path.dirname(output_path)
         if output_dirname:
             os.makedirs(output_dirname, exist_ok=True)
 
-        dataset: pl.DataFrame = DatasetModule.get_entries()
-        question_outputs: List[Any] = [""] * dataset.height
+        output_buffer: List[str] = self._batch_query\
+            (
+                dataset=dataset,
+                format_callable=single_format_callable,
 
+                sub_dir=sub_dir,
+                params=params,
+                batch_size=batch_size,
+            )
+        
+        question_outputs: List[Any] = self._batch_format_outputs(
+            itms=output_buffer,
+            endpoint=endpoint,
+            format_callable=self._format_single_output
+        )
+
+        if not question_outputs:
+            print(f"Failed to generate questions for endpoint: {endpoint}.")
+            return False
+        
+        self.write_outputs(raw=question_outputs, output_path=output_path)
+        return True
+        
+        
+        
+
+    def _batch_query(
+            self,
+            dataset: pl.DataFrame,
+            format_callable: Callable,
+
+            sub_dir: str = "",
+            params: Dict[str, Any] = {},
+            batch_size: int = 32,
+    ) -> List[str]:
         height: int = dataset.height
         batch_count: int = height // batch_size
 
@@ -60,8 +148,8 @@ class LLMInterfaceModule():
             batch_slice: List[Dict[str, Any]] = dataset.slice(offset=idx * batch_size, length=batch_size).to_dicts()
             if batch_slice == []:
                 continue
-            input: List[str] = [self._format_single_input\
-                (
+            input: List[str] = [
+                format_callable(
                     itm=itm,
                     params=params,
                     sub_dir=sub_dir
@@ -71,28 +159,27 @@ class LLMInterfaceModule():
                     messages=input,
                     temperature = params.get("temperature", GENERATE_TEMPERATURE),
                     max_tokens = params.get("max_tokens", GENERATE_TOKENS_PER_PROMPT),
-                    seed = params.get("seed", 42)
                 )
             
-            output_buffer.append(raw_outs)
-
-            
-        for idx, out in tqdm(enumerate(output_buffer)):
-            if out is None:
-                out = ""
-            entry: Dict[str, Any] = {
-            "endpoint_identifier": ds_endpoint, 
-            "entry_idx": idx,
-            "output": out,
-            }
-            question_outputs[idx] = entry
+            output_buffer.extend(raw_outs)
+        return output_buffer
+    
+    def _batch_format_outputs(self,
+                              itms: List[Dict[str, Any]],
+                              endpoint: str,
+                              format_callable: Callable
+                              ) -> List[Dict[str, Any]]:
+        question_outputs: List[Any] = [""] * len(itms)
+        for idx, itm in tqdm(enumerate(itms)):
+            if itm is None:
+                itm = ""
+            question_outputs[idx] = format_callable(
+                itm=itm,
+                endpoint=endpoint,
+                idx=idx,
+            )
+        return question_outputs
         
-        if not question_outputs:
-            print(f"Failed to generate questions for {DatasetModule.get_endpoint()}")
-            return
-        
-        self.write_outputs(raw=question_outputs, output_path=output_path)
-
     def _format_single_input(
             self,
             itm: Dict[str, Any],
@@ -101,23 +188,56 @@ class LLMInterfaceModule():
         ) -> str:
         
         if not self.check_if_question_in_filter(itm, params):
-            print("Skipping question due to filter settings.")
+            print(f"Warning: Skipping question ID {itm.get("id", "unknown")} due to filter settings.")
             return ""
         
+        raw_type: str = itm.get("question_type", "")
         question_type: QuestionType = util.question_type_remap(
-            itm.get("question_type", None), 
+            raw_type, 
             row=itm,
             endpoint=sub_dir
             )
+        
         template_method: Optional[Callable] = self._get_template(question_type=question_type)
         if not template_method:
             print(f"Warning: template method for question type {question_type} not set in the configuration file.")
-            message_single: str = ""
-        else:
-            message_single: str = template_method(gen_utils.remap_question_row(itm, sub_dir))
+            return ""
+        
+        try:
+            remapped_item: Dict[str, Any] = gen_utils.remap_question_row(itm, sub_dir)
+            message_single: str = template_method(remapped_item)
+        except Exception as e:
+            print(f"Warning: failed to generate template for type '{question_type}'. Error: {e}")
+            return ""
         
         return message_single
+
+    def _format_single_response(
+            self,
+            itm: Dict[str, Any],
+            params: Dict[str, Any],
+            sub_dir: str,  
+    ) -> str:
+        question: str = itm.get("output", "")
+        if not question:
+            return ""
+        message_single: Dict[str, Any] = eval_tmps.multichoice(question)
         
+        return message_single
+    
+    def _format_single_output(
+            self,
+            endpoint: str,
+            idx: int,
+            itm: str
+        ) -> Dict[str, Any]:
+        return {
+            "endpoint_identifier": endpoint, 
+            "entry_idx": idx,
+            "output": itm,
+            }
+        
+    
 
     def query_model(self, 
                     messages: List[str],
@@ -130,49 +250,11 @@ class LLMInterfaceModule():
     def _get_template(self, question_type: QuestionType) -> object:
         return question_generation_template_mapping.get(question_type, None)
 
-    def respond_to_questions(self,
-                            DatasetModule: DatasetModule,
-                            params: Optional[Dict[str, Any]] = None,
-                            output_path: str = ""
-                            ) -> None:
-        if params is None:
-            print("Warning: No parameters provided for question generation. Using default settings.")
-            params = {}
-        
-        ds_endpoint: str = DatasetModule.get_endpoint()
-        if ds_endpoint is None:
-            print("No Endpoint Specified")
-            return None    
-            
-        question_df: pl.DataFrame = DatasetModule.get_questions()
-        if question_df is None:
-            print(f"No questions linked to dataset {ds_endpoint}.")
-            return None
-        
-        output_dirname: str = os.path.dirname(output_path)
-        os.makedirs(output_dirname, exist_ok=True)
-
-        question_outputs: List[Dict[str, Any]] = self._create_empty_outputs(question_df.height)
-        
-        for idx, row in tqdm(enumerate(question_df.to_dicts())):
-            output: str = self._respond_single(row=row, params=params)
-            if output is None:
-                continue
-            print("Query Output:", output)
-            question_outputs[idx] = {
-                "endpoint_identifier": ds_endpoint, 
-                "entry_idx": idx,
-                "output": output,
-                }
-        
-        self.write_outputs(raw=question_outputs, output_path=output_path)
-
-
-    def _create_empty_outputs(self, height: int) -> List[Dict[str, Any]]:
-        return [{"endpoint_identifier": None, "entry_idx": None, "output": None} for _ in range(height)]
-
-
-    def _respond_single(self, row: Dict[str, Any], params: Dict[str, Any]) -> str:
+    def _respond_batch(
+            self, 
+            row: Dict[str, Any], 
+            params: Dict[str, Any]
+            ) -> str:
         question: str = row.get("output", "")
         if not question:
             return None

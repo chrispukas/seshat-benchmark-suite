@@ -69,52 +69,53 @@ class QwenInterfaceModule(LLMInterfaceModule):
         print(f"\n\n\n")
         print(f"Querying Qwen model, message: {messages}")
         try:
-            response = new_chat(
-                self, 
-                batch_messages=messages, 
+            response = self.new_chat(
                 temperature=temperature, 
                 max_tokens=max_tokens, 
-                seed=seed)
+                batch_messages=messages, 
+                )
         except:
-            response = old_chat(self, messages=messages)
+            response = self.old_chat(
+                messages=messages)
         print(f"       Output: {response}")
         return response
     
-def old_chat(
-        self, 
-        messages: List[str]
-        ):
-    prompt = util.collapse_prompt(messages[0])
-    response, _ = self.model.chat(self.tokenizer, prompt, history=None)
-    return response
+    def old_chat(
+            self, 
+            messages: List[str]
+            ):
+        prompt = util.collapse_prompt(messages[0])
+        response, _ = self.model.chat(self.tokenizer, prompt, history=None)
+        return response
 
-def new_chat(
-        self, 
-        temperature: Optional[int], 
-        max_tokens: Optional[int], 
-        batch_messages: List[str] = cfg.BATCH_SIZE, 
-        ):
-    templated_texts: List[Any] = [
-        self.tokenizer.apply_chat_template(messages, add_generation_prompt=True, tokenize=False)
-        for messages in batch_messages
-    ]
-    inputs = self.tokenizer.apply_chat_template(
-        templated_texts,
-        return_tensors="pt",
-        padding=True,
-        return_dict=True
-    ).to(self.model.device)
-    
-    outputs = self.model.generate(
-        **inputs, 
-        max_new_tokens=max_tokens,
-        temperature=temperature,
-        pad_token_id=self.tokenizer.eos_token_id,
-        )
-    input_length = inputs["input_ids"].shape[-1]
-    
-    return [
-        self.tokenizer.decode(output[input_length:], skip_special_tokens=True).strip()
-        for output in outputs
-    ]
+    def new_chat(
+            self, 
+            temperature: Optional[int], 
+            max_tokens: Optional[int], 
+            batch_messages: List[str], 
+            ):
+        templated_texts: List[Any] = [
+            self.tokenizer.apply_chat_template(messages, add_generation_prompt=True, tokenize=False)
+            for messages in batch_messages
+        ]
+        inputs = self.tokenizer(
+            templated_texts,
+            return_tensors="pt",
+            padding=True,
+            return_dict=True
+        ).to(self.model.device)
+        
+        outputs = self.model.generate(
+            **inputs, 
+            max_new_tokens=max_tokens,
+            temperature=temperature,
+            pad_token_id=self.tokenizer.eos_token_id,
+            do_sample=True if temperature > 0 else False
+            )
+        input_length = inputs["input_ids"].shape[-1]
+        
+        return [
+            self.tokenizer.decode(output[input_length:], skip_special_tokens=True).strip()
+            for output in outputs
+        ]
 

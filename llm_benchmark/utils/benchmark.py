@@ -156,7 +156,8 @@ def generate(
         LLMInterfaceModule: LLMInterfaceModule,
         seshat_cache_dir: Optional[str] = None,
         polity_mapping: Optional[Dict[str, str]] = config.polity_mapping,
-        polities_to_evaluate: Optional[List[str]] = ["wf"]
+        polities_to_evaluate: Optional[List[str]] = ["wf"],
+        batch_size: Optional[int] = config.BATCH_SIZE,
 ) -> None:
     if seshat_cache_dir is None:
         raise ValueError("No seshat cache directory must be provided for evaluation, set variable {str: seshat_cache_dir}.")
@@ -170,12 +171,14 @@ def generate(
         _run_per_polity_generate(polity=polity, 
                        LLMInterfaceModule=LLMInterfaceModule, 
                        ds=seshat_ds, 
-                       save_path=save_path)
+                       save_path=save_path,
+                       batch_size=batch_size)
 
 def _run_per_polity_generate(polity: str, 
                     LLMInterfaceModule: LLMInterfaceModule,
                     ds: dataset.Dataset,
                     save_path: str,
+                    batch_size: int = config.BATCH_SIZE
                     ) -> None:
     
     polity_identifiers: List[str] = ds.get_identifiers_by_parent(polity)
@@ -185,6 +188,7 @@ def _run_per_polity_generate(polity: str,
             DatasetModule = dataset_module,
             params = {"max_new_tokens": 1024, "temperature": 0.7},
             output_path = f"{save_path}/{polity}/{identifier.replace('/', '_')}_questions.csv",
+            batch_size=batch_size
         )
 
 
