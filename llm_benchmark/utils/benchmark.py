@@ -36,13 +36,19 @@ def evaluate(
         LLM evaluation function, checking LLM accuracy based on pre-hydrated questions, and corresponding dataset entries.
 
         Args:
-            question_save_path (str): Path to source the generated questions.
-            answer_save_path (str): Path to save the generated answers.
-            LLMInterfaceModule (LLMInterfaceModule): An instance of the LLMInterfaceModule to use for generating answers.
-            seshat_cache_dir (Optional[str]): Path for which the SESHAT database is cached to.
+            llm_interface (llm_benchmark.utils.llm_interface.query_core.LLMInterfaceModule): An instance of the LLMInterfaceModule to use for generating answers.
+            evaluation_type (llm_benchmark.utils.enums.QuestionHydrationOptions): The detail in which a question is asked
             polity_mapping (Optional[Dict[str, str]]): Polity mapping to use for the SESHAT dataset.
-            polities_to_evaluate (Optional[List[str]]): List of polities to evaluate, if None, will evaluate the warfare features polity, tagged 'wf'.
 
+            seshat_cache_dir (Optional[str]): Path for which the SESHAT database is cached to.
+            categories_to_evaluate (Optional[List[str]]): List of categories to evaluate, default behaviour is to evaluate the warfare features polity, tagged 'wf'.
+
+            unhydrated_question_save_path (str): Path to the unhydrated questions.
+            hydrated_question_save_path (str): Path to the hydrated questions.
+            answer_save_path (str): Path to save the generated answers.
+
+            overwrite (bool): Toggles if already hyrated questions are to be overwritten.
+            
         Returns:
             None
     """

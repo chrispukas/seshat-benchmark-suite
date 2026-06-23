@@ -23,12 +23,13 @@ class LLMInterfaceModule():
         print(f"Initialized {self.__class__.__name__}")
         pass
     
-    def generate_questions(self, 
-                           DatasetModule: DatasetModule,
-                           params: Optional[Dict[str, Any]] = None,
-                           output_path: str = "",
-                           batch_size: Optional[int] = 32,
-                           ) -> None:
+    def generate_questions(
+            self, 
+            DatasetModule: DatasetModule,
+            params: Optional[Dict[str, Any]] = None,
+            output_path: str = "",
+            batch_size: Optional[int] = 32,
+            ) -> None:
 
         try:
             endpoint: str = DatasetModule.get_endpoint()
@@ -53,13 +54,13 @@ class LLMInterfaceModule():
 
         )
 
-    
-    def respond_to_questions(self,
-                            DatasetModule: DatasetModule,
-                            params: Optional[Dict[str, Any]] = None,
-                            output_path: str = "",
-                            batch_size: int = 32,
-                            ) -> None:
+    def respond_to_questions(
+            self,
+            DatasetModule: DatasetModule,
+            params: Optional[Dict[str, Any]] = None,
+            output_path: str = "",
+            batch_size: int = 32,
+            ) -> None:
         endpoint: str = DatasetModule.get_endpoint()
         dataset: pl.DataFrame = DatasetModule.get_questions()
 
@@ -127,9 +128,6 @@ class LLMInterfaceModule():
         self.write_outputs(raw=question_outputs, output_path=output_path)
         return True
         
-        
-        
-
     def _batch_query(
             self,
             dataset: pl.DataFrame,
@@ -164,11 +162,12 @@ class LLMInterfaceModule():
             output_buffer.extend(raw_outs)
         return output_buffer
     
-    def _batch_format_outputs(self,
-                              itms: List[Dict[str, Any]],
-                              endpoint: str,
-                              format_callable: Callable
-                              ) -> List[Dict[str, Any]]:
+    def _batch_format_outputs(
+            self,
+            itms: List[Dict[str, Any]],
+            endpoint: str,
+            format_callable: Callable
+            ) -> List[Dict[str, Any]]:
         question_outputs: List[Any] = [""] * len(itms)
         for idx, itm in tqdm(enumerate(itms)):
             if itm is None:
@@ -239,12 +238,13 @@ class LLMInterfaceModule():
         
     
 
-    def query_model(self, 
-                    messages: List[str],
-                    temperature: float = 0.7,
-                    max_tokens: int = 150,
-                    batch_size: int = 1,
-                    ) -> str:
+    def query_model(
+            self, 
+            messages: List[str],
+            temperature: float = 0.7,
+            max_tokens: int = 150,
+            batch_size: int = 1,
+            ) -> str:
         raise NotImplementedError("This method should be overridden by subclasses.")
 
     def _get_template(self, question_type: QuestionType) -> object:
@@ -265,10 +265,11 @@ class LLMInterfaceModule():
             max_tokens=params.get("max_tokens", QUERY_TOKENS_PER_PROMPT)
             )
 
-    def write_outputs(self, 
-                      raw: List[Dict[str, Any]], 
-                      output_path: str
-                      ) -> None:
+    def write_outputs(
+            self, 
+            raw: List[Dict[str, Any]], 
+            output_path: str
+            ) -> None:
         """Writes the generated questions to a CSV file."""
         if not output_path:
             print(f"Output path doesnt exist.")
@@ -281,29 +282,34 @@ class LLMInterfaceModule():
         print(f"Questions generated and saved to {output_path}")
     
     # Utility
-    def hugging_face_model_load(self,
-                                model_name: str,
-                                trust_remote_code: Optional[bool] = False,
-                                local: Optional[bool] = True,
-                                cache_dir: Optional[str] = "/rds/general/user/cp824/ephemeral/huggingface_cache"
-                                ) -> Tuple[AutoTokenizer, AutoModelForCausalLM]:        
+    def hugging_face_model_load(
+            self,
+            model_name: str,
+            trust_remote_code: Optional[bool] = False,
+            local: Optional[bool] = True,
+            cache_dir: Optional[str] = "/rds/general/user/cp824/ephemeral/huggingface_cache"
+            ) -> Tuple[AutoTokenizer, AutoModelForCausalLM]:        
         print(f"Loading model {model_name}.")
         
-        tokenizer = AutoTokenizer.from_pretrained(model_name, 
-                                                  trust_remote_code=trust_remote_code,
-                                                  local_files_only=local,
-                                                  cache_dir=cache_dir,
-                                                  )
+        tokenizer = AutoTokenizer.from_pretrained(
+            model_name, 
+            trust_remote_code=trust_remote_code,
+            local_files_only=local,
+            cache_dir=cache_dir,
+            )
         print("Tokenizer loaded successfully.")
-        model = AutoModelForCausalLM.from_pretrained(model_name, 
-                                                     torch_dtype="auto", 
-                                                     device_map="auto", 
-                                                     trust_remote_code=trust_remote_code,
-                                                     cache_dir=cache_dir,
-                                                     local_files_only=local
-                                                     )
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name, 
+            torch_dtype="auto", 
+            device_map="auto", 
+            trust_remote_code=trust_remote_code,
+            cache_dir=cache_dir,
+            local_files_only=local
+            )
         try:
-            model.generation_config = GenerationConfig.from_pretrained(model_name)
+            model.generation_config = GenerationConfig.from_pretrained(
+                model_name
+                )
         except Exception as e:
             print(f"Failed to load generation config for {model_name}. Using default config. Error: {e}")
             model.generation_config = GenerationConfig()
@@ -311,20 +317,22 @@ class LLMInterfaceModule():
 
         return tokenizer, model
     
-    def pull_remote_weights(self,
-                            model_name: str,
-                            trust_remote_code: Optional[bool] = False,
-                            cache_dir: Optional[str] = "/rds/general/user/cp824/ephemeral/huggingface_cache",
-                            ) -> None:
+    def pull_remote_weights(
+            self,
+            model_name: str,
+            trust_remote_code: Optional[bool] = False,
+            cache_dir: Optional[str] = "/rds/general/user/cp824/ephemeral/huggingface_cache",
+            ) -> None:
         self.hugging_face_model_load(model_name=model_name,
                                      trust_remote_code=trust_remote_code, 
                                      local=False,
                                      cache_dir=cache_dir,)
         
-    def check_if_question_in_filter(self,
-                                    question: Dict[str, Any],
-                                    params: Dict[str, Any]
-                                    ) -> bool:
+    def check_if_question_in_filter(
+            self,
+            question: Dict[str, Any],
+            params: Dict[str, Any]
+            ) -> bool:
         """Check if a question matches the filter parameters."""
         for param_key, (question_key, remap) in params_to_question_mapping.items(): 
             param_item: List[Any] = params.get(param_key, [])
