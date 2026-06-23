@@ -27,7 +27,8 @@ def query(model_name: str = "Qwen/Qwen-7B-Chat", polities_to_evaluate: List[str]
     question_instance: QwenInterfaceModule = QwenInterfaceModule(
         model_name=args.model_name,
         local = True,
-        trust_remote_code=True
+        trust_remote_code=True,
+        test_mode=True
     )
 
     generate(
