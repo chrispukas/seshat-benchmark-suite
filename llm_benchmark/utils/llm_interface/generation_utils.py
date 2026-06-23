@@ -15,12 +15,12 @@ def savepath_formatting(model_name: str, default_save_path: str) -> str:
 def remap_question_row(row: Dict[str, Any], endpoint: str) -> Dict[str, Any]:
     """Remap question row based on endpoint."""
     remapped_row: Dict[str, Any] = {}
-    remapped_row["polity"] = row.get("polity_name", "Not provided")
-    remapped_row["short_name"] = row.get("name", "Not provided")
-    remapped_row["full_name"] = row.get("full_name", "Not provided")
-    remapped_row["time_start"] = row.get(f"{endpoint}_from", "Not provided")
-    remapped_row["time_end"] = row.get(f"{endpoint}_to", "Not provided")
-    remapped_row["description"] = row.get("description", "Not provided")
+    remapped_row["name"] = row.get("name", "Not provided")
+    remapped_row["year_from"] = row.get("year_from", "Not provided")
+    remapped_row["year_to"] = row.get("year_to", "Not provided")
+    remapped_row["description"] = row.get("comment", "Not provided")
     remapped_row["data_unit"] = row.get("data_unit", "Not provided")
+
+    print(remapped_row)
 
     return remapped_row

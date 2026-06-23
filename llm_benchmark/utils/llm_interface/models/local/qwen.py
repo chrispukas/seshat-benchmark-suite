@@ -19,7 +19,8 @@ class QwenInterfaceModule(LLMInterfaceModule):
                  model_name: str = "Qwen/Qwen-7B-Chat",
                  trust_remote_code: Optional[bool] = True,
                  local: Optional[bool] = True,
-                 pull_model: Optional[bool] = False
+                 pull_model: Optional[bool] = False,
+                 test_mode: Optional[bool] = False,
                  ) -> None:
         
         if model_name is None:
@@ -30,6 +31,10 @@ class QwenInterfaceModule(LLMInterfaceModule):
         self.model_name = model_name
         self.trust_remote_code = trust_remote_code
         self.local = local
+
+        if test_mode:
+            return
+
         try:
             self.tokenizer, self.model = self._initialize_client(bf16=True, pull_model=pull_model)
         except:

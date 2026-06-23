@@ -38,7 +38,7 @@ class LLMInterfaceModule():
             print("Warning: Failed to parse endpoint.")
             return
         
-        print(f"Generating questions for dataset at endpoint: {sub_dir}")
+        print(f"\n\nGenerating questions for dataset at endpoint: {sub_dir}")
 
         dataset: pl.DataFrame = DatasetModule.get_entries()
         success: bool = self._query_generic(
@@ -152,6 +152,7 @@ class LLMInterfaceModule():
                     params=params,
                     sub_dir=sub_dir
                 ) for itm in batch_slice]
+
             raw_outs: List[str] = self.query_model\
                 (
                     messages=input,
@@ -203,7 +204,7 @@ class LLMInterfaceModule():
             return ""
         
         try:
-            remapped_item: Dict[str, Any] = gen_utils.remap_question_row(itm, sub_dir)
+            remapped_item: Dict[str, Any] = gen_utils.remap_question_row(row=itm, endpoint=sub_dir)
             message_single: str = template_method(remapped_item)
         except Exception as e:
             print(f"Warning: failed to generate template for type '{question_type}'. Error: {e}")
