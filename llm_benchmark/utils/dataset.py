@@ -222,6 +222,15 @@ class DatasetModule():
         return self.seshat_identifier
     def get_polity_groupings(self) -> str:
         return self.polity_group
+    
+    def get_polity_by_id(self,
+                         polity_id: int
+                         ) -> Optional[pl.DataFrame]:
+        filtered_df: pl.DataFrame = self.dataset.filter(pl.col("id") == polity_id)
+        if filtered_df.height > 0:
+            return filtered_df
+        else:
+            return None
 
     def sanitize_row(self,
                     row: Dict[str, Any]
@@ -254,16 +263,6 @@ class PolityModule(DatasetModule):
                  override: bool = False,
                  ) -> None:
         super().__init__(parquet_path, polity_group, DatasetType.POLITY, seshat_identifier, seshat_url, override)
-
-    def get_polity_by_id(self,
-                         polity_id: int
-                         ) -> Optional[pl.DataFrame]:
-        filtered_df: pl.DataFrame = self.dataset.filter(pl.col("id") == polity_id)
-        if filtered_df.height > 0:
-            return filtered_df
-        else:
-            return None
-        
 
     def format_entry(self,
                      entry: Dict[str, Any]
@@ -309,15 +308,6 @@ class EconomicComplexityModule(DatasetModule):
                          
         
         print("Initialized EconomicComplexityModule.")
-
-    def get_polity_by_id(self,
-                         polity_id: int
-                         ) -> Optional[pl.DataFrame]:
-        filtered_df: pl.DataFrame = self.dataset.filter(pl.col("id") == polity_id)
-        if filtered_df.height > 0:
-            return filtered_df
-        else:
-            return None
         
 
     def format_entry(self,
@@ -387,15 +377,6 @@ class SocialComplexityModule(DatasetModule):
                          polity_group=polity_group)
         
         print("Initialized SocialComplexityModule.")
-
-    def get_polity_by_id(self,
-                         polity_id: int
-                         ) -> Optional[pl.DataFrame]:
-        filtered_df: pl.DataFrame = self.dataset.filter(pl.col("id") == polity_id)
-        if filtered_df.height > 0:
-            return filtered_df
-        else:
-            return None
         
 
     def format_entry(self,
@@ -449,15 +430,6 @@ class WarfareFeaturesModule(DatasetModule):
                          polity_group=polity_group)
         
         print("Initialized WarfareFeaturesModule.")
-
-    def get_polity_by_id(self,
-                         polity_id: int
-                         ) -> Optional[pl.DataFrame]:
-        filtered_df: pl.DataFrame = self.dataset.filter(pl.col("id") == polity_id)
-        if filtered_df.height > 0:
-            return filtered_df
-        else:
-            return None
         
 
     def format_entry(self,

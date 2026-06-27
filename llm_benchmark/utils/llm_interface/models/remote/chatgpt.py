@@ -164,11 +164,11 @@ class ChatGPTInterfaceModule(LLMInterfaceModule):
         logger: logging.Logger,
     ) -> Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]:
         
-        if not ENABLE_API_CALLS:
-            logger.warning(f"API calls are disabled for: {self.model_name}, enable ENABLE_API_CALLS in config.")
-            return ("", None, [{}], {})
         if message is None or message == []:
             logger.warning(f"Message is empty, skipping.")
+            return ("", None, [{}], {})
+        if not ENABLE_API_CALLS:
+            logger.warning(f"API calls are disabled for: {self.model_name}, enable ENABLE_API_CALLS in config.")
             return ("", None, [{}], {})
         
         response = self.client.chat.completions.create(

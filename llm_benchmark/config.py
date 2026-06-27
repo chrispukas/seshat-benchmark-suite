@@ -18,9 +18,9 @@ EVALUATION_TEMPERATURE: int = 1
 BATCH_SIZE: int = 1
 SEED: int = 42
 
-CONCURRENT_THREADS: int = 1
+CONCURRENT_THREADS: int = 20
 
-ENABLE_API_CALLS: bool = False
+ENABLE_API_CALLS: bool = True
 
 year_ranges: List[int] = [-10000, -8000, -6000, -4000, -3500, -3000, -2500, -2000, -1500, -1000, -500, 0, 500, 1000, 1500, 2000]
 
@@ -104,9 +104,26 @@ params_to_question_mapping: Dict[str, str] = \
         "question_type_filter": ("question_type", question_types_remap)
     }
 
+
+unit_mapping: Dict[str, str] = \
+    {
+        # Social Datasets
+        "sc/polity-territories": "square kilometers",
+        "sc/polity-populations": "people",
+        "sc/fastest-individual-communications": "days",
+        "sc/largest-communication-distances": "kilometers",
+        "sc/population-of-the-largest-settlements": "people",
+
+        "sc/administrative-levels": "not applicable",
+        "sc/military-levels": "not applicable",
+        "sc/religious-levels": "not applicable",
+        "sc/settlement-hierarchies": "not applicable"
+    }
+
+
 polity_mapping: Dict[str, str] = \
     {
-    # Unique Datasets
+    # Core Datasets
     "core/polities": DatasetType.POLITY,
 
 

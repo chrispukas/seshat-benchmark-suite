@@ -11,6 +11,7 @@ from typing import Dict, List
 from llm_benchmark.utils.llm_interface.models.remote.chatgpt import ChatGPTInterfaceModule
 from llm_benchmark.utils.llm_interface.generation_utils import savepath_formatting
 from llm_benchmark.utils.benchmark import generate
+from llm_benchmark.utils import enums
 
 def query(
         model_name: str = "gpt-5.2-2025-12-11", 
@@ -45,5 +46,6 @@ def query(
         LLMInterfaceModule=model_instance,
         seshat_cache_dir=args.cache_dir,
         polity_mapping=config.polity_mapping,
-        polities_to_evaluate=polities_to_evaluate
+        polities_to_evaluate=polities_to_evaluate,
+        allowed_question_types=[enums.QuestionType.RANGE]
     )

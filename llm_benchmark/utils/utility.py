@@ -51,16 +51,12 @@ def question_types_remap(tag: str,
     if endpoint == "" or endpoint is None:
         logger.warning("Warning: No endpoint provided for question type remapping.")
         return {DEFAULT}
-    
-    clean_key: str = row.get('name').replace('-', '_').lower()
-    
-    malf_keymap: Dict[str, str] = _malformed_keymap(keys=list(row.keys()))
-    
-    to_get: Any   = row.get(malf_keymap.get(f"{clean_key}_to",   ""), None)
-    from_get: Any = row.get(malf_keymap.get(f"{clean_key}_from", ""), None)
+
+    to_get: Any   = row.get(f"polity_to",   -99999)
+    from_get: Any = row.get(f"polity_from", -99999)
 
     if to_get is None or from_get is None:
-        logger.warning(f"Warning: Missing data for endpoint '{clean_key}': '{f"{clean_key}_to"}' or '{f"{clean_key}_from"}' not found in row.")
+        logger.warning(f"Warning: Missing data for endpoint '{endpoint}': '{f"polity_to"}' or '{f"polity_from"}' not found in row.")
         return {DEFAULT}
     if int(to_get) == -99999 and int(from_get) == -99999:
         return {DEFAULT}
@@ -71,7 +67,7 @@ def question_types_remap(tag: str,
                 return {QuestionType.RANGE, QuestionType.MULTIPLE_CHOICE}
             return {QuestionType.RANGE}
     except (ValueError, TypeError):
-        logger.warning(f"Warning: non-integer values found for ranges {clean_key}")
+        logger.warning(f"Warning: non-integer values found for ranges {endpoint}")
 
     return {DEFAULT}
 
