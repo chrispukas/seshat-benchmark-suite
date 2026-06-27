@@ -1,0 +1,1119 @@
+2026-06-27 12:01:14,638 [INFO] Starting question generation for wf/composite-bows.
+2026-06-27 12:01:14,638 [INFO] 
+
+Generating questions for dataset at endpoint: composite-bows
+2026-06-27 12:01:14,658 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   0%|          | 0/370 [00:00<?, ?it/s]
+2026-06-27 12:01:14,660 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:16,230 [INFO]     Metrics:total_token usage: 673, prompt_token usage: 606
+2026-06-27 12:01:16,230 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   0%|          | 1/370 [00:01<09:40,  1.57s/it]
+2026-06-27 12:01:16,231 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:17,109 [INFO]     Metrics:total_token usage: 749, prompt_token usage: 661
+2026-06-27 12:01:17,109 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   1%|          | 2/370 [00:02<07:08,  1.16s/it]
+2026-06-27 12:01:17,110 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:17,948 [INFO]     Metrics:total_token usage: 708, prompt_token usage: 621
+2026-06-27 12:01:17,948 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   1%|          | 3/370 [00:03<06:12,  1.02s/it]
+2026-06-27 12:01:17,948 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:18,781 [INFO]     Metrics:total_token usage: 693, prompt_token usage: 613
+2026-06-27 12:01:18,782 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   1%|1         | 4/370 [00:04<05:45,  1.06it/s]
+2026-06-27 12:01:18,782 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:19,795 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 586
+2026-06-27 12:01:19,795 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   1%|1         | 5/370 [00:05<05:53,  1.03it/s]
+2026-06-27 12:01:19,795 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:20,730 [INFO]     Metrics:total_token usage: 761, prompt_token usage: 668
+2026-06-27 12:01:20,730 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   2%|1         | 6/370 [00:06<05:48,  1.04it/s]
+2026-06-27 12:01:20,730 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:21,587 [INFO]     Metrics:total_token usage: 772, prompt_token usage: 694
+2026-06-27 12:01:21,587 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   2%|1         | 7/370 [00:06<05:35,  1.08it/s]
+2026-06-27 12:01:21,587 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:22,716 [INFO]     Metrics:total_token usage: 705, prompt_token usage: 626
+2026-06-27 12:01:22,716 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   2%|2         | 8/370 [00:08<05:58,  1.01it/s]
+2026-06-27 12:01:22,716 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:23,844 [INFO]     Metrics:total_token usage: 694, prompt_token usage: 624
+2026-06-27 12:01:23,844 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   2%|2         | 9/370 [00:09<06:12,  1.03s/it]
+2026-06-27 12:01:23,844 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:24,920 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 602
+2026-06-27 12:01:24,920 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   3%|2         | 10/370 [00:10<06:16,  1.05s/it]
+2026-06-27 12:01:24,920 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:26,024 [INFO]     Metrics:total_token usage: 691, prompt_token usage: 602
+2026-06-27 12:01:26,024 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   3%|2         | 11/370 [00:11<06:21,  1.06s/it]
+2026-06-27 12:01:26,024 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:26,912 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 596
+2026-06-27 12:01:26,913 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   3%|3         | 12/370 [00:12<06:01,  1.01s/it]
+2026-06-27 12:01:26,913 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:27,916 [INFO]     Metrics:total_token usage: 673, prompt_token usage: 596
+2026-06-27 12:01:27,916 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   4%|3         | 13/370 [00:13<06:00,  1.01s/it]
+2026-06-27 12:01:27,917 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:28,690 [INFO]     Metrics:total_token usage: 662, prompt_token usage: 586
+2026-06-27 12:01:28,691 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   4%|3         | 14/370 [00:14<05:33,  1.07it/s]
+2026-06-27 12:01:28,692 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:29,844 [INFO]     Metrics:total_token usage: 680, prompt_token usage: 611
+2026-06-27 12:01:29,845 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   4%|4         | 15/370 [00:15<05:56,  1.00s/it]
+2026-06-27 12:01:29,846 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:30,478 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:01:30,479 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   4%|4         | 16/370 [00:15<05:15,  1.12it/s]
+2026-06-27 12:01:30,480 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:31,430 [INFO]     Metrics:total_token usage: 740, prompt_token usage: 659
+2026-06-27 12:01:31,431 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   5%|4         | 17/370 [00:16<05:21,  1.10it/s]
+2026-06-27 12:01:31,433 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:32,354 [INFO]     Metrics:total_token usage: 677, prompt_token usage: 610
+2026-06-27 12:01:32,354 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   5%|4         | 18/370 [00:17<05:21,  1.09it/s]
+2026-06-27 12:01:32,354 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:33,187 [INFO]     Metrics:total_token usage: 735, prompt_token usage: 657
+2026-06-27 12:01:33,188 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   5%|5         | 19/370 [00:18<05:12,  1.12it/s]
+2026-06-27 12:01:33,188 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:34,209 [INFO]     Metrics:total_token usage: 669, prompt_token usage: 599
+2026-06-27 12:01:34,210 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   5%|5         | 20/370 [00:19<05:25,  1.08it/s]
+2026-06-27 12:01:34,210 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:37,475 [INFO]     Metrics:total_token usage: 766, prompt_token usage: 666
+2026-06-27 12:01:37,476 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   6%|5         | 21/370 [00:22<09:29,  1.63s/it]
+2026-06-27 12:01:37,476 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:38,325 [INFO]     Metrics:total_token usage: 768, prompt_token usage: 666
+2026-06-27 12:01:38,325 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   6%|5         | 22/370 [00:23<08:05,  1.40s/it]
+2026-06-27 12:01:38,326 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:39,338 [INFO]     Metrics:total_token usage: 686, prompt_token usage: 612
+2026-06-27 12:01:39,338 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   6%|6         | 23/370 [00:24<07:24,  1.28s/it]
+2026-06-27 12:01:39,338 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:40,103 [INFO]     Metrics:total_token usage: 741, prompt_token usage: 663
+2026-06-27 12:01:40,103 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   6%|6         | 24/370 [00:25<06:29,  1.13s/it]
+2026-06-27 12:01:40,104 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:40,918 [INFO]     Metrics:total_token usage: 733, prompt_token usage: 663
+2026-06-27 12:01:40,918 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   7%|6         | 25/370 [00:26<05:56,  1.03s/it]
+2026-06-27 12:01:40,918 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:42,195 [INFO]     Metrics:total_token usage: 743, prompt_token usage: 663
+2026-06-27 12:01:42,195 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   7%|7         | 26/370 [00:27<06:20,  1.11s/it]
+2026-06-27 12:01:42,195 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:42,964 [INFO]     Metrics:total_token usage: 699, prompt_token usage: 625
+2026-06-27 12:01:42,964 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   7%|7         | 27/370 [00:28<05:44,  1.01s/it]
+2026-06-27 12:01:42,964 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:43,801 [INFO]     Metrics:total_token usage: 705, prompt_token usage: 626
+2026-06-27 12:01:43,802 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   8%|7         | 28/370 [00:29<05:26,  1.05it/s]
+2026-06-27 12:01:43,802 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:44,695 [INFO]     Metrics:total_token usage: 736, prompt_token usage: 667
+2026-06-27 12:01:44,695 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   8%|7         | 29/370 [00:30<05:19,  1.07it/s]
+2026-06-27 12:01:44,696 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:45,572 [INFO]     Metrics:total_token usage: 677, prompt_token usage: 599
+2026-06-27 12:01:45,573 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   8%|8         | 30/370 [00:30<05:12,  1.09it/s]
+2026-06-27 12:01:45,573 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:46,608 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 586
+2026-06-27 12:01:46,609 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   8%|8         | 31/370 [00:31<05:23,  1.05it/s]
+2026-06-27 12:01:46,609 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:47,679 [INFO]     Metrics:total_token usage: 689, prompt_token usage: 617
+2026-06-27 12:01:47,679 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   9%|8         | 32/370 [00:33<05:34,  1.01it/s]
+2026-06-27 12:01:47,679 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:48,455 [INFO]     Metrics:total_token usage: 720, prompt_token usage: 640
+2026-06-27 12:01:48,455 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   9%|8         | 33/370 [00:33<05:11,  1.08it/s]
+2026-06-27 12:01:48,455 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:49,211 [INFO]     Metrics:total_token usage: 683, prompt_token usage: 610
+2026-06-27 12:01:49,211 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   9%|9         | 34/370 [00:34<04:53,  1.14it/s]
+2026-06-27 12:01:49,212 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:50,577 [INFO]     Metrics:total_token usage: 675, prompt_token usage: 610
+2026-06-27 12:01:50,578 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   9%|9         | 35/370 [00:35<05:42,  1.02s/it]
+2026-06-27 12:01:50,578 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:51,469 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:01:51,469 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  10%|9         | 36/370 [00:36<05:28,  1.02it/s]
+2026-06-27 12:01:51,469 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:52,275 [INFO]     Metrics:total_token usage: 704, prompt_token usage: 635
+2026-06-27 12:01:52,275 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  10%|#         | 37/370 [00:37<05:09,  1.08it/s]
+2026-06-27 12:01:52,276 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:53,316 [INFO]     Metrics:total_token usage: 704, prompt_token usage: 635
+2026-06-27 12:01:53,316 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  10%|#         | 38/370 [00:38<05:19,  1.04it/s]
+2026-06-27 12:01:53,317 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:54,101 [INFO]     Metrics:total_token usage: 704, prompt_token usage: 635
+2026-06-27 12:01:54,101 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  11%|#         | 39/370 [00:39<05:01,  1.10it/s]
+2026-06-27 12:01:54,101 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:54,879 [INFO]     Metrics:total_token usage: 733, prompt_token usage: 651
+2026-06-27 12:01:54,880 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  11%|#         | 40/370 [00:40<04:47,  1.15it/s]
+2026-06-27 12:01:54,881 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:55,852 [INFO]     Metrics:total_token usage: 685, prompt_token usage: 601
+2026-06-27 12:01:55,852 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  11%|#1        | 41/370 [00:41<04:56,  1.11it/s]
+2026-06-27 12:01:55,852 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:57,136 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 601
+2026-06-27 12:01:57,136 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  11%|#1        | 42/370 [00:42<05:33,  1.02s/it]
+2026-06-27 12:01:57,137 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:58,112 [INFO]     Metrics:total_token usage: 670, prompt_token usage: 601
+2026-06-27 12:01:58,112 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  12%|#1        | 43/370 [00:43<05:28,  1.00s/it]
+2026-06-27 12:01:58,113 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:59,011 [INFO]     Metrics:total_token usage: 742, prompt_token usage: 644
+2026-06-27 12:01:59,011 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  12%|#1        | 44/370 [00:44<05:16,  1.03it/s]
+2026-06-27 12:01:59,012 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:01:59,958 [INFO]     Metrics:total_token usage: 704, prompt_token usage: 635
+2026-06-27 12:01:59,960 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  12%|#2        | 45/370 [00:45<05:13,  1.04it/s]
+2026-06-27 12:01:59,960 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:00,740 [INFO]     Metrics:total_token usage: 704, prompt_token usage: 635
+2026-06-27 12:02:00,740 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  12%|#2        | 46/370 [00:46<04:54,  1.10it/s]
+2026-06-27 12:02:00,741 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:01,554 [INFO]     Metrics:total_token usage: 704, prompt_token usage: 635
+2026-06-27 12:02:01,555 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  13%|#2        | 47/370 [00:46<04:44,  1.13it/s]
+2026-06-27 12:02:01,555 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:02,836 [INFO]     Metrics:total_token usage: 707, prompt_token usage: 622
+2026-06-27 12:02:02,837 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  13%|#2        | 48/370 [00:48<05:22,  1.00s/it]
+2026-06-27 12:02:02,838 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:03,794 [INFO]     Metrics:total_token usage: 706, prompt_token usage: 624
+2026-06-27 12:02:03,794 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  13%|#3        | 49/370 [00:49<05:17,  1.01it/s]
+2026-06-27 12:02:03,794 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:04,848 [INFO]     Metrics:total_token usage: 754, prompt_token usage: 663
+2026-06-27 12:02:04,848 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  14%|#3        | 50/370 [00:50<05:22,  1.01s/it]
+2026-06-27 12:02:04,848 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:05,814 [INFO]     Metrics:total_token usage: 741, prompt_token usage: 635
+2026-06-27 12:02:05,814 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  14%|#3        | 51/370 [00:51<05:17,  1.00it/s]
+2026-06-27 12:02:05,814 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:06,654 [INFO]     Metrics:total_token usage: 727, prompt_token usage: 640
+2026-06-27 12:02:06,654 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  14%|#4        | 52/370 [00:51<05:01,  1.05it/s]
+2026-06-27 12:02:06,654 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:07,713 [INFO]     Metrics:total_token usage: 720, prompt_token usage: 640
+2026-06-27 12:02:07,713 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  14%|#4        | 53/370 [00:53<05:11,  1.02it/s]
+2026-06-27 12:02:07,713 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:08,690 [INFO]     Metrics:total_token usage: 718, prompt_token usage: 635
+2026-06-27 12:02:08,690 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  15%|#4        | 54/370 [00:54<05:09,  1.02it/s]
+2026-06-27 12:02:08,690 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:09,680 [INFO]     Metrics:total_token usage: 683, prompt_token usage: 614
+2026-06-27 12:02:09,680 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  15%|#4        | 55/370 [00:55<05:09,  1.02it/s]
+2026-06-27 12:02:09,680 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:10,671 [INFO]     Metrics:total_token usage: 732, prompt_token usage: 645
+2026-06-27 12:02:10,671 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  15%|#5        | 56/370 [00:56<05:09,  1.01it/s]
+2026-06-27 12:02:10,671 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:11,441 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:02:11,441 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  15%|#5        | 57/370 [00:56<04:48,  1.09it/s]
+2026-06-27 12:02:11,442 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:12,355 [INFO]     Metrics:total_token usage: 691, prompt_token usage: 613
+2026-06-27 12:02:12,355 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  16%|#5        | 58/370 [00:57<04:46,  1.09it/s]
+2026-06-27 12:02:12,356 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:13,629 [INFO]     Metrics:total_token usage: 690, prompt_token usage: 605
+2026-06-27 12:02:13,629 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  16%|#5        | 59/370 [00:58<05:18,  1.03s/it]
+2026-06-27 12:02:13,629 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:14,418 [INFO]     Metrics:total_token usage: 646, prompt_token usage: 592
+2026-06-27 12:02:14,418 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  16%|#6        | 60/370 [00:59<04:55,  1.05it/s]
+2026-06-27 12:02:14,419 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:15,042 [INFO]     Metrics:total_token usage: 646, prompt_token usage: 592
+2026-06-27 12:02:15,042 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  16%|#6        | 61/370 [01:00<04:24,  1.17it/s]
+2026-06-27 12:02:15,042 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:15,898 [INFO]     Metrics:total_token usage: 645, prompt_token usage: 591
+2026-06-27 12:02:15,898 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  17%|#6        | 62/370 [01:01<04:23,  1.17it/s]
+2026-06-27 12:02:15,898 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:16,648 [INFO]     Metrics:total_token usage: 646, prompt_token usage: 592
+2026-06-27 12:02:16,648 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  17%|#7        | 63/370 [01:01<04:12,  1.21it/s]
+2026-06-27 12:02:16,649 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:17,592 [INFO]     Metrics:total_token usage: 784, prompt_token usage: 703
+2026-06-27 12:02:17,592 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  17%|#7        | 64/370 [01:02<04:23,  1.16it/s]
+2026-06-27 12:02:17,592 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:18,436 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:02:18,437 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  18%|#7        | 65/370 [01:03<04:20,  1.17it/s]
+2026-06-27 12:02:18,437 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:19,563 [INFO]     Metrics:total_token usage: 681, prompt_token usage: 600
+2026-06-27 12:02:19,563 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  18%|#7        | 66/370 [01:04<04:44,  1.07it/s]
+2026-06-27 12:02:19,564 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:20,461 [INFO]     Metrics:total_token usage: 693, prompt_token usage: 611
+2026-06-27 12:02:20,462 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  18%|#8        | 67/370 [01:05<04:40,  1.08it/s]
+2026-06-27 12:02:20,462 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:21,375 [INFO]     Metrics:total_token usage: 761, prompt_token usage: 674
+2026-06-27 12:02:21,375 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  18%|#8        | 68/370 [01:06<04:38,  1.09it/s]
+2026-06-27 12:02:21,376 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:22,378 [INFO]     Metrics:total_token usage: 756, prompt_token usage: 674
+2026-06-27 12:02:22,378 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  19%|#8        | 69/370 [01:07<04:44,  1.06it/s]
+2026-06-27 12:02:22,379 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:23,154 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 599
+2026-06-27 12:02:23,154 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  19%|#8        | 70/370 [01:08<04:28,  1.12it/s]
+2026-06-27 12:02:23,155 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:24,109 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 602
+2026-06-27 12:02:24,109 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  19%|#9        | 71/370 [01:09<04:32,  1.10it/s]
+2026-06-27 12:02:24,110 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:25,075 [INFO]     Metrics:total_token usage: 687, prompt_token usage: 603
+2026-06-27 12:02:25,075 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  19%|#9        | 72/370 [01:10<04:36,  1.08it/s]
+2026-06-27 12:02:25,075 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:25,830 [INFO]     Metrics:total_token usage: 672, prompt_token usage: 603
+2026-06-27 12:02:25,830 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  20%|#9        | 73/370 [01:11<04:20,  1.14it/s]
+2026-06-27 12:02:25,830 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:26,852 [INFO]     Metrics:total_token usage: 646, prompt_token usage: 592
+2026-06-27 12:02:26,852 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  20%|##        | 74/370 [01:12<04:32,  1.09it/s]
+2026-06-27 12:02:26,852 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:27,753 [INFO]     Metrics:total_token usage: 689, prompt_token usage: 620
+2026-06-27 12:02:27,753 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  20%|##        | 75/370 [01:13<04:29,  1.09it/s]
+2026-06-27 12:02:27,753 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:28,497 [INFO]     Metrics:total_token usage: 689, prompt_token usage: 620
+2026-06-27 12:02:28,498 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  21%|##        | 76/370 [01:13<04:13,  1.16it/s]
+2026-06-27 12:02:28,499 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:29,220 [INFO]     Metrics:total_token usage: 645, prompt_token usage: 591
+2026-06-27 12:02:29,221 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  21%|##        | 77/370 [01:14<04:00,  1.22it/s]
+2026-06-27 12:02:29,221 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:29,882 [INFO]     Metrics:total_token usage: 646, prompt_token usage: 592
+2026-06-27 12:02:29,883 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  21%|##1       | 78/370 [01:15<03:45,  1.29it/s]
+2026-06-27 12:02:29,883 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:30,808 [INFO]     Metrics:total_token usage: 649, prompt_token usage: 593
+2026-06-27 12:02:30,808 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  21%|##1       | 79/370 [01:16<03:58,  1.22it/s]
+2026-06-27 12:02:30,809 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:31,825 [INFO]     Metrics:total_token usage: 756, prompt_token usage: 675
+2026-06-27 12:02:31,828 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  22%|##1       | 80/370 [01:17<04:14,  1.14it/s]
+2026-06-27 12:02:31,829 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:33,083 [INFO]     Metrics:total_token usage: 770, prompt_token usage: 690
+2026-06-27 12:02:33,083 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  22%|##1       | 81/370 [01:18<04:46,  1.01it/s]
+2026-06-27 12:02:33,084 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:33,893 [INFO]     Metrics:total_token usage: 660, prompt_token usage: 595
+2026-06-27 12:02:33,894 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  22%|##2       | 82/370 [01:19<04:30,  1.07it/s]
+2026-06-27 12:02:33,894 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:34,699 [INFO]     Metrics:total_token usage: 687, prompt_token usage: 598
+2026-06-27 12:02:34,700 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  22%|##2       | 83/370 [01:20<04:17,  1.11it/s]
+2026-06-27 12:02:34,700 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:35,537 [INFO]     Metrics:total_token usage: 698, prompt_token usage: 616
+2026-06-27 12:02:35,538 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  23%|##2       | 84/370 [01:20<04:11,  1.14it/s]
+2026-06-27 12:02:35,538 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:36,727 [INFO]     Metrics:total_token usage: 661, prompt_token usage: 586
+2026-06-27 12:02:36,728 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  23%|##2       | 85/370 [01:22<04:37,  1.03it/s]
+2026-06-27 12:02:36,729 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:37,813 [INFO]     Metrics:total_token usage: 664, prompt_token usage: 594
+2026-06-27 12:02:37,814 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  23%|##3       | 86/370 [01:23<04:45,  1.01s/it]
+2026-06-27 12:02:37,815 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:39,053 [INFO]     Metrics:total_token usage: 662, prompt_token usage: 586
+2026-06-27 12:02:39,054 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  24%|##3       | 87/370 [01:24<05:04,  1.08s/it]
+2026-06-27 12:02:39,054 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:39,809 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:02:39,809 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  24%|##3       | 88/370 [01:25<04:36,  1.02it/s]
+2026-06-27 12:02:39,809 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:40,699 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:02:40,699 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  24%|##4       | 89/370 [01:26<04:27,  1.05it/s]
+2026-06-27 12:02:40,699 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:41,968 [INFO]     Metrics:total_token usage: 662, prompt_token usage: 594
+2026-06-27 12:02:41,968 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  24%|##4       | 90/370 [01:27<04:53,  1.05s/it]
+2026-06-27 12:02:41,968 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:43,128 [INFO]     Metrics:total_token usage: 776, prompt_token usage: 697
+2026-06-27 12:02:43,128 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  25%|##4       | 91/370 [01:28<05:01,  1.08s/it]
+2026-06-27 12:02:43,129 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:44,029 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:02:44,029 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  25%|##4       | 92/370 [01:29<04:45,  1.03s/it]
+2026-06-27 12:02:44,029 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:44,890 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:02:44,890 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  25%|##5       | 93/370 [01:30<04:30,  1.02it/s]
+2026-06-27 12:02:44,891 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:45,615 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:02:45,615 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  25%|##5       | 94/370 [01:30<04:08,  1.11it/s]
+2026-06-27 12:02:45,616 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:46,767 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:02:46,767 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  26%|##5       | 95/370 [01:32<04:28,  1.02it/s]
+2026-06-27 12:02:46,768 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:47,716 [INFO]     Metrics:total_token usage: 711, prompt_token usage: 639
+2026-06-27 12:02:47,717 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  26%|##5       | 96/370 [01:33<04:25,  1.03it/s]
+2026-06-27 12:02:47,717 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:48,731 [INFO]     Metrics:total_token usage: 704, prompt_token usage: 639
+2026-06-27 12:02:48,731 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  26%|##6       | 97/370 [01:34<04:28,  1.02it/s]
+2026-06-27 12:02:48,731 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:49,659 [INFO]     Metrics:total_token usage: 668, prompt_token usage: 600
+2026-06-27 12:02:49,660 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  26%|##6       | 98/370 [01:35<04:22,  1.03it/s]
+2026-06-27 12:02:49,660 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:50,623 [INFO]     Metrics:total_token usage: 667, prompt_token usage: 599
+2026-06-27 12:02:50,624 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  27%|##6       | 99/370 [01:35<04:21,  1.04it/s]
+2026-06-27 12:02:50,624 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:51,371 [INFO]     Metrics:total_token usage: 643, prompt_token usage: 589
+2026-06-27 12:02:51,371 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  27%|##7       | 100/370 [01:36<04:03,  1.11it/s]
+2026-06-27 12:02:51,372 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:52,127 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:02:52,127 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  27%|##7       | 101/370 [01:37<03:50,  1.17it/s]
+2026-06-27 12:02:52,127 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:52,941 [INFO]     Metrics:total_token usage: 703, prompt_token usage: 623
+2026-06-27 12:02:52,942 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  28%|##7       | 102/370 [01:38<03:46,  1.18it/s]
+2026-06-27 12:02:52,943 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:53,898 [INFO]     Metrics:total_token usage: 827, prompt_token usage: 746
+2026-06-27 12:02:53,899 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  28%|##7       | 103/370 [01:39<03:54,  1.14it/s]
+2026-06-27 12:02:53,899 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:54,765 [INFO]     Metrics:total_token usage: 701, prompt_token usage: 623
+2026-06-27 12:02:54,766 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  28%|##8       | 104/370 [01:40<03:52,  1.14it/s]
+2026-06-27 12:02:54,766 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:55,549 [INFO]     Metrics:total_token usage: 681, prompt_token usage: 617
+2026-06-27 12:02:55,550 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  28%|##8       | 105/370 [01:40<03:44,  1.18it/s]
+2026-06-27 12:02:55,550 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:56,310 [INFO]     Metrics:total_token usage: 729, prompt_token usage: 651
+2026-06-27 12:02:56,311 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  29%|##8       | 106/370 [01:41<03:36,  1.22it/s]
+2026-06-27 12:02:56,312 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:57,157 [INFO]     Metrics:total_token usage: 744, prompt_token usage: 669
+2026-06-27 12:02:57,158 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  29%|##8       | 107/370 [01:42<03:38,  1.21it/s]
+2026-06-27 12:02:57,160 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:58,034 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 599
+2026-06-27 12:02:58,034 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  29%|##9       | 108/370 [01:43<03:40,  1.19it/s]
+2026-06-27 12:02:58,035 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:59,058 [INFO]     Metrics:total_token usage: 768, prompt_token usage: 688
+2026-06-27 12:02:59,059 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  29%|##9       | 109/370 [01:44<03:54,  1.11it/s]
+2026-06-27 12:02:59,059 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:02:59,892 [INFO]     Metrics:total_token usage: 728, prompt_token usage: 652
+2026-06-27 12:02:59,893 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  30%|##9       | 110/370 [01:45<03:48,  1.14it/s]
+2026-06-27 12:02:59,893 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:00,933 [INFO]     Metrics:total_token usage: 722, prompt_token usage: 646
+2026-06-27 12:03:00,934 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  30%|###       | 111/370 [01:46<04:00,  1.08it/s]
+2026-06-27 12:03:00,934 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:01,963 [INFO]     Metrics:total_token usage: 722, prompt_token usage: 646
+2026-06-27 12:03:01,964 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  30%|###       | 112/370 [01:47<04:07,  1.04it/s]
+2026-06-27 12:03:01,964 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:02,814 [INFO]     Metrics:total_token usage: 717, prompt_token usage: 648
+2026-06-27 12:03:02,814 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  31%|###       | 113/370 [01:48<03:57,  1.08it/s]
+2026-06-27 12:03:02,815 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:03,917 [INFO]     Metrics:total_token usage: 668, prompt_token usage: 595
+2026-06-27 12:03:03,917 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  31%|###       | 114/370 [01:49<04:10,  1.02it/s]
+2026-06-27 12:03:03,917 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:05,354 [INFO]     Metrics:total_token usage: 717, prompt_token usage: 648
+2026-06-27 12:03:05,355 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  31%|###1      | 115/370 [01:50<04:44,  1.12s/it]
+2026-06-27 12:03:05,356 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:06,204 [INFO]     Metrics:total_token usage: 670, prompt_token usage: 605
+2026-06-27 12:03:06,205 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  31%|###1      | 116/370 [01:51<04:23,  1.04s/it]
+2026-06-27 12:03:06,206 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:07,000 [INFO]     Metrics:total_token usage: 699, prompt_token usage: 606
+2026-06-27 12:03:07,000 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  32%|###1      | 117/370 [01:52<04:03,  1.04it/s]
+2026-06-27 12:03:07,001 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:07,917 [INFO]     Metrics:total_token usage: 699, prompt_token usage: 606
+2026-06-27 12:03:07,918 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  32%|###1      | 118/370 [01:53<03:59,  1.05it/s]
+2026-06-27 12:03:07,918 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:08,900 [INFO]     Metrics:total_token usage: 670, prompt_token usage: 589
+2026-06-27 12:03:08,900 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  32%|###2      | 119/370 [01:54<04:00,  1.04it/s]
+2026-06-27 12:03:08,900 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:09,796 [INFO]     Metrics:total_token usage: 921, prompt_token usage: 839
+2026-06-27 12:03:09,797 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  32%|###2      | 120/370 [01:55<03:55,  1.06it/s]
+2026-06-27 12:03:09,797 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:10,762 [INFO]     Metrics:total_token usage: 723, prompt_token usage: 647
+2026-06-27 12:03:10,762 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  33%|###2      | 121/370 [01:56<03:56,  1.05it/s]
+2026-06-27 12:03:10,762 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:11,752 [INFO]     Metrics:total_token usage: 733, prompt_token usage: 664
+2026-06-27 12:03:11,752 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  33%|###2      | 122/370 [01:57<03:58,  1.04it/s]
+2026-06-27 12:03:11,752 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:12,637 [INFO]     Metrics:total_token usage: 685, prompt_token usage: 616
+2026-06-27 12:03:12,637 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  33%|###3      | 123/370 [01:57<03:51,  1.07it/s]
+2026-06-27 12:03:12,637 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:13,525 [INFO]     Metrics:total_token usage: 722, prompt_token usage: 646
+2026-06-27 12:03:13,525 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  34%|###3      | 124/370 [01:58<03:47,  1.08it/s]
+2026-06-27 12:03:13,526 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:14,432 [INFO]     Metrics:total_token usage: 798, prompt_token usage: 708
+2026-06-27 12:03:14,432 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  34%|###3      | 125/370 [01:59<03:44,  1.09it/s]
+2026-06-27 12:03:14,433 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:15,516 [INFO]     Metrics:total_token usage: 722, prompt_token usage: 646
+2026-06-27 12:03:15,516 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  34%|###4      | 126/370 [02:00<03:56,  1.03it/s]
+2026-06-27 12:03:15,517 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:16,302 [INFO]     Metrics:total_token usage: 685, prompt_token usage: 616
+2026-06-27 12:03:16,303 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  34%|###4      | 127/370 [02:01<03:41,  1.09it/s]
+2026-06-27 12:03:16,303 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:17,111 [INFO]     Metrics:total_token usage: 682, prompt_token usage: 616
+2026-06-27 12:03:17,111 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  35%|###4      | 128/370 [02:02<03:33,  1.13it/s]
+2026-06-27 12:03:17,112 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:18,613 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 586
+2026-06-27 12:03:18,614 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  35%|###4      | 129/370 [02:03<04:17,  1.07s/it]
+2026-06-27 12:03:18,614 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:20,390 [INFO]     Metrics:total_token usage: 701, prompt_token usage: 616
+2026-06-27 12:03:20,390 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  35%|###5      | 130/370 [02:05<05:07,  1.28s/it]
+2026-06-27 12:03:20,390 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:21,095 [INFO]     Metrics:total_token usage: 651, prompt_token usage: 594
+2026-06-27 12:03:21,096 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  35%|###5      | 131/370 [02:06<04:24,  1.11s/it]
+2026-06-27 12:03:21,096 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:21,825 [INFO]     Metrics:total_token usage: 722, prompt_token usage: 646
+2026-06-27 12:03:21,826 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  36%|###5      | 132/370 [02:07<03:56,  1.01it/s]
+2026-06-27 12:03:21,826 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:23,005 [INFO]     Metrics:total_token usage: 782, prompt_token usage: 708
+2026-06-27 12:03:23,005 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  36%|###5      | 133/370 [02:08<04:08,  1.05s/it]
+2026-06-27 12:03:23,005 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:24,902 [INFO]     Metrics:total_token usage: 740, prompt_token usage: 650
+2026-06-27 12:03:24,902 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  36%|###6      | 134/370 [02:10<05:07,  1.30s/it]
+2026-06-27 12:03:24,902 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:25,694 [INFO]     Metrics:total_token usage: 719, prompt_token usage: 650
+2026-06-27 12:03:25,695 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  36%|###6      | 135/370 [02:11<04:30,  1.15s/it]
+2026-06-27 12:03:25,697 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:26,539 [INFO]     Metrics:total_token usage: 789, prompt_token usage: 708
+2026-06-27 12:03:26,540 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  37%|###6      | 136/370 [02:11<04:07,  1.06s/it]
+2026-06-27 12:03:26,540 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:27,234 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:03:27,234 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  37%|###7      | 137/370 [02:12<03:41,  1.05it/s]
+2026-06-27 12:03:27,234 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:28,081 [INFO]     Metrics:total_token usage: 700, prompt_token usage: 621
+2026-06-27 12:03:28,082 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  37%|###7      | 138/370 [02:13<03:33,  1.09it/s]
+2026-06-27 12:03:28,082 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:29,003 [INFO]     Metrics:total_token usage: 691, prompt_token usage: 622
+2026-06-27 12:03:29,003 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  38%|###7      | 139/370 [02:14<03:32,  1.09it/s]
+2026-06-27 12:03:29,004 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:29,841 [INFO]     Metrics:total_token usage: 909, prompt_token usage: 825
+2026-06-27 12:03:29,842 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  38%|###7      | 140/370 [02:15<03:25,  1.12it/s]
+2026-06-27 12:03:29,842 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:30,725 [INFO]     Metrics:total_token usage: 661, prompt_token usage: 586
+2026-06-27 12:03:30,726 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  38%|###8      | 141/370 [02:16<03:24,  1.12it/s]
+2026-06-27 12:03:30,726 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:31,855 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:03:31,856 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  38%|###8      | 142/370 [02:17<03:39,  1.04it/s]
+2026-06-27 12:03:31,856 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:32,803 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 602
+2026-06-27 12:03:32,804 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  39%|###8      | 143/370 [02:18<03:37,  1.04it/s]
+2026-06-27 12:03:32,804 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:33,584 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 602
+2026-06-27 12:03:33,584 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  39%|###8      | 144/370 [02:18<03:24,  1.10it/s]
+2026-06-27 12:03:33,584 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:34,823 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 602
+2026-06-27 12:03:34,823 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  39%|###9      | 145/370 [02:20<03:46,  1.01s/it]
+2026-06-27 12:03:34,824 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:35,774 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 602
+2026-06-27 12:03:35,775 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  39%|###9      | 146/370 [02:21<03:41,  1.01it/s]
+2026-06-27 12:03:35,775 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:37,740 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 602
+2026-06-27 12:03:37,740 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  40%|###9      | 147/370 [02:23<04:45,  1.28s/it]
+2026-06-27 12:03:37,740 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:38,855 [INFO]     Metrics:total_token usage: 856, prompt_token usage: 762
+2026-06-27 12:03:38,855 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  40%|####      | 148/370 [02:24<04:33,  1.23s/it]
+2026-06-27 12:03:38,855 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:39,559 [INFO]     Metrics:total_token usage: 648, prompt_token usage: 594
+2026-06-27 12:03:39,560 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  40%|####      | 149/370 [02:24<03:57,  1.07s/it]
+2026-06-27 12:03:39,561 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:40,396 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 602
+2026-06-27 12:03:40,396 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  41%|####      | 150/370 [02:25<03:40,  1.00s/it]
+2026-06-27 12:03:40,396 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:41,390 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 602
+2026-06-27 12:03:41,390 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  41%|####      | 151/370 [02:26<03:39,  1.00s/it]
+2026-06-27 12:03:41,391 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:42,222 [INFO]     Metrics:total_token usage: 889, prompt_token usage: 805
+2026-06-27 12:03:42,222 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  41%|####1     | 152/370 [02:27<03:27,  1.05it/s]
+2026-06-27 12:03:42,223 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:42,888 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 602
+2026-06-27 12:03:42,888 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  41%|####1     | 153/370 [02:28<03:07,  1.16it/s]
+2026-06-27 12:03:42,888 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:43,760 [INFO]     Metrics:total_token usage: 797, prompt_token usage: 717
+2026-06-27 12:03:43,760 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  42%|####1     | 154/370 [02:29<03:07,  1.15it/s]
+2026-06-27 12:03:43,760 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:45,041 [INFO]     Metrics:total_token usage: 680, prompt_token usage: 612
+2026-06-27 12:03:45,042 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  42%|####1     | 155/370 [02:30<03:33,  1.01it/s]
+2026-06-27 12:03:45,042 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:45,996 [INFO]     Metrics:total_token usage: 709, prompt_token usage: 626
+2026-06-27 12:03:45,996 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  42%|####2     | 156/370 [02:31<03:29,  1.02it/s]
+2026-06-27 12:03:45,996 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:47,005 [INFO]     Metrics:total_token usage: 802, prompt_token usage: 715
+2026-06-27 12:03:47,006 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  42%|####2     | 157/370 [02:32<03:30,  1.01it/s]
+2026-06-27 12:03:47,006 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:47,771 [INFO]     Metrics:total_token usage: 707, prompt_token usage: 619
+2026-06-27 12:03:47,773 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  43%|####2     | 158/370 [02:33<03:15,  1.08it/s]
+2026-06-27 12:03:47,774 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:49,411 [INFO]     Metrics:total_token usage: 1063, prompt_token usage: 979
+2026-06-27 12:03:49,411 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  43%|####2     | 159/370 [02:34<03:59,  1.14s/it]
+2026-06-27 12:03:49,412 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:50,271 [INFO]     Metrics:total_token usage: 775, prompt_token usage: 691
+2026-06-27 12:03:50,272 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  43%|####3     | 160/370 [02:35<03:41,  1.05s/it]
+2026-06-27 12:03:50,272 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:51,178 [INFO]     Metrics:total_token usage: 701, prompt_token usage: 626
+2026-06-27 12:03:51,178 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  44%|####3     | 161/370 [02:36<03:31,  1.01s/it]
+2026-06-27 12:03:51,178 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:51,907 [INFO]     Metrics:total_token usage: 662, prompt_token usage: 596
+2026-06-27 12:03:51,907 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  44%|####3     | 162/370 [02:37<03:12,  1.08it/s]
+2026-06-27 12:03:51,907 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:52,844 [INFO]     Metrics:total_token usage: 709, prompt_token usage: 626
+2026-06-27 12:03:52,844 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  44%|####4     | 163/370 [02:38<03:12,  1.08it/s]
+2026-06-27 12:03:52,844 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:53,713 [INFO]     Metrics:total_token usage: 709, prompt_token usage: 626
+2026-06-27 12:03:53,713 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  44%|####4     | 164/370 [02:39<03:07,  1.10it/s]
+2026-06-27 12:03:53,714 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:54,594 [INFO]     Metrics:total_token usage: 709, prompt_token usage: 626
+2026-06-27 12:03:54,594 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  45%|####4     | 165/370 [02:39<03:04,  1.11it/s]
+2026-06-27 12:03:54,594 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:55,434 [INFO]     Metrics:total_token usage: 709, prompt_token usage: 626
+2026-06-27 12:03:55,435 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  45%|####4     | 166/370 [02:40<03:00,  1.13it/s]
+2026-06-27 12:03:55,435 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:56,428 [INFO]     Metrics:total_token usage: 1063, prompt_token usage: 979
+2026-06-27 12:03:56,428 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  45%|####5     | 167/370 [02:41<03:06,  1.09it/s]
+2026-06-27 12:03:56,428 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:57,274 [INFO]     Metrics:total_token usage: 1075, prompt_token usage: 979
+2026-06-27 12:03:57,275 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  45%|####5     | 168/370 [02:42<03:00,  1.12it/s]
+2026-06-27 12:03:57,275 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:58,186 [INFO]     Metrics:total_token usage: 1075, prompt_token usage: 979
+2026-06-27 12:03:58,186 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  46%|####5     | 169/370 [02:43<03:00,  1.11it/s]
+2026-06-27 12:03:58,187 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:03:59,202 [INFO]     Metrics:total_token usage: 1042, prompt_token usage: 946
+2026-06-27 12:03:59,202 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  46%|####5     | 170/370 [02:44<03:07,  1.07it/s]
+2026-06-27 12:03:59,202 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:00,014 [INFO]     Metrics:total_token usage: 1117, prompt_token usage: 1021
+2026-06-27 12:04:00,014 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  46%|####6     | 171/370 [02:45<02:58,  1.11it/s]
+2026-06-27 12:04:00,014 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:01,487 [INFO]     Metrics:total_token usage: 1117, prompt_token usage: 1021
+2026-06-27 12:04:01,487 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  46%|####6     | 172/370 [02:46<03:31,  1.07s/it]
+2026-06-27 12:04:01,487 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:02,303 [INFO]     Metrics:total_token usage: 726, prompt_token usage: 655
+2026-06-27 12:04:02,303 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  47%|####6     | 173/370 [02:47<03:15,  1.01it/s]
+2026-06-27 12:04:02,304 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:03,464 [INFO]     Metrics:total_token usage: 726, prompt_token usage: 655
+2026-06-27 12:04:03,464 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  47%|####7     | 174/370 [02:48<03:24,  1.04s/it]
+2026-06-27 12:04:03,464 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:04,288 [INFO]     Metrics:total_token usage: 709, prompt_token usage: 626
+2026-06-27 12:04:04,289 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  47%|####7     | 175/370 [02:49<03:10,  1.02it/s]
+2026-06-27 12:04:04,289 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:05,031 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 596
+2026-06-27 12:04:05,031 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  48%|####7     | 176/370 [02:50<02:56,  1.10it/s]
+2026-06-27 12:04:05,032 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:05,914 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 604
+2026-06-27 12:04:05,914 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  48%|####7     | 177/370 [02:51<02:53,  1.11it/s]
+2026-06-27 12:04:05,914 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:06,657 [INFO]     Metrics:total_token usage: 773, prompt_token usage: 688
+2026-06-27 12:04:06,658 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  48%|####8     | 178/370 [02:51<02:43,  1.17it/s]
+2026-06-27 12:04:06,659 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:07,478 [INFO]     Metrics:total_token usage: 818, prompt_token usage: 733
+2026-06-27 12:04:07,479 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  48%|####8     | 179/370 [02:52<02:41,  1.19it/s]
+2026-06-27 12:04:07,479 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:08,414 [INFO]     Metrics:total_token usage: 762, prompt_token usage: 668
+2026-06-27 12:04:08,414 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  49%|####8     | 180/370 [02:53<02:45,  1.15it/s]
+2026-06-27 12:04:08,415 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:09,122 [INFO]     Metrics:total_token usage: 673, prompt_token usage: 600
+2026-06-27 12:04:09,122 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  49%|####8     | 181/370 [02:54<02:35,  1.22it/s]
+2026-06-27 12:04:09,122 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:10,120 [INFO]     Metrics:total_token usage: 1075, prompt_token usage: 979
+2026-06-27 12:04:10,120 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  49%|####9     | 182/370 [02:55<02:44,  1.14it/s]
+2026-06-27 12:04:10,120 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:11,062 [INFO]     Metrics:total_token usage: 1075, prompt_token usage: 979
+2026-06-27 12:04:11,062 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  49%|####9     | 183/370 [02:56<02:47,  1.12it/s]
+2026-06-27 12:04:11,062 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:12,088 [INFO]     Metrics:total_token usage: 1075, prompt_token usage: 979
+2026-06-27 12:04:12,088 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  50%|####9     | 184/370 [02:57<02:53,  1.07it/s]
+2026-06-27 12:04:12,089 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:13,001 [INFO]     Metrics:total_token usage: 709, prompt_token usage: 626
+2026-06-27 12:04:13,001 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  50%|#####     | 185/370 [02:58<02:51,  1.08it/s]
+2026-06-27 12:04:13,001 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:14,576 [INFO]     Metrics:total_token usage: 803, prompt_token usage: 730
+2026-06-27 12:04:14,576 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  50%|#####     | 186/370 [02:59<03:26,  1.12s/it]
+2026-06-27 12:04:14,577 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:15,340 [INFO]     Metrics:total_token usage: 803, prompt_token usage: 730
+2026-06-27 12:04:15,341 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  51%|#####     | 187/370 [03:00<03:05,  1.01s/it]
+2026-06-27 12:04:15,341 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:16,554 [INFO]     Metrics:total_token usage: 778, prompt_token usage: 691
+2026-06-27 12:04:16,554 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  51%|#####     | 188/370 [03:01<03:15,  1.07s/it]
+2026-06-27 12:04:16,554 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:17,352 [INFO]     Metrics:total_token usage: 692, prompt_token usage: 616
+2026-06-27 12:04:17,352 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  51%|#####1    | 189/370 [03:02<02:59,  1.01it/s]
+2026-06-27 12:04:17,353 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:18,346 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:04:18,347 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  51%|#####1    | 190/370 [03:03<02:58,  1.01it/s]
+2026-06-27 12:04:18,347 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:19,080 [INFO]     Metrics:total_token usage: 667, prompt_token usage: 600
+2026-06-27 12:04:19,080 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  52%|#####1    | 191/370 [03:04<02:43,  1.09it/s]
+2026-06-27 12:04:19,080 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:20,209 [INFO]     Metrics:total_token usage: 664, prompt_token usage: 596
+2026-06-27 12:04:20,209 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  52%|#####1    | 192/370 [03:05<02:54,  1.02it/s]
+2026-06-27 12:04:20,212 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:21,760 [INFO]     Metrics:total_token usage: 679, prompt_token usage: 601
+2026-06-27 12:04:21,760 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  52%|#####2    | 193/370 [03:07<03:23,  1.15s/it]
+2026-06-27 12:04:21,760 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:22,972 [INFO]     Metrics:total_token usage: 667, prompt_token usage: 590
+2026-06-27 12:04:22,972 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  52%|#####2    | 194/370 [03:08<03:25,  1.17s/it]
+2026-06-27 12:04:22,973 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:24,188 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:04:24,188 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  53%|#####2    | 195/370 [03:09<03:27,  1.18s/it]
+2026-06-27 12:04:24,189 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:24,958 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:04:24,959 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  53%|#####2    | 196/370 [03:10<03:04,  1.06s/it]
+2026-06-27 12:04:24,959 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:25,754 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:04:25,754 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  53%|#####3    | 197/370 [03:11<02:49,  1.02it/s]
+2026-06-27 12:04:25,754 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:27,336 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:04:27,336 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  54%|#####3    | 198/370 [03:12<03:19,  1.16s/it]
+2026-06-27 12:04:27,337 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:28,162 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 597
+2026-06-27 12:04:28,163 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  54%|#####3    | 199/370 [03:13<03:01,  1.06s/it]
+2026-06-27 12:04:28,163 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:29,158 [INFO]     Metrics:total_token usage: 718, prompt_token usage: 640
+2026-06-27 12:04:29,159 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  54%|#####4    | 200/370 [03:14<02:56,  1.04s/it]
+2026-06-27 12:04:29,159 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:29,880 [INFO]     Metrics:total_token usage: 666, prompt_token usage: 597
+2026-06-27 12:04:29,880 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  54%|#####4    | 201/370 [03:15<02:39,  1.06it/s]
+2026-06-27 12:04:29,880 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:30,834 [INFO]     Metrics:total_token usage: 672, prompt_token usage: 594
+2026-06-27 12:04:30,834 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  55%|#####4    | 202/370 [03:16<02:39,  1.06it/s]
+2026-06-27 12:04:30,834 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:32,716 [INFO]     Metrics:total_token usage: 685, prompt_token usage: 610
+2026-06-27 12:04:32,716 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  55%|#####4    | 203/370 [03:18<03:25,  1.23s/it]
+2026-06-27 12:04:32,717 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:35,202 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:04:35,202 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  55%|#####5    | 204/370 [03:20<04:26,  1.61s/it]
+2026-06-27 12:04:35,202 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:36,269 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:04:36,269 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  55%|#####5    | 205/370 [03:21<03:58,  1.44s/it]
+2026-06-27 12:04:36,269 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:37,214 [INFO]     Metrics:total_token usage: 844, prompt_token usage: 763
+2026-06-27 12:04:37,215 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  56%|#####5    | 206/370 [03:22<03:32,  1.29s/it]
+2026-06-27 12:04:37,215 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:39,258 [INFO]     Metrics:total_token usage: 883, prompt_token usage: 802
+2026-06-27 12:04:39,258 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  56%|#####5    | 207/370 [03:24<04:07,  1.52s/it]
+2026-06-27 12:04:39,258 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:41,118 [INFO]     Metrics:total_token usage: 782, prompt_token usage: 697
+2026-06-27 12:04:41,118 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  56%|#####6    | 208/370 [03:26<04:22,  1.62s/it]
+2026-06-27 12:04:41,119 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:42,088 [INFO]     Metrics:total_token usage: 977, prompt_token usage: 902
+2026-06-27 12:04:42,088 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  56%|#####6    | 209/370 [03:27<03:49,  1.43s/it]
+2026-06-27 12:04:42,088 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:42,958 [INFO]     Metrics:total_token usage: 673, prompt_token usage: 606
+2026-06-27 12:04:42,959 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  57%|#####6    | 210/370 [03:28<03:21,  1.26s/it]
+2026-06-27 12:04:42,959 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:43,661 [INFO]     Metrics:total_token usage: 680, prompt_token usage: 606
+2026-06-27 12:04:43,661 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  57%|#####7    | 211/370 [03:29<02:53,  1.09s/it]
+2026-06-27 12:04:43,662 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:44,455 [INFO]     Metrics:total_token usage: 680, prompt_token usage: 606
+2026-06-27 12:04:44,455 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  57%|#####7    | 212/370 [03:29<02:38,  1.00s/it]
+2026-06-27 12:04:44,455 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:45,342 [INFO]     Metrics:total_token usage: 680, prompt_token usage: 606
+2026-06-27 12:04:45,343 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  58%|#####7    | 213/370 [03:30<02:32,  1.03it/s]
+2026-06-27 12:04:45,343 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:46,049 [INFO]     Metrics:total_token usage: 680, prompt_token usage: 606
+2026-06-27 12:04:46,049 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  58%|#####7    | 214/370 [03:31<02:18,  1.12it/s]
+2026-06-27 12:04:46,049 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:46,849 [INFO]     Metrics:total_token usage: 681, prompt_token usage: 606
+2026-06-27 12:04:46,849 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  58%|#####8    | 215/370 [03:32<02:13,  1.16it/s]
+2026-06-27 12:04:46,849 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:48,034 [INFO]     Metrics:total_token usage: 777, prompt_token usage: 692
+2026-06-27 12:04:48,034 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  58%|#####8    | 216/370 [03:33<02:27,  1.04it/s]
+2026-06-27 12:04:48,035 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:49,013 [INFO]     Metrics:total_token usage: 883, prompt_token usage: 802
+2026-06-27 12:04:49,014 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  59%|#####8    | 217/370 [03:34<02:27,  1.04it/s]
+2026-06-27 12:04:49,014 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:50,012 [INFO]     Metrics:total_token usage: 733, prompt_token usage: 649
+2026-06-27 12:04:50,012 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  59%|#####8    | 218/370 [03:35<02:28,  1.03it/s]
+2026-06-27 12:04:50,012 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:51,319 [INFO]     Metrics:total_token usage: 730, prompt_token usage: 661
+2026-06-27 12:04:51,320 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  59%|#####9    | 219/370 [03:36<02:42,  1.08s/it]
+2026-06-27 12:04:51,320 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:52,266 [INFO]     Metrics:total_token usage: 848, prompt_token usage: 762
+2026-06-27 12:04:52,266 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  59%|#####9    | 220/370 [03:37<02:35,  1.04s/it]
+2026-06-27 12:04:52,266 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:53,987 [INFO]     Metrics:total_token usage: 883, prompt_token usage: 802
+2026-06-27 12:04:53,987 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  60%|#####9    | 221/370 [03:39<03:05,  1.24s/it]
+2026-06-27 12:04:53,987 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:54,860 [INFO]     Metrics:total_token usage: 659, prompt_token usage: 595
+2026-06-27 12:04:54,861 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  60%|######    | 222/370 [03:40<02:47,  1.13s/it]
+2026-06-27 12:04:54,861 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:55,848 [INFO]     Metrics:total_token usage: 731, prompt_token usage: 647
+2026-06-27 12:04:55,848 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  60%|######    | 223/370 [03:41<02:39,  1.09s/it]
+2026-06-27 12:04:55,848 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:56,913 [INFO]     Metrics:total_token usage: 747, prompt_token usage: 667
+2026-06-27 12:04:56,914 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  61%|######    | 224/370 [03:42<02:37,  1.08s/it]
+2026-06-27 12:04:56,914 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:04:58,913 [INFO]     Metrics:total_token usage: 747, prompt_token usage: 667
+2026-06-27 12:04:58,913 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  61%|######    | 225/370 [03:44<03:16,  1.36s/it]
+2026-06-27 12:04:58,916 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:00,043 [INFO]     Metrics:total_token usage: 747, prompt_token usage: 667
+2026-06-27 12:05:00,043 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  61%|######1   | 226/370 [03:45<03:05,  1.29s/it]
+2026-06-27 12:05:00,043 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:01,277 [INFO]     Metrics:total_token usage: 747, prompt_token usage: 667
+2026-06-27 12:05:01,277 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  61%|######1   | 227/370 [03:46<03:01,  1.27s/it]
+2026-06-27 12:05:01,277 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:02,131 [INFO]     Metrics:total_token usage: 686, prompt_token usage: 608
+2026-06-27 12:05:02,131 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  62%|######1   | 228/370 [03:47<02:42,  1.15s/it]
+2026-06-27 12:05:02,131 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:03,020 [INFO]     Metrics:total_token usage: 686, prompt_token usage: 608
+2026-06-27 12:05:03,021 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  62%|######1   | 229/370 [03:48<02:30,  1.07s/it]
+2026-06-27 12:05:03,021 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:03,805 [INFO]     Metrics:total_token usage: 674, prompt_token usage: 608
+2026-06-27 12:05:03,805 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  62%|######2   | 230/370 [03:49<02:17,  1.02it/s]
+2026-06-27 12:05:03,805 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:04,962 [INFO]     Metrics:total_token usage: 726, prompt_token usage: 648
+2026-06-27 12:05:04,962 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  62%|######2   | 231/370 [03:50<02:24,  1.04s/it]
+2026-06-27 12:05:04,963 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:05,876 [INFO]     Metrics:total_token usage: 772, prompt_token usage: 692
+2026-06-27 12:05:05,876 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  63%|######2   | 232/370 [03:51<02:17,  1.00it/s]
+2026-06-27 12:05:05,876 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:07,149 [INFO]     Metrics:total_token usage: 1026, prompt_token usage: 943
+2026-06-27 12:05:07,149 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  63%|######2   | 233/370 [03:52<02:28,  1.08s/it]
+2026-06-27 12:05:07,149 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:07,967 [INFO]     Metrics:total_token usage: 710, prompt_token usage: 641
+2026-06-27 12:05:07,967 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  63%|######3   | 234/370 [03:53<02:16,  1.00s/it]
+2026-06-27 12:05:07,967 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:09,081 [INFO]     Metrics:total_token usage: 803, prompt_token usage: 721
+2026-06-27 12:05:09,081 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  64%|######3   | 235/370 [03:54<02:19,  1.04s/it]
+2026-06-27 12:05:09,083 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:09,950 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:05:09,951 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  64%|######3   | 236/370 [03:55<02:12,  1.01it/s]
+2026-06-27 12:05:09,951 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:11,136 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:05:11,136 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  64%|######4   | 237/370 [03:56<02:19,  1.05s/it]
+2026-06-27 12:05:11,136 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:12,043 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:05:12,043 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  64%|######4   | 238/370 [03:57<02:12,  1.00s/it]
+2026-06-27 12:05:12,043 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:12,941 [INFO]     Metrics:total_token usage: 688, prompt_token usage: 609
+2026-06-27 12:05:12,942 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  65%|######4   | 239/370 [03:58<02:07,  1.03it/s]
+2026-06-27 12:05:12,942 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:13,916 [INFO]     Metrics:total_token usage: 687, prompt_token usage: 609
+2026-06-27 12:05:13,917 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  65%|######4   | 240/370 [03:59<02:06,  1.03it/s]
+2026-06-27 12:05:13,917 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:15,953 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:05:15,953 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  65%|######5   | 241/370 [04:01<02:46,  1.29s/it]
+2026-06-27 12:05:15,953 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:16,798 [INFO]     Metrics:total_token usage: 827, prompt_token usage: 742
+2026-06-27 12:05:16,799 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  65%|######5   | 242/370 [04:02<02:28,  1.16s/it]
+2026-06-27 12:05:16,799 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:17,777 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:05:17,777 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  66%|######5   | 243/370 [04:03<02:20,  1.10s/it]
+2026-06-27 12:05:17,777 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:18,776 [INFO]     Metrics:total_token usage: 724, prompt_token usage: 644
+2026-06-27 12:05:18,777 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  66%|######5   | 244/370 [04:04<02:15,  1.07s/it]
+2026-06-27 12:05:18,777 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:19,956 [INFO]     Metrics:total_token usage: 767, prompt_token usage: 676
+2026-06-27 12:05:19,956 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  66%|######6   | 245/370 [04:05<02:18,  1.10s/it]
+2026-06-27 12:05:19,956 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:20,676 [INFO]     Metrics:total_token usage: 662, prompt_token usage: 596
+2026-06-27 12:05:20,676 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  66%|######6   | 246/370 [04:06<02:02,  1.01it/s]
+2026-06-27 12:05:20,676 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:21,377 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:05:21,377 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  67%|######6   | 247/370 [04:06<01:51,  1.11it/s]
+2026-06-27 12:05:21,377 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:22,264 [INFO]     Metrics:total_token usage: 719, prompt_token usage: 642
+2026-06-27 12:05:22,264 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  67%|######7   | 248/370 [04:07<01:49,  1.11it/s]
+2026-06-27 12:05:22,264 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:23,107 [INFO]     Metrics:total_token usage: 683, prompt_token usage: 613
+2026-06-27 12:05:23,107 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  67%|######7   | 249/370 [04:08<01:46,  1.13it/s]
+2026-06-27 12:05:23,107 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:24,187 [INFO]     Metrics:total_token usage: 718, prompt_token usage: 642
+2026-06-27 12:05:24,187 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  68%|######7   | 250/370 [04:09<01:52,  1.06it/s]
+2026-06-27 12:05:24,190 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:25,403 [INFO]     Metrics:total_token usage: 731, prompt_token usage: 647
+2026-06-27 12:05:25,403 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  68%|######7   | 251/370 [04:10<02:01,  1.02s/it]
+2026-06-27 12:05:25,403 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:26,183 [INFO]     Metrics:total_token usage: 659, prompt_token usage: 592
+2026-06-27 12:05:26,183 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  68%|######8   | 252/370 [04:11<01:52,  1.05it/s]
+2026-06-27 12:05:26,183 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:27,118 [INFO]     Metrics:total_token usage: 744, prompt_token usage: 666
+2026-06-27 12:05:27,119 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  68%|######8   | 253/370 [04:12<01:50,  1.06it/s]
+2026-06-27 12:05:27,120 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:28,250 [INFO]     Metrics:total_token usage: 817, prompt_token usage: 724
+2026-06-27 12:05:28,250 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  69%|######8   | 254/370 [04:13<01:56,  1.00s/it]
+2026-06-27 12:05:28,251 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:30,840 [INFO]     Metrics:total_token usage: 817, prompt_token usage: 724
+2026-06-27 12:05:30,841 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  69%|######8   | 255/370 [04:16<02:50,  1.48s/it]
+2026-06-27 12:05:30,841 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:31,564 [INFO]     Metrics:total_token usage: 709, prompt_token usage: 631
+2026-06-27 12:05:31,565 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  69%|######9   | 256/370 [04:16<02:22,  1.25s/it]
+2026-06-27 12:05:31,565 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:32,888 [INFO]     Metrics:total_token usage: 709, prompt_token usage: 631
+2026-06-27 12:05:32,889 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  69%|######9   | 257/370 [04:18<02:23,  1.27s/it]
+2026-06-27 12:05:32,889 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:34,104 [INFO]     Metrics:total_token usage: 812, prompt_token usage: 717
+2026-06-27 12:05:34,105 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  70%|######9   | 258/370 [04:19<02:20,  1.26s/it]
+2026-06-27 12:05:34,105 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:35,038 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:05:35,038 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  70%|#######   | 259/370 [04:20<02:08,  1.16s/it]
+2026-06-27 12:05:35,039 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:35,718 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:05:35,718 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  70%|#######   | 260/370 [04:21<01:51,  1.02s/it]
+2026-06-27 12:05:35,721 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:36,609 [INFO]     Metrics:total_token usage: 734, prompt_token usage: 661
+2026-06-27 12:05:36,609 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  71%|#######   | 261/370 [04:21<01:46,  1.02it/s]
+2026-06-27 12:05:36,609 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:37,518 [INFO]     Metrics:total_token usage: 734, prompt_token usage: 661
+2026-06-27 12:05:37,519 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  71%|#######   | 262/370 [04:22<01:43,  1.04it/s]
+2026-06-27 12:05:37,519 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:38,894 [INFO]     Metrics:total_token usage: 734, prompt_token usage: 661
+2026-06-27 12:05:38,894 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  71%|#######1  | 263/370 [04:24<01:55,  1.08s/it]
+2026-06-27 12:05:38,894 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:39,921 [INFO]     Metrics:total_token usage: 755, prompt_token usage: 661
+2026-06-27 12:05:39,921 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  71%|#######1  | 264/370 [04:25<01:53,  1.07s/it]
+2026-06-27 12:05:39,921 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:40,684 [INFO]     Metrics:total_token usage: 734, prompt_token usage: 661
+2026-06-27 12:05:40,685 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  72%|#######1  | 265/370 [04:26<01:42,  1.03it/s]
+2026-06-27 12:05:40,686 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:41,633 [INFO]     Metrics:total_token usage: 686, prompt_token usage: 613
+2026-06-27 12:05:41,633 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  72%|#######1  | 266/370 [04:26<01:40,  1.03it/s]
+2026-06-27 12:05:41,633 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:42,532 [INFO]     Metrics:total_token usage: 699, prompt_token usage: 621
+2026-06-27 12:05:42,533 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  72%|#######2  | 267/370 [04:27<01:37,  1.06it/s]
+2026-06-27 12:05:42,533 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:43,308 [INFO]     Metrics:total_token usage: 660, prompt_token usage: 595
+2026-06-27 12:05:43,308 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  72%|#######2  | 268/370 [04:28<01:31,  1.12it/s]
+2026-06-27 12:05:43,308 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:44,095 [INFO]     Metrics:total_token usage: 687, prompt_token usage: 612
+2026-06-27 12:05:44,095 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  73%|#######2  | 269/370 [04:29<01:27,  1.16it/s]
+2026-06-27 12:05:44,095 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:44,989 [INFO]     Metrics:total_token usage: 675, prompt_token usage: 607
+2026-06-27 12:05:44,990 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  73%|#######2  | 270/370 [04:30<01:27,  1.15it/s]
+2026-06-27 12:05:44,990 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:45,848 [INFO]     Metrics:total_token usage: 699, prompt_token usage: 630
+2026-06-27 12:05:45,849 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  73%|#######3  | 271/370 [04:31<01:25,  1.15it/s]
+2026-06-27 12:05:45,849 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:46,877 [INFO]     Metrics:total_token usage: 699, prompt_token usage: 621
+2026-06-27 12:05:46,877 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  74%|#######3  | 272/370 [04:32<01:29,  1.09it/s]
+2026-06-27 12:05:46,877 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:47,727 [INFO]     Metrics:total_token usage: 743, prompt_token usage: 663
+2026-06-27 12:05:47,727 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  74%|#######3  | 273/370 [04:33<01:26,  1.12it/s]
+2026-06-27 12:05:47,727 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:48,526 [INFO]     Metrics:total_token usage: 734, prompt_token usage: 661
+2026-06-27 12:05:48,526 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  74%|#######4  | 274/370 [04:33<01:23,  1.15it/s]
+2026-06-27 12:05:48,527 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:49,613 [INFO]     Metrics:total_token usage: 741, prompt_token usage: 668
+2026-06-27 12:05:49,613 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  74%|#######4  | 275/370 [04:34<01:28,  1.07it/s]
+2026-06-27 12:05:49,613 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:50,431 [INFO]     Metrics:total_token usage: 741, prompt_token usage: 668
+2026-06-27 12:05:50,431 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  75%|#######4  | 276/370 [04:35<01:24,  1.11it/s]
+2026-06-27 12:05:50,432 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:51,362 [INFO]     Metrics:total_token usage: 677, prompt_token usage: 599
+2026-06-27 12:05:51,362 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  75%|#######4  | 277/370 [04:36<01:24,  1.10it/s]
+2026-06-27 12:05:51,362 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:52,898 [INFO]     Metrics:total_token usage: 771, prompt_token usage: 691
+2026-06-27 12:05:52,898 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  75%|#######5  | 278/370 [04:38<01:40,  1.10s/it]
+2026-06-27 12:05:52,898 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:54,287 [INFO]     Metrics:total_token usage: 670, prompt_token usage: 595
+2026-06-27 12:05:54,288 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  75%|#######5  | 279/370 [04:39<01:47,  1.18s/it]
+2026-06-27 12:05:54,290 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:55,309 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 596
+2026-06-27 12:05:55,309 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  76%|#######5  | 280/370 [04:40<01:42,  1.14s/it]
+2026-06-27 12:05:55,309 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:56,253 [INFO]     Metrics:total_token usage: 672, prompt_token usage: 604
+2026-06-27 12:05:56,253 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  76%|#######5  | 281/370 [04:41<01:35,  1.08s/it]
+2026-06-27 12:05:56,253 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:57,157 [INFO]     Metrics:total_token usage: 672, prompt_token usage: 604
+2026-06-27 12:05:57,157 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  76%|#######6  | 282/370 [04:42<01:30,  1.03s/it]
+2026-06-27 12:05:57,157 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:57,840 [INFO]     Metrics:total_token usage: 663, prompt_token usage: 595
+2026-06-27 12:05:57,840 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  76%|#######6  | 283/370 [04:43<01:20,  1.08it/s]
+2026-06-27 12:05:57,840 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:59,042 [INFO]     Metrics:total_token usage: 670, prompt_token usage: 595
+2026-06-27 12:05:59,042 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  77%|#######6  | 284/370 [04:44<01:26,  1.01s/it]
+2026-06-27 12:05:59,042 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:05:59,839 [INFO]     Metrics:total_token usage: 683, prompt_token usage: 604
+2026-06-27 12:05:59,839 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  77%|#######7  | 285/370 [04:45<01:20,  1.06it/s]
+2026-06-27 12:05:59,839 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:01,253 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:06:01,253 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  77%|#######7  | 286/370 [04:46<01:31,  1.08s/it]
+2026-06-27 12:06:01,253 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:02,123 [INFO]     Metrics:total_token usage: 668, prompt_token usage: 586
+2026-06-27 12:06:02,123 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  78%|#######7  | 287/370 [04:47<01:24,  1.02s/it]
+2026-06-27 12:06:02,123 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:02,924 [INFO]     Metrics:total_token usage: 660, prompt_token usage: 592
+2026-06-27 12:06:02,925 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  78%|#######7  | 288/370 [04:48<01:18,  1.05it/s]
+2026-06-27 12:06:02,925 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:03,729 [INFO]     Metrics:total_token usage: 660, prompt_token usage: 592
+2026-06-27 12:06:03,729 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  78%|#######8  | 289/370 [04:49<01:13,  1.10it/s]
+2026-06-27 12:06:03,730 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:04,415 [INFO]     Metrics:total_token usage: 660, prompt_token usage: 592
+2026-06-27 12:06:04,415 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  78%|#######8  | 290/370 [04:49<01:07,  1.19it/s]
+2026-06-27 12:06:04,415 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:05,203 [INFO]     Metrics:total_token usage: 695, prompt_token usage: 614
+2026-06-27 12:06:05,203 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  79%|#######8  | 291/370 [04:50<01:05,  1.21it/s]
+2026-06-27 12:06:05,204 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:06,187 [INFO]     Metrics:total_token usage: 690, prompt_token usage: 613
+2026-06-27 12:06:06,187 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  79%|#######8  | 292/370 [04:51<01:08,  1.14it/s]
+2026-06-27 12:06:06,188 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:07,032 [INFO]     Metrics:total_token usage: 660, prompt_token usage: 592
+2026-06-27 12:06:07,032 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  79%|#######9  | 293/370 [04:52<01:06,  1.16it/s]
+2026-06-27 12:06:07,032 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:07,811 [INFO]     Metrics:total_token usage: 657, prompt_token usage: 589
+2026-06-27 12:06:07,811 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  79%|#######9  | 294/370 [04:53<01:03,  1.19it/s]
+2026-06-27 12:06:07,811 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:08,538 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 600
+2026-06-27 12:06:08,539 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  80%|#######9  | 295/370 [04:53<01:00,  1.24it/s]
+2026-06-27 12:06:08,540 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:09,311 [INFO]     Metrics:total_token usage: 645, prompt_token usage: 592
+2026-06-27 12:06:09,311 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  80%|########  | 296/370 [04:54<00:58,  1.26it/s]
+2026-06-27 12:06:09,311 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:10,178 [INFO]     Metrics:total_token usage: 657, prompt_token usage: 589
+2026-06-27 12:06:10,178 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  80%|########  | 297/370 [04:55<00:59,  1.22it/s]
+2026-06-27 12:06:10,179 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:10,989 [INFO]     Metrics:total_token usage: 657, prompt_token usage: 589
+2026-06-27 12:06:10,989 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  81%|########  | 298/370 [04:56<00:58,  1.23it/s]
+2026-06-27 12:06:10,989 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:12,195 [INFO]     Metrics:total_token usage: 666, prompt_token usage: 599
+2026-06-27 12:06:12,196 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  81%|########  | 299/370 [04:57<01:06,  1.07it/s]
+2026-06-27 12:06:12,196 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:13,272 [INFO]     Metrics:total_token usage: 672, prompt_token usage: 599
+2026-06-27 12:06:13,272 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  81%|########1 | 300/370 [04:58<01:08,  1.02it/s]
+2026-06-27 12:06:13,273 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:13,986 [INFO]     Metrics:total_token usage: 654, prompt_token usage: 593
+2026-06-27 12:06:13,986 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  81%|########1 | 301/370 [04:59<01:01,  1.11it/s]
+2026-06-27 12:06:13,986 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:14,785 [INFO]     Metrics:total_token usage: 663, prompt_token usage: 595
+2026-06-27 12:06:14,785 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  82%|########1 | 302/370 [05:00<00:59,  1.15it/s]
+2026-06-27 12:06:14,785 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:15,607 [INFO]     Metrics:total_token usage: 708, prompt_token usage: 630
+2026-06-27 12:06:15,607 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  82%|########1 | 303/370 [05:00<00:57,  1.17it/s]
+2026-06-27 12:06:15,607 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:16,389 [INFO]     Metrics:total_token usage: 694, prompt_token usage: 616
+2026-06-27 12:06:16,389 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  82%|########2 | 304/370 [05:01<00:54,  1.20it/s]
+2026-06-27 12:06:16,389 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:17,281 [INFO]     Metrics:total_token usage: 762, prompt_token usage: 668
+2026-06-27 12:06:17,281 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  82%|########2 | 305/370 [05:02<00:55,  1.18it/s]
+2026-06-27 12:06:17,281 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:18,177 [INFO]     Metrics:total_token usage: 653, prompt_token usage: 591
+2026-06-27 12:06:18,177 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  83%|########2 | 306/370 [05:03<00:55,  1.16it/s]
+2026-06-27 12:06:18,177 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:19,041 [INFO]     Metrics:total_token usage: 800, prompt_token usage: 722
+2026-06-27 12:06:19,041 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  83%|########2 | 307/370 [05:04<00:54,  1.16it/s]
+2026-06-27 12:06:19,041 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:19,939 [INFO]     Metrics:total_token usage: 830, prompt_token usage: 737
+2026-06-27 12:06:19,939 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  83%|########3 | 308/370 [05:05<00:54,  1.14it/s]
+2026-06-27 12:06:19,939 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:21,015 [INFO]     Metrics:total_token usage: 814, prompt_token usage: 722
+2026-06-27 12:06:21,015 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  84%|########3 | 309/370 [05:06<00:57,  1.07it/s]
+2026-06-27 12:06:21,015 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:22,143 [INFO]     Metrics:total_token usage: 817, prompt_token usage: 722
+2026-06-27 12:06:22,143 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  84%|########3 | 310/370 [05:07<00:59,  1.01it/s]
+2026-06-27 12:06:22,143 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:23,233 [INFO]     Metrics:total_token usage: 816, prompt_token usage: 722
+2026-06-27 12:06:23,233 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  84%|########4 | 311/370 [05:08<01:00,  1.02s/it]
+2026-06-27 12:06:23,233 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:24,149 [INFO]     Metrics:total_token usage: 734, prompt_token usage: 653
+2026-06-27 12:06:24,149 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  84%|########4 | 312/370 [05:09<00:57,  1.01it/s]
+2026-06-27 12:06:24,149 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:25,401 [INFO]     Metrics:total_token usage: 762, prompt_token usage: 669
+2026-06-27 12:06:25,401 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  85%|########4 | 313/370 [05:10<01:00,  1.07s/it]
+2026-06-27 12:06:25,401 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:26,362 [INFO]     Metrics:total_token usage: 655, prompt_token usage: 591
+2026-06-27 12:06:26,362 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  85%|########4 | 314/370 [05:11<00:58,  1.04s/it]
+2026-06-27 12:06:26,363 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:27,391 [INFO]     Metrics:total_token usage: 791, prompt_token usage: 695
+2026-06-27 12:06:27,391 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  85%|########5 | 315/370 [05:12<00:56,  1.03s/it]
+2026-06-27 12:06:27,392 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:28,393 [INFO]     Metrics:total_token usage: 718, prompt_token usage: 635
+2026-06-27 12:06:28,393 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  85%|########5 | 316/370 [05:13<00:55,  1.02s/it]
+2026-06-27 12:06:28,393 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:29,121 [INFO]     Metrics:total_token usage: 704, prompt_token usage: 635
+2026-06-27 12:06:29,121 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  86%|########5 | 317/370 [05:14<00:49,  1.07it/s]
+2026-06-27 12:06:29,122 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:29,929 [INFO]     Metrics:total_token usage: 694, prompt_token usage: 615
+2026-06-27 12:06:29,929 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  86%|########5 | 318/370 [05:15<00:46,  1.11it/s]
+2026-06-27 12:06:29,930 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:31,259 [INFO]     Metrics:total_token usage: 832, prompt_token usage: 737
+2026-06-27 12:06:31,259 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  86%|########6 | 319/370 [05:16<00:52,  1.03s/it]
+2026-06-27 12:06:31,259 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:32,307 [INFO]     Metrics:total_token usage: 832, prompt_token usage: 737
+2026-06-27 12:06:32,307 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  86%|########6 | 320/370 [05:17<00:51,  1.03s/it]
+2026-06-27 12:06:32,307 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:33,179 [INFO]     Metrics:total_token usage: 790, prompt_token usage: 710
+2026-06-27 12:06:33,179 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  87%|########6 | 321/370 [05:18<00:48,  1.02it/s]
+2026-06-27 12:06:33,179 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:34,359 [INFO]     Metrics:total_token usage: 775, prompt_token usage: 695
+2026-06-27 12:06:34,359 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  87%|########7 | 322/370 [05:19<00:50,  1.04s/it]
+2026-06-27 12:06:34,359 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:35,099 [INFO]     Metrics:total_token usage: 704, prompt_token usage: 635
+2026-06-27 12:06:35,100 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  87%|########7 | 323/370 [05:20<00:44,  1.05it/s]
+2026-06-27 12:06:35,100 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:36,307 [INFO]     Metrics:total_token usage: 704, prompt_token usage: 635
+2026-06-27 12:06:36,307 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  88%|########7 | 324/370 [05:21<00:47,  1.03s/it]
+2026-06-27 12:06:36,307 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:37,605 [INFO]     Metrics:total_token usage: 704, prompt_token usage: 635
+2026-06-27 12:06:37,605 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  88%|########7 | 325/370 [05:22<00:49,  1.11s/it]
+2026-06-27 12:06:37,605 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:40,311 [INFO]     Metrics:total_token usage: 785, prompt_token usage: 710
+2026-06-27 12:06:40,311 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  88%|########8 | 326/370 [05:25<01:09,  1.59s/it]
+2026-06-27 12:06:40,311 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:41,068 [INFO]     Metrics:total_token usage: 693, prompt_token usage: 624
+2026-06-27 12:06:41,068 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  88%|########8 | 327/370 [05:26<00:57,  1.34s/it]
+2026-06-27 12:06:41,068 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:42,024 [INFO]     Metrics:total_token usage: 700, prompt_token usage: 621
+2026-06-27 12:06:42,025 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  89%|########8 | 328/370 [05:27<00:51,  1.22s/it]
+2026-06-27 12:06:42,025 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:43,382 [INFO]     Metrics:total_token usage: 746, prompt_token usage: 668
+2026-06-27 12:06:43,382 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  89%|########8 | 329/370 [05:28<00:51,  1.26s/it]
+2026-06-27 12:06:43,383 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:44,472 [INFO]     Metrics:total_token usage: 695, prompt_token usage: 627
+2026-06-27 12:06:44,473 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  89%|########9 | 330/370 [05:29<00:48,  1.21s/it]
+2026-06-27 12:06:44,473 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:45,289 [INFO]     Metrics:total_token usage: 762, prompt_token usage: 668
+2026-06-27 12:06:45,290 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  89%|########9 | 331/370 [05:30<00:42,  1.09s/it]
+2026-06-27 12:06:45,290 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:45,920 [INFO]     Metrics:total_token usage: 660, prompt_token usage: 599
+2026-06-27 12:06:45,920 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  90%|########9 | 332/370 [05:31<00:36,  1.05it/s]
+2026-06-27 12:06:45,920 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:46,608 [INFO]     Metrics:total_token usage: 673, prompt_token usage: 600
+2026-06-27 12:06:46,608 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  90%|######### | 333/370 [05:31<00:32,  1.14it/s]
+2026-06-27 12:06:46,609 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:47,531 [INFO]     Metrics:total_token usage: 752, prompt_token usage: 668
+2026-06-27 12:06:47,531 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  90%|######### | 334/370 [05:32<00:32,  1.12it/s]
+2026-06-27 12:06:47,531 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:48,517 [INFO]     Metrics:total_token usage: 661, prompt_token usage: 593
+2026-06-27 12:06:48,517 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  91%|######### | 335/370 [05:33<00:32,  1.09it/s]
+2026-06-27 12:06:48,517 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:49,757 [INFO]     Metrics:total_token usage: 668, prompt_token usage: 593
+2026-06-27 12:06:49,757 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  91%|######### | 336/370 [05:35<00:34,  1.01s/it]
+2026-06-27 12:06:49,758 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:51,175 [INFO]     Metrics:total_token usage: 703, prompt_token usage: 628
+2026-06-27 12:06:51,175 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  91%|#########1| 337/370 [05:36<00:37,  1.14s/it]
+2026-06-27 12:06:51,175 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:52,021 [INFO]     Metrics:total_token usage: 739, prompt_token usage: 644
+2026-06-27 12:06:52,021 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  91%|#########1| 338/370 [05:37<00:33,  1.05s/it]
+2026-06-27 12:06:52,021 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:53,226 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:06:53,226 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  92%|#########1| 339/370 [05:38<00:33,  1.10s/it]
+2026-06-27 12:06:53,226 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:54,085 [INFO]     Metrics:total_token usage: 720, prompt_token usage: 639
+2026-06-27 12:06:54,085 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  92%|#########1| 340/370 [05:39<00:30,  1.02s/it]
+2026-06-27 12:06:54,085 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:54,791 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 600
+2026-06-27 12:06:54,792 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  92%|#########2| 341/370 [05:40<00:26,  1.08it/s]
+2026-06-27 12:06:54,792 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:06:59,171 [INFO]     Metrics:total_token usage: 666, prompt_token usage: 597
+2026-06-27 12:06:59,171 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  92%|#########2| 342/370 [05:44<00:55,  1.96s/it]
+2026-06-27 12:06:59,171 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:00,060 [INFO]     Metrics:total_token usage: 670, prompt_token usage: 593
+2026-06-27 12:07:00,060 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  93%|#########2| 343/370 [05:45<00:44,  1.64s/it]
+2026-06-27 12:07:00,060 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:01,191 [INFO]     Metrics:total_token usage: 668, prompt_token usage: 593
+2026-06-27 12:07:01,191 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  93%|#########2| 344/370 [05:46<00:38,  1.49s/it]
+2026-06-27 12:07:01,191 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:02,081 [INFO]     Metrics:total_token usage: 669, prompt_token usage: 593
+2026-06-27 12:07:02,081 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  93%|#########3| 345/370 [05:47<00:32,  1.31s/it]
+2026-06-27 12:07:02,081 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:02,926 [INFO]     Metrics:total_token usage: 668, prompt_token usage: 593
+2026-06-27 12:07:02,926 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  94%|#########3| 346/370 [05:48<00:28,  1.17s/it]
+2026-06-27 12:07:02,926 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:03,831 [INFO]     Metrics:total_token usage: 668, prompt_token usage: 593
+2026-06-27 12:07:03,832 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  94%|#########3| 347/370 [05:49<00:25,  1.09s/it]
+2026-06-27 12:07:03,832 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:04,965 [INFO]     Metrics:total_token usage: 662, prompt_token usage: 593
+2026-06-27 12:07:04,965 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  94%|#########4| 348/370 [05:50<00:24,  1.10s/it]
+2026-06-27 12:07:04,965 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:05,843 [INFO]     Metrics:total_token usage: 668, prompt_token usage: 593
+2026-06-27 12:07:05,843 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  94%|#########4| 349/370 [05:51<00:21,  1.04s/it]
+2026-06-27 12:07:05,843 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:06,761 [INFO]     Metrics:total_token usage: 751, prompt_token usage: 672
+2026-06-27 12:07:06,761 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  95%|#########4| 350/370 [05:52<00:20,  1.00s/it]
+2026-06-27 12:07:06,761 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:07,582 [INFO]     Metrics:total_token usage: 669, prompt_token usage: 599
+2026-06-27 12:07:07,582 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  95%|#########4| 351/370 [05:52<00:17,  1.06it/s]
+2026-06-27 12:07:07,582 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:08,450 [INFO]     Metrics:total_token usage: 681, prompt_token usage: 606
+2026-06-27 12:07:08,450 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  95%|#########5| 352/370 [05:53<00:16,  1.08it/s]
+2026-06-27 12:07:08,450 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:09,197 [INFO]     Metrics:total_token usage: 752, prompt_token usage: 668
+2026-06-27 12:07:09,197 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  95%|#########5| 353/370 [05:54<00:14,  1.15it/s]
+2026-06-27 12:07:09,197 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:12,672 [INFO]     Metrics:total_token usage: 762, prompt_token usage: 668
+2026-06-27 12:07:12,672 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  96%|#########5| 354/370 [05:58<00:26,  1.65s/it]
+2026-06-27 12:07:12,673 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:13,443 [INFO]     Metrics:total_token usage: 849, prompt_token usage: 771
+2026-06-27 12:07:13,444 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  96%|#########5| 355/370 [05:58<00:20,  1.39s/it]
+2026-06-27 12:07:13,444 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:14,284 [INFO]     Metrics:total_token usage: 713, prompt_token usage: 646
+2026-06-27 12:07:14,284 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  96%|#########6| 356/370 [05:59<00:17,  1.22s/it]
+2026-06-27 12:07:14,284 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:15,387 [INFO]     Metrics:total_token usage: 741, prompt_token usage: 667
+2026-06-27 12:07:15,387 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  96%|#########6| 357/370 [06:00<00:15,  1.19s/it]
+2026-06-27 12:07:15,388 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:16,145 [INFO]     Metrics:total_token usage: 695, prompt_token usage: 615
+2026-06-27 12:07:16,145 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  97%|#########6| 358/370 [06:01<00:12,  1.06s/it]
+2026-06-27 12:07:16,145 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:16,921 [INFO]     Metrics:total_token usage: 707, prompt_token usage: 618
+2026-06-27 12:07:16,921 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  97%|#########7| 359/370 [06:02<00:10,  1.03it/s]
+2026-06-27 12:07:16,921 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:17,740 [INFO]     Metrics:total_token usage: 693, prompt_token usage: 618
+2026-06-27 12:07:17,741 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  97%|#########7| 360/370 [06:03<00:09,  1.08it/s]
+2026-06-27 12:07:17,741 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:18,473 [INFO]     Metrics:total_token usage: 645, prompt_token usage: 591
+2026-06-27 12:07:18,474 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  98%|#########7| 361/370 [06:03<00:07,  1.15it/s]
+2026-06-27 12:07:18,474 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:19,567 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:07:19,567 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  98%|#########7| 362/370 [06:04<00:07,  1.07it/s]
+2026-06-27 12:07:19,567 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:20,415 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:07:20,415 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  98%|#########8| 363/370 [06:05<00:06,  1.10it/s]
+2026-06-27 12:07:20,415 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:21,290 [INFO]     Metrics:total_token usage: 661, prompt_token usage: 586
+2026-06-27 12:07:21,290 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  98%|#########8| 364/370 [06:06<00:05,  1.11it/s]
+2026-06-27 12:07:21,290 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:22,231 [INFO]     Metrics:total_token usage: 640, prompt_token usage: 586
+2026-06-27 12:07:22,232 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  99%|#########8| 365/370 [06:07<00:04,  1.10it/s]
+2026-06-27 12:07:22,232 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:23,428 [INFO]     Metrics:total_token usage: 662, prompt_token usage: 586
+2026-06-27 12:07:23,429 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  99%|#########8| 366/370 [06:08<00:03,  1.00it/s]
+2026-06-27 12:07:23,429 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:24,207 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 586
+2026-06-27 12:07:24,207 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  99%|#########9| 367/370 [06:09<00:02,  1.07it/s]
+2026-06-27 12:07:24,207 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:25,286 [INFO]     Metrics:total_token usage: 672, prompt_token usage: 604
+2026-06-27 12:07:25,287 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:  99%|#########9| 368/370 [06:10<00:01,  1.02it/s]
+2026-06-27 12:07:25,287 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 12:07:26,173 [INFO]     Metrics:total_token usage: 672, prompt_token usage: 604
+2026-06-27 12:07:26,173 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1: 100%|#########9| 369/370 [06:11<00:00,  1.05it/s]
+2026-06-27 12:07:26,174 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1: 100%|##########| 370/370 [06:11<00:00,  1.00s/it]
+2026-06-27 12:07:26,174 [INFO] ... (more hidden) ...
+2026-06-27 12:07:26,181 [INFO] Formatting items for endpoint: https://seshat-db.com/api/wf/composite-bows/: 100%|##########| 369/369 [00:00<00:00, 49141.08it/s]
+2026-06-27 12:07:26,181 [INFO] Total token usage: 264657
+2026-06-27 12:07:26,181 [INFO] Prompt token usage: 237154
+2026-06-27 12:07:26,186 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/27_06_2026/run_2_gpt-4.1-2025-04-14/wf/wf_composite-bows_questions.csv
+2026-06-27 12:07:26,188 [INFO] Successfully completed question generation for wf/composite-bows.

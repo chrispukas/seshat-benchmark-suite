@@ -1,19 +1,26 @@
-from llm_benchmark.utils.utility import tag_remap, quality_remap, question_type_remap
+from llm_benchmark.utils.utility import tag_remap, quality_remap, question_types_remap
 from llm_benchmark.utils.enums import DatasetType, Tags, Quality, QuestionType, QuestionHydrationOptions
 
 from llm_benchmark.utils.llm_interface.templates import generation_templates as gen_tmps 
 from llm_benchmark.utils.utility import format_year
 
-from typing import Dict, Any, Tuple, List
+from typing import Dict, Any, Tuple, List, Callable
 
 ENDPOINT_URL: str = "https://seshat-db.com/api/"
+CACHE_PATH: str = "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat"
 
-GENERATE_TOKENS_PER_PROMPT: int = 2048
-GENERATE_TEMPERATURE: int = 0.7
-QUERY_TOKENS_PER_PROMPT: int = 2048
-QUERY_TEMPERATURE: int = 0.0
+GENERATION_MAXTOKENS_PER_PROMPT: int = 2048
+GENERATION_TEMPERATURE: int = 0.2
 
-BATCH_SIZE: int = 64
+EVALUATION_MAXTOKENS_PER_PROMPT: int = 2048
+EVALUATION_TEMPERATURE: int = 1
+
+BATCH_SIZE: int = 1
+SEED: int = 42
+
+CONCURRENT_THREADS: int = 1
+
+ENABLE_API_CALLS: bool = False
 
 year_ranges: List[int] = [-10000, -8000, -6000, -4000, -3500, -3000, -2500, -2000, -1500, -1000, -500, 0, 500, 1000, 1500, 2000]
 
@@ -32,7 +39,7 @@ hydrate_to_real_mapping: Dict[str, Tuple[str, Any]] = \
 hydration_shuffle_answer_options: bool = True # Positional bias
 hydration_shuffle_answer_option_labels: bool = False # Semantic Bias
 
-hydration_answeroptions_prefix: str = "Strictly choose the correct label from an unordered set"
+hydration_answeroptions_prefix: str = "Strictly choose the correct label from the unordered set"
 
 hydration_answeroptions: Dict[QuestionHydrationOptions, Dict[str, str]] = \
     {
@@ -69,7 +76,7 @@ hydration_answeroptions: Dict[QuestionHydrationOptions, Dict[str, str]] = \
 # --------------------------
 
 
-question_generation_template_mapping: Dict[QuestionType, object] = \
+question_generation_template_mapping: Dict[QuestionType, Callable] = \
     {
         QuestionType.MULTIPLE_CHOICE: gen_tmps.multichoice_question,
         QuestionType.RANGE: gen_tmps.range_question,
@@ -94,7 +101,7 @@ params_to_question_mapping: Dict[str, str] = \
     {
         "tag_filter": ("tag", tag_remap),
         "quality_filter": ("quality", quality_remap),
-        "question_type_filter": ("question_type", question_type_remap)
+        "question_type_filter": ("question_type", question_types_remap)
     }
 
 polity_mapping: Dict[str, str] = \

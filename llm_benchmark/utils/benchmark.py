@@ -1,6 +1,9 @@
 import os
 import polars as pl
+import logging
+
 from tqdm import tqdm
+from concurrent.futures import ThreadPoolExecutor
 
 from typing import Dict, List, Optional, Any, Tuple
 
@@ -10,7 +13,7 @@ import llm_benchmark.utils.dataset as dataset
 import llm_benchmark.utils.seshat_requests as seshat_requests
 import llm_benchmark.utils.llm_interface.evaluation_utils as eutils
 
-from llm_benchmark.utils.enums import QuestionHydrationOptions
+from llm_benchmark.utils.enums import QuestionHydrationOptions, QuestionType
 from llm_benchmark.utils.llm_interface.query_core import LLMInterfaceModule
 from llm_benchmark.utils.llm_interface.models.local.qwen import QwenInterfaceModule
 
@@ -147,8 +150,8 @@ def _run_per_polity_evaluate(
             DatasetModule = dataset.dataset_modules[identifier],
             params = \
                 {
-                "max_new_tokens": config.QUERY_TOKENS_PER_PROMPT, 
-                "temperature": config.QUERY_TEMPERATURE
+                    "max_new_tokens": config.EVALUATION_MAXTOKENS_PER_PROMPT, 
+                    "temperature":    config.EVALUATION_TEMPERATURE
                 },
             output_path = os.path.join(answer_dir, csv_answers_name),
         )
@@ -164,6 +167,7 @@ def generate(
         polity_mapping: Optional[Dict[str, str]] = config.polity_mapping,
         polities_to_evaluate: Optional[List[str]] = ["wf"],
         batch_size: Optional[int] = config.BATCH_SIZE,
+        allowed_question_types: List[QuestionType] = [QuestionType.MULTIPLE_CHOICE, QuestionType.RANGE]
 ) -> None:
     if seshat_cache_dir is None:
         raise ValueError("No seshat cache directory must be provided for evaluation, set variable {str: seshat_cache_dir}.")
@@ -174,28 +178,75 @@ def generate(
     seshat_ds: dataset.Dataset = seshat_setup(seshat_cache_dir=seshat_cache_dir, polity_mapping=polity_mapping)
 
     for polity in polities_to_evaluate:
-        _run_per_polity_generate(polity=polity, 
-                       LLMInterfaceModule=LLMInterfaceModule, 
-                       ds=seshat_ds, 
-                       save_path=save_path,
-                       batch_size=batch_size)
+        for allowed_question_type in allowed_question_types:
+            _run_per_polity_generate(
+                polity=polity, 
+                llm_interface=LLMInterfaceModule, 
+                ds=seshat_ds, 
+                save_path=save_path,
+                batch_size=batch_size,
+                allowed_question_type=allowed_question_type
+                )
 
-def _run_per_polity_generate(polity: str, 
-                    LLMInterfaceModule: LLMInterfaceModule,
-                    ds: dataset.Dataset,
-                    save_path: str,
-                    batch_size: int = config.BATCH_SIZE
-                    ) -> None:
-    
-    polity_identifiers: List[str] = ds.get_identifiers_by_parent(polity)
-    for identifier in polity_identifiers:
-        dataset_module: dataset.DatasetModule = ds.dataset_modules[identifier]
-        LLMInterfaceModule.generate_questions(
-            DatasetModule = dataset_module,
-            params = {"max_new_tokens": 1024, "temperature": 0.7},
-            output_path = f"{save_path}/{polity}/{identifier.replace('/', '_')}_questions.csv",
-            batch_size=batch_size
+def _run_per_polity_generate(
+        polity: str, 
+        llm_interface: LLMInterfaceModule,
+        ds: dataset.Dataset,
+        save_path: str,
+        allowed_question_type: QuestionType, 
+        batch_size: int = config.BATCH_SIZE,
+        ) -> None:
+    def _single(
+            identifier: str
+            ):
+        logger = logging.getLogger(identifier)
+        logger.setLevel(logging.INFO)
+        logger.propagate = False
+
+        home_dir: str = os.path.join(save_path, polity)
+
+        safe_filename = identifier.replace("/", "_")
+        log_path = os.path.join(home_dir, "logs", allowed_question_type.name.lower(), f"{safe_filename}_generation.log")
+        os.makedirs(os.path.dirname(log_path), exist_ok=True)
+
+        file_handler = logging.FileHandler(log_path, mode="a")
+        file_handler.setFormatter(
+            logging.Formatter("%(asctime)s [%(levelname)s] %(message)s")
         )
+
+        logger.addHandler(file_handler)
+        logger.info(f"Starting question generation for {identifier}.")
+
+        try:
+            dataset_module: dataset.DatasetModule = ds.dataset_modules[identifier]
+            llm_interface.generate_questions(
+                DatasetModule = dataset_module,
+                params = \
+                    {
+                        "max_new_tokens": config.GENERATION_MAXTOKENS_PER_PROMPT, 
+                        "temperature":    config.GENERATION_TEMPERATURE
+                    },
+                output_path = os.path.join(home_dir, allowed_question_type.name.lower(), f"{identifier.replace('/', '_')}_questions.csv"),
+                batch_size=batch_size,
+
+                logger=logger,
+                allowed_question_type=allowed_question_type
+            )
+            logger.info(f"Successfully completed question generation for {identifier}.")
+        except Exception as e:
+            logger.error(f"Execution failed: {str(e)}", exc_info=True)
+
+        finally:
+            file_handler.close()
+            logger.removeHandler(file_handler)
+        print(f"Saved log for identifier: {identifier} in path: {log_path}")
+
+    polity_identifiers: List[str] = ds.get_identifiers_by_parent(polity)
+    with ThreadPoolExecutor(max_workers=config.CONCURRENT_THREADS) as executor:
+        for t in executor._threads:
+            t.daemon = True
+
+        executor.map(_single, polity_identifiers)
 
 
 

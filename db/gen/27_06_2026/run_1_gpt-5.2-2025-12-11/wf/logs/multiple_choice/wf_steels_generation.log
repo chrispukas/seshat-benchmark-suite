@@ -1,0 +1,1137 @@
+2026-06-27 11:31:32,743 [INFO] Starting question generation for wf/steels.
+2026-06-27 11:31:32,743 [INFO] 
+
+Generating questions for dataset at endpoint: steels
+2026-06-27 11:31:32,764 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   0%|          | 0/376 [00:00<?, ?it/s]
+2026-06-27 11:31:32,764 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:31:34,550 [INFO]     Metrics:total_token usage: 652, prompt_token usage: 587
+2026-06-27 11:31:34,550 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   0%|          | 1/376 [00:01<11:09,  1.79s/it]
+2026-06-27 11:31:34,550 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:31:36,984 [INFO]     Metrics:total_token usage: 751, prompt_token usage: 640
+2026-06-27 11:31:36,985 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   1%|          | 2/376 [00:04<13:30,  2.17s/it]
+2026-06-27 11:31:36,985 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:31:39,473 [INFO]     Metrics:total_token usage: 1230, prompt_token usage: 1096
+2026-06-27 11:31:39,474 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   1%|          | 3/376 [00:06<14:23,  2.31s/it]
+2026-06-27 11:31:39,474 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:31:41,022 [INFO]     Metrics:total_token usage: 1145, prompt_token usage: 1069
+2026-06-27 11:31:41,023 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   1%|1         | 4/376 [00:08<12:28,  2.01s/it]
+2026-06-27 11:31:41,023 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:31:42,521 [INFO]     Metrics:total_token usage: 1182, prompt_token usage: 1103
+2026-06-27 11:31:42,521 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   1%|1         | 5/376 [00:09<11:17,  1.83s/it]
+2026-06-27 11:31:42,521 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:31:44,434 [INFO]     Metrics:total_token usage: 1206, prompt_token usage: 1112
+2026-06-27 11:31:44,434 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   2%|1         | 6/376 [00:11<11:26,  1.86s/it]
+2026-06-27 11:31:44,434 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:31:46,335 [INFO]     Metrics:total_token usage: 1193, prompt_token usage: 1096
+2026-06-27 11:31:46,335 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   2%|1         | 7/376 [00:13<11:30,  1.87s/it]
+2026-06-27 11:31:46,335 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:31:48,219 [INFO]     Metrics:total_token usage: 1186, prompt_token usage: 1096
+2026-06-27 11:31:48,220 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   2%|2         | 8/376 [00:15<11:30,  1.88s/it]
+2026-06-27 11:31:48,220 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:31:51,522 [INFO]     Metrics:total_token usage: 945, prompt_token usage: 799
+2026-06-27 11:31:51,522 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   2%|2         | 9/376 [00:18<14:11,  2.32s/it]
+2026-06-27 11:31:51,522 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:31:53,804 [INFO]     Metrics:total_token usage: 892, prompt_token usage: 800
+2026-06-27 11:31:53,804 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   3%|2         | 10/376 [00:21<14:05,  2.31s/it]
+2026-06-27 11:31:53,804 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:31:55,336 [INFO]     Metrics:total_token usage: 659, prompt_token usage: 588
+2026-06-27 11:31:55,337 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   3%|2         | 11/376 [00:22<12:36,  2.07s/it]
+2026-06-27 11:31:55,338 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:31:57,218 [INFO]     Metrics:total_token usage: 647, prompt_token usage: 588
+2026-06-27 11:31:57,219 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   3%|3         | 12/376 [00:24<12:13,  2.01s/it]
+2026-06-27 11:31:57,219 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:31:59,378 [INFO]     Metrics:total_token usage: 693, prompt_token usage: 607
+2026-06-27 11:31:59,379 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   3%|3         | 13/376 [00:26<12:27,  2.06s/it]
+2026-06-27 11:31:59,379 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:02,037 [INFO]     Metrics:total_token usage: 732, prompt_token usage: 624
+2026-06-27 11:32:02,038 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   4%|3         | 14/376 [00:29<13:30,  2.24s/it]
+2026-06-27 11:32:02,038 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:04,066 [INFO]     Metrics:total_token usage: 741, prompt_token usage: 647
+2026-06-27 11:32:04,066 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   4%|3         | 15/376 [00:31<13:05,  2.18s/it]
+2026-06-27 11:32:04,066 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:05,944 [INFO]     Metrics:total_token usage: 741, prompt_token usage: 647
+2026-06-27 11:32:05,944 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   4%|4         | 16/376 [00:33<12:31,  2.09s/it]
+2026-06-27 11:32:05,945 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:07,304 [INFO]     Metrics:total_token usage: 655, prompt_token usage: 587
+2026-06-27 11:32:07,304 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   5%|4         | 17/376 [00:34<11:10,  1.87s/it]
+2026-06-27 11:32:07,304 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:08,298 [INFO]     Metrics:total_token usage: 637, prompt_token usage: 581
+2026-06-27 11:32:08,298 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   5%|4         | 18/376 [00:35<09:34,  1.61s/it]
+2026-06-27 11:32:08,298 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:12,281 [INFO]     Metrics:total_token usage: 675, prompt_token usage: 597
+2026-06-27 11:32:12,282 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   5%|5         | 19/376 [00:39<13:48,  2.32s/it]
+2026-06-27 11:32:12,282 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:14,299 [INFO]     Metrics:total_token usage: 920, prompt_token usage: 800
+2026-06-27 11:32:14,299 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   5%|5         | 20/376 [00:41<13:13,  2.23s/it]
+2026-06-27 11:32:14,300 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:16,608 [INFO]     Metrics:total_token usage: 908, prompt_token usage: 800
+2026-06-27 11:32:16,609 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   6%|5         | 21/376 [00:43<13:19,  2.25s/it]
+2026-06-27 11:32:16,609 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:17,957 [INFO]     Metrics:total_token usage: 655, prompt_token usage: 588
+2026-06-27 11:32:17,957 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   6%|5         | 22/376 [00:45<11:41,  1.98s/it]
+2026-06-27 11:32:17,957 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:19,335 [INFO]     Metrics:total_token usage: 654, prompt_token usage: 587
+2026-06-27 11:32:19,335 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   6%|6         | 23/376 [00:46<10:35,  1.80s/it]
+2026-06-27 11:32:19,336 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:20,756 [INFO]     Metrics:total_token usage: 680, prompt_token usage: 599
+2026-06-27 11:32:20,756 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   6%|6         | 24/376 [00:47<09:53,  1.69s/it]
+2026-06-27 11:32:20,756 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:22,224 [INFO]     Metrics:total_token usage: 658, prompt_token usage: 588
+2026-06-27 11:32:22,225 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   7%|6         | 25/376 [00:49<09:28,  1.62s/it]
+2026-06-27 11:32:22,225 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:25,252 [INFO]     Metrics:total_token usage: 790, prompt_token usage: 678
+2026-06-27 11:32:25,252 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   7%|6         | 26/376 [00:52<11:55,  2.04s/it]
+2026-06-27 11:32:25,252 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:27,321 [INFO]     Metrics:total_token usage: 744, prompt_token usage: 638
+2026-06-27 11:32:27,321 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   7%|7         | 27/376 [00:54<11:55,  2.05s/it]
+2026-06-27 11:32:27,321 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:29,164 [INFO]     Metrics:total_token usage: 905, prompt_token usage: 797
+2026-06-27 11:32:29,164 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   7%|7         | 28/376 [00:56<11:31,  1.99s/it]
+2026-06-27 11:32:29,164 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:30,784 [INFO]     Metrics:total_token usage: 815, prompt_token usage: 713
+2026-06-27 11:32:30,784 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   8%|7         | 29/376 [00:58<10:51,  1.88s/it]
+2026-06-27 11:32:30,784 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:32,660 [INFO]     Metrics:total_token usage: 907, prompt_token usage: 800
+2026-06-27 11:32:32,660 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   8%|7         | 30/376 [00:59<10:49,  1.88s/it]
+2026-06-27 11:32:32,660 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:34,310 [INFO]     Metrics:total_token usage: 657, prompt_token usage: 587
+2026-06-27 11:32:34,310 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   8%|8         | 31/376 [01:01<10:24,  1.81s/it]
+2026-06-27 11:32:34,310 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:35,960 [INFO]     Metrics:total_token usage: 685, prompt_token usage: 604
+2026-06-27 11:32:35,960 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   9%|8         | 32/376 [01:03<10:05,  1.76s/it]
+2026-06-27 11:32:35,960 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:37,282 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:32:37,283 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   9%|8         | 33/376 [01:04<09:19,  1.63s/it]
+2026-06-27 11:32:37,284 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:40,354 [INFO]     Metrics:total_token usage: 1048, prompt_token usage: 866
+2026-06-27 11:32:40,354 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   9%|9         | 34/376 [01:07<11:45,  2.06s/it]
+2026-06-27 11:32:40,354 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:42,405 [INFO]     Metrics:total_token usage: 967, prompt_token usage: 880
+2026-06-27 11:32:42,405 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   9%|9         | 35/376 [01:09<11:42,  2.06s/it]
+2026-06-27 11:32:42,406 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:44,404 [INFO]     Metrics:total_token usage: 840, prompt_token usage: 751
+2026-06-27 11:32:44,404 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  10%|9         | 36/376 [01:11<11:33,  2.04s/it]
+2026-06-27 11:32:44,404 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:46,375 [INFO]     Metrics:total_token usage: 769, prompt_token usage: 684
+2026-06-27 11:32:46,375 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  10%|9         | 37/376 [01:13<11:24,  2.02s/it]
+2026-06-27 11:32:46,376 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:47,703 [INFO]     Metrics:total_token usage: 650, prompt_token usage: 584
+2026-06-27 11:32:47,703 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  10%|#         | 38/376 [01:14<10:12,  1.81s/it]
+2026-06-27 11:32:47,703 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:48,959 [INFO]     Metrics:total_token usage: 656, prompt_token usage: 588
+2026-06-27 11:32:48,959 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  10%|#         | 39/376 [01:16<09:14,  1.65s/it]
+2026-06-27 11:32:48,959 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:50,181 [INFO]     Metrics:total_token usage: 642, prompt_token usage: 587
+2026-06-27 11:32:50,182 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  11%|#         | 40/376 [01:17<08:30,  1.52s/it]
+2026-06-27 11:32:50,182 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:51,424 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:32:51,425 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  11%|#         | 41/376 [01:18<08:01,  1.44s/it]
+2026-06-27 11:32:51,426 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:53,401 [INFO]     Metrics:total_token usage: 669, prompt_token usage: 590
+2026-06-27 11:32:53,401 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  11%|#1        | 42/376 [01:20<08:53,  1.60s/it]
+2026-06-27 11:32:53,402 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:57,067 [INFO]     Metrics:total_token usage: 695, prompt_token usage: 625
+2026-06-27 11:32:57,067 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  11%|#1        | 43/376 [01:24<12:18,  2.22s/it]
+2026-06-27 11:32:57,067 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:32:59,768 [INFO]     Metrics:total_token usage: 762, prompt_token usage: 667
+2026-06-27 11:32:59,768 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  12%|#1        | 44/376 [01:27<13:04,  2.36s/it]
+2026-06-27 11:32:59,768 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:01,298 [INFO]     Metrics:total_token usage: 694, prompt_token usage: 625
+2026-06-27 11:33:01,298 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  12%|#1        | 45/376 [01:28<11:39,  2.11s/it]
+2026-06-27 11:33:01,298 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:02,648 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:33:02,649 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  12%|#2        | 46/376 [01:29<10:21,  1.88s/it]
+2026-06-27 11:33:02,650 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:04,292 [INFO]     Metrics:total_token usage: 660, prompt_token usage: 588
+2026-06-27 11:33:04,292 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  12%|#2        | 47/376 [01:31<09:56,  1.81s/it]
+2026-06-27 11:33:04,292 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:05,714 [INFO]     Metrics:total_token usage: 655, prompt_token usage: 587
+2026-06-27 11:33:05,714 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  13%|#2        | 48/376 [01:32<09:15,  1.70s/it]
+2026-06-27 11:33:05,714 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:07,352 [INFO]     Metrics:total_token usage: 655, prompt_token usage: 587
+2026-06-27 11:33:07,352 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  13%|#3        | 49/376 [01:34<09:08,  1.68s/it]
+2026-06-27 11:33:07,352 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:08,503 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:33:08,503 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  13%|#3        | 50/376 [01:35<08:15,  1.52s/it]
+2026-06-27 11:33:08,503 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:09,922 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:33:09,922 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  14%|#3        | 51/376 [01:37<08:04,  1.49s/it]
+2026-06-27 11:33:09,922 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:11,259 [INFO]     Metrics:total_token usage: 640, prompt_token usage: 581
+2026-06-27 11:33:11,259 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  14%|#3        | 52/376 [01:38<07:47,  1.44s/it]
+2026-06-27 11:33:11,260 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:12,677 [INFO]     Metrics:total_token usage: 642, prompt_token usage: 583
+2026-06-27 11:33:12,678 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  14%|#4        | 53/376 [01:39<07:43,  1.44s/it]
+2026-06-27 11:33:12,678 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:13,612 [INFO]     Metrics:total_token usage: 637, prompt_token usage: 581
+2026-06-27 11:33:13,612 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  14%|#4        | 54/376 [01:40<06:54,  1.29s/it]
+2026-06-27 11:33:13,613 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:14,961 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:33:14,961 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  15%|#4        | 55/376 [01:42<06:58,  1.30s/it]
+2026-06-27 11:33:14,961 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:16,333 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:33:16,333 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  15%|#4        | 56/376 [01:43<07:03,  1.32s/it]
+2026-06-27 11:33:16,334 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:17,754 [INFO]     Metrics:total_token usage: 659, prompt_token usage: 590
+2026-06-27 11:33:17,754 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  15%|#5        | 57/376 [01:44<07:11,  1.35s/it]
+2026-06-27 11:33:17,754 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:19,370 [INFO]     Metrics:total_token usage: 654, prompt_token usage: 588
+2026-06-27 11:33:19,370 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  15%|#5        | 58/376 [01:46<07:35,  1.43s/it]
+2026-06-27 11:33:19,370 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:20,820 [INFO]     Metrics:total_token usage: 641, prompt_token usage: 581
+2026-06-27 11:33:20,820 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  16%|#5        | 59/376 [01:48<07:35,  1.44s/it]
+2026-06-27 11:33:20,820 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:21,994 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:33:21,994 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  16%|#5        | 60/376 [01:49<07:09,  1.36s/it]
+2026-06-27 11:33:21,995 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:23,590 [INFO]     Metrics:total_token usage: 669, prompt_token usage: 592
+2026-06-27 11:33:23,590 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  16%|#6        | 61/376 [01:50<07:30,  1.43s/it]
+2026-06-27 11:33:23,590 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:25,319 [INFO]     Metrics:total_token usage: 701, prompt_token usage: 612
+2026-06-27 11:33:25,320 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  16%|#6        | 62/376 [01:52<07:57,  1.52s/it]
+2026-06-27 11:33:25,320 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:26,991 [INFO]     Metrics:total_token usage: 780, prompt_token usage: 704
+2026-06-27 11:33:26,992 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  17%|#6        | 63/376 [01:54<08:09,  1.57s/it]
+2026-06-27 11:33:26,992 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:28,842 [INFO]     Metrics:total_token usage: 782, prompt_token usage: 704
+2026-06-27 11:33:28,842 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  17%|#7        | 64/376 [01:56<08:35,  1.65s/it]
+2026-06-27 11:33:28,842 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:29,958 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:33:29,959 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  17%|#7        | 65/376 [01:57<07:43,  1.49s/it]
+2026-06-27 11:33:29,959 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:31,168 [INFO]     Metrics:total_token usage: 645, prompt_token usage: 587
+2026-06-27 11:33:31,169 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  18%|#7        | 66/376 [01:58<07:15,  1.41s/it]
+2026-06-27 11:33:31,169 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:32,364 [INFO]     Metrics:total_token usage: 640, prompt_token usage: 581
+2026-06-27 11:33:32,364 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  18%|#7        | 67/376 [01:59<06:55,  1.34s/it]
+2026-06-27 11:33:32,364 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:33,558 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:33:33,558 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  18%|#8        | 68/376 [02:00<06:39,  1.30s/it]
+2026-06-27 11:33:33,559 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:35,754 [INFO]     Metrics:total_token usage: 824, prompt_token usage: 723
+2026-06-27 11:33:35,754 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  18%|#8        | 69/376 [02:02<08:01,  1.57s/it]
+2026-06-27 11:33:35,754 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:37,654 [INFO]     Metrics:total_token usage: 814, prompt_token usage: 723
+2026-06-27 11:33:37,654 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  19%|#8        | 70/376 [02:04<08:30,  1.67s/it]
+2026-06-27 11:33:37,654 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:39,318 [INFO]     Metrics:total_token usage: 809, prompt_token usage: 723
+2026-06-27 11:33:39,318 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  19%|#8        | 71/376 [02:06<08:28,  1.67s/it]
+2026-06-27 11:33:39,318 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:41,669 [INFO]     Metrics:total_token usage: 811, prompt_token usage: 723
+2026-06-27 11:33:41,669 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  19%|#9        | 72/376 [02:08<09:29,  1.87s/it]
+2026-06-27 11:33:41,669 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:42,768 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:33:42,768 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  19%|#9        | 73/376 [02:10<08:16,  1.64s/it]
+2026-06-27 11:33:42,768 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:43,884 [INFO]     Metrics:total_token usage: 640, prompt_token usage: 581
+2026-06-27 11:33:43,885 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  20%|#9        | 74/376 [02:11<07:27,  1.48s/it]
+2026-06-27 11:33:43,886 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:45,415 [INFO]     Metrics:total_token usage: 637, prompt_token usage: 581
+2026-06-27 11:33:45,416 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  20%|#9        | 75/376 [02:12<07:30,  1.50s/it]
+2026-06-27 11:33:45,416 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:47,490 [INFO]     Metrics:total_token usage: 992, prompt_token usage: 883
+2026-06-27 11:33:47,490 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  20%|##        | 76/376 [02:14<08:21,  1.67s/it]
+2026-06-27 11:33:47,490 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:49,264 [INFO]     Metrics:total_token usage: 765, prompt_token usage: 674
+2026-06-27 11:33:49,264 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  20%|##        | 77/376 [02:16<08:28,  1.70s/it]
+2026-06-27 11:33:49,264 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:51,501 [INFO]     Metrics:total_token usage: 773, prompt_token usage: 674
+2026-06-27 11:33:51,501 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  21%|##        | 78/376 [02:18<09:14,  1.86s/it]
+2026-06-27 11:33:51,502 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:53,235 [INFO]     Metrics:total_token usage: 767, prompt_token usage: 674
+2026-06-27 11:33:53,236 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  21%|##1       | 79/376 [02:20<09:01,  1.82s/it]
+2026-06-27 11:33:53,236 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:55,451 [INFO]     Metrics:total_token usage: 768, prompt_token usage: 674
+2026-06-27 11:33:55,451 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  21%|##1       | 80/376 [02:22<09:34,  1.94s/it]
+2026-06-27 11:33:55,451 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:57,374 [INFO]     Metrics:total_token usage: 769, prompt_token usage: 674
+2026-06-27 11:33:57,374 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  22%|##1       | 81/376 [02:24<09:31,  1.94s/it]
+2026-06-27 11:33:57,375 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:33:59,759 [INFO]     Metrics:total_token usage: 760, prompt_token usage: 674
+2026-06-27 11:33:59,759 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  22%|##1       | 82/376 [02:26<10:08,  2.07s/it]
+2026-06-27 11:33:59,759 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:02,017 [INFO]     Metrics:total_token usage: 1056, prompt_token usage: 949
+2026-06-27 11:34:02,017 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  22%|##2       | 83/376 [02:29<10:23,  2.13s/it]
+2026-06-27 11:34:02,018 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:03,810 [INFO]     Metrics:total_token usage: 1057, prompt_token usage: 949
+2026-06-27 11:34:03,811 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  22%|##2       | 84/376 [02:31<09:51,  2.03s/it]
+2026-06-27 11:34:03,811 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:06,106 [INFO]     Metrics:total_token usage: 1061, prompt_token usage: 949
+2026-06-27 11:34:06,106 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  23%|##2       | 85/376 [02:33<10:13,  2.11s/it]
+2026-06-27 11:34:06,107 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:07,802 [INFO]     Metrics:total_token usage: 810, prompt_token usage: 723
+2026-06-27 11:34:07,802 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  23%|##2       | 86/376 [02:35<09:35,  1.98s/it]
+2026-06-27 11:34:07,802 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:09,868 [INFO]     Metrics:total_token usage: 814, prompt_token usage: 723
+2026-06-27 11:34:09,869 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  23%|##3       | 87/376 [02:37<09:40,  2.01s/it]
+2026-06-27 11:34:09,869 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:11,202 [INFO]     Metrics:total_token usage: 656, prompt_token usage: 585
+2026-06-27 11:34:11,202 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  23%|##3       | 88/376 [02:38<08:40,  1.81s/it]
+2026-06-27 11:34:11,202 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:12,973 [INFO]     Metrics:total_token usage: 851, prompt_token usage: 769
+2026-06-27 11:34:12,973 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  24%|##3       | 89/376 [02:40<08:35,  1.80s/it]
+2026-06-27 11:34:12,973 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:14,194 [INFO]     Metrics:total_token usage: 651, prompt_token usage: 581
+2026-06-27 11:34:14,194 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  24%|##3       | 90/376 [02:41<07:44,  1.62s/it]
+2026-06-27 11:34:14,194 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:15,339 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:34:15,339 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  24%|##4       | 91/376 [02:42<07:01,  1.48s/it]
+2026-06-27 11:34:15,339 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:18,027 [INFO]     Metrics:total_token usage: 667, prompt_token usage: 581
+2026-06-27 11:34:18,027 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  24%|##4       | 92/376 [02:45<08:43,  1.84s/it]
+2026-06-27 11:34:18,028 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:19,195 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:34:19,196 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  25%|##4       | 93/376 [02:46<07:44,  1.64s/it]
+2026-06-27 11:34:19,196 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:20,314 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:34:20,314 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  25%|##5       | 94/376 [02:47<06:58,  1.48s/it]
+2026-06-27 11:34:20,314 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:21,305 [INFO]     Metrics:total_token usage: 637, prompt_token usage: 581
+2026-06-27 11:34:21,305 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  25%|##5       | 95/376 [02:48<06:15,  1.34s/it]
+2026-06-27 11:34:21,306 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:22,983 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:34:22,984 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  26%|##5       | 96/376 [02:50<06:42,  1.44s/it]
+2026-06-27 11:34:22,984 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:24,255 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:34:24,256 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  26%|##5       | 97/376 [02:51<06:27,  1.39s/it]
+2026-06-27 11:34:24,256 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:25,866 [INFO]     Metrics:total_token usage: 653, prompt_token usage: 581
+2026-06-27 11:34:25,866 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  26%|##6       | 98/376 [02:53<06:44,  1.46s/it]
+2026-06-27 11:34:25,866 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:28,598 [INFO]     Metrics:total_token usage: 654, prompt_token usage: 581
+2026-06-27 11:34:28,599 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  26%|##6       | 99/376 [02:55<08:29,  1.84s/it]
+2026-06-27 11:34:28,599 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:29,850 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:34:29,850 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  27%|##6       | 100/376 [02:57<07:38,  1.66s/it]
+2026-06-27 11:34:29,851 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:33,667 [INFO]     Metrics:total_token usage: 797, prompt_token usage: 635
+2026-06-27 11:34:33,668 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  27%|##6       | 101/376 [03:00<10:34,  2.31s/it]
+2026-06-27 11:34:33,668 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:35,228 [INFO]     Metrics:total_token usage: 695, prompt_token usage: 609
+2026-06-27 11:34:35,229 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  27%|##7       | 102/376 [03:02<09:31,  2.08s/it]
+2026-06-27 11:34:35,229 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:36,953 [INFO]     Metrics:total_token usage: 698, prompt_token usage: 605
+2026-06-27 11:34:36,953 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  27%|##7       | 103/376 [03:04<08:59,  1.98s/it]
+2026-06-27 11:34:36,954 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:38,733 [INFO]     Metrics:total_token usage: 696, prompt_token usage: 605
+2026-06-27 11:34:38,734 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  28%|##7       | 104/376 [03:05<08:41,  1.92s/it]
+2026-06-27 11:34:38,734 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:42,066 [INFO]     Metrics:total_token usage: 800, prompt_token usage: 632
+2026-06-27 11:34:42,067 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  28%|##7       | 105/376 [03:09<10:34,  2.34s/it]
+2026-06-27 11:34:42,067 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:44,680 [INFO]     Metrics:total_token usage: 759, prompt_token usage: 634
+2026-06-27 11:34:44,680 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  28%|##8       | 106/376 [03:11<10:54,  2.42s/it]
+2026-06-27 11:34:44,681 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:47,233 [INFO]     Metrics:total_token usage: 736, prompt_token usage: 632
+2026-06-27 11:34:47,234 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  28%|##8       | 107/376 [03:14<11:02,  2.46s/it]
+2026-06-27 11:34:47,235 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:50,518 [INFO]     Metrics:total_token usage: 761, prompt_token usage: 632
+2026-06-27 11:34:50,519 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  29%|##8       | 108/376 [03:17<12:06,  2.71s/it]
+2026-06-27 11:34:50,519 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:52,953 [INFO]     Metrics:total_token usage: 747, prompt_token usage: 632
+2026-06-27 11:34:52,954 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  29%|##8       | 109/376 [03:20<11:41,  2.63s/it]
+2026-06-27 11:34:52,954 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:54,546 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:34:54,547 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  29%|##9       | 110/376 [03:21<10:16,  2.32s/it]
+2026-06-27 11:34:54,547 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:56,488 [INFO]     Metrics:total_token usage: 741, prompt_token usage: 645
+2026-06-27 11:34:56,488 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  30%|##9       | 111/376 [03:23<09:44,  2.20s/it]
+2026-06-27 11:34:56,488 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:34:58,378 [INFO]     Metrics:total_token usage: 741, prompt_token usage: 645
+2026-06-27 11:34:58,378 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  30%|##9       | 112/376 [03:25<09:17,  2.11s/it]
+2026-06-27 11:34:58,378 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:00,983 [INFO]     Metrics:total_token usage: 764, prompt_token usage: 635
+2026-06-27 11:35:00,983 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  30%|###       | 113/376 [03:28<09:53,  2.26s/it]
+2026-06-27 11:35:00,984 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:02,774 [INFO]     Metrics:total_token usage: 737, prompt_token usage: 652
+2026-06-27 11:35:02,775 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  30%|###       | 114/376 [03:30<09:15,  2.12s/it]
+2026-06-27 11:35:02,776 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:04,795 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:35:04,795 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  31%|###       | 115/376 [03:32<09:05,  2.09s/it]
+2026-06-27 11:35:04,796 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:06,882 [INFO]     Metrics:total_token usage: 821, prompt_token usage: 730
+2026-06-27 11:35:06,883 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  31%|###       | 116/376 [03:34<09:03,  2.09s/it]
+2026-06-27 11:35:06,883 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:09,605 [INFO]     Metrics:total_token usage: 858, prompt_token usage: 730
+2026-06-27 11:35:09,605 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  31%|###1      | 117/376 [03:36<09:50,  2.28s/it]
+2026-06-27 11:35:09,606 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:11,723 [INFO]     Metrics:total_token usage: 831, prompt_token usage: 730
+2026-06-27 11:35:11,723 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  31%|###1      | 118/376 [03:38<09:35,  2.23s/it]
+2026-06-27 11:35:11,724 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:13,755 [INFO]     Metrics:total_token usage: 762, prompt_token usage: 669
+2026-06-27 11:35:13,755 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  32%|###1      | 119/376 [03:40<09:17,  2.17s/it]
+2026-06-27 11:35:13,756 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:15,828 [INFO]     Metrics:total_token usage: 750, prompt_token usage: 636
+2026-06-27 11:35:15,828 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  32%|###1      | 120/376 [03:43<09:08,  2.14s/it]
+2026-06-27 11:35:15,829 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:17,068 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:35:17,069 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  32%|###2      | 121/376 [03:44<07:57,  1.87s/it]
+2026-06-27 11:35:17,069 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:18,715 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 586
+2026-06-27 11:35:18,716 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  32%|###2      | 122/376 [03:45<07:38,  1.80s/it]
+2026-06-27 11:35:18,716 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:20,288 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 586
+2026-06-27 11:35:20,288 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  33%|###2      | 123/376 [03:47<07:18,  1.73s/it]
+2026-06-27 11:35:20,288 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:22,151 [INFO]     Metrics:total_token usage: 1014, prompt_token usage: 896
+2026-06-27 11:35:22,152 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  33%|###2      | 124/376 [03:49<07:26,  1.77s/it]
+2026-06-27 11:35:22,152 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:23,865 [INFO]     Metrics:total_token usage: 659, prompt_token usage: 588
+2026-06-27 11:35:23,866 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  33%|###3      | 125/376 [03:51<07:20,  1.76s/it]
+2026-06-27 11:35:23,867 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:25,723 [INFO]     Metrics:total_token usage: 743, prompt_token usage: 635
+2026-06-27 11:35:25,723 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  34%|###3      | 126/376 [03:52<07:26,  1.79s/it]
+2026-06-27 11:35:25,723 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:27,918 [INFO]     Metrics:total_token usage: 745, prompt_token usage: 636
+2026-06-27 11:35:27,919 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  34%|###3      | 127/376 [03:55<07:55,  1.91s/it]
+2026-06-27 11:35:27,919 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:29,924 [INFO]     Metrics:total_token usage: 745, prompt_token usage: 636
+2026-06-27 11:35:29,924 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  34%|###4      | 128/376 [03:57<08:00,  1.94s/it]
+2026-06-27 11:35:29,924 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:32,288 [INFO]     Metrics:total_token usage: 753, prompt_token usage: 636
+2026-06-27 11:35:32,288 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  34%|###4      | 129/376 [03:59<08:30,  2.07s/it]
+2026-06-27 11:35:32,289 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:33,967 [INFO]     Metrics:total_token usage: 727, prompt_token usage: 636
+2026-06-27 11:35:33,967 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  35%|###4      | 130/376 [04:01<07:59,  1.95s/it]
+2026-06-27 11:35:33,967 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:35,272 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:35:35,272 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  35%|###4      | 131/376 [04:02<07:10,  1.76s/it]
+2026-06-27 11:35:35,273 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:37,463 [INFO]     Metrics:total_token usage: 751, prompt_token usage: 636
+2026-06-27 11:35:37,463 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  35%|###5      | 132/376 [04:04<07:40,  1.89s/it]
+2026-06-27 11:35:37,463 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:39,273 [INFO]     Metrics:total_token usage: 803, prompt_token usage: 724
+2026-06-27 11:35:39,273 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  35%|###5      | 133/376 [04:06<07:32,  1.86s/it]
+2026-06-27 11:35:39,274 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:41,425 [INFO]     Metrics:total_token usage: 800, prompt_token usage: 724
+2026-06-27 11:35:41,426 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  36%|###5      | 134/376 [04:08<07:51,  1.95s/it]
+2026-06-27 11:35:41,426 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:43,724 [INFO]     Metrics:total_token usage: 812, prompt_token usage: 703
+2026-06-27 11:35:43,725 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  36%|###5      | 135/376 [04:10<08:15,  2.05s/it]
+2026-06-27 11:35:43,725 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:45,150 [INFO]     Metrics:total_token usage: 660, prompt_token usage: 594
+2026-06-27 11:35:45,150 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  36%|###6      | 136/376 [04:12<07:27,  1.87s/it]
+2026-06-27 11:35:45,150 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:47,189 [INFO]     Metrics:total_token usage: 743, prompt_token usage: 636
+2026-06-27 11:35:47,189 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  36%|###6      | 137/376 [04:14<07:38,  1.92s/it]
+2026-06-27 11:35:47,189 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:49,599 [INFO]     Metrics:total_token usage: 836, prompt_token usage: 703
+2026-06-27 11:35:49,600 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  37%|###6      | 138/376 [04:16<08:11,  2.07s/it]
+2026-06-27 11:35:49,600 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:52,718 [INFO]     Metrics:total_token usage: 836, prompt_token usage: 703
+2026-06-27 11:35:52,719 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  37%|###6      | 139/376 [04:19<09:24,  2.38s/it]
+2026-06-27 11:35:52,719 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:55,502 [INFO]     Metrics:total_token usage: 747, prompt_token usage: 636
+2026-06-27 11:35:55,503 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  37%|###7      | 140/376 [04:22<09:50,  2.50s/it]
+2026-06-27 11:35:55,503 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:56,969 [INFO]     Metrics:total_token usage: 675, prompt_token usage: 598
+2026-06-27 11:35:56,970 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  38%|###7      | 141/376 [04:24<08:35,  2.19s/it]
+2026-06-27 11:35:56,970 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:58,373 [INFO]     Metrics:total_token usage: 652, prompt_token usage: 581
+2026-06-27 11:35:58,373 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  38%|###7      | 142/376 [04:25<07:37,  1.96s/it]
+2026-06-27 11:35:58,374 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:35:59,777 [INFO]     Metrics:total_token usage: 654, prompt_token usage: 588
+2026-06-27 11:35:59,777 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  38%|###8      | 143/376 [04:27<06:57,  1.79s/it]
+2026-06-27 11:35:59,778 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:01,225 [INFO]     Metrics:total_token usage: 690, prompt_token usage: 608
+2026-06-27 11:36:01,226 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  38%|###8      | 144/376 [04:28<06:31,  1.69s/it]
+2026-06-27 11:36:01,226 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:03,349 [INFO]     Metrics:total_token usage: 733, prompt_token usage: 627
+2026-06-27 11:36:03,350 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  39%|###8      | 145/376 [04:30<07:00,  1.82s/it]
+2026-06-27 11:36:03,350 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:05,509 [INFO]     Metrics:total_token usage: 722, prompt_token usage: 627
+2026-06-27 11:36:05,509 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  39%|###8      | 146/376 [04:32<07:21,  1.92s/it]
+2026-06-27 11:36:05,509 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:07,106 [INFO]     Metrics:total_token usage: 686, prompt_token usage: 607
+2026-06-27 11:36:07,106 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  39%|###9      | 147/376 [04:34<06:57,  1.82s/it]
+2026-06-27 11:36:07,106 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:09,728 [INFO]     Metrics:total_token usage: 730, prompt_token usage: 627
+2026-06-27 11:36:09,728 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  39%|###9      | 148/376 [04:36<07:50,  2.06s/it]
+2026-06-27 11:36:09,728 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:11,751 [INFO]     Metrics:total_token usage: 742, prompt_token usage: 627
+2026-06-27 11:36:11,752 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  40%|###9      | 149/376 [04:38<07:45,  2.05s/it]
+2026-06-27 11:36:11,753 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:13,348 [INFO]     Metrics:total_token usage: 726, prompt_token usage: 634
+2026-06-27 11:36:13,348 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  40%|###9      | 150/376 [04:40<07:12,  1.91s/it]
+2026-06-27 11:36:13,349 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:14,598 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:36:14,599 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  40%|####      | 151/376 [04:41<06:25,  1.72s/it]
+2026-06-27 11:36:14,600 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:15,982 [INFO]     Metrics:total_token usage: 667, prompt_token usage: 594
+2026-06-27 11:36:15,983 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  40%|####      | 152/376 [04:43<06:01,  1.62s/it]
+2026-06-27 11:36:15,983 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:17,992 [INFO]     Metrics:total_token usage: 700, prompt_token usage: 627
+2026-06-27 11:36:17,992 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  41%|####      | 153/376 [04:45<06:26,  1.73s/it]
+2026-06-27 11:36:17,993 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:19,106 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:36:19,107 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  41%|####      | 154/376 [04:46<05:43,  1.55s/it]
+2026-06-27 11:36:19,107 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:20,861 [INFO]     Metrics:total_token usage: 760, prompt_token usage: 683
+2026-06-27 11:36:20,861 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  41%|####1     | 155/376 [04:48<05:55,  1.61s/it]
+2026-06-27 11:36:20,862 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:22,401 [INFO]     Metrics:total_token usage: 765, prompt_token usage: 683
+2026-06-27 11:36:22,401 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  41%|####1     | 156/376 [04:49<05:49,  1.59s/it]
+2026-06-27 11:36:22,402 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:23,923 [INFO]     Metrics:total_token usage: 706, prompt_token usage: 620
+2026-06-27 11:36:23,923 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  42%|####1     | 157/376 [04:51<05:43,  1.57s/it]
+2026-06-27 11:36:23,923 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:25,408 [INFO]     Metrics:total_token usage: 661, prompt_token usage: 590
+2026-06-27 11:36:25,409 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  42%|####2     | 158/376 [04:52<05:36,  1.54s/it]
+2026-06-27 11:36:25,409 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:26,750 [INFO]     Metrics:total_token usage: 662, prompt_token usage: 590
+2026-06-27 11:36:26,750 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  42%|####2     | 159/376 [04:53<05:21,  1.48s/it]
+2026-06-27 11:36:26,751 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:28,138 [INFO]     Metrics:total_token usage: 655, prompt_token usage: 588
+2026-06-27 11:36:28,139 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  43%|####2     | 160/376 [04:55<05:14,  1.45s/it]
+2026-06-27 11:36:28,139 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:30,092 [INFO]     Metrics:total_token usage: 938, prompt_token usage: 846
+2026-06-27 11:36:30,093 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  43%|####2     | 161/376 [04:57<05:45,  1.60s/it]
+2026-06-27 11:36:30,094 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:31,795 [INFO]     Metrics:total_token usage: 663, prompt_token usage: 590
+2026-06-27 11:36:31,796 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  43%|####3     | 162/376 [04:59<05:49,  1.63s/it]
+2026-06-27 11:36:31,796 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:33,235 [INFO]     Metrics:total_token usage: 651, prompt_token usage: 586
+2026-06-27 11:36:33,235 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  43%|####3     | 163/376 [05:00<05:35,  1.58s/it]
+2026-06-27 11:36:33,236 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:34,609 [INFO]     Metrics:total_token usage: 667, prompt_token usage: 590
+2026-06-27 11:36:34,610 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  44%|####3     | 164/376 [05:01<05:21,  1.52s/it]
+2026-06-27 11:36:34,610 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:35,997 [INFO]     Metrics:total_token usage: 661, prompt_token usage: 590
+2026-06-27 11:36:35,998 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  44%|####3     | 165/376 [05:03<05:11,  1.48s/it]
+2026-06-27 11:36:35,999 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:37,505 [INFO]     Metrics:total_token usage: 656, prompt_token usage: 590
+2026-06-27 11:36:37,505 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  44%|####4     | 166/376 [05:04<05:12,  1.49s/it]
+2026-06-27 11:36:37,505 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:39,240 [INFO]     Metrics:total_token usage: 664, prompt_token usage: 590
+2026-06-27 11:36:39,241 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  44%|####4     | 167/376 [05:06<05:26,  1.56s/it]
+2026-06-27 11:36:39,242 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:40,401 [INFO]     Metrics:total_token usage: 637, prompt_token usage: 581
+2026-06-27 11:36:40,402 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  45%|####4     | 168/376 [05:07<04:59,  1.44s/it]
+2026-06-27 11:36:40,403 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:41,805 [INFO]     Metrics:total_token usage: 659, prompt_token usage: 589
+2026-06-27 11:36:41,806 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  45%|####4     | 169/376 [05:09<04:55,  1.43s/it]
+2026-06-27 11:36:41,806 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:42,780 [INFO]     Metrics:total_token usage: 637, prompt_token usage: 581
+2026-06-27 11:36:42,780 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  45%|####5     | 170/376 [05:10<04:26,  1.29s/it]
+2026-06-27 11:36:42,781 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:45,128 [INFO]     Metrics:total_token usage: 970, prompt_token usage: 853
+2026-06-27 11:36:45,129 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  45%|####5     | 171/376 [05:12<05:30,  1.61s/it]
+2026-06-27 11:36:45,129 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:47,447 [INFO]     Metrics:total_token usage: 939, prompt_token usage: 853
+2026-06-27 11:36:47,448 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  46%|####5     | 172/376 [05:14<06:11,  1.82s/it]
+2026-06-27 11:36:47,449 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:50,661 [INFO]     Metrics:total_token usage: 941, prompt_token usage: 798
+2026-06-27 11:36:50,662 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  46%|####6     | 173/376 [05:17<07:34,  2.24s/it]
+2026-06-27 11:36:50,662 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:52,215 [INFO]     Metrics:total_token usage: 661, prompt_token usage: 590
+2026-06-27 11:36:52,216 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  46%|####6     | 174/376 [05:19<06:50,  2.03s/it]
+2026-06-27 11:36:52,217 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:53,753 [INFO]     Metrics:total_token usage: 689, prompt_token usage: 610
+2026-06-27 11:36:53,753 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  47%|####6     | 175/376 [05:20<06:18,  1.89s/it]
+2026-06-27 11:36:53,754 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:55,182 [INFO]     Metrics:total_token usage: 682, prompt_token usage: 601
+2026-06-27 11:36:55,183 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  47%|####6     | 176/376 [05:22<05:49,  1.75s/it]
+2026-06-27 11:36:55,183 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:57,005 [INFO]     Metrics:total_token usage: 901, prompt_token usage: 798
+2026-06-27 11:36:57,005 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  47%|####7     | 177/376 [05:24<05:52,  1.77s/it]
+2026-06-27 11:36:57,006 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:36:59,681 [INFO]     Metrics:total_token usage: 862, prompt_token usage: 759
+2026-06-27 11:36:59,682 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  47%|####7     | 178/376 [05:26<06:44,  2.04s/it]
+2026-06-27 11:36:59,682 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:02,184 [INFO]     Metrics:total_token usage: 863, prompt_token usage: 731
+2026-06-27 11:37:02,184 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  48%|####7     | 179/376 [05:29<07:09,  2.18s/it]
+2026-06-27 11:37:02,184 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:04,385 [INFO]     Metrics:total_token usage: 830, prompt_token usage: 731
+2026-06-27 11:37:04,386 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  48%|####7     | 180/376 [05:31<07:08,  2.19s/it]
+2026-06-27 11:37:04,386 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:06,406 [INFO]     Metrics:total_token usage: 681, prompt_token usage: 605
+2026-06-27 11:37:06,407 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  48%|####8     | 181/376 [05:33<06:56,  2.14s/it]
+2026-06-27 11:37:06,407 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:07,944 [INFO]     Metrics:total_token usage: 687, prompt_token usage: 608
+2026-06-27 11:37:07,944 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  48%|####8     | 182/376 [05:35<06:19,  1.96s/it]
+2026-06-27 11:37:07,945 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:10,207 [INFO]     Metrics:total_token usage: 774, prompt_token usage: 665
+2026-06-27 11:37:10,207 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  49%|####8     | 183/376 [05:37<06:35,  2.05s/it]
+2026-06-27 11:37:10,207 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:12,091 [INFO]     Metrics:total_token usage: 662, prompt_token usage: 590
+2026-06-27 11:37:12,092 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  49%|####8     | 184/376 [05:39<06:23,  2.00s/it]
+2026-06-27 11:37:12,092 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:13,790 [INFO]     Metrics:total_token usage: 660, prompt_token usage: 590
+2026-06-27 11:37:13,791 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  49%|####9     | 185/376 [05:41<06:04,  1.91s/it]
+2026-06-27 11:37:13,791 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:15,774 [INFO]     Metrics:total_token usage: 664, prompt_token usage: 590
+2026-06-27 11:37:15,774 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  49%|####9     | 186/376 [05:43<06:07,  1.93s/it]
+2026-06-27 11:37:15,775 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:18,040 [INFO]     Metrics:total_token usage: 700, prompt_token usage: 603
+2026-06-27 11:37:18,041 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  50%|####9     | 187/376 [05:45<06:24,  2.03s/it]
+2026-06-27 11:37:18,041 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:19,209 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:37:19,209 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  50%|#####     | 188/376 [05:46<05:33,  1.77s/it]
+2026-06-27 11:37:19,209 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:20,641 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:37:20,642 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  50%|#####     | 189/376 [05:47<05:12,  1.67s/it]
+2026-06-27 11:37:20,643 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:21,924 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:37:21,925 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  51%|#####     | 190/376 [05:49<04:49,  1.55s/it]
+2026-06-27 11:37:21,925 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:23,280 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:37:23,281 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  51%|#####     | 191/376 [05:50<04:36,  1.49s/it]
+2026-06-27 11:37:23,281 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:26,371 [INFO]     Metrics:total_token usage: 742, prompt_token usage: 604
+2026-06-27 11:37:26,371 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  51%|#####1    | 192/376 [05:53<06:03,  1.97s/it]
+2026-06-27 11:37:26,371 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:28,164 [INFO]     Metrics:total_token usage: 682, prompt_token usage: 604
+2026-06-27 11:37:28,164 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  51%|#####1    | 193/376 [05:55<05:51,  1.92s/it]
+2026-06-27 11:37:28,165 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:29,398 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:37:29,398 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  52%|#####1    | 194/376 [05:56<05:11,  1.71s/it]
+2026-06-27 11:37:29,398 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:30,505 [INFO]     Metrics:total_token usage: 637, prompt_token usage: 581
+2026-06-27 11:37:30,506 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  52%|#####1    | 195/376 [05:57<04:37,  1.53s/it]
+2026-06-27 11:37:30,507 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:33,588 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:37:33,589 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  52%|#####2    | 196/376 [06:00<05:59,  2.00s/it]
+2026-06-27 11:37:33,589 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:34,716 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:37:34,716 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  52%|#####2    | 197/376 [06:01<05:10,  1.74s/it]
+2026-06-27 11:37:34,717 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:36,461 [INFO]     Metrics:total_token usage: 744, prompt_token usage: 654
+2026-06-27 11:37:36,461 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  53%|#####2    | 198/376 [06:03<05:09,  1.74s/it]
+2026-06-27 11:37:36,462 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:38,563 [INFO]     Metrics:total_token usage: 810, prompt_token usage: 703
+2026-06-27 11:37:38,564 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  53%|#####2    | 199/376 [06:05<05:27,  1.85s/it]
+2026-06-27 11:37:38,564 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:40,935 [INFO]     Metrics:total_token usage: 803, prompt_token usage: 698
+2026-06-27 11:37:40,935 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  53%|#####3    | 200/376 [06:08<05:52,  2.01s/it]
+2026-06-27 11:37:40,936 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:42,159 [INFO]     Metrics:total_token usage: 778, prompt_token usage: 703
+2026-06-27 11:37:42,159 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  53%|#####3    | 201/376 [06:09<05:09,  1.77s/it]
+2026-06-27 11:37:42,160 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:43,750 [INFO]     Metrics:total_token usage: 740, prompt_token usage: 654
+2026-06-27 11:37:43,751 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  54%|#####3    | 202/376 [06:10<04:58,  1.72s/it]
+2026-06-27 11:37:43,751 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:44,827 [INFO]     Metrics:total_token usage: 640, prompt_token usage: 581
+2026-06-27 11:37:44,827 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  54%|#####3    | 203/376 [06:12<04:23,  1.52s/it]
+2026-06-27 11:37:44,827 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:46,044 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:37:46,045 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  54%|#####4    | 204/376 [06:13<04:06,  1.43s/it]
+2026-06-27 11:37:46,047 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:47,628 [INFO]     Metrics:total_token usage: 686, prompt_token usage: 605
+2026-06-27 11:37:47,629 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  55%|#####4    | 205/376 [06:14<04:12,  1.48s/it]
+2026-06-27 11:37:47,629 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:48,896 [INFO]     Metrics:total_token usage: 686, prompt_token usage: 605
+2026-06-27 11:37:48,896 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  55%|#####4    | 206/376 [06:16<04:00,  1.41s/it]
+2026-06-27 11:37:48,897 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:50,026 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:37:50,026 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  55%|#####5    | 207/376 [06:17<03:44,  1.33s/it]
+2026-06-27 11:37:50,027 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:51,807 [INFO]     Metrics:total_token usage: 929, prompt_token usage: 830
+2026-06-27 11:37:51,808 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  55%|#####5    | 208/376 [06:19<04:06,  1.46s/it]
+2026-06-27 11:37:51,808 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:53,085 [INFO]     Metrics:total_token usage: 642, prompt_token usage: 581
+2026-06-27 11:37:53,086 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  56%|#####5    | 209/376 [06:20<03:55,  1.41s/it]
+2026-06-27 11:37:53,086 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:55,271 [INFO]     Metrics:total_token usage: 916, prompt_token usage: 828
+2026-06-27 11:37:55,272 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  56%|#####5    | 210/376 [06:22<04:32,  1.64s/it]
+2026-06-27 11:37:55,273 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:56,947 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 590
+2026-06-27 11:37:56,947 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  56%|#####6    | 211/376 [06:24<04:32,  1.65s/it]
+2026-06-27 11:37:56,948 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:58,399 [INFO]     Metrics:total_token usage: 663, prompt_token usage: 590
+2026-06-27 11:37:58,399 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  56%|#####6    | 212/376 [06:25<04:21,  1.59s/it]
+2026-06-27 11:37:58,400 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:37:59,712 [INFO]     Metrics:total_token usage: 657, prompt_token usage: 590
+2026-06-27 11:37:59,713 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  57%|#####6    | 213/376 [06:26<04:05,  1.51s/it]
+2026-06-27 11:37:59,714 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:01,283 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 590
+2026-06-27 11:38:01,283 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  57%|#####6    | 214/376 [06:28<04:07,  1.53s/it]
+2026-06-27 11:38:01,284 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:02,933 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 590
+2026-06-27 11:38:02,934 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  57%|#####7    | 215/376 [06:30<04:11,  1.56s/it]
+2026-06-27 11:38:02,934 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:04,597 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 590
+2026-06-27 11:38:04,598 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  57%|#####7    | 216/376 [06:31<04:15,  1.59s/it]
+2026-06-27 11:38:04,598 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:06,203 [INFO]     Metrics:total_token usage: 935, prompt_token usage: 830
+2026-06-27 11:38:06,204 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  58%|#####7    | 217/376 [06:33<04:14,  1.60s/it]
+2026-06-27 11:38:06,205 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:07,799 [INFO]     Metrics:total_token usage: 907, prompt_token usage: 823
+2026-06-27 11:38:07,800 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  58%|#####7    | 218/376 [06:35<04:12,  1.60s/it]
+2026-06-27 11:38:07,800 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:08,988 [INFO]     Metrics:total_token usage: 637, prompt_token usage: 581
+2026-06-27 11:38:08,989 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  58%|#####8    | 219/376 [06:36<03:51,  1.47s/it]
+2026-06-27 11:38:08,989 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:10,342 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:38:10,343 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  59%|#####8    | 220/376 [06:37<03:44,  1.44s/it]
+2026-06-27 11:38:10,343 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:12,435 [INFO]     Metrics:total_token usage: 798, prompt_token usage: 703
+2026-06-27 11:38:12,435 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  59%|#####8    | 221/376 [06:39<04:13,  1.63s/it]
+2026-06-27 11:38:12,436 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:14,000 [INFO]     Metrics:total_token usage: 908, prompt_token usage: 823
+2026-06-27 11:38:14,003 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  59%|#####9    | 222/376 [06:41<04:08,  1.61s/it]
+2026-06-27 11:38:14,004 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:15,820 [INFO]     Metrics:total_token usage: 1117, prompt_token usage: 1030
+2026-06-27 11:38:15,821 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  59%|#####9    | 223/376 [06:43<04:16,  1.68s/it]
+2026-06-27 11:38:15,821 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:17,434 [INFO]     Metrics:total_token usage: 1120, prompt_token usage: 1041
+2026-06-27 11:38:17,435 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  60%|#####9    | 224/376 [06:44<04:11,  1.66s/it]
+2026-06-27 11:38:17,435 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:19,118 [INFO]     Metrics:total_token usage: 1141, prompt_token usage: 1041
+2026-06-27 11:38:19,119 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  60%|#####9    | 225/376 [06:46<04:11,  1.67s/it]
+2026-06-27 11:38:19,119 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:21,156 [INFO]     Metrics:total_token usage: 839, prompt_token usage: 746
+2026-06-27 11:38:21,156 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  60%|######    | 226/376 [06:48<04:26,  1.78s/it]
+2026-06-27 11:38:21,157 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:23,574 [INFO]     Metrics:total_token usage: 836, prompt_token usage: 746
+2026-06-27 11:38:23,575 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  60%|######    | 227/376 [06:50<04:53,  1.97s/it]
+2026-06-27 11:38:23,575 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:26,001 [INFO]     Metrics:total_token usage: 834, prompt_token usage: 746
+2026-06-27 11:38:26,001 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  61%|######    | 228/376 [06:53<05:11,  2.11s/it]
+2026-06-27 11:38:26,002 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:28,283 [INFO]     Metrics:total_token usage: 854, prompt_token usage: 746
+2026-06-27 11:38:28,283 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  61%|######    | 229/376 [06:55<05:17,  2.16s/it]
+2026-06-27 11:38:28,284 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:29,920 [INFO]     Metrics:total_token usage: 829, prompt_token usage: 745
+2026-06-27 11:38:29,920 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  61%|######1   | 230/376 [06:57<04:52,  2.00s/it]
+2026-06-27 11:38:29,921 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:31,837 [INFO]     Metrics:total_token usage: 837, prompt_token usage: 725
+2026-06-27 11:38:31,838 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  61%|######1   | 231/376 [06:59<04:46,  1.98s/it]
+2026-06-27 11:38:31,838 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:34,561 [INFO]     Metrics:total_token usage: 844, prompt_token usage: 725
+2026-06-27 11:38:34,562 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  62%|######1   | 232/376 [07:01<05:16,  2.20s/it]
+2026-06-27 11:38:34,562 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:35,811 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:38:35,811 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  62%|######1   | 233/376 [07:03<04:33,  1.92s/it]
+2026-06-27 11:38:35,811 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:36,941 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:38:36,941 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  62%|######2   | 234/376 [07:04<03:58,  1.68s/it]
+2026-06-27 11:38:36,941 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:38,047 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:38:38,047 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  62%|######2   | 235/376 [07:05<03:32,  1.51s/it]
+2026-06-27 11:38:38,047 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:39,095 [INFO]     Metrics:total_token usage: 637, prompt_token usage: 581
+2026-06-27 11:38:39,095 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  63%|######2   | 236/376 [07:06<03:11,  1.37s/it]
+2026-06-27 11:38:39,095 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:41,290 [INFO]     Metrics:total_token usage: 718, prompt_token usage: 623
+2026-06-27 11:38:41,290 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  63%|######3   | 237/376 [07:08<03:44,  1.62s/it]
+2026-06-27 11:38:41,291 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:42,393 [INFO]     Metrics:total_token usage: 640, prompt_token usage: 581
+2026-06-27 11:38:42,394 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  63%|######3   | 238/376 [07:09<03:21,  1.46s/it]
+2026-06-27 11:38:42,394 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:44,834 [INFO]     Metrics:total_token usage: 637, prompt_token usage: 581
+2026-06-27 11:38:44,834 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  64%|######3   | 239/376 [07:12<04:00,  1.76s/it]
+2026-06-27 11:38:44,835 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:46,387 [INFO]     Metrics:total_token usage: 649, prompt_token usage: 581
+2026-06-27 11:38:46,388 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  64%|######3   | 240/376 [07:13<03:50,  1.70s/it]
+2026-06-27 11:38:46,388 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:47,483 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:38:47,483 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  64%|######4   | 241/376 [07:14<03:24,  1.52s/it]
+2026-06-27 11:38:47,484 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:48,625 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:38:48,625 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  64%|######4   | 242/376 [07:15<03:08,  1.40s/it]
+2026-06-27 11:38:48,625 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:49,645 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:38:49,646 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  65%|######4   | 243/376 [07:16<02:51,  1.29s/it]
+2026-06-27 11:38:49,646 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:50,732 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:38:50,732 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  65%|######4   | 244/376 [07:17<02:42,  1.23s/it]
+2026-06-27 11:38:50,732 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:52,501 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:38:52,502 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  65%|######5   | 245/376 [07:19<03:02,  1.39s/it]
+2026-06-27 11:38:52,502 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:54,329 [INFO]     Metrics:total_token usage: 777, prompt_token usage: 678
+2026-06-27 11:38:54,330 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  65%|######5   | 246/376 [07:21<03:17,  1.52s/it]
+2026-06-27 11:38:54,331 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:56,060 [INFO]     Metrics:total_token usage: 646, prompt_token usage: 581
+2026-06-27 11:38:56,060 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  66%|######5   | 247/376 [07:23<03:24,  1.58s/it]
+2026-06-27 11:38:56,061 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:57,144 [INFO]     Metrics:total_token usage: 651, prompt_token usage: 586
+2026-06-27 11:38:57,145 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  66%|######5   | 248/376 [07:24<03:03,  1.43s/it]
+2026-06-27 11:38:57,145 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:58,203 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:38:58,203 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  66%|######6   | 249/376 [07:25<02:47,  1.32s/it]
+2026-06-27 11:38:58,203 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:38:59,695 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:38:59,696 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  66%|######6   | 250/376 [07:26<02:52,  1.37s/it]
+2026-06-27 11:38:59,697 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:02,202 [INFO]     Metrics:total_token usage: 806, prompt_token usage: 682
+2026-06-27 11:39:02,202 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  67%|######6   | 251/376 [07:29<03:34,  1.71s/it]
+2026-06-27 11:39:02,203 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:03,519 [INFO]     Metrics:total_token usage: 640, prompt_token usage: 581
+2026-06-27 11:39:03,520 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  67%|######7   | 252/376 [07:30<03:17,  1.59s/it]
+2026-06-27 11:39:03,520 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:05,895 [INFO]     Metrics:total_token usage: 764, prompt_token usage: 669
+2026-06-27 11:39:05,895 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  67%|######7   | 253/376 [07:33<03:44,  1.83s/it]
+2026-06-27 11:39:05,895 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:07,945 [INFO]     Metrics:total_token usage: 766, prompt_token usage: 669
+2026-06-27 11:39:07,946 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  68%|######7   | 254/376 [07:35<03:51,  1.90s/it]
+2026-06-27 11:39:07,947 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:10,225 [INFO]     Metrics:total_token usage: 772, prompt_token usage: 669
+2026-06-27 11:39:10,225 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  68%|######7   | 255/376 [07:37<04:03,  2.01s/it]
+2026-06-27 11:39:10,225 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:12,420 [INFO]     Metrics:total_token usage: 770, prompt_token usage: 669
+2026-06-27 11:39:12,421 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  68%|######8   | 256/376 [07:39<04:07,  2.07s/it]
+2026-06-27 11:39:12,422 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:14,185 [INFO]     Metrics:total_token usage: 753, prompt_token usage: 669
+2026-06-27 11:39:14,186 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  68%|######8   | 257/376 [07:41<03:55,  1.98s/it]
+2026-06-27 11:39:14,186 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:15,985 [INFO]     Metrics:total_token usage: 762, prompt_token usage: 669
+2026-06-27 11:39:15,985 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  69%|######8   | 258/376 [07:43<03:46,  1.92s/it]
+2026-06-27 11:39:15,986 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:17,181 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:39:17,182 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  69%|######8   | 259/376 [07:44<03:19,  1.70s/it]
+2026-06-27 11:39:17,182 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:18,302 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:39:18,302 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  69%|######9   | 260/376 [07:45<02:57,  1.53s/it]
+2026-06-27 11:39:18,303 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:19,430 [INFO]     Metrics:total_token usage: 642, prompt_token usage: 581
+2026-06-27 11:39:19,430 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  69%|######9   | 261/376 [07:46<02:42,  1.41s/it]
+2026-06-27 11:39:19,431 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:21,240 [INFO]     Metrics:total_token usage: 695, prompt_token usage: 603
+2026-06-27 11:39:21,241 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  70%|######9   | 262/376 [07:48<02:54,  1.53s/it]
+2026-06-27 11:39:21,243 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:23,052 [INFO]     Metrics:total_token usage: 678, prompt_token usage: 603
+2026-06-27 11:39:23,052 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  70%|######9   | 263/376 [07:50<03:02,  1.61s/it]
+2026-06-27 11:39:23,053 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:24,693 [INFO]     Metrics:total_token usage: 691, prompt_token usage: 603
+2026-06-27 11:39:24,693 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  70%|#######   | 264/376 [07:51<03:01,  1.62s/it]
+2026-06-27 11:39:24,693 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:26,837 [INFO]     Metrics:total_token usage: 701, prompt_token usage: 603
+2026-06-27 11:39:26,838 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  70%|#######   | 265/376 [07:54<03:17,  1.78s/it]
+2026-06-27 11:39:26,840 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:28,543 [INFO]     Metrics:total_token usage: 689, prompt_token usage: 603
+2026-06-27 11:39:28,543 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  71%|#######   | 266/376 [07:55<03:13,  1.76s/it]
+2026-06-27 11:39:28,543 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:30,194 [INFO]     Metrics:total_token usage: 683, prompt_token usage: 603
+2026-06-27 11:39:30,194 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  71%|#######1  | 267/376 [07:57<03:08,  1.73s/it]
+2026-06-27 11:39:30,194 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:32,019 [INFO]     Metrics:total_token usage: 726, prompt_token usage: 630
+2026-06-27 11:39:32,019 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  71%|#######1  | 268/376 [07:59<03:09,  1.76s/it]
+2026-06-27 11:39:32,019 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:33,995 [INFO]     Metrics:total_token usage: 703, prompt_token usage: 630
+2026-06-27 11:39:33,995 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  72%|#######1  | 269/376 [08:01<03:14,  1.82s/it]
+2026-06-27 11:39:33,995 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:35,863 [INFO]     Metrics:total_token usage: 706, prompt_token usage: 630
+2026-06-27 11:39:35,863 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  72%|#######1  | 270/376 [08:03<03:14,  1.84s/it]
+2026-06-27 11:39:35,863 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:37,934 [INFO]     Metrics:total_token usage: 721, prompt_token usage: 630
+2026-06-27 11:39:37,934 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  72%|#######2  | 271/376 [08:05<03:20,  1.91s/it]
+2026-06-27 11:39:37,934 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:39,817 [INFO]     Metrics:total_token usage: 725, prompt_token usage: 630
+2026-06-27 11:39:39,817 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  72%|#######2  | 272/376 [08:07<03:17,  1.90s/it]
+2026-06-27 11:39:39,817 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:42,511 [INFO]     Metrics:total_token usage: 765, prompt_token usage: 643
+2026-06-27 11:39:42,511 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  73%|#######2  | 273/376 [08:09<03:40,  2.14s/it]
+2026-06-27 11:39:42,511 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:44,351 [INFO]     Metrics:total_token usage: 726, prompt_token usage: 630
+2026-06-27 11:39:44,352 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  73%|#######2  | 274/376 [08:11<03:28,  2.05s/it]
+2026-06-27 11:39:44,352 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:46,650 [INFO]     Metrics:total_token usage: 767, prompt_token usage: 643
+2026-06-27 11:39:46,650 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  73%|#######3  | 275/376 [08:13<03:34,  2.12s/it]
+2026-06-27 11:39:46,650 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:48,567 [INFO]     Metrics:total_token usage: 709, prompt_token usage: 630
+2026-06-27 11:39:48,568 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  73%|#######3  | 276/376 [08:15<03:26,  2.06s/it]
+2026-06-27 11:39:48,568 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:50,450 [INFO]     Metrics:total_token usage: 705, prompt_token usage: 630
+2026-06-27 11:39:50,451 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  74%|#######3  | 277/376 [08:17<03:18,  2.01s/it]
+2026-06-27 11:39:50,452 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:52,493 [INFO]     Metrics:total_token usage: 689, prompt_token usage: 603
+2026-06-27 11:39:52,494 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  74%|#######3  | 278/376 [08:19<03:17,  2.02s/it]
+2026-06-27 11:39:52,494 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:53,689 [INFO]     Metrics:total_token usage: 696, prompt_token usage: 626
+2026-06-27 11:39:53,690 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  74%|#######4  | 279/376 [08:20<02:51,  1.77s/it]
+2026-06-27 11:39:53,691 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:55,254 [INFO]     Metrics:total_token usage: 695, prompt_token usage: 626
+2026-06-27 11:39:55,255 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  74%|#######4  | 280/376 [08:22<02:44,  1.71s/it]
+2026-06-27 11:39:55,255 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:56,772 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 596
+2026-06-27 11:39:56,773 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  75%|#######4  | 281/376 [08:24<02:36,  1.65s/it]
+2026-06-27 11:39:56,773 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:57,933 [INFO]     Metrics:total_token usage: 637, prompt_token usage: 581
+2026-06-27 11:39:57,934 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  75%|#######5  | 282/376 [08:25<02:21,  1.50s/it]
+2026-06-27 11:39:57,934 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:39:59,416 [INFO]     Metrics:total_token usage: 671, prompt_token usage: 594
+2026-06-27 11:39:59,417 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  75%|#######5  | 283/376 [08:26<02:19,  1.50s/it]
+2026-06-27 11:39:59,417 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:01,144 [INFO]     Metrics:total_token usage: 682, prompt_token usage: 594
+2026-06-27 11:40:01,145 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  76%|#######5  | 284/376 [08:28<02:24,  1.57s/it]
+2026-06-27 11:40:01,145 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:02,723 [INFO]     Metrics:total_token usage: 682, prompt_token usage: 594
+2026-06-27 11:40:02,724 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  76%|#######5  | 285/376 [08:29<02:22,  1.57s/it]
+2026-06-27 11:40:02,724 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:04,263 [INFO]     Metrics:total_token usage: 669, prompt_token usage: 594
+2026-06-27 11:40:04,263 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  76%|#######6  | 286/376 [08:31<02:20,  1.56s/it]
+2026-06-27 11:40:04,264 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:05,665 [INFO]     Metrics:total_token usage: 678, prompt_token usage: 594
+2026-06-27 11:40:05,665 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  76%|#######6  | 287/376 [08:32<02:14,  1.51s/it]
+2026-06-27 11:40:05,665 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:07,292 [INFO]     Metrics:total_token usage: 682, prompt_token usage: 594
+2026-06-27 11:40:07,292 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  77%|#######6  | 288/376 [08:34<02:16,  1.55s/it]
+2026-06-27 11:40:07,293 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:08,828 [INFO]     Metrics:total_token usage: 682, prompt_token usage: 594
+2026-06-27 11:40:08,828 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  77%|#######6  | 289/376 [08:36<02:14,  1.54s/it]
+2026-06-27 11:40:08,828 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:10,737 [INFO]     Metrics:total_token usage: 667, prompt_token usage: 581
+2026-06-27 11:40:10,737 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  77%|#######7  | 290/376 [08:37<02:22,  1.65s/it]
+2026-06-27 11:40:10,738 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:12,212 [INFO]     Metrics:total_token usage: 668, prompt_token usage: 595
+2026-06-27 11:40:12,213 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  77%|#######7  | 291/376 [08:39<02:16,  1.60s/it]
+2026-06-27 11:40:12,213 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:14,111 [INFO]     Metrics:total_token usage: 673, prompt_token usage: 595
+2026-06-27 11:40:14,112 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  78%|#######7  | 292/376 [08:41<02:21,  1.69s/it]
+2026-06-27 11:40:14,113 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:15,486 [INFO]     Metrics:total_token usage: 649, prompt_token usage: 587
+2026-06-27 11:40:15,486 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  78%|#######7  | 293/376 [08:42<02:12,  1.60s/it]
+2026-06-27 11:40:15,487 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:17,542 [INFO]     Metrics:total_token usage: 672, prompt_token usage: 587
+2026-06-27 11:40:17,542 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  78%|#######8  | 294/376 [08:44<02:22,  1.73s/it]
+2026-06-27 11:40:17,542 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:19,096 [INFO]     Metrics:total_token usage: 659, prompt_token usage: 587
+2026-06-27 11:40:19,097 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  78%|#######8  | 295/376 [08:46<02:16,  1.68s/it]
+2026-06-27 11:40:19,097 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:21,018 [INFO]     Metrics:total_token usage: 755, prompt_token usage: 658
+2026-06-27 11:40:21,018 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  79%|#######8  | 296/376 [08:48<02:20,  1.75s/it]
+2026-06-27 11:40:21,019 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:23,167 [INFO]     Metrics:total_token usage: 767, prompt_token usage: 658
+2026-06-27 11:40:23,167 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  79%|#######8  | 297/376 [08:50<02:27,  1.87s/it]
+2026-06-27 11:40:23,168 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:24,943 [INFO]     Metrics:total_token usage: 712, prompt_token usage: 611
+2026-06-27 11:40:24,945 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  79%|#######9  | 298/376 [08:52<02:23,  1.84s/it]
+2026-06-27 11:40:24,945 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:26,356 [INFO]     Metrics:total_token usage: 651, prompt_token usage: 587
+2026-06-27 11:40:26,357 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  80%|#######9  | 299/376 [08:53<02:11,  1.71s/it]
+2026-06-27 11:40:26,357 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:28,067 [INFO]     Metrics:total_token usage: 701, prompt_token usage: 608
+2026-06-27 11:40:28,067 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  80%|#######9  | 300/376 [08:55<02:10,  1.71s/it]
+2026-06-27 11:40:28,067 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:29,246 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:40:29,246 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  80%|########  | 301/376 [08:56<01:56,  1.55s/it]
+2026-06-27 11:40:29,246 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:30,413 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:40:30,413 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  80%|########  | 302/376 [08:57<01:46,  1.44s/it]
+2026-06-27 11:40:30,416 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:31,995 [INFO]     Metrics:total_token usage: 655, prompt_token usage: 592
+2026-06-27 11:40:31,996 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  81%|########  | 303/376 [08:59<01:48,  1.48s/it]
+2026-06-27 11:40:31,996 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:34,325 [INFO]     Metrics:total_token usage: 666, prompt_token usage: 592
+2026-06-27 11:40:34,325 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  81%|########  | 304/376 [09:01<02:04,  1.74s/it]
+2026-06-27 11:40:34,326 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:36,667 [INFO]     Metrics:total_token usage: 691, prompt_token usage: 600
+2026-06-27 11:40:36,667 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  81%|########1 | 305/376 [09:03<02:16,  1.92s/it]
+2026-06-27 11:40:36,667 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:38,187 [INFO]     Metrics:total_token usage: 665, prompt_token usage: 599
+2026-06-27 11:40:38,187 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  81%|########1 | 306/376 [09:05<02:05,  1.80s/it]
+2026-06-27 11:40:38,187 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:39,570 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:40:39,571 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  82%|########1 | 307/376 [09:06<01:55,  1.67s/it]
+2026-06-27 11:40:39,571 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:42,526 [INFO]     Metrics:total_token usage: 861, prompt_token usage: 739
+2026-06-27 11:40:42,527 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  82%|########1 | 308/376 [09:09<02:19,  2.06s/it]
+2026-06-27 11:40:42,527 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:44,630 [INFO]     Metrics:total_token usage: 734, prompt_token usage: 635
+2026-06-27 11:40:44,630 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  82%|########2 | 309/376 [09:11<02:18,  2.07s/it]
+2026-06-27 11:40:44,630 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:46,949 [INFO]     Metrics:total_token usage: 722, prompt_token usage: 635
+2026-06-27 11:40:46,949 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  82%|########2 | 310/376 [09:14<02:21,  2.15s/it]
+2026-06-27 11:40:46,949 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:48,105 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:40:48,105 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  83%|########2 | 311/376 [09:15<02:00,  1.85s/it]
+2026-06-27 11:40:48,106 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:49,452 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:40:49,453 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  83%|########2 | 312/376 [09:16<01:48,  1.70s/it]
+2026-06-27 11:40:49,454 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:50,861 [INFO]     Metrics:total_token usage: 662, prompt_token usage: 590
+2026-06-27 11:40:50,861 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  83%|########3 | 313/376 [09:18<01:41,  1.61s/it]
+2026-06-27 11:40:50,861 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:52,664 [INFO]     Metrics:total_token usage: 666, prompt_token usage: 590
+2026-06-27 11:40:52,665 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  84%|########3 | 314/376 [09:19<01:43,  1.67s/it]
+2026-06-27 11:40:52,665 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:54,568 [INFO]     Metrics:total_token usage: 713, prompt_token usage: 621
+2026-06-27 11:40:54,569 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  84%|########3 | 315/376 [09:21<01:46,  1.74s/it]
+2026-06-27 11:40:54,569 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:40:58,543 [INFO]     Metrics:total_token usage: 852, prompt_token usage: 748
+2026-06-27 11:40:58,544 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  84%|########4 | 316/376 [09:25<02:24,  2.41s/it]
+2026-06-27 11:40:58,546 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:00,599 [INFO]     Metrics:total_token usage: 841, prompt_token usage: 743
+2026-06-27 11:41:00,599 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  84%|########4 | 317/376 [09:27<02:15,  2.30s/it]
+2026-06-27 11:41:00,600 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:02,347 [INFO]     Metrics:total_token usage: 831, prompt_token usage: 743
+2026-06-27 11:41:02,347 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  85%|########4 | 318/376 [09:29<02:03,  2.14s/it]
+2026-06-27 11:41:02,347 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:03,880 [INFO]     Metrics:total_token usage: 673, prompt_token usage: 594
+2026-06-27 11:41:03,880 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  85%|########4 | 319/376 [09:31<01:51,  1.96s/it]
+2026-06-27 11:41:03,881 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:05,388 [INFO]     Metrics:total_token usage: 660, prompt_token usage: 592
+2026-06-27 11:41:05,391 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  85%|########5 | 320/376 [09:32<01:42,  1.82s/it]
+2026-06-27 11:41:05,392 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:06,558 [INFO]     Metrics:total_token usage: 661, prompt_token usage: 590
+2026-06-27 11:41:06,560 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  85%|########5 | 321/376 [09:33<01:29,  1.63s/it]
+2026-06-27 11:41:06,561 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:07,715 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:41:07,715 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  86%|########5 | 322/376 [09:34<01:20,  1.48s/it]
+2026-06-27 11:41:07,716 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:09,140 [INFO]     Metrics:total_token usage: 666, prompt_token usage: 590
+2026-06-27 11:41:09,140 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  86%|########5 | 323/376 [09:36<01:17,  1.47s/it]
+2026-06-27 11:41:09,140 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:10,263 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:41:10,264 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  86%|########6 | 324/376 [09:37<01:10,  1.36s/it]
+2026-06-27 11:41:10,265 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:11,755 [INFO]     Metrics:total_token usage: 661, prompt_token usage: 590
+2026-06-27 11:41:11,756 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  86%|########6 | 325/376 [09:38<01:11,  1.40s/it]
+2026-06-27 11:41:11,756 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:13,386 [INFO]     Metrics:total_token usage: 662, prompt_token usage: 590
+2026-06-27 11:41:13,386 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  87%|########6 | 326/376 [09:40<01:13,  1.47s/it]
+2026-06-27 11:41:13,387 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:14,560 [INFO]     Metrics:total_token usage: 661, prompt_token usage: 590
+2026-06-27 11:41:14,560 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  87%|########6 | 327/376 [09:41<01:07,  1.38s/it]
+2026-06-27 11:41:14,562 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:16,514 [INFO]     Metrics:total_token usage: 661, prompt_token usage: 590
+2026-06-27 11:41:16,515 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  87%|########7 | 328/376 [09:43<01:14,  1.55s/it]
+2026-06-27 11:41:16,515 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:17,914 [INFO]     Metrics:total_token usage: 644, prompt_token usage: 581
+2026-06-27 11:41:17,915 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  88%|########7 | 329/376 [09:45<01:10,  1.51s/it]
+2026-06-27 11:41:17,915 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:19,047 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:41:19,047 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  88%|########7 | 330/376 [09:46<01:04,  1.40s/it]
+2026-06-27 11:41:19,048 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:20,199 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:41:20,199 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  88%|########8 | 331/376 [09:47<00:59,  1.32s/it]
+2026-06-27 11:41:20,200 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:21,164 [INFO]     Metrics:total_token usage: 637, prompt_token usage: 581
+2026-06-27 11:41:21,165 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  88%|########8 | 332/376 [09:48<00:53,  1.22s/it]
+2026-06-27 11:41:21,165 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:22,313 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:41:22,314 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  89%|########8 | 333/376 [09:49<00:51,  1.20s/it]
+2026-06-27 11:41:22,314 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:23,625 [INFO]     Metrics:total_token usage: 657, prompt_token usage: 590
+2026-06-27 11:41:23,626 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  89%|########8 | 334/376 [09:50<00:51,  1.23s/it]
+2026-06-27 11:41:23,627 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:24,911 [INFO]     Metrics:total_token usage: 647, prompt_token usage: 585
+2026-06-27 11:41:24,912 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  89%|########9 | 335/376 [09:52<00:51,  1.25s/it]
+2026-06-27 11:41:24,912 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:26,186 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:41:26,186 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  89%|########9 | 336/376 [09:53<00:50,  1.26s/it]
+2026-06-27 11:41:26,190 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:27,653 [INFO]     Metrics:total_token usage: 666, prompt_token usage: 590
+2026-06-27 11:41:27,654 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  90%|########9 | 337/376 [09:54<00:51,  1.32s/it]
+2026-06-27 11:41:27,654 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:30,403 [INFO]     Metrics:total_token usage: 650, prompt_token usage: 581
+2026-06-27 11:41:30,403 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  90%|########9 | 338/376 [09:57<01:06,  1.75s/it]
+2026-06-27 11:41:30,404 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:32,786 [INFO]     Metrics:total_token usage: 669, prompt_token usage: 581
+2026-06-27 11:41:32,786 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  90%|######### | 339/376 [10:00<01:11,  1.94s/it]
+2026-06-27 11:41:32,787 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:34,099 [INFO]     Metrics:total_token usage: 680, prompt_token usage: 610
+2026-06-27 11:41:34,100 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  90%|######### | 340/376 [10:01<01:03,  1.75s/it]
+2026-06-27 11:41:34,100 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:36,234 [INFO]     Metrics:total_token usage: 1170, prompt_token usage: 1063
+2026-06-27 11:41:36,234 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  91%|######### | 341/376 [10:03<01:05,  1.87s/it]
+2026-06-27 11:41:36,235 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:38,094 [INFO]     Metrics:total_token usage: 1178, prompt_token usage: 1063
+2026-06-27 11:41:38,095 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  91%|######### | 342/376 [10:05<01:03,  1.86s/it]
+2026-06-27 11:41:38,095 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:39,725 [INFO]     Metrics:total_token usage: 767, prompt_token usage: 686
+2026-06-27 11:41:39,725 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  91%|#########1| 343/376 [10:06<00:59,  1.79s/it]
+2026-06-27 11:41:39,725 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:41,356 [INFO]     Metrics:total_token usage: 722, prompt_token usage: 637
+2026-06-27 11:41:41,357 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  91%|#########1| 344/376 [10:08<00:55,  1.75s/it]
+2026-06-27 11:41:41,357 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:43,117 [INFO]     Metrics:total_token usage: 674, prompt_token usage: 596
+2026-06-27 11:41:43,118 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  92%|#########1| 345/376 [10:10<00:54,  1.75s/it]
+2026-06-27 11:41:43,118 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:44,108 [INFO]     Metrics:total_token usage: 640, prompt_token usage: 581
+2026-06-27 11:41:44,108 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  92%|#########2| 346/376 [10:11<00:45,  1.52s/it]
+2026-06-27 11:41:44,108 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:45,177 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:41:45,178 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  92%|#########2| 347/376 [10:12<00:40,  1.39s/it]
+2026-06-27 11:41:45,179 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:46,200 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:41:46,200 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  93%|#########2| 348/376 [10:13<00:35,  1.28s/it]
+2026-06-27 11:41:46,201 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:47,386 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:41:47,386 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  93%|#########2| 349/376 [10:14<00:33,  1.25s/it]
+2026-06-27 11:41:47,387 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:48,339 [INFO]     Metrics:total_token usage: 637, prompt_token usage: 581
+2026-06-27 11:41:48,340 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  93%|#########3| 350/376 [10:15<00:30,  1.16s/it]
+2026-06-27 11:41:48,340 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:50,776 [INFO]     Metrics:total_token usage: 637, prompt_token usage: 581
+2026-06-27 11:41:50,776 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  93%|#########3| 351/376 [10:18<00:38,  1.54s/it]
+2026-06-27 11:41:50,777 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:52,004 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:41:52,004 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  94%|#########3| 352/376 [10:19<00:34,  1.45s/it]
+2026-06-27 11:41:52,004 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:53,055 [INFO]     Metrics:total_token usage: 637, prompt_token usage: 581
+2026-06-27 11:41:53,056 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  94%|#########3| 353/376 [10:20<00:30,  1.33s/it]
+2026-06-27 11:41:53,056 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:54,589 [INFO]     Metrics:total_token usage: 670, prompt_token usage: 598
+2026-06-27 11:41:54,589 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  94%|#########4| 354/376 [10:21<00:30,  1.39s/it]
+2026-06-27 11:41:54,589 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:55,750 [INFO]     Metrics:total_token usage: 645, prompt_token usage: 586
+2026-06-27 11:41:55,750 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  94%|#########4| 355/376 [10:22<00:27,  1.32s/it]
+2026-06-27 11:41:55,750 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:57,170 [INFO]     Metrics:total_token usage: 654, prompt_token usage: 587
+2026-06-27 11:41:57,170 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  95%|#########4| 356/376 [10:24<00:27,  1.35s/it]
+2026-06-27 11:41:57,172 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:58,270 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:41:58,270 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  95%|#########4| 357/376 [10:25<00:24,  1.28s/it]
+2026-06-27 11:41:58,270 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:41:59,361 [INFO]     Metrics:total_token usage: 642, prompt_token usage: 581
+2026-06-27 11:41:59,362 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  95%|#########5| 358/376 [10:26<00:21,  1.22s/it]
+2026-06-27 11:41:59,362 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:10,125 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:42:10,126 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  95%|#########5| 359/376 [10:37<01:09,  4.08s/it]
+2026-06-27 11:42:10,126 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:12,233 [INFO]     Metrics:total_token usage: 1117, prompt_token usage: 1044
+2026-06-27 11:42:12,233 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  96%|#########5| 360/376 [10:39<00:55,  3.49s/it]
+2026-06-27 11:42:12,234 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:14,057 [INFO]     Metrics:total_token usage: 1124, prompt_token usage: 1050
+2026-06-27 11:42:14,057 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  96%|#########6| 361/376 [10:41<00:44,  2.99s/it]
+2026-06-27 11:42:14,058 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:15,483 [INFO]     Metrics:total_token usage: 660, prompt_token usage: 586
+2026-06-27 11:42:15,483 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  96%|#########6| 362/376 [10:42<00:35,  2.52s/it]
+2026-06-27 11:42:15,483 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:17,445 [INFO]     Metrics:total_token usage: 789, prompt_token usage: 686
+2026-06-27 11:42:17,445 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  97%|#########6| 363/376 [10:44<00:30,  2.35s/it]
+2026-06-27 11:42:17,445 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:19,721 [INFO]     Metrics:total_token usage: 783, prompt_token usage: 686
+2026-06-27 11:42:19,721 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  97%|#########6| 364/376 [10:46<00:27,  2.33s/it]
+2026-06-27 11:42:19,721 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:20,880 [INFO]     Metrics:total_token usage: 636, prompt_token usage: 581
+2026-06-27 11:42:20,880 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  97%|#########7| 365/376 [10:48<00:21,  1.98s/it]
+2026-06-27 11:42:20,880 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:22,797 [INFO]     Metrics:total_token usage: 720, prompt_token usage: 625
+2026-06-27 11:42:22,797 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  97%|#########7| 366/376 [10:50<00:19,  1.96s/it]
+2026-06-27 11:42:22,797 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:24,478 [INFO]     Metrics:total_token usage: 938, prompt_token usage: 869
+2026-06-27 11:42:24,479 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  98%|#########7| 367/376 [10:51<00:16,  1.88s/it]
+2026-06-27 11:42:24,480 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:26,334 [INFO]     Metrics:total_token usage: 691, prompt_token usage: 602
+2026-06-27 11:42:26,334 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  98%|#########7| 368/376 [10:53<00:14,  1.87s/it]
+2026-06-27 11:42:26,334 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:28,276 [INFO]     Metrics:total_token usage: 778, prompt_token usage: 669
+2026-06-27 11:42:28,278 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  98%|#########8| 369/376 [10:55<00:13,  1.89s/it]
+2026-06-27 11:42:28,278 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:29,857 [INFO]     Metrics:total_token usage: 682, prompt_token usage: 602
+2026-06-27 11:42:29,858 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  98%|#########8| 370/376 [10:57<00:10,  1.80s/it]
+2026-06-27 11:42:29,858 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:31,603 [INFO]     Metrics:total_token usage: 690, prompt_token usage: 599
+2026-06-27 11:42:31,604 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  99%|#########8| 371/376 [10:58<00:08,  1.78s/it]
+2026-06-27 11:42:31,604 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:33,169 [INFO]     Metrics:total_token usage: 685, prompt_token usage: 599
+2026-06-27 11:42:33,170 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  99%|#########8| 372/376 [11:00<00:06,  1.72s/it]
+2026-06-27 11:42:33,170 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:34,280 [INFO]     Metrics:total_token usage: 639, prompt_token usage: 581
+2026-06-27 11:42:34,280 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  99%|#########9| 373/376 [11:01<00:04,  1.54s/it]
+2026-06-27 11:42:34,281 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:35,881 [INFO]     Metrics:total_token usage: 653, prompt_token usage: 581
+2026-06-27 11:42:35,882 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:  99%|#########9| 374/376 [11:03<00:03,  1.56s/it]
+2026-06-27 11:42:35,882 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 11:42:37,329 [INFO]     Metrics:total_token usage: 646, prompt_token usage: 581
+2026-06-27 11:42:37,330 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1: 100%|#########9| 375/376 [11:04<00:01,  1.52s/it]
+2026-06-27 11:42:37,330 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1: 100%|##########| 376/376 [11:04<00:00,  1.77s/it]
+2026-06-27 11:42:37,330 [INFO] ... (more hidden) ...
+2026-06-27 11:42:37,340 [INFO] Formatting items for endpoint: https://seshat-db.com/api/wf/steels/: 100%|##########| 375/375 [00:00<00:00, 39245.07it/s]
+2026-06-27 11:42:37,340 [INFO] Total token usage: 273238
+2026-06-27 11:42:37,340 [INFO] Prompt token usage: 242854
+2026-06-27 11:42:37,344 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/27_06_2026/run_1_gpt-5.2-2025-12-11/wf/wf_steels_questions.csv
+2026-06-27 11:42:37,346 [INFO] Successfully completed question generation for wf/steels.

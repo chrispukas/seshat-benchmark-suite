@@ -14,8 +14,7 @@ def multichoice(question: str
             Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don't continue writing after giving an answer.
         
             Follow the output schema:
-            Reasoning: <insert reasoning>
-            Answer only: <selected option letter>
+            Answer: <selected option letter>
             
             Do not output anything after this line.
         """
@@ -31,3 +30,4 @@ def multichoice(question: str
             "content": question,
         },
     ]
+

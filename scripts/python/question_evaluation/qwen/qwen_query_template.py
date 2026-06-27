@@ -15,7 +15,8 @@ def setup_model(model_name: str):
         model_name=model_name,
         local = False,
         trust_remote_code=True,
-        pull_model=False
+        pull_model=False,
+        test_mode=True,
     )
 
 def query(model_name: str = "Qwen/Qwen-7B-Chat"):

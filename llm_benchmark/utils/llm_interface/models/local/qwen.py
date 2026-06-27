@@ -65,12 +65,15 @@ class QwenInterfaceModule(LLMInterfaceModule):
 
         return tokenizer, model
     
-    def query_model(self, 
-                    messages: List[str],
-                    temperature: float = 0.7,
-                    max_tokens: int = 300,
-                    seed: int = 42,
-                    ) -> str:
+    def query_model(
+            self, 
+            messages: List[str],
+            temperature: float = 0.7,
+            max_tokens: int = 300,
+            seed: int = 42,
+
+            endpoint: str = ""
+            ) -> str:
         print(f"\n\n\n")
         print(f"Querying Qwen model, message: {messages}")
         try:

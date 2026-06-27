@@ -24,7 +24,7 @@ def query(model_name: str = "Qwen/Qwen-7B-Chat", polities_to_evaluate: List[str]
     final_save_path: str = savepath_formatting(model_name, defaults.get("unhydrated_question_save_path")) if args.save_path is None else args.save_path
     os.makedirs(final_save_path, exist_ok=True)
 
-    question_instance: QwenInterfaceModule = QwenInterfaceModule(
+    model_instance: QwenInterfaceModule = QwenInterfaceModule(
         model_name=args.model_name,
         local = True,
         trust_remote_code=True,
@@ -33,7 +33,7 @@ def query(model_name: str = "Qwen/Qwen-7B-Chat", polities_to_evaluate: List[str]
 
     generate(
         save_path=final_save_path,
-        LLMInterfaceModule=question_instance,
+        LLMInterfaceModule=model_instance,
         seshat_cache_dir=args.cache_dir,
         polity_mapping=config.polity_mapping,
         polities_to_evaluate=polities_to_evaluate

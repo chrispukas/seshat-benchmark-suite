@@ -3,48 +3,48 @@ from typing import Any, Dict, List, Optional, Tuple
 def multichoice_question(
         content: Dict[str, Any]
         ) -> List[Dict[str, str]]:
-    ABS_PRES_INSTRUCTIONS: str = f"""
+    instructions: str = f"""
     Your task is to create a challenging yet well-defined historical exam question based on a variable definition from a historical dataset.
     Follow the rules below, and return ONLY the final question template, based on the examples provided. 
     
     1. Begin the question with a concise explanation of the variable's definition, strictly adhering to the provided description, if no description is provided, use the variable name as the basis for the question.
-    2. Ensure all of the following template markers are used, assume these will be replaced later:
+    2. Ensure all of the following template markers are used:
         - '<polity>' for polity names (e.g. 'The Papal States')
         - '<time-start>' and '<time-end>' for temporal scope
     3. The question should make abundantly clear what the format of the desired response is and that only that response should be given.
-    4. The output must be exactly one question.
+    4. The output must be exactly one question, and must end with a question mark (?).
 
     Structure your response with a clear question template.
     """
 
     # [(description, question), ...]
-    EXAMPLES: List[Dict[str, str]] = [
+    examples: List[Dict[str, str]] = [
         {
             "name": "atlatl",
             "description": "The absence or presence of atlatl as a military technology used in warfare.",
-            "question": "Consider the period from <time-start> to <time-end> in the context of '<polity>'. Was the atlatl, defined as a spear-throwing device used to increase the range and force of a projectile, absent or present as a 'military technology during this time?"
+            "question": "Consider the period from <time-start> to <time-end> in the context of '<polity>'. Was the atlatl, defined as a spear-throwing device used to increase the range and force of a projectile, absent or present as a 'military technology during this time? Strictly choose an option from the unordered set {A, B}. A = present, B = absent"
         },
         {
             "name": "ditch",
             "description": "The absence or presence of ditch as a military technology used in warfare.",
-            "question": "During the period from <time-start> to <time-end>, was the use of ditches as a military technology present or absent in the warfare strategies of '<polity>'?"
+            "question": "During the period from <time-start> to <time-end>, was the use of ditches as a military technology present or absent in the warfare strategies of '<polity>'? Strictly choose an option from the unordered set {A, B}. A = present, B = absent"
         },
         {
             "name": "chain",
             "description": "The absence or presence of chainmail as a military technology used in warfare. We’re using a broad definition of chainmail. Habergeon was the word used to describe the Chinese version and that would qualify as chainmail. Armor that is made of small metal rings linked together in a pattern to form a mesh.",
-            "question": "During the period from <time-start> to <time-end>, was chainmail, defined as armor made of small metal rings linked together in a pattern to form a mesh, present or absent as a military technology in the warfare practices of '<polity>'?"
+            "question": "During the period from <time-start> to <time-end>, was chainmail, defined as armor made of small metal rings linked together in a pattern to form a mesh, present or absent as a military technology in the warfare practices of '<polity>'? Strictly choose an option from the unordered set {A, B}. A = present, B = absent"
         }
     ]
 
 
-    examples: List[Dict[str, str]] = [item for example in EXAMPLES for item in fewshot_template(example)]
-    variable_name: str        = content.get("name",        "NOT PROVIDED")
-    variable_description: str = content.get("description", "NOT PROVIDED")
+    examples: List[Dict[str, str]] = [item for example in examples for item in _fewshot_template(example)]
+    variable_name: str        = content.get("name",        "Not provided")
+    variable_description: str = content.get("description", "Not provided")
 
     template: List[Dict[str, Any]] =  [
         {
             "role": "system",
-            "content": f"""You are are history professor writing challenging questions for PhD students.\n{ABS_PRES_INSTRUCTIONS}""",
+            "content": f"""You are are history professor writing challenging questions for PhD students.\n{instructions}""",
         },
     ]
 
@@ -56,7 +56,8 @@ def multichoice_question(
     return template
 
 
-def fewshot_template(example: Dict[str, str]) -> List[Dict[str, Any]]:
+
+def _fewshot_template(example: Dict[str, str]) -> List[Dict[str, Any]]:
     variable_name: str = example.get("name")
     description: str = example.get("description")
     question: str = example.get("question")
@@ -77,8 +78,7 @@ def fewshot_template(example: Dict[str, str]) -> List[Dict[str, Any]]:
 
 def range_question(content: Dict[str, Any]
                    ) -> List[Dict[str, str]]:
-    return None
-    RANGE_INSTRUCTIONS: str = """
+    RANGE_INSTRUCTIONS: str = f"""
     Your task is to create a challenging yet well-defined historical exam question based on a variable definition.
     Follow the rules below, and return ONLY the final question template. Do not include explanations, roles, metadata, or reasoning.
 
@@ -146,4 +146,3 @@ def range_question(content: Dict[str, Any]
             "content": POL_TERRITORY,
         },
     ]
-    pass

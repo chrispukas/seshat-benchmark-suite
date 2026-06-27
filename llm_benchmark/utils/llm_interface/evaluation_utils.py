@@ -55,7 +55,7 @@ def hydrate(dataset: Dataset,
         entry: pl.DataFrame = endpoint_module_df.row(entry_idx, named=True)
         
         try:
-            hydrated_row: str = \
+            (hydrated_row, successs) = \
                 _map_hydrated_to_real(
                 to_hydrate=row["output"], 
                 data=entry, 
