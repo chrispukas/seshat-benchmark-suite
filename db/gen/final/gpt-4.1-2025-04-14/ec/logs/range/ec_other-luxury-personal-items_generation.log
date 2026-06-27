@@ -1,0 +1,21 @@
+2026-06-27 22:32:31,069 [INFO] Starting question generation for ec/other-luxury-personal-items.
+2026-06-27 22:32:31,070 [INFO] 
+
+Generating questions for dataset at endpoint: other-luxury-personal-items
+2026-06-27 22:32:31,075 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   0%|          | 0/3 [00:00<?, ?it/s]
+2026-06-27 22:32:31,077 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 22:32:31,077 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 22:32:31,077 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 22:32:31,077 [WARNING] Message is empty, skipping.
+2026-06-27 22:32:31,077 [INFO] ('', None, [{}], {})
+2026-06-27 22:32:31,078 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 22:32:31,078 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 22:32:31,078 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 22:32:31,078 [WARNING] Message is empty, skipping.
+2026-06-27 22:32:31,078 [INFO] ('', None, [{}], {})
+2026-06-27 22:32:31,078 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1: 100%|##########| 3/3 [00:00<00:00, 1666.61it/s]
+2026-06-27 22:32:31,078 [INFO] Formatting items for endpoint: https://seshat-db.com/api/ec/other-luxury-personal-items/:   0%|          | 0/2 [00:00<?, ?it/s]
+2026-06-27 22:32:31,078 [INFO] Formatting items for endpoint: https://seshat-db.com/api/ec/other-luxury-personal-items/: 100%|##########| 2/2 [00:00<00:00, 48770.98it/s]
+2026-06-27 22:32:31,078 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/ec/other-luxury-personal-items/', 'model': 'gpt-4.1-2025-04-14', 'entry_idx': 0, 'output': '', 'reasoning': None, 'message': '[{}]', 'others': '{}'}
+2026-06-27 22:32:31,080 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/27_06_2026/run_7_gpt-4.1-2025-04-14/ec/range/ec_other-luxury-personal-items_questions.csv
+2026-06-27 22:32:31,080 [INFO] Successfully completed question generation for ec/other-luxury-personal-items.

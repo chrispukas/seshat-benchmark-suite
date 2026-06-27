@@ -21,6 +21,7 @@ class DatasetType(Enum):
     ECONOMIC_COMPLEXITY = 3
     SOCIAL_COMPLEXITY = 4
     WARFARE_FEATURES = 5
+    RELIGIOUS_FEATURES = 6,
 
 
 class Tags(Enum):

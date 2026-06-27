@@ -1,0 +1,56 @@
+2026-06-27 23:24:44,288 [INFO] Starting question generation for rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions.
+2026-06-27 23:24:44,289 [INFO] 
+
+Generating questions for dataset at endpoint: governmental-obligations-for-religious-groups-to-apply-for-official-recognitions
+2026-06-27 23:24:44,300 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   0%|          | 0/10 [00:00<?, ?it/s]
+2026-06-27 23:24:44,301 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,301 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,301 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,301 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,303 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,308 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,308 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,308 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,308 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,308 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,308 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,308 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,308 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,308 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,308 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,310 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,310 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,310 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,310 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,310 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,311 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,311 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,311 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,311 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,311 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,313 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,313 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,313 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,313 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,314 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,314 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,314 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,315 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,315 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,315 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,315 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,315 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,315 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,315 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,315 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,316 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,316 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,316 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,316 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,316 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,343 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1: 100%|##########| 10/10 [00:00<00:00, 229.12it/s]
+2026-06-27 23:24:44,361 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions/:   0%|          | 0/9 [00:00<?, ?it/s]
+2026-06-27 23:24:44,371 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions/: 100%|##########| 9/9 [00:00<00:00, 918.82it/s]
+2026-06-27 23:24:44,372 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions/', 'model': 'gpt-5.2-2025-12-11', 'entry_idx': 0, 'output': '', 'reasoning': None, 'message': '[{}]', 'others': '{}'}
+2026-06-27 23:24:44,373 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/27_06_2026/run_5_gpt-5.2-2025-12-11/rt/range/rt_governmental-obligations-for-religious-groups-to-apply-for-official-recognitions_questions.csv
+2026-06-27 23:24:44,374 [INFO] Successfully completed question generation for rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions.

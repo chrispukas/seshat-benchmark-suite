@@ -273,7 +273,7 @@ def seshat_setup(seshat_cache_dir: str,
         module_dir=seshat_module_dir,
         cache_dir=seshat_main_dir,
         override=force,
-        ignore_polities=["crisisdb/", "core/", "general/", "rt/"],
+        ignore_polities=["crisisdb/", "core/", "general/"],
         polity_mapping=polity_mapping
     )
     return seshat_ds

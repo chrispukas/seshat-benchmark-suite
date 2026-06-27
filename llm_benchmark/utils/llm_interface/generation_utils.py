@@ -21,6 +21,6 @@ def remap_question_row(row: Dict[str, Any], endpoint: str) -> Dict[str, Any]:
     remapped_row["year_from"] = row.get("year_from", "Not provided")
     remapped_row["year_to"] = row.get("year_to", "Not provided")
     remapped_row["description"] = re.sub(r'§REF§.*?§REF§', '', row.get("description", "Not provided"), flags=re.DOTALL)
-    remapped_row["data_unit"] = row.get("data_unit", "Not provided")
+    remapped_row["data_unit"] = row.get("unit", "Not provided")
 
     return remapped_row

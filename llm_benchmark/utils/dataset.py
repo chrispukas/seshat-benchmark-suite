@@ -1,10 +1,12 @@
 import os
+import json
 
 import numpy as np
 import polars as pl
 
 import llm_benchmark.utils.seshat_requests as seshat_requests
 import llm_benchmark.data.groupings as groupings
+import llm_benchmark.config as config
 
 from typing import Any, Dict, List, Optional, Tuple, Set
 from llm_benchmark.utils.enums import DatasetType
@@ -69,6 +71,7 @@ class Dataset():
             DatasetType.ECONOMIC_COMPLEXITY: EconomicComplexityModule,
             DatasetType.SOCIAL_COMPLEXITY: SocialComplexityModule,
             DatasetType.WARFARE_FEATURES: WarfareFeaturesModule,
+            DatasetType.RELIGIOUS_FEATURES: ReligiousFeaturesModule,
         }
 
         return module_mapping.get(dataset_type, DatasetModule)
@@ -162,7 +165,7 @@ class DatasetModule():
         try:
             self.dataset: pl.DataFrame = \
                 pl.DataFrame(results_collapsed,
-                             infer_schema_length=2000)
+                             infer_schema_length=None)
         except Exception as e:
             print("Error during dataset refresh:", e)
             print("Sample of results causing error:", results_collapsed[0:20])
@@ -199,6 +202,10 @@ class DatasetModule():
                      entry: Dict[str, Any],
                      remappable_keys: Optional[Dict[str, Tuple[Any, Any]]] = None,
                      ) -> Dict[str, Any]:
+        for key, value in entry.items():
+            if isinstance(value, (dict, list)):
+                entry[key] = json.dumps(value)
+
         if remappable_keys is None:
             remappable_keys: Dict[str, Tuple[Any, Any]] = {
                 "name": (None, ""),
@@ -336,7 +343,6 @@ class EconomicComplexityModule(DatasetModule):
             "name": (None, ""),
             "comment": (None, ""),
             "description": (None, ""),
-
         }
 
         return super().format_entry(entry, remappable_keys)
@@ -369,6 +375,7 @@ class SocialComplexityModule(DatasetModule):
                  override: bool = False,
                  polity_group: Optional[groupings.PolityGroup] = None
                  ) -> None:
+        self.unit = config.unit_mapping.get(seshat_identifier, "")
         super().__init__(parquet_path=parquet_path, 
                          dataset_type=DatasetType.SOCIAL_COMPLEXITY, 
                          seshat_identifier=seshat_identifier, 
@@ -390,6 +397,7 @@ class SocialComplexityModule(DatasetModule):
 
         entry["is_disputed"] = is_disputed
         entry["is_uncertain"] = is_uncertain
+        entry["unit"] = self.unit
         
         remappable_keys: Dict[str, Tuple[Any, Any]] = {
             "year_from": (None, int(-99999)),
@@ -408,6 +416,8 @@ class SocialComplexityModule(DatasetModule):
 
             "comment": (None, ""),
             "description": (None, ""),
+
+            "unit": (None, "")
 
         }
 
@@ -465,6 +475,57 @@ class WarfareFeaturesModule(DatasetModule):
 
         return super().format_entry(entry, remappable_keys)
     
+class ReligiousFeaturesModule(DatasetModule):
+    def __init__(self, 
+                 parquet_path: str,
+                 dataset_type: DatasetType = DatasetType.RELIGIOUS_FEATURES,
+                 seshat_identifier: Optional[str] = None,
+                 seshat_url: Optional[str] = None,
+                 override: bool = False,
+                 polity_group: Optional[groupings.PolityGroup] = None
+                 ) -> None:
+        super().__init__(parquet_path=parquet_path, 
+                         dataset_type=DatasetType.RELIGIOUS_FEATURES, 
+                         seshat_identifier=seshat_identifier, 
+                         seshat_url=seshat_url, 
+                         override=override,
+                         polity_group=polity_group)
+        
+        print("Initialized WarfareFeaturesModule.")
+        
 
+    def format_entry(self,
+                     entry: Dict[str, Any]
+                     ) -> Dict[str, Any]:
+        
+
+        name: str = entry.get("name", "")
+        entry["name"] = config.name_mapping.get(name, name)
+        is_disputed: Optional[int] = entry.get("is_disputed", -1)
+        is_uncertain: Optional[int] = entry.get("is_uncertain", -1)
+
+        entry["is_disputed"] = is_disputed
+        entry["is_uncertain"] = is_uncertain
+        
+        remappable_keys: Dict[str, Tuple[Any, Any]] = {
+            "year_from": (None, int(-99999)),
+            "year_to": (None, int(-99999)),
+            
+            "tag": (None, ""),
+            "coded_value": (None, ""),
+
+            "is_disputed": (None, -1),
+            "is_uncertain": (None, -1),
+
+            "name": (None, ""),
+
+            f"{name.lower()}": (None, ""),
+
+            "comment": (None, ""),
+            "description": (None, ""),
+
+        }
+
+        return super().format_entry(entry, remappable_keys)
 
 

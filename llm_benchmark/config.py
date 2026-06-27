@@ -18,7 +18,7 @@ EVALUATION_TEMPERATURE: int = 1
 BATCH_SIZE: int = 1
 SEED: int = 42
 
-CONCURRENT_THREADS: int = 20
+CONCURRENT_THREADS: int = 25
 
 ENABLE_API_CALLS: bool = True
 
@@ -105,6 +105,27 @@ params_to_question_mapping: Dict[str, str] = \
     }
 
 
+name_mapping: Dict[str, str] = \
+    {
+        "Gov_vio_freq_rel_grp": "Frequency_of_governmental_violence_against_religious_groups",
+        "Soc_vio_freq_rel_grp": "Frequency_of_societal_violence_against_religious_groups",
+        "Gov_dis_rel_grp_occ_fun": "Government_discrimination_against_religious_groups_taking_up_certain_occupations_or_functions",
+        "Gov_press_conv": "Governmental_pressure_to_convert",
+        "Gov_res_cir_rel_lit": "Government_restrictions_on_circulation_of_religious_literatures",
+        "Gov_res_cons_rel_buil": "Government_restrictions_on_construction_of_religious_buildings",
+        "Gov_res_conv": "Government_restrictions_on_conversions",
+        "Gov_res_prop_own_for_rel_grp": "Government_restrictions_on_property_ownership_for_adherents_of_any_religious_groups",
+        "Gov_res_pub_pros": "Government_restrictions_on_public_proselytizings",
+        "Gov_res_pub_wor": "Government_restrictions_on_public_worships",
+        "Gov_res_rel_edu": "Government_restrictions_on_religious_education",
+        "Gov_obl_rel_grp_ofc_reco": "Government_obligations_for_religious_groups_to_apply_for_official_recognitions",
+        "Soc_dis_rel_grp_occ_fun": "Societal_discrimination_against_religious_groups_taking_up_certain_occupations_or_functions",
+        "Gov_press_conv_for_aga": "Societal_pressure_to_convert_or_against_conversions",
+        "Sync_rel_pra_ind_beli": "Syncretism_of_religious_practices_at_the_level_of_individual_believers",
+        "Tax_rel_adh_act_ins": "Taxes_based_on_religious_adherence_or_on_religious_activities_and_institutions",
+        "Theo_sync_dif_rel": "Theological_syncretism_of_different_religions",
+    }
+
 unit_mapping: Dict[str, str] = \
     {
         # Social Datasets
@@ -131,6 +152,7 @@ polity_mapping: Dict[str, str] = \
     "sc/research-assistants": DatasetType.SOCIAL_COMPLEXITY,
     "sc/polity-territories": DatasetType.SOCIAL_COMPLEXITY,
     "sc/polity-populations": DatasetType.SOCIAL_COMPLEXITY,
+    "sc/population-of-the-largest-settlements": DatasetType.SOCIAL_COMPLEXITY,
     "sc/settlement-hierarchies": DatasetType.SOCIAL_COMPLEXITY,
     "sc/administrative-levels": DatasetType.SOCIAL_COMPLEXITY,
     "sc/religious-levels": DatasetType.SOCIAL_COMPLEXITY,
@@ -271,4 +293,40 @@ polity_mapping: Dict[str, str] = \
     "ec/luxury-statuary": DatasetType.ECONOMIC_COMPLEXITY,
     "ec/luxury-food": DatasetType.ECONOMIC_COMPLEXITY,
     "ec/other-luxury-personal-items": DatasetType.ECONOMIC_COMPLEXITY,
+
+
+    # Religious datasets
+    "rt/elites-religions": DatasetType.RELIGIOUS_FEATURES,
+    "rt/frequency-of-governmental-violence-against-religious-groups": DatasetType.RELIGIOUS_FEATURES,
+    "rt/frequency-of-societal-violence-against-religious-groups": DatasetType.RELIGIOUS_FEATURES,
+    "rt/government-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions": DatasetType.RELIGIOUS_FEATURES,
+    "rt/government-pressure-to-converts": DatasetType.RELIGIOUS_FEATURES,
+    "rt/government-restrictions-on-circulation-of-religious-literatures": DatasetType.RELIGIOUS_FEATURES,
+    "rt/government-restrictions-on-construction-of-religious-buildings": DatasetType.RELIGIOUS_FEATURES,
+    "rt/government-restrictions-on-conversions": DatasetType.RELIGIOUS_FEATURES,
+    "rt/government-restrictions-on-property-ownership-for-adherents-of-any-religious-groups": DatasetType.RELIGIOUS_FEATURES,
+    "rt/government-restrictions-on-public-proselytizings": DatasetType.RELIGIOUS_FEATURES,
+    "rt/government-restrictions-on-public-worships": DatasetType.RELIGIOUS_FEATURES,
+    "rt/government-restrictions-on-religious-educations": DatasetType.RELIGIOUS_FEATURES,
+    "rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions": DatasetType.RELIGIOUS_FEATURES,
+    "rt/human-sacrifices": DatasetType.RELIGIOUS_FEATURES,
+    "rt/moralizing-enforcement-in-afterlife": DatasetType.RELIGIOUS_FEATURES,
+    "rt/moralizing-enforcement-in-this-life": DatasetType.RELIGIOUS_FEATURES,
+    "rt/moralizing-enforcement-is-agentic": DatasetType.RELIGIOUS_FEATURES,
+    "rt/moralizing-enforcement-is-broad": DatasetType.RELIGIOUS_FEATURES,
+    "rt/moralizing-enforcement-is-certain": DatasetType.RELIGIOUS_FEATURES,
+    "rt/moralizing-enforcement-is-targeted": DatasetType.RELIGIOUS_FEATURES,
+    "rt/moralizing-enforcement-of-rulers": DatasetType.RELIGIOUS_FEATURES,
+    "rt/moralizing-religion-adopted-by-commoners": DatasetType.RELIGIOUS_FEATURES,
+    "rt/moralizing-supernatural-concern-is-primary": DatasetType.RELIGIOUS_FEATURES,
+    "rt/moralizing-religion-adopted-by-elites": DatasetType.RELIGIOUS_FEATURES,
+    "rt/moralizing-supernatural-punishment-and-reward": DatasetType.RELIGIOUS_FEATURES,
+    "rt/official-religions": DatasetType.RELIGIOUS_FEATURES,
+    "rt/religious-fragmentations": DatasetType.RELIGIOUS_FEATURES,
+    "rt/societal-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions": DatasetType.RELIGIOUS_FEATURES,
+    "rt/societal-pressure-to-convert-or-against-conversions": DatasetType.RELIGIOUS_FEATURES,
+    "rt/syncretism-of-religious-practices-at-the-level-of-individual-believers": DatasetType.RELIGIOUS_FEATURES,
+    "rt/taxes-based-on-religious-adherence-or-on-religious-activities-and-institutions": DatasetType.RELIGIOUS_FEATURES,
+    "rt/theological-syncretism-of-different-religions": DatasetType.RELIGIOUS_FEATURES,
+    "rt/widespread-religions": DatasetType.RELIGIOUS_FEATURES,
 }

@@ -1,0 +1,51 @@
+2026-06-27 23:24:44,289 [INFO] Starting question generation for rt/government-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions.
+2026-06-27 23:24:44,289 [INFO] 
+
+Generating questions for dataset at endpoint: government-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions
+2026-06-27 23:24:44,302 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   0%|          | 0/9 [00:00<?, ?it/s]
+2026-06-27 23:24:44,305 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,305 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,306 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,306 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,306 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,306 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,306 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,307 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,307 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,308 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,308 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,308 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,308 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,308 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,308 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,309 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,309 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,309 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,309 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,309 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,310 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,310 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,310 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,310 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,310 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,311 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,311 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,311 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,311 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,311 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,313 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,313 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,313 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,313 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,313 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,313 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,313 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,313 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,313 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,314 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,328 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1: 100%|##########| 9/9 [00:00<00:00, 349.42it/s]
+2026-06-27 23:24:44,356 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/government-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions/:   0%|          | 0/8 [00:00<?, ?it/s]
+2026-06-27 23:24:44,364 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/government-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions/: 100%|##########| 8/8 [00:00<00:00, 993.56it/s]
+2026-06-27 23:24:44,364 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/rt/government-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions/', 'model': 'gpt-5.2-2025-12-11', 'entry_idx': 0, 'output': '', 'reasoning': None, 'message': '[{}]', 'others': '{}'}
+2026-06-27 23:24:44,366 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/27_06_2026/run_5_gpt-5.2-2025-12-11/rt/range/rt_government-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions_questions.csv
+2026-06-27 23:24:44,367 [INFO] Successfully completed question generation for rt/government-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions.

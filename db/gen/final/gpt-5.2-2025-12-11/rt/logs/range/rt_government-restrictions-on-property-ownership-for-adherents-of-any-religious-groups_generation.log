@@ -1,0 +1,56 @@
+2026-06-27 23:24:44,288 [INFO] Starting question generation for rt/government-restrictions-on-property-ownership-for-adherents-of-any-religious-groups.
+2026-06-27 23:24:44,288 [INFO] 
+
+Generating questions for dataset at endpoint: government-restrictions-on-property-ownership-for-adherents-of-any-religious-groups
+2026-06-27 23:24:44,297 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   0%|          | 0/10 [00:00<?, ?it/s]
+2026-06-27 23:24:44,298 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,300 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,300 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,300 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,300 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,301 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,301 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,301 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,301 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,301 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,303 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,304 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,304 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,304 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,304 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,305 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,307 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,307 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,307 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,307 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,309 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,309 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,309 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,309 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,309 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,310 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,310 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,310 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,310 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,310 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,312 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,312 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,313 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,313 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,313 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,313 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,313 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,313 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,313 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,315 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,316 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,316 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,316 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,316 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,316 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,330 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1: 100%|##########| 10/10 [00:00<00:00, 312.76it/s]
+2026-06-27 23:24:44,357 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/government-restrictions-on-property-ownership-for-adherents-of-any-religious-groups/:   0%|          | 0/9 [00:00<?, ?it/s]
+2026-06-27 23:24:44,366 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/government-restrictions-on-property-ownership-for-adherents-of-any-religious-groups/: 100%|##########| 9/9 [00:00<00:00, 992.50it/s]
+2026-06-27 23:24:44,366 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/rt/government-restrictions-on-property-ownership-for-adherents-of-any-religious-groups/', 'model': 'gpt-5.2-2025-12-11', 'entry_idx': 0, 'output': '', 'reasoning': None, 'message': '[{}]', 'others': '{}'}
+2026-06-27 23:24:44,368 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/27_06_2026/run_5_gpt-5.2-2025-12-11/rt/range/rt_government-restrictions-on-property-ownership-for-adherents-of-any-religious-groups_questions.csv
+2026-06-27 23:24:44,368 [INFO] Successfully completed question generation for rt/government-restrictions-on-property-ownership-for-adherents-of-any-religious-groups.

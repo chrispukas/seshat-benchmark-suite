@@ -1,0 +1,51 @@
+2026-06-27 23:24:44,289 [INFO] Starting question generation for rt/government-restrictions-on-religious-educations.
+2026-06-27 23:24:44,289 [INFO] 
+
+Generating questions for dataset at endpoint: government-restrictions-on-religious-educations
+2026-06-27 23:24:44,302 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   0%|          | 0/9 [00:00<?, ?it/s]
+2026-06-27 23:24:44,303 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,303 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,303 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,303 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,303 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,303 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,303 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,303 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,303 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,303 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,304 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,304 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,304 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,304 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,304 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,304 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,304 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,304 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,304 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,304 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,310 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,310 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,310 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,310 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,310 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,312 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,312 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,313 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,313 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,315 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,316 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,316 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,316 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,316 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,316 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,317 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,317 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,317 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,317 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,317 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,331 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1: 100%|##########| 9/9 [00:00<00:00, 312.47it/s]
+2026-06-27 23:24:44,358 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/government-restrictions-on-religious-educations/:   0%|          | 0/8 [00:00<?, ?it/s]
+2026-06-27 23:24:44,367 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/government-restrictions-on-religious-educations/: 100%|##########| 8/8 [00:00<00:00, 853.41it/s]
+2026-06-27 23:24:44,368 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/rt/government-restrictions-on-religious-educations/', 'model': 'gpt-5.2-2025-12-11', 'entry_idx': 0, 'output': '', 'reasoning': None, 'message': '[{}]', 'others': '{}'}
+2026-06-27 23:24:44,370 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/27_06_2026/run_5_gpt-5.2-2025-12-11/rt/range/rt_government-restrictions-on-religious-educations_questions.csv
+2026-06-27 23:24:44,370 [INFO] Successfully completed question generation for rt/government-restrictions-on-religious-educations.

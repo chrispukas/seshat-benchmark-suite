@@ -1,0 +1,56 @@
+2026-06-27 22:30:01,231 [INFO] Starting question generation for rt/frequency-of-governmental-violence-against-religious-groups.
+2026-06-27 22:30:01,231 [INFO] 
+
+Generating questions for dataset at endpoint: frequency-of-governmental-violence-against-religious-groups
+2026-06-27 22:30:01,232 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1:   0%|          | 0/10 [00:00<?, ?it/s]
+2026-06-27 22:30:01,232 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 22:30:01,232 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 22:30:01,233 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 22:30:01,233 [WARNING] Message is empty, skipping.
+2026-06-27 22:30:01,233 [INFO] ('', None, [{}], {})
+2026-06-27 22:30:01,233 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 22:30:01,234 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 22:30:01,234 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 22:30:01,234 [WARNING] Message is empty, skipping.
+2026-06-27 22:30:01,234 [INFO] ('', None, [{}], {})
+2026-06-27 22:30:01,234 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 22:30:01,235 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 22:30:01,235 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 22:30:01,235 [WARNING] Message is empty, skipping.
+2026-06-27 22:30:01,236 [INFO] ('', None, [{}], {})
+2026-06-27 22:30:01,236 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 22:30:01,236 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 22:30:01,236 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 22:30:01,237 [WARNING] Message is empty, skipping.
+2026-06-27 22:30:01,237 [INFO] ('', None, [{}], {})
+2026-06-27 22:30:01,238 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 22:30:01,239 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 22:30:01,239 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 22:30:01,239 [WARNING] Message is empty, skipping.
+2026-06-27 22:30:01,239 [INFO] ('', None, [{}], {})
+2026-06-27 22:30:01,239 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 22:30:01,239 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 22:30:01,240 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 22:30:01,240 [WARNING] Message is empty, skipping.
+2026-06-27 22:30:01,240 [INFO] ('', None, [{}], {})
+2026-06-27 22:30:01,240 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 22:30:01,240 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 22:30:01,242 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 22:30:01,242 [WARNING] Message is empty, skipping.
+2026-06-27 22:30:01,242 [INFO] ('', None, [{}], {})
+2026-06-27 22:30:01,242 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 22:30:01,242 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 22:30:01,242 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 22:30:01,242 [WARNING] Message is empty, skipping.
+2026-06-27 22:30:01,242 [INFO] ('', None, [{}], {})
+2026-06-27 22:30:01,244 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 22:30:01,244 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 22:30:01,244 [INFO]     Querying model gpt-4.1-2025-04-14 with 1 message(s), temperature: 0.2
+2026-06-27 22:30:01,245 [WARNING] Message is empty, skipping.
+2026-06-27 22:30:01,245 [INFO] ('', None, [{}], {})
+2026-06-27 22:30:01,256 [INFO] Processing batch queries for gpt-4.1-2025-04-14, batch size: 1: 100%|##########| 10/10 [00:00<00:00, 417.78it/s]
+2026-06-27 22:30:01,264 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/frequency-of-governmental-violence-against-religious-groups/:   0%|          | 0/9 [00:00<?, ?it/s]
+2026-06-27 22:30:01,271 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/frequency-of-governmental-violence-against-religious-groups/: 100%|##########| 9/9 [00:00<00:00, 1370.29it/s]
+2026-06-27 22:30:01,271 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/rt/frequency-of-governmental-violence-against-religious-groups/', 'model': 'gpt-4.1-2025-04-14', 'entry_idx': 0, 'output': '', 'reasoning': None, 'message': '[{}]', 'others': '{}'}
+2026-06-27 22:30:01,274 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/27_06_2026/run_7_gpt-4.1-2025-04-14/rt/range/rt_frequency-of-governmental-violence-against-religious-groups_questions.csv
+2026-06-27 22:30:01,274 [INFO] Successfully completed question generation for rt/frequency-of-governmental-violence-against-religious-groups.

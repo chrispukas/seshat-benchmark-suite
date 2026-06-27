@@ -1,0 +1,56 @@
+2026-06-27 23:24:44,288 [INFO] Starting question generation for rt/government-pressure-to-converts.
+2026-06-27 23:24:44,289 [INFO] 
+
+Generating questions for dataset at endpoint: government-pressure-to-converts
+2026-06-27 23:24:44,300 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1:   0%|          | 0/10 [00:00<?, ?it/s]
+2026-06-27 23:24:44,301 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,301 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,301 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,301 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,302 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,303 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,303 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,303 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,303 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,303 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,304 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,304 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,304 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,304 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,304 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,304 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,304 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,305 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,305 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,307 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,307 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,307 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,307 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,307 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,307 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,309 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,309 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,310 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,310 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,310 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,313 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,313 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,313 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,313 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,314 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,315 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,315 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,315 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,315 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,315 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,318 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-27 23:24:44,318 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-27 23:24:44,318 [INFO]     Querying model gpt-5.2-2025-12-11 with 1 message(s), temperature: 0.2
+2026-06-27 23:24:44,318 [WARNING] Message is empty, skipping.
+2026-06-27 23:24:44,318 [INFO] ('', None, [{}], {})
+2026-06-27 23:24:44,332 [INFO] Processing batch queries for gpt-5.2-2025-12-11, batch size: 1: 100%|##########| 10/10 [00:00<00:00, 318.93it/s]
+2026-06-27 23:24:44,359 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/government-pressure-to-converts/:   0%|          | 0/9 [00:00<?, ?it/s]
+2026-06-27 23:24:44,368 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/government-pressure-to-converts/: 100%|##########| 9/9 [00:00<00:00, 934.33it/s]
+2026-06-27 23:24:44,369 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/rt/government-pressure-to-converts/', 'model': 'gpt-5.2-2025-12-11', 'entry_idx': 0, 'output': '', 'reasoning': None, 'message': '[{}]', 'others': '{}'}
+2026-06-27 23:24:44,370 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/27_06_2026/run_5_gpt-5.2-2025-12-11/rt/range/rt_government-pressure-to-converts_questions.csv
+2026-06-27 23:24:44,371 [INFO] Successfully completed question generation for rt/government-pressure-to-converts.
