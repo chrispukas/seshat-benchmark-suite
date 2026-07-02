@@ -1,0 +1,47 @@
+2026-06-28 23:23:09,145 [INFO] Starting question evaluation for sc/drinking-water-supplies.
+2026-06-28 23:23:09,197 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-28 23:23:09,255 [INFO]     Querying model gpt-3.5-turbo-0125 with 399 message(s), temperature: 1
+2026-06-28 23:25:14,493 [INFO] Current time: 120, polling batch id: batch_6a419ed22ac081908e76f8f6fc343502
+2026-06-28 23:25:15,050 [WARNING] Failed to generate batch for endpoint: .
+2026-06-28 23:25:15,050 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048: 100%|##########| 1/1 [02:05<00:00, 125.85s/it]
+2026-06-28 23:25:15,050 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048: 100%|##########| 1/1 [02:05<00:00, 125.85s/it]
+2026-06-28 23:25:15,051 [INFO] ... (more hidden) ...
+2026-06-28 23:25:15,051 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/drinking-water-supplies/: 0it [00:00, ?it/s]
+2026-06-28 23:25:15,051 [ERROR] Execution failed: cannot access local variable 'others' where it is not associated with a value
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 163, in _single
+    llm_instance.respond_to_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule=dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 84, in respond_to_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    
+    
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 150, in _query_generic
+    question_outputs: List[Dict[str, Any]] = self._batch_format_outputs\
+                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            itms=output_buffer,
+            ^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            logger=logger
+            ^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 266, in _batch_format_outputs
+    if isinstance(others, dict) and "usage.cached_tokens" in others:
+                  ^^^^^^
+UnboundLocalError: cannot access local variable 'others' where it is not associated with a value

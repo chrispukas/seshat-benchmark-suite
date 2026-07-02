@@ -1,0 +1,28 @@
+2026-06-30 11:25:55,499 [INFO] Starting question evaluation for sc/other-special-purpose-sites.
+2026-06-30 11:25:55,500 [INFO] ... (more hidden) ...
+2026-06-30 11:25:55,501 [INFO]     Querying model gpt-5.5-2026-04-23 with 32 message(s), temperature: 1
+2026-06-30 11:27:56,655 [INFO] Current time: 120, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:29:56,830 [INFO] Current time: 240, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:31:56,994 [INFO] Current time: 360, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:33:57,185 [INFO] Current time: 480, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:35:57,349 [INFO] Current time: 600, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:37:57,525 [INFO] Current time: 720, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:39:57,722 [INFO] Current time: 840, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:41:57,875 [INFO] Current time: 960, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:43:58,054 [INFO] Current time: 1080, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:45:58,222 [INFO] Current time: 1200, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:47:58,413 [INFO] Current time: 1320, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:49:58,588 [INFO] Current time: 1440, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:51:58,760 [INFO] Current time: 1560, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:53:58,946 [INFO] Current time: 1680, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:55:59,128 [INFO] Current time: 1800, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:57:59,299 [INFO] Current time: 1920, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 11:59:59,499 [INFO] Current time: 2040, polling batch id: batch_6a4399b425d08190acaa5bf5ad73d009
+2026-06-30 12:00:00,116 [INFO] Processing batch queries for gpt-5.5-2026-04-23, batch size: 2048: 100%|##########| 1/1 [34:04<00:00, 2044.62s/it]
+2026-06-30 12:00:00,116 [INFO] Processing batch queries for gpt-5.5-2026-04-23, batch size: 2048: 100%|##########| 1/1 [34:04<00:00, 2044.62s/it]
+2026-06-30 12:00:00,117 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/other-special-purpose-sites/:   0%|          | 0/32 [00:00<?, ?it/s]
+2026-06-30 12:00:00,118 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/other-special-purpose-sites/: 100%|##########| 32/32 [00:00<00:00, 32993.54it/s]
+2026-06-30 12:00:00,118 [INFO] Total token usage: 21029
+2026-06-30 12:00:00,118 [INFO] Prompt token usage: 7675
+2026-06-30 12:00:00,118 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/sc/other-special-purpose-sites/', 'model': 'gpt-5.5-2026-04-23', 'entry_idx': 0, 'output': '', 'reasoning': '', 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "During the period from 300 CE to 1500 CE, was there evidence for the presence or absence of \'Other Special Purpose Site\'\\u2014defined as any site within \'Hohokam Culture\' constructed or designated for a specific, non-generalized function not covered by other site categories? Strictly choose the correct label from the unordered set: {A, C, B}. A = present, C = unknown, B = absent"}]', 'others': '{"usage.total_tokens": 757, "usage.prompt_tokens": 245, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true, "jsonl.output": "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat/jsonl/outputs/gpt-5.5-2026-04-23/30_06_2026_11_25_55_gpt-5.5-2026-04-23_https:__seshat-db.com_api_sc_other-special-purpose-sites__73.jsonl"}'}
+2026-06-30 12:00:00,124 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/30_06_2026/run_2_gpt-5.5-2026-04-23/sc/multiple_choice/sc_other-special-purpose-sites_answers.csv

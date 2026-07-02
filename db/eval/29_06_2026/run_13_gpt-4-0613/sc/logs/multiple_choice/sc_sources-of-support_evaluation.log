@@ -1,0 +1,50 @@
+2026-06-29 14:50:36,567 [INFO] Starting question evaluation for sc/sources-of-support.
+2026-06-29 14:50:36,568 [INFO]     Querying model gpt-4-0613 with 109 message(s), temperature: 1
+2026-06-29 14:51:07,676 [INFO] Current time: 30, polling batch id: batch_6a42782d53d08190879e61c99a9b9140
+2026-06-29 14:51:37,854 [INFO] Current time: 60, polling batch id: batch_6a42782d53d08190879e61c99a9b9140
+2026-06-29 14:52:08,063 [INFO] Current time: 90, polling batch id: batch_6a42782d53d08190879e61c99a9b9140
+2026-06-29 14:52:38,258 [INFO] Current time: 120, polling batch id: batch_6a42782d53d08190879e61c99a9b9140
+2026-06-29 14:53:08,474 [INFO] Current time: 150, polling batch id: batch_6a42782d53d08190879e61c99a9b9140
+2026-06-29 14:53:38,672 [INFO] Current time: 180, polling batch id: batch_6a42782d53d08190879e61c99a9b9140
+2026-06-29 14:53:39,895 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [03:03<00:00, 183.33s/it]
+2026-06-29 14:53:39,895 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [03:03<00:00, 183.33s/it]
+2026-06-29 14:53:39,896 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/sources-of-support/:   0%|          | 0/109 [00:00<?, ?it/s]
+2026-06-29 14:53:39,896 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/sources-of-support/:  17%|#6        | 18/109 [00:00<00:00, 43265.03it/s]
+2026-06-29 14:53:39,896 [ERROR] Execution failed: not enough values to unpack (expected 4, got 0)
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 163, in _single
+    llm_instance.respond_to_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule=dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 84, in respond_to_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 149, in _query_generic
+    question_outputs: List[Dict[str, Any]] = self._batch_format_outputs\
+                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            itms=output_buffer,
+            ^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            logger=logger
+            ^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 238, in _batch_format_outputs
+    for idx, (itm, reasoning, message, others) in tqdm\
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 4, got 0)

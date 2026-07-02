@@ -1,0 +1,73 @@
+Processing: gpt-3.5-turbo-0125
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/scripts/python/question_evaluation/chatgpt/chatgpt_query_template.py", line 78, in <module>
+    query()
+    ~~~~~^^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/scripts/python/question_evaluation/chatgpt/chatgpt_query_template.py", line 29, in query
+    raise ValueError("OpenAI model name is not defined!")
+ValueError: OpenAI model name is not defined!
+Processing: gpt-3.5-turbo-1106
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/scripts/python/question_evaluation/chatgpt/chatgpt_query_template.py", line 78, in <module>
+    query()
+    ~~~~~^^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/scripts/python/question_evaluation/chatgpt/chatgpt_query_template.py", line 29, in query
+    raise ValueError("OpenAI model name is not defined!")
+ValueError: OpenAI model name is not defined!
+Processing: gpt-4-0613
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/scripts/python/question_evaluation/chatgpt/chatgpt_query_template.py", line 78, in <module>
+    query()
+    ~~~~~^^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/scripts/python/question_evaluation/chatgpt/chatgpt_query_template.py", line 29, in query
+    raise ValueError("OpenAI model name is not defined!")
+ValueError: OpenAI model name is not defined!
+Processing: gpt-5-2025-08-07
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/scripts/python/question_evaluation/chatgpt/chatgpt_query_template.py", line 5, in <module>
+    import llm_benchmark.config as config
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/config.py", line 1, in <module>
+    from llm_benchmark.utils.utility import tag_remap, quality_remap, question_types_remap
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/utility.py", line 5, in <module>
+    import torch
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/torch/__init__.py", line 2838, in <module>
+    from torch import _meta_registrations
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/torch/_meta_registrations.py", line 12, in <module>
+    from torch._decomp import (
+    ...<4 lines>...
+    )
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/torch/_decomp/__init__.py", line 287, in <module>
+    import torch._decomp.decompositions
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/torch/_decomp/decompositions.py", line 17, in <module>
+    import torch._prims as prims
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/torch/_prims/__init__.py", line 693, in <module>
+    conj_physical = _make_prim(
+        schema="conj_physical(Tensor self) -> Tensor",
+    ...<3 lines>...
+        return_type=RETURN_TYPE.NEW,
+    )
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/torch/_prims/__init__.py", line 334, in _make_prim
+    prim_def = torch.library.custom_op(
+        "prims::" + name,
+    ...<2 lines>...
+        schema=schema,
+    )
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/torch/_library/custom_ops.py", line 204, in custom_op
+    return inner(fn)
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/torch/_library/custom_ops.py", line 185, in inner
+    result = CustomOpDef(namespace, opname, schema_str, fn, tags)
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/torch/_library/custom_ops.py", line 243, in __init__
+    self._register_to_dispatcher(self._tags)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/torch/_library/custom_ops.py", line 668, in _register_to_dispatcher
+    autograd_impl = autograd.make_autograd_impl(self._opoverload, self)
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/torch/_library/autograd.py", line 90, in make_autograd_impl
+    Generated = type(
+        name,
+    ...<4 lines>...
+        },
+    )
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/torch/autograd/function.py", line 339, in __init__
+    def __init__(cls, name, bases, attrs):
+    
+KeyboardInterrupt

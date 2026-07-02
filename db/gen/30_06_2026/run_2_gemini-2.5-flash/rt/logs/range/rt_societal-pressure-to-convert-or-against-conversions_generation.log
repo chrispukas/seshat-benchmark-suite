@@ -1,0 +1,48 @@
+2026-06-30 08:53:34,208 [INFO] Starting question generation for rt/societal-pressure-to-convert-or-against-conversions.
+2026-06-30 08:53:34,208 [INFO] 
+
+Generating questions for dataset at endpoint: societal-pressure-to-convert-or-against-conversions
+2026-06-30 08:53:34,216 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-30 08:53:34,216 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,217 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,217 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,217 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,217 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,217 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,217 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,218 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,218 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,218 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,218 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,218 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,218 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,218 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,218 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,219 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,219 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,219 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,219 [INFO]     Querying model gemini-2.5-flash with 9 message(s), temperature: 0.2
+2026-06-30 08:53:34,219 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,220 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,220 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,220 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,221 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,221 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,222 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,222 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,223 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,223 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,223 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,223 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,223 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,224 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,224 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,224 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,225 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,225 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,232 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048: 100%|##########| 1/1 [00:00<00:00, 64.94it/s]
+2026-06-30 08:53:34,243 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/societal-pressure-to-convert-or-against-conversions/:   0%|          | 0/9 [00:00<?, ?it/s]
+2026-06-30 08:53:34,245 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/societal-pressure-to-convert-or-against-conversions/: 100%|##########| 9/9 [00:00<00:00, 11796.48it/s]
+2026-06-30 08:53:34,248 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/rt/societal-pressure-to-convert-or-against-conversions/', 'model': 'gemini-2.5-flash', 'entry_idx': 0, 'output': '', 'reasoning': '', 'message': '[{}]', 'others': '{"error": "Message is empty"}'}
+2026-06-30 08:53:34,249 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/30_06_2026/run_2_gemini-2.5-flash/rt/range/rt_societal-pressure-to-convert-or-against-conversions_questions.csv
+2026-06-30 08:53:34,249 [INFO] Successfully completed question generation for rt/societal-pressure-to-convert-or-against-conversions.

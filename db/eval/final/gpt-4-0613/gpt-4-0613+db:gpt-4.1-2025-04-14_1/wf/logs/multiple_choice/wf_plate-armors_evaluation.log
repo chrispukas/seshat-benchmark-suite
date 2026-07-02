@@ -1,0 +1,35 @@
+2026-06-30 01:20:22,111 [INFO] Starting question evaluation for wf/plate-armors.
+2026-06-30 01:20:22,111 [INFO] ... (more hidden) ...
+2026-06-30 01:20:22,115 [INFO]     Querying model gpt-4-0613 with 358 message(s), temperature: 1
+2026-06-30 01:22:23,024 [INFO] Current time: 120, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:24:23,229 [INFO] Current time: 240, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:26:23,403 [INFO] Current time: 360, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:28:23,602 [INFO] Current time: 480, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:30:23,903 [INFO] Current time: 600, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:32:24,075 [INFO] Current time: 720, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:34:24,269 [INFO] Current time: 840, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:36:24,440 [INFO] Current time: 960, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:38:24,642 [INFO] Current time: 1080, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:40:24,822 [INFO] Current time: 1200, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:42:25,020 [INFO] Current time: 1320, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:44:25,224 [INFO] Current time: 1440, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:46:25,412 [INFO] Current time: 1560, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:48:25,630 [INFO] Current time: 1680, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:50:25,844 [INFO] Current time: 1800, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:52:26,063 [INFO] Current time: 1920, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:54:26,315 [INFO] Current time: 2040, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:56:26,499 [INFO] Current time: 2160, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 01:58:26,715 [INFO] Current time: 2280, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 02:00:26,926 [INFO] Current time: 2400, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 02:02:27,168 [INFO] Current time: 2520, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 02:04:27,377 [INFO] Current time: 2640, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 02:06:27,605 [INFO] Current time: 2760, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 02:08:27,827 [INFO] Current time: 2880, polling batch id: batch_6a430bc6ae248190b6a9bed003eb5cb1
+2026-06-30 02:08:31,984 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [48:09<00:00, 2889.87s/it]
+2026-06-30 02:08:31,984 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [48:09<00:00, 2889.87s/it]
+2026-06-30 02:08:31,985 [INFO] Formatting items for endpoint: https://seshat-db.com/api/wf/plate-armors/:   0%|          | 0/358 [00:00<?, ?it/s]
+2026-06-30 02:08:31,991 [INFO] Formatting items for endpoint: https://seshat-db.com/api/wf/plate-armors/: 100%|##########| 358/358 [00:00<00:00, 65739.72it/s]
+2026-06-30 02:08:31,991 [INFO] Total token usage: 112623
+2026-06-30 02:08:31,991 [INFO] Prompt token usage: 86941
+2026-06-30 02:08:31,991 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/wf/plate-armors/', 'model': 'gpt-4-0613', 'entry_idx': 0, 'output': 'REASONING: The Durrani Empire, also known as the Afghan Empire, existed in the mid to late 18th century and early 19th century. This period marked the decline of traditional forms of protective armor such as plate armor, largely due to the increased prevalence and power of firearms. Therefore, plate armor was not typically used in warfare practices of this time and place.\n\nANSWER: B', 'reasoning': '', 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "During the period from 1747 CE to 1826 CE, was plate armor, defined as armor worn by cavalry, present or absent as a military technology in the warfare practices of \'Durrani Empire\'? Strictly choose the correct label from the unordered set: {C, A, B}. C = unknown, A = present, B = absent"}]', 'others': '{"usage.total_tokens": 315, "usage.prompt_tokens": 233, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true, "jsonl.output": "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat/jsonl/outputs/gpt-4-0613/30_06_2026_01_20_22_gpt-4-0613_https:__seshat-db.com_api_wf_plate-armors__323.jsonl"}'}
+2026-06-30 02:08:31,999 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/29_06_2026/run_16_gpt-4-0613/wf/multiple_choice/wf_plate-armors_answers.csv

@@ -1,0 +1,124 @@
+2026-07-01 01:03:56,449 [INFO] Starting question evaluation for sc/other-utilitarian-public-buildings.
+2026-07-01 01:03:56,449 [INFO] ... (more hidden) ...
+2026-07-01 01:03:56,449 [INFO]     Querying model gpt-3.5-turbo-1106 with 1 message(s), temperature: 1
+2026-07-01 01:03:58,744 [INFO]     Metrics: total_token usage: 286, prompt_token usage: 240cached_token usage: -1
+2026-07-01 01:03:58,744 [INFO] ('REASONING: During this time period, Anurādhapura IV, a city in Sri Lanka, had a well-developed system of hospitals and medical care, making the presence of hospitals likely.\n\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "During the period from 614 CE to 1017 CE, did 'Anurādhapura IV' have hospitals, defined as public institutions providing medical care (including facilities such as maternity homes and homes for the disabled), present or absent? Strictly choose the correct label from the unordered set: {A, C, B}. A = present, C = unknown, B = absent"}], {'usage.total_tokens': 286, 'usage.prompt_tokens': 240, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:03:58,745 [INFO]     Querying model gpt-3.5-turbo-1106 with 1 message(s), temperature: 1
+2026-07-01 01:04:01,183 [INFO]     Metrics: total_token usage: 337, prompt_token usage: 261cached_token usage: -1
+2026-07-01 01:04:01,184 [INFO] ('REASONING: During the period from 428 CE to 614 CE, Anurādhapura III, which corresponds to the Anuradhapura Kingdom in Sri Lanka, had a well-developed system of public healthcare, including hospitals and medical institutions. The ancient city was renowned for its advanced medical practices, indicating the presence of such institutions.\n\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "“Other Utilitarian Public Building” refers to the presence or absence of hospitals and related public medical-care institutions (e.g., maternity homes, hospitals, and homes for the crippled and the blind) as urban amenities; during the period from 428 CE to 614 CE, were such institutions present or absent in 'Anurādhapura III'? Strictly choose the correct label from the unordered set: {B, C, A}. B = absent, C = unknown, A = present"}], {'usage.total_tokens': 337, 'usage.prompt_tokens': 261, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:04:01,184 [INFO] Processing batch queries for gpt-3.5-turbo-1106, batch size: 2048:  14%|#4        | 2/14 [00:04<00:28,  2.38s/it]
+2026-07-01 01:04:01,184 [INFO]     Querying model gpt-3.5-turbo-1106 with 1 message(s), temperature: 1
+2026-07-01 01:04:03,260 [INFO]     Metrics: total_token usage: 302, prompt_token usage: 269cached_token usage: -1
+2026-07-01 01:04:03,261 [INFO] ('REASONING: There is evidence of the presence of hospitals and institutions for medical care in Anurādhapura II during this period.\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "For 'Anurādhapura II' between 70 CE and 428 CE, assess the presence or absence of other utilitarian public buildings specifically defined as hospitals or institutions for medical care (including maternity homes, hospitals, and homes for the crippled and the blind) as public amenities; respond with only one option from {A, B}, where A = present and B = absent? Strictly choose the correct label from the unordered set: {C, A, B}. C = unknown, A = present, B = absent"}], {'usage.total_tokens': 302, 'usage.prompt_tokens': 269, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:04:03,261 [INFO] Processing batch queries for gpt-3.5-turbo-1106, batch size: 2048:  21%|##1       | 3/14 [00:06<00:24,  2.24s/it]
+2026-07-01 01:04:03,262 [INFO]     Querying model gpt-3.5-turbo-1106 with 1 message(s), temperature: 1
+2026-07-01 01:04:04,664 [INFO]     Metrics: total_token usage: 305, prompt_token usage: 276cached_token usage: -1
+2026-07-01 01:04:04,665 [INFO] ('REASONING: Given the time frame, there is evidence that such buildings or sites existed and functioned in this way.\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "“Other Utilitarian Public Building” refers to higher-order collection points for goods and taxes—such as customs houses placed on major roads and palace sites serving as collection hubs—facilitating the movement and taxation of production; for 'Foys' between 1715 CE and 1894 CE, is there evidence that such buildings or sites existed and functioned in this way (answer ONLY “present” or “absent”)? Strictly choose the correct label from the unordered set: {A, B, C}. A = present, B = absent, C = unknown"}], {'usage.total_tokens': 305, 'usage.prompt_tokens': 276, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:04:04,666 [INFO] Processing batch queries for gpt-3.5-turbo-1106, batch size: 2048:  29%|##8       | 4/14 [00:08<00:19,  1.91s/it]
+2026-07-01 01:04:04,666 [INFO]     Querying model gpt-3.5-turbo-1106 with 1 message(s), temperature: 1
+2026-07-01 01:04:08,182 [INFO] Processing batch queries for gpt-3.5-turbo-1106, batch size: 2048:  29%|##8       | 4/14 [00:11<00:29,  2.93s/it]
+2026-07-01 01:04:08,183 [ERROR] Execution failed: ChatGPTInterfaceModule._create_with_retry() missing 1 required positional argument: 'seed'
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 345, in _create_with_retry
+    return self.client.chat.completions.create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        model=self.model_name,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        seed=seed,
+        ^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1251, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<52 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 169, in _single
+    llm_instance.respond_to_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule=dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        batch_size=batch_size
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 84, in respond_to_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 134, in _query_generic
+    output_buffer: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self._batch_query\
+                                                                                           ~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            dataset=dataset,
+            ^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+            manual_reasoning=manual_reasoning
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 212, in _batch_query
+    raw_outs: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self.query_model\
+                                                                                      ~~~~~~~~~~~~~~~~~
+        (
+        ^
+            messages=input,
+            ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            endpoint=sub_dir
+            ^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 61, in query_model
+    response: Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]] = self._single(
+                                                                                ~~~~~~~~~~~~^
+        message=messages[0],
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        logger=logger
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 290, in _single
+    response = self._create_with_retry(
+        max=3,
+    ...<4 lines>...
+        seed=seed
+    )
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 360, in _create_with_retry
+    return self._create_with_retry(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        max=max,
+        ^^^^^^^^
+    ...<5 lines>...
+        temperature=temperature
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: ChatGPTInterfaceModule._create_with_retry() missing 1 required positional argument: 'seed'

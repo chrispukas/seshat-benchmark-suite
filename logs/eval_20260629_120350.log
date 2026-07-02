@@ -1,0 +1,43 @@
+Processing: gpt-3.5-turbo-0125
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/scripts/python/question_evaluation/chatgpt/chatgpt_query_template.py", line 11, in <module>
+    from llm_benchmark.utils.llm_interface.models.remote.chatgpt import ChatGPTInterfaceModule
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 13, in <module>
+    from llm_benchmark.utils.llm_interface.query_core import LLMInterfaceModule
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 218
+    logger=logger
+           ^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+Processing: gpt-3.5-turbo-1106
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/scripts/python/question_evaluation/chatgpt/chatgpt_query_template.py", line 11, in <module>
+    from llm_benchmark.utils.llm_interface.models.remote.chatgpt import ChatGPTInterfaceModule
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 13, in <module>
+    from llm_benchmark.utils.llm_interface.query_core import LLMInterfaceModule
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 218
+    logger=logger
+           ^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+Processing: gpt-4-0613
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/scripts/python/question_evaluation/chatgpt/chatgpt_query_template.py", line 11, in <module>
+    from llm_benchmark.utils.llm_interface.models.remote.chatgpt import ChatGPTInterfaceModule
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 13, in <module>
+    from llm_benchmark.utils.llm_interface.query_core import LLMInterfaceModule
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 218
+    logger=logger
+           ^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+Processing: gpt-5-2025-08-07
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/scripts/python/question_evaluation/chatgpt/chatgpt_query_template.py", line 5, in <module>
+    import llm_benchmark.config as config
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/config.py", line 1, in <module>
+    from llm_benchmark.utils.utility import tag_remap, quality_remap, question_types_remap
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/utility.py", line 5, in <module>
+    import torch
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/torch/__init__.py", line 444, in <module>
+    from torch._C import *  # noqa: F403
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 466, in _lock_unlock_module
+KeyboardInterrupt

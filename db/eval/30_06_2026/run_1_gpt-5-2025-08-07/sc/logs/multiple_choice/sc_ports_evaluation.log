@@ -1,0 +1,24 @@
+2026-06-30 03:15:24,790 [INFO] Starting question evaluation for sc/ports.
+2026-06-30 03:15:24,790 [INFO] ... (more hidden) ...
+2026-06-30 03:15:24,794 [INFO]     Querying model gpt-5-2025-08-07 with 451 message(s), temperature: 1
+2026-06-30 03:17:26,335 [INFO] Current time: 120, polling batch id: batch_6a4326bdede481908a9f555cec9761be
+2026-06-30 03:19:26,520 [INFO] Current time: 240, polling batch id: batch_6a4326bdede481908a9f555cec9761be
+2026-06-30 03:21:26,700 [INFO] Current time: 360, polling batch id: batch_6a4326bdede481908a9f555cec9761be
+2026-06-30 03:23:26,896 [INFO] Current time: 480, polling batch id: batch_6a4326bdede481908a9f555cec9761be
+2026-06-30 03:25:27,079 [INFO] Current time: 600, polling batch id: batch_6a4326bdede481908a9f555cec9761be
+2026-06-30 03:27:29,927 [INFO] Current time: 720, polling batch id: batch_6a4326bdede481908a9f555cec9761be
+2026-06-30 03:29:31,161 [INFO] Current time: 840, polling batch id: batch_6a4326bdede481908a9f555cec9761be
+2026-06-30 03:31:34,532 [INFO] Current time: 960, polling batch id: batch_6a4326bdede481908a9f555cec9761be
+2026-06-30 03:33:34,728 [INFO] Current time: 1080, polling batch id: batch_6a4326bdede481908a9f555cec9761be
+2026-06-30 03:35:34,915 [INFO] Current time: 1200, polling batch id: batch_6a4326bdede481908a9f555cec9761be
+2026-06-30 03:37:35,089 [INFO] Current time: 1320, polling batch id: batch_6a4326bdede481908a9f555cec9761be
+2026-06-30 03:39:35,276 [INFO] Current time: 1440, polling batch id: batch_6a4326bdede481908a9f555cec9761be
+2026-06-30 03:41:39,774 [INFO] Current time: 1560, polling batch id: batch_6a4326bdede481908a9f555cec9761be
+2026-06-30 03:41:41,214 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048: 100%|##########| 1/1 [26:16<00:00, 1576.42s/it]
+2026-06-30 03:41:41,214 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048: 100%|##########| 1/1 [26:16<00:00, 1576.42s/it]
+2026-06-30 03:41:41,215 [INFO] ... (more hidden) ...
+2026-06-30 03:41:41,221 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/ports/: 100%|##########| 451/451 [00:00<00:00, 71146.05it/s]
+2026-06-30 03:41:41,221 [INFO] Total token usage: 317392
+2026-06-30 03:41:41,222 [INFO] Prompt token usage: 105909
+2026-06-30 03:41:41,222 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/sc/ports/', 'model': 'gpt-5-2025-08-07', 'entry_idx': 0, 'output': '', 'reasoning': '', 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "During the period from 1747 CE to 1826 CE, was a port\\u2014defined as a harbor or place on the coast where ships may dock and transfer people or cargo\\u2014present or absent within the territory of \'Durrani Empire\'? Strictly choose the correct label from the unordered set: {C, B, A}. C = unknown, B = absent, A = present"}]', 'others': '{"usage.total_tokens": 748, "usage.prompt_tokens": 236, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true, "jsonl.output": "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat/jsonl/outputs/gpt-5-2025-08-07/30_06_2026_03_15_24_gpt-5-2025-08-07_https:__seshat-db.com_api_sc_ports__25.jsonl"}'}
+2026-06-30 03:41:41,226 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/30_06_2026/run_1_gpt-5-2025-08-07/sc/multiple_choice/sc_ports_answers.csv

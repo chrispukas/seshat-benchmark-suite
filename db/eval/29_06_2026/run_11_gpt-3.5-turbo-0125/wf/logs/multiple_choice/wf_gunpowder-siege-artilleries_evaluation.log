@@ -1,0 +1,19 @@
+2026-06-29 13:26:31,677 [INFO] Starting question evaluation for wf/gunpowder-siege-artilleries.
+2026-06-29 13:26:31,722 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-29 13:26:31,725 [INFO]     Querying model gpt-3.5-turbo-0125 with 362 message(s), temperature: 1
+2026-06-29 13:27:03,153 [INFO] Current time: 30, polling batch id: batch_6a426478ca408190833ec23f603ddd72
+2026-06-29 13:27:33,357 [INFO] Current time: 60, polling batch id: batch_6a426478ca408190833ec23f603ddd72
+2026-06-29 13:28:03,569 [INFO] Current time: 90, polling batch id: batch_6a426478ca408190833ec23f603ddd72
+2026-06-29 13:28:33,771 [INFO] Current time: 120, polling batch id: batch_6a426478ca408190833ec23f603ddd72
+2026-06-29 13:29:03,981 [INFO] Current time: 150, polling batch id: batch_6a426478ca408190833ec23f603ddd72
+2026-06-29 13:29:34,156 [INFO] Current time: 180, polling batch id: batch_6a426478ca408190833ec23f603ddd72
+2026-06-29 13:30:04,353 [INFO] Current time: 210, polling batch id: batch_6a426478ca408190833ec23f603ddd72
+2026-06-29 13:30:34,566 [INFO] Current time: 240, polling batch id: batch_6a426478ca408190833ec23f603ddd72
+2026-06-29 13:30:35,583 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048: 100%|##########| 1/1 [04:03<00:00, 243.86s/it]
+2026-06-29 13:30:35,583 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048: 100%|##########| 1/1 [04:03<00:00, 243.86s/it]
+2026-06-29 13:30:35,583 [INFO] ... (more hidden) ...
+2026-06-29 13:30:35,586 [INFO] Formatting items for endpoint: https://seshat-db.com/api/wf/gunpowder-siege-artilleries/: 100%|##########| 362/362 [00:00<00:00, 124016.83it/s]
+2026-06-29 13:30:35,586 [INFO] Total token usage: 104085
+2026-06-29 13:30:35,586 [INFO] Prompt token usage: 87753
+2026-06-29 13:30:35,586 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/wf/gunpowder-siege-artilleries/', 'model': 'gpt-3.5-turbo-0125', 'entry_idx': 0, 'output': 'REASONING: Gunpowder siege artillery was present as a military technology during this time period, as it had already been widely adopted in warfare by the 18th century.\nANSWER: A', 'reasoning': None, 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "During the period from 1747 CE to 1826 CE, was gunpowder siege artillery\\u2014defined as artillery employing gunpowder and used in both siege craft and open battle\\u2014present or absent as a military technology in the warfare of \'Durrani Empire\'? Strictly choose the correct label from the unordered set: {B, A, C}. B = absent, A = present, C = unknown"}]', 'others': '{"usage.total_tokens": 285, "usage.prompt_tokens": 245, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true}'}
+2026-06-29 13:30:35,588 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/29_06_2026/run_11_gpt-3.5-turbo-0125/wf/multiple_choice/wf_gunpowder-siege-artilleries_answers.csv

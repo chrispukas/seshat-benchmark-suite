@@ -1,0 +1,39 @@
+2026-06-30 01:00:13,187 [INFO] Starting question evaluation for wf/camels.
+2026-06-30 01:00:13,188 [INFO] ... (more hidden) ...
+2026-06-30 01:00:13,191 [INFO]     Querying model gpt-4-0613 with 362 message(s), temperature: 1
+2026-06-30 01:02:14,964 [INFO] Current time: 120, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:04:15,145 [INFO] Current time: 240, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:06:15,326 [INFO] Current time: 360, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:08:15,543 [INFO] Current time: 480, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:10:15,769 [INFO] Current time: 600, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:12:15,981 [INFO] Current time: 720, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:14:16,187 [INFO] Current time: 840, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:16:16,384 [INFO] Current time: 960, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:18:16,594 [INFO] Current time: 1080, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:20:16,795 [INFO] Current time: 1200, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:22:22,092 [INFO] Current time: 1320, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:24:22,292 [INFO] Current time: 1440, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:26:22,468 [INFO] Current time: 1560, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:28:22,656 [INFO] Current time: 1680, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:30:22,810 [INFO] Current time: 1800, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:32:22,984 [INFO] Current time: 1920, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:34:23,153 [INFO] Current time: 2040, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:36:23,325 [INFO] Current time: 2160, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:38:23,520 [INFO] Current time: 2280, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:40:23,702 [INFO] Current time: 2400, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:42:25,958 [INFO] Current time: 2520, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:44:26,163 [INFO] Current time: 2640, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:46:26,339 [INFO] Current time: 2760, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:48:26,506 [INFO] Current time: 2880, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:50:26,692 [INFO] Current time: 3000, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:52:26,882 [INFO] Current time: 3120, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:54:27,053 [INFO] Current time: 3240, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:56:27,228 [INFO] Current time: 3360, polling batch id: batch_6a43070e6a54819088aa63329dc85444
+2026-06-30 01:56:28,514 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [56:15<00:00, 3375.33s/it]
+2026-06-30 01:56:28,514 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [56:15<00:00, 3375.33s/it]
+2026-06-30 01:56:28,515 [INFO] Formatting items for endpoint: https://seshat-db.com/api/wf/camels/:   0%|          | 0/362 [00:00<?, ?it/s]
+2026-06-30 01:56:28,520 [INFO] Formatting items for endpoint: https://seshat-db.com/api/wf/camels/: 100%|##########| 362/362 [00:00<00:00, 70076.06it/s]
+2026-06-30 01:56:28,520 [INFO] Total token usage: 109364
+2026-06-30 01:56:28,520 [INFO] Prompt token usage: 83589
+2026-06-30 01:56:28,520 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/wf/camels/', 'model': 'gpt-4-0613', 'entry_idx': 0, 'output': 'REASONING: The zanbūrak was indeed present as a military technology during this period in the Durrani Empire, which was a Pashtun empire based in modern-day Afghanistan. The Empire was known for employing the use of camels in warfare, and the zanbūrak was a particular type of camel cavalry which used swivel guns.\n\nANSWER: A', 'reasoning': '', 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "During the period from 1747 CE to 1826 CE, was the zanb\\u016brak, defined as a type of swivel gun mounted on the back of a camel and fired either from a kneeling or trotting camel, present or absent as a military technology in the warfare practices of \'Durrani Empire\'? Strictly choose the correct label from the unordered set: {A, B, C}. A = present, B = absent, C = unknown"}]', 'others': '{"usage.total_tokens": 337, "usage.prompt_tokens": 257, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true, "jsonl.output": "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat/jsonl/outputs/gpt-4-0613/30_06_2026_01_00_13_gpt-4-0613_https:__seshat-db.com_api_wf_camels__320.jsonl"}'}
+2026-06-30 01:56:28,525 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/29_06_2026/run_16_gpt-4-0613/wf/multiple_choice/wf_camels_answers.csv

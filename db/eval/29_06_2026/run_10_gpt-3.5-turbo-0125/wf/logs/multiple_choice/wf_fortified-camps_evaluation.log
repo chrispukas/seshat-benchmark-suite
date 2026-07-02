@@ -1,0 +1,73 @@
+2026-06-29 12:54:29,242 [INFO] Starting question evaluation for wf/fortified-camps.
+2026-06-29 12:54:29,242 [INFO] ... (more hidden) ...
+2026-06-29 12:54:29,246 [INFO]     Querying model gpt-3.5-turbo-0125 with 360 message(s), temperature: 1
+2026-06-29 12:55:00,286 [INFO] Current time: 30, polling batch id: batch_6a425cf5d24c819085484d57e664d7f4
+2026-06-29 12:55:30,479 [INFO] Current time: 60, polling batch id: batch_6a425cf5d24c819085484d57e664d7f4
+2026-06-29 12:56:00,676 [INFO] Current time: 90, polling batch id: batch_6a425cf5d24c819085484d57e664d7f4
+2026-06-29 12:56:30,847 [INFO] Current time: 120, polling batch id: batch_6a425cf5d24c819085484d57e664d7f4
+2026-06-29 12:57:01,024 [INFO] Current time: 150, polling batch id: batch_6a425cf5d24c819085484d57e664d7f4
+2026-06-29 12:57:31,279 [INFO] Current time: 180, polling batch id: batch_6a425cf5d24c819085484d57e664d7f4
+2026-06-29 12:58:01,486 [INFO] Current time: 210, polling batch id: batch_6a425cf5d24c819085484d57e664d7f4
+2026-06-29 12:58:31,672 [INFO] Current time: 240, polling batch id: batch_6a425cf5d24c819085484d57e664d7f4
+2026-06-29 12:59:01,858 [INFO] Current time: 270, polling batch id: batch_6a425cf5d24c819085484d57e664d7f4
+2026-06-29 12:59:02,099 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048:   0%|          | 0/1 [04:32<?, ?it/s]
+2026-06-29 12:59:02,100 [ERROR] Execution failed: [Errno 2] No such file or directory: '/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat/jsonl/outputs/gpt-3.5-turbo-0125'
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 163, in _single
+    llm_instance.respond_to_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule=dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 84, in respond_to_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 134, in _query_generic
+    output_buffer: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self._batch_query\
+                                                                                           ~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            dataset=dataset,
+            ^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+            manual_reasoning=manual_reasoning
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 212, in _batch_query
+    raw_outs: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self.query_model\
+                                                                                      ~~~~~~~~~~~~~~~~~
+        (
+        ^
+            messages=input,
+            ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            endpoint=sub_dir
+            ^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 71, in query_model
+    response: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self._batch(
+                                                                                      ~~~~~~~~~~~^
+        messages=messages,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        logger=logger,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 123, in _batch
+    file_name: str = f"{dt}_{model}_{endpoint.replace("/", "_")}_{len(os.listdir(output_basename))}.jsonl"
+                                                                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat/jsonl/outputs/gpt-3.5-turbo-0125'

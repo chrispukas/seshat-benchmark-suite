@@ -1,0 +1,55 @@
+2026-06-29 15:56:48,348 [INFO] Starting question evaluation for sc/scientific-literatures.
+2026-06-29 15:56:48,351 [INFO]     Querying model gpt-4-0613 with 484 message(s), temperature: 1
+2026-06-29 15:57:19,621 [INFO] Current time: 30, polling batch id: batch_6a4287b13e048190a8b1840b43055678
+2026-06-29 15:57:49,789 [INFO] Current time: 60, polling batch id: batch_6a4287b13e048190a8b1840b43055678
+2026-06-29 15:58:19,959 [INFO] Current time: 90, polling batch id: batch_6a4287b13e048190a8b1840b43055678
+2026-06-29 15:58:50,152 [INFO] Current time: 120, polling batch id: batch_6a4287b13e048190a8b1840b43055678
+2026-06-29 15:59:20,366 [INFO] Current time: 150, polling batch id: batch_6a4287b13e048190a8b1840b43055678
+2026-06-29 15:59:50,570 [INFO] Current time: 180, polling batch id: batch_6a4287b13e048190a8b1840b43055678
+2026-06-29 16:00:20,789 [INFO] Current time: 210, polling batch id: batch_6a4287b13e048190a8b1840b43055678
+2026-06-29 16:00:50,967 [INFO] Current time: 240, polling batch id: batch_6a4287b13e048190a8b1840b43055678
+2026-06-29 16:01:21,148 [INFO] Current time: 270, polling batch id: batch_6a4287b13e048190a8b1840b43055678
+2026-06-29 16:01:51,319 [INFO] Current time: 300, polling batch id: batch_6a4287b13e048190a8b1840b43055678
+2026-06-29 16:02:21,567 [INFO] Current time: 330, polling batch id: batch_6a4287b13e048190a8b1840b43055678
+2026-06-29 16:02:22,841 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [05:34<00:00, 334.49s/it]
+2026-06-29 16:02:22,841 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [05:34<00:00, 334.49s/it]
+2026-06-29 16:02:22,841 [INFO] ... (more hidden) ...
+2026-06-29 16:02:22,842 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/scientific-literatures/:   0%|          | 0/484 [00:00<?, ?it/s]
+2026-06-29 16:02:22,842 [ERROR] Execution failed: cannot access local variable 'itm' where it is not associated with a value
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 163, in _single
+    llm_instance.respond_to_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule=dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 84, in respond_to_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 149, in _query_generic
+    question_outputs: List[Dict[str, Any]] = self._batch_format_outputs\
+                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            itms=output_buffer,
+            ^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            logger=logger
+            ^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 245, in _batch_format_outputs
+    if itm is None:
+       ^^^
+UnboundLocalError: cannot access local variable 'itm' where it is not associated with a value

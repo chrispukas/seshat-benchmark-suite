@@ -16,7 +16,7 @@ from llm_benchmark.utils import enums
 def query(
         model_name: str = "gpt-5.2-2025-12-11", 
         api_key: str = "", 
-        polities_to_evaluate: List[str] = ["rt", "ec"]
+        polities_to_evaluate: List[str] = ["sc"]
         ):
     if api_key is None or api_key == "":
         load_dotenv()
@@ -47,5 +47,5 @@ def query(
         seshat_cache_dir=args.cache_dir,
         polity_mapping=config.polity_mapping,
         polities_to_evaluate=polities_to_evaluate,
-        allowed_question_types=[enums.QuestionType.MULTIPLE_CHOICE, enums.QuestionType.RANGE]
+        allowed_question_types=[enums.QuestionType.MULTIPLE_CHOICE]
     )

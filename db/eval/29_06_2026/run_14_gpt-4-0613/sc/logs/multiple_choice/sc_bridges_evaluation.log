@@ -1,0 +1,57 @@
+2026-06-29 15:52:12,132 [INFO] Starting question evaluation for sc/bridges.
+2026-06-29 15:52:12,309 [INFO]     Querying model gpt-4-0613 with 376 message(s), temperature: 1
+2026-06-29 15:52:45,329 [INFO] Current time: 30, polling batch id: batch_6a42869f01608190a379b01f7db4c03e
+2026-06-29 15:53:15,600 [INFO] Current time: 60, polling batch id: batch_6a42869f01608190a379b01f7db4c03e
+2026-06-29 15:53:46,086 [INFO] Current time: 90, polling batch id: batch_6a42869f01608190a379b01f7db4c03e
+2026-06-29 15:54:16,265 [INFO] Current time: 120, polling batch id: batch_6a42869f01608190a379b01f7db4c03e
+2026-06-29 15:54:46,437 [INFO] Current time: 150, polling batch id: batch_6a42869f01608190a379b01f7db4c03e
+2026-06-29 15:55:16,603 [INFO] Current time: 180, polling batch id: batch_6a42869f01608190a379b01f7db4c03e
+2026-06-29 15:55:46,773 [INFO] Current time: 210, polling batch id: batch_6a42869f01608190a379b01f7db4c03e
+2026-06-29 15:56:17,177 [INFO] Current time: 240, polling batch id: batch_6a42869f01608190a379b01f7db4c03e
+2026-06-29 15:56:47,377 [INFO] Current time: 270, polling batch id: batch_6a42869f01608190a379b01f7db4c03e
+2026-06-29 15:57:17,606 [INFO] Current time: 300, polling batch id: batch_6a42869f01608190a379b01f7db4c03e
+2026-06-29 15:57:47,774 [INFO] Current time: 330, polling batch id: batch_6a42869f01608190a379b01f7db4c03e
+2026-06-29 15:58:17,946 [INFO] Current time: 360, polling batch id: batch_6a42869f01608190a379b01f7db4c03e
+2026-06-29 15:58:48,130 [INFO] Current time: 390, polling batch id: batch_6a42869f01608190a379b01f7db4c03e
+2026-06-29 15:59:18,304 [INFO] Current time: 420, polling batch id: batch_6a42869f01608190a379b01f7db4c03e
+2026-06-29 15:59:19,376 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [07:07<00:00, 427.07s/it]
+2026-06-29 15:59:19,377 [INFO] ... (more hidden) ...
+2026-06-29 15:59:19,377 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/bridges/:   0%|          | 0/376 [00:00<?, ?it/s]
+2026-06-29 15:59:19,377 [ERROR] Execution failed: cannot access local variable 'itm' where it is not associated with a value
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 163, in _single
+    llm_instance.respond_to_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule=dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 84, in respond_to_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 149, in _query_generic
+    question_outputs: List[Dict[str, Any]] = self._batch_format_outputs\
+                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            itms=output_buffer,
+            ^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            logger=logger
+            ^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 245, in _batch_format_outputs
+    if itm is None:
+       ^^^
+UnboundLocalError: cannot access local variable 'itm' where it is not associated with a value

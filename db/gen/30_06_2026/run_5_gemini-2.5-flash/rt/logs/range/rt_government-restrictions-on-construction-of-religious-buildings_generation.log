@@ -1,0 +1,48 @@
+2026-06-30 09:30:23,213 [INFO] Starting question generation for rt/government-restrictions-on-construction-of-religious-buildings.
+2026-06-30 09:30:23,213 [INFO] 
+
+Generating questions for dataset at endpoint: government-restrictions-on-construction-of-religious-buildings
+2026-06-30 09:30:23,237 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-30 09:30:23,238 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 09:30:23,238 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 09:30:23,238 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 09:30:23,238 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 09:30:23,238 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 09:30:23,238 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 09:30:23,238 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 09:30:23,238 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 09:30:23,238 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 09:30:23,238 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 09:30:23,240 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 09:30:23,241 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 09:30:23,242 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 09:30:23,242 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 09:30:23,242 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 09:30:23,242 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 09:30:23,242 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 09:30:23,242 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 09:30:23,242 [INFO]     Querying model gemini-2.5-flash with 9 message(s), temperature: 0.2
+2026-06-30 09:30:23,242 [WARNING] Message is empty, skipping.
+2026-06-30 09:30:23,242 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 09:30:23,242 [WARNING] Message is empty, skipping.
+2026-06-30 09:30:23,242 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 09:30:23,242 [WARNING] Message is empty, skipping.
+2026-06-30 09:30:23,242 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 09:30:23,242 [WARNING] Message is empty, skipping.
+2026-06-30 09:30:23,242 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 09:30:23,242 [WARNING] Message is empty, skipping.
+2026-06-30 09:30:23,242 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 09:30:23,242 [WARNING] Message is empty, skipping.
+2026-06-30 09:30:23,242 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 09:30:23,242 [WARNING] Message is empty, skipping.
+2026-06-30 09:30:23,242 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 09:30:23,242 [WARNING] Message is empty, skipping.
+2026-06-30 09:30:23,242 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 09:30:23,242 [WARNING] Message is empty, skipping.
+2026-06-30 09:30:23,243 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 09:30:23,263 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048: 100%|##########| 1/1 [00:00<00:00, 38.57it/s]
+2026-06-30 09:30:23,286 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/government-restrictions-on-construction-of-religious-buildings/:   0%|          | 0/9 [00:00<?, ?it/s]
+2026-06-30 09:30:23,298 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/government-restrictions-on-construction-of-religious-buildings/: 100%|##########| 9/9 [00:00<00:00, 767.06it/s]
+2026-06-30 09:30:23,298 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/rt/government-restrictions-on-construction-of-religious-buildings/', 'model': 'gemini-2.5-flash', 'entry_idx': 0, 'output': '', 'reasoning': '', 'message': '[{}]', 'others': '{"error": "Message is empty"}'}
+2026-06-30 09:30:23,300 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/30_06_2026/run_5_gemini-2.5-flash/rt/range/rt_government-restrictions-on-construction-of-religious-buildings_questions.csv
+2026-06-30 09:30:23,300 [INFO] Successfully completed question generation for rt/government-restrictions-on-construction-of-religious-buildings.

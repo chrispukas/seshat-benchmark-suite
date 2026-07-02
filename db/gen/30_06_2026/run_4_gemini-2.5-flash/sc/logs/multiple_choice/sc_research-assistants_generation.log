@@ -1,0 +1,10 @@
+2026-06-30 09:18:21,317 [INFO] Starting question generation for sc/research-assistants.
+2026-06-30 09:18:21,318 [INFO] 
+
+Generating questions for dataset at endpoint: research-assistants
+2026-06-30 09:18:21,320 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-30 09:18:21,320 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048: 100%|##########| 1/1 [00:00<00:00, 45100.04it/s]
+2026-06-30 09:18:21,323 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/research-assistants/: 0it [00:00, ?it/s]
+2026-06-30 09:18:21,329 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/research-assistants/: 0it [00:00, ?it/s]
+2026-06-30 09:18:21,329 [WARNING] Failed to generate questions for endpoint: https://seshat-db.com/api/sc/research-assistants/.
+2026-06-30 09:18:21,329 [INFO] Successfully completed question generation for sc/research-assistants.

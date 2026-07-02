@@ -1,0 +1,48 @@
+2026-06-30 16:06:26,973 [INFO] Starting question generation for rt/taxes-based-on-religious-adherence-or-on-religious-activities-and-institutions.
+2026-06-30 16:06:26,974 [INFO] 
+
+Generating questions for dataset at endpoint: taxes-based-on-religious-adherence-or-on-religious-activities-and-institutions
+2026-06-30 16:06:26,979 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-30 16:06:26,979 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,979 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,980 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,980 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,980 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,980 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,980 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,980 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,980 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,980 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,981 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,981 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,981 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,982 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,982 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,982 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,982 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,982 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,983 [INFO]     Querying model gemini-2.5-flash with 9 message(s), temperature: 0.2
+2026-06-30 16:06:26,983 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,983 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,983 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,984 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,984 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,984 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,985 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,985 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,985 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,986 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,986 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,987 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,987 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,988 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,988 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,988 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,988 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,989 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,992 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048: 100%|##########| 1/1 [00:00<00:00, 76.53it/s]
+2026-06-30 16:06:26,999 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/taxes-based-on-religious-adherence-or-on-religious-activities-and-institutions/:   0%|          | 0/9 [00:00<?, ?it/s]
+2026-06-30 16:06:27,003 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/taxes-based-on-religious-adherence-or-on-religious-activities-and-institutions/: 100%|##########| 9/9 [00:00<00:00, 2135.23it/s]
+2026-06-30 16:06:27,003 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/rt/taxes-based-on-religious-adherence-or-on-religious-activities-and-institutions/', 'model': 'gemini-2.5-flash', 'entry_idx': 0, 'output': '', 'reasoning': '', 'message': '[{}]', 'others': '{"error": "Message is empty"}'}
+2026-06-30 16:06:27,004 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/30_06_2026/run_8_gemini-2.5-flash/rt/range/rt_taxes-based-on-religious-adherence-or-on-religious-activities-and-institutions_questions.csv
+2026-06-30 16:06:27,005 [INFO] Successfully completed question generation for rt/taxes-based-on-religious-adherence-or-on-religious-activities-and-institutions.

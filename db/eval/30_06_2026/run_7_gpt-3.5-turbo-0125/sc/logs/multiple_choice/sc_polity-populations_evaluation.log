@@ -1,0 +1,66 @@
+2026-06-30 20:32:39,764 [INFO] Starting question evaluation for sc/polity-populations.
+2026-06-30 20:32:39,767 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048:   0%|          | 0/579 [00:00<?, ?it/s]
+2026-06-30 20:32:39,768 [INFO]     Querying model gpt-3.5-turbo-0125 with 1 message(s), temperature: 1
+2026-06-30 20:32:42,636 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048:   0%|          | 0/579 [00:02<?, ?it/s]
+2026-06-30 20:32:42,636 [ERROR] Execution failed: 'PromptTokensDetails' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 169, in _single
+    llm_instance.respond_to_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule=dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        batch_size=batch_size
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 84, in respond_to_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 134, in _query_generic
+    output_buffer: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self._batch_query\
+                                                                                           ~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            dataset=dataset,
+            ^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+            manual_reasoning=manual_reasoning
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 212, in _batch_query
+    raw_outs: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self.query_model\
+                                                                                      ~~~~~~~~~~~~~~~~~
+        (
+        ^
+            messages=input,
+            ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            endpoint=sub_dir
+            ^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 60, in query_model
+    response: Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]] = self._single(
+                                                                                ~~~~~~~~~~~~^
+        message=messages[0],
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        logger=logger
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 305, in _single
+    "usage.cached_tokens": getattr(response.usage, 'prompt_tokens_details', {}).get('cached_tokens', 0),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/pydantic/main.py", line 1042, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'PromptTokensDetails' object has no attribute 'get'

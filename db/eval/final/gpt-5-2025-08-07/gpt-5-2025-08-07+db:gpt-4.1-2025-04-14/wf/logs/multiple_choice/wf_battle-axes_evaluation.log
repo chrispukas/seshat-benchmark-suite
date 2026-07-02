@@ -1,0 +1,117 @@
+2026-07-01 01:00:36,621 [INFO] Starting question evaluation for wf/battle-axes.
+2026-07-01 01:00:36,629 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   0%|          | 0/365 [00:00<?, ?it/s]
+2026-07-01 01:00:36,629 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:00:42,955 [INFO]     Metrics: total_token usage: 512, prompt_token usage: 258cached_token usage: -1
+2026-07-01 01:00:42,956 [INFO] ('REASONING: Afghan forces of the Durrani Empire at the Third Battle of Panipat (1761) are recorded as using battle-axes (tabar) among their arms, indicating the weapon’s presence in their warfare during this period.\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "During the period from 1747 CE to 1826 CE, was the battle axe, defined as a weapon used in warfare such as at Panipat in 1761 CE where both Afghans and Mahrattas fought with battle-axes among other weapons, present or absent as a military technology in the warfare of 'Durrani Empire'? Strictly choose the correct label from the unordered set: {B, A, C}. B = absent, A = present, C = unknown"}], {'usage.total_tokens': 512, 'usage.prompt_tokens': 258, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:00:42,956 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   0%|          | 1/365 [00:06<38:23,  6.33s/it]
+2026-07-01 01:00:42,957 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:00:52,285 [INFO]     Metrics: total_token usage: 698, prompt_token usage: 238cached_token usage: -1
+2026-07-01 01:00:52,286 [INFO] ('REASONING: Ghurid/Persianate armies of the 11th–13th centuries commonly employed the tabar/tabarzin (battle axe), including axe-bearing guards (tabardaran) and infantry, and axes were widespread in Indo-Persian warfare. Therefore, the battle axe was present.\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "During the period from 1025 CE to 1215 CE, was the battle axe, defined as a weapon wielded by cavalry or infantry in addition to other arms, present or absent as a military technology in the warfare of 'Ghur Principality'? Strictly choose the correct label from the unordered set: {C, A, B}. C = unknown, A = present, B = absent"}], {'usage.total_tokens': 698, 'usage.prompt_tokens': 238, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:00:52,286 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   1%|          | 2/365 [00:15<48:57,  8.09s/it]
+2026-07-01 01:00:52,287 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:00:55,983 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   1%|          | 2/365 [00:19<58:32,  9.68s/it]
+2026-07-01 01:00:55,983 [ERROR] Execution failed: ChatGPTInterfaceModule._create_with_retry() missing 1 required positional argument: 'seed'
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 345, in _create_with_retry
+    return self.client.chat.completions.create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        model=self.model_name,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        seed=seed,
+        ^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1251, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<52 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 169, in _single
+    llm_instance.respond_to_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule=dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        batch_size=batch_size
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 84, in respond_to_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 134, in _query_generic
+    output_buffer: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self._batch_query\
+                                                                                           ~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            dataset=dataset,
+            ^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+            manual_reasoning=manual_reasoning
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 212, in _batch_query
+    raw_outs: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self.query_model\
+                                                                                      ~~~~~~~~~~~~~~~~~
+        (
+        ^
+            messages=input,
+            ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            endpoint=sub_dir
+            ^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 61, in query_model
+    response: Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]] = self._single(
+                                                                                ~~~~~~~~~~~~^
+        message=messages[0],
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        logger=logger
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 290, in _single
+    response = self._create_with_retry(
+        max=3,
+    ...<4 lines>...
+        seed=seed
+    )
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 360, in _create_with_retry
+    return self._create_with_retry(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        max=max,
+        ^^^^^^^^
+    ...<5 lines>...
+        temperature=temperature
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: ChatGPTInterfaceModule._create_with_retry() missing 1 required positional argument: 'seed'

@@ -1,0 +1,22 @@
+2026-06-29 13:01:45,469 [INFO] Starting question evaluation for sc/formal-legal-codes.
+2026-06-29 13:01:45,590 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-29 13:01:45,595 [INFO]     Querying model gpt-3.5-turbo-0125 with 508 message(s), temperature: 1
+2026-06-29 13:02:18,343 [INFO] Current time: 30, polling batch id: batch_6a425eabeab081909f09f7c7d9aca4d6
+2026-06-29 13:02:48,503 [INFO] Current time: 60, polling batch id: batch_6a425eabeab081909f09f7c7d9aca4d6
+2026-06-29 13:03:18,670 [INFO] Current time: 90, polling batch id: batch_6a425eabeab081909f09f7c7d9aca4d6
+2026-06-29 13:03:48,846 [INFO] Current time: 120, polling batch id: batch_6a425eabeab081909f09f7c7d9aca4d6
+2026-06-29 13:04:19,029 [INFO] Current time: 150, polling batch id: batch_6a425eabeab081909f09f7c7d9aca4d6
+2026-06-29 13:04:49,208 [INFO] Current time: 180, polling batch id: batch_6a425eabeab081909f09f7c7d9aca4d6
+2026-06-29 13:05:19,388 [INFO] Current time: 210, polling batch id: batch_6a425eabeab081909f09f7c7d9aca4d6
+2026-06-29 13:05:49,600 [INFO] Current time: 240, polling batch id: batch_6a425eabeab081909f09f7c7d9aca4d6
+2026-06-29 13:06:19,808 [INFO] Current time: 270, polling batch id: batch_6a425eabeab081909f09f7c7d9aca4d6
+2026-06-29 13:06:49,995 [INFO] Current time: 300, polling batch id: batch_6a425eabeab081909f09f7c7d9aca4d6
+2026-06-29 13:07:20,196 [INFO] Current time: 330, polling batch id: batch_6a425eabeab081909f09f7c7d9aca4d6
+2026-06-29 13:07:21,557 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048: 100%|##########| 1/1 [05:35<00:00, 335.97s/it]
+2026-06-29 13:07:21,557 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048: 100%|##########| 1/1 [05:35<00:00, 335.97s/it]
+2026-06-29 13:07:21,558 [INFO] ... (more hidden) ...
+2026-06-29 13:07:21,563 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/formal-legal-codes/: 100%|##########| 508/508 [00:00<00:00, 97132.86it/s]
+2026-06-29 13:07:21,563 [INFO] Total token usage: 150370
+2026-06-29 13:07:21,563 [INFO] Prompt token usage: 124915
+2026-06-29 13:07:21,563 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/sc/formal-legal-codes/', 'model': 'gpt-3.5-turbo-0125', 'entry_idx': 0, 'output': 'REASONING: The Durrani Empire under Ahmad Shah Durrani did not possess a formal legal code. He primarily relied on tribal customary laws, known as Pashtunwali, to govern the diverse groups within the empire. \nANSWER: B', 'reasoning': None, 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "During the period from 1747 CE to 1826 CE, did \'Durrani Empire\' possess a formal legal code, defined as an overarching, codified system of laws (inherited or original) that was officially recognized and implemented across the polity, regardless of its practical enforcement or the coexistence of local customary laws? Strictly choose the correct label from the unordered set: {B, C, A}. B = absent, C = unknown, A = present"}]', 'others': '{"usage.total_tokens": 311, "usage.prompt_tokens": 258, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true}'}
+2026-06-29 13:07:21,568 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/29_06_2026/run_11_gpt-3.5-turbo-0125/sc/multiple_choice/sc_formal-legal-codes_answers.csv

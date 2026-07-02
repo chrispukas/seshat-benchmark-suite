@@ -1,0 +1,48 @@
+2026-06-30 16:06:26,967 [INFO] Starting question generation for rt/frequency-of-governmental-violence-against-religious-groups.
+2026-06-30 16:06:26,970 [INFO] 
+
+Generating questions for dataset at endpoint: frequency-of-governmental-violence-against-religious-groups
+2026-06-30 16:06:26,971 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-30 16:06:26,971 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,971 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,971 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,971 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,971 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,971 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,971 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,971 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,971 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,971 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,971 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,971 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,971 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,971 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,971 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,971 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,971 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,971 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,971 [INFO]     Querying model gemini-2.5-flash with 9 message(s), temperature: 0.2
+2026-06-30 16:06:26,971 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,971 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,971 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,971 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,971 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,971 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,971 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,971 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,971 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,971 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,971 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,971 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,971 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,971 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,971 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,971 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,971 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,974 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,974 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048: 100%|##########| 1/1 [00:00<00:00, 297.64it/s]
+2026-06-30 16:06:26,978 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/frequency-of-governmental-violence-against-religious-groups/:   0%|          | 0/9 [00:00<?, ?it/s]
+2026-06-30 16:06:26,982 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/frequency-of-governmental-violence-against-religious-groups/: 100%|##########| 9/9 [00:00<00:00, 2619.44it/s]
+2026-06-30 16:06:26,982 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/rt/frequency-of-governmental-violence-against-religious-groups/', 'model': 'gemini-2.5-flash', 'entry_idx': 0, 'output': '', 'reasoning': '', 'message': '[{}]', 'others': '{"error": "Message is empty"}'}
+2026-06-30 16:06:26,983 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/30_06_2026/run_8_gemini-2.5-flash/rt/range/rt_frequency-of-governmental-violence-against-religious-groups_questions.csv
+2026-06-30 16:06:26,983 [INFO] Successfully completed question generation for rt/frequency-of-governmental-violence-against-religious-groups.

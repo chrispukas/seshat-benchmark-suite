@@ -1,0 +1,70 @@
+2026-06-29 12:21:42,773 [INFO] Starting question evaluation for sc/practical-literatures.
+2026-06-29 12:21:42,773 [INFO] ... (more hidden) ...
+2026-06-29 12:21:42,778 [INFO]     Querying model gpt-3.5-turbo-0125 with 502 message(s), temperature: 1
+2026-06-29 12:22:13,665 [INFO] Current time: 30, polling batch id: batch_6a42554768e08190a8a665e227e221a6
+2026-06-29 12:22:43,831 [INFO] Current time: 60, polling batch id: batch_6a42554768e08190a8a665e227e221a6
+2026-06-29 12:23:14,022 [INFO] Current time: 90, polling batch id: batch_6a42554768e08190a8a665e227e221a6
+2026-06-29 12:23:44,194 [INFO] Current time: 120, polling batch id: batch_6a42554768e08190a8a665e227e221a6
+2026-06-29 12:24:14,363 [INFO] Current time: 150, polling batch id: batch_6a42554768e08190a8a665e227e221a6
+2026-06-29 12:24:44,549 [INFO] Current time: 180, polling batch id: batch_6a42554768e08190a8a665e227e221a6
+2026-06-29 12:24:44,719 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048:   0%|          | 0/1 [03:01<?, ?it/s]
+2026-06-29 12:24:44,719 [ERROR] Execution failed: [Errno 2] No such file or directory: '/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat/jsonl/outputs/gpt-3.5-turbo-0125'
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 163, in _single
+    llm_instance.respond_to_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule=dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 84, in respond_to_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 134, in _query_generic
+    output_buffer: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self._batch_query\
+                                                                                           ~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            dataset=dataset,
+            ^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+            manual_reasoning=manual_reasoning
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 212, in _batch_query
+    raw_outs: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self.query_model\
+                                                                                      ~~~~~~~~~~~~~~~~~
+        (
+        ^
+            messages=input,
+            ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            endpoint=sub_dir
+            ^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 71, in query_model
+    response: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self._batch(
+                                                                                      ~~~~~~~~~~~^
+        messages=messages,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        logger=logger,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 123, in _batch
+    file_name: str = f"{dt}_{model}_{endpoint.replace("/", "_")}_{len(os.listdir(output_basename))}.jsonl"
+                                                                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat/jsonl/outputs/gpt-3.5-turbo-0125'

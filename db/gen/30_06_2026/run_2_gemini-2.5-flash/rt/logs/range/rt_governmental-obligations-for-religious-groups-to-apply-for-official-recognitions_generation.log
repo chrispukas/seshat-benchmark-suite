@@ -1,0 +1,48 @@
+2026-06-30 08:53:34,175 [INFO] Starting question generation for rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions.
+2026-06-30 08:53:34,175 [INFO] 
+
+Generating questions for dataset at endpoint: governmental-obligations-for-religious-groups-to-apply-for-official-recognitions
+2026-06-30 08:53:34,188 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-30 08:53:34,188 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,188 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,188 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,188 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,189 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,189 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,189 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,190 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,190 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,190 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,190 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,191 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,194 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,194 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,194 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,195 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,195 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,195 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,195 [INFO]     Querying model gemini-2.5-flash with 9 message(s), temperature: 0.2
+2026-06-30 08:53:34,195 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,196 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,196 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,196 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,196 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,196 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,196 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,196 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,196 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,196 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,196 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,197 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,197 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,197 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,197 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,197 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,197 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,197 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,209 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048: 100%|##########| 1/1 [00:00<00:00, 46.27it/s]
+2026-06-30 08:53:34,217 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions/:   0%|          | 0/9 [00:00<?, ?it/s]
+2026-06-30 08:53:34,225 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions/: 100%|##########| 9/9 [00:00<00:00, 1157.87it/s]
+2026-06-30 08:53:34,226 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions/', 'model': 'gemini-2.5-flash', 'entry_idx': 0, 'output': '', 'reasoning': '', 'message': '[{}]', 'others': '{"error": "Message is empty"}'}
+2026-06-30 08:53:34,227 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/30_06_2026/run_2_gemini-2.5-flash/rt/range/rt_governmental-obligations-for-religious-groups-to-apply-for-official-recognitions_questions.csv
+2026-06-30 08:53:34,228 [INFO] Successfully completed question generation for rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions.

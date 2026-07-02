@@ -1,0 +1,29 @@
+2026-06-30 11:23:55,573 [INFO] Starting question evaluation for sc/sources-of-support.
+2026-06-30 11:23:55,573 [INFO] ... (more hidden) ...
+2026-06-30 11:23:55,575 [INFO]     Querying model gpt-5.5-2026-04-23 with 109 message(s), temperature: 1
+2026-06-30 11:25:57,301 [INFO] Current time: 120, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:27:57,474 [INFO] Current time: 240, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:29:57,652 [INFO] Current time: 360, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:31:57,838 [INFO] Current time: 480, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:33:58,018 [INFO] Current time: 600, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:35:58,204 [INFO] Current time: 720, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:37:58,384 [INFO] Current time: 840, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:39:58,580 [INFO] Current time: 960, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:41:58,735 [INFO] Current time: 1080, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:43:58,914 [INFO] Current time: 1200, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:45:59,083 [INFO] Current time: 1320, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:47:59,255 [INFO] Current time: 1440, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:49:59,428 [INFO] Current time: 1560, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:51:59,604 [INFO] Current time: 1680, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:53:59,775 [INFO] Current time: 1800, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:55:59,968 [INFO] Current time: 1920, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 11:58:00,137 [INFO] Current time: 2040, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 12:00:00,312 [INFO] Current time: 2160, polling batch id: batch_6a43993cb9388190a022168bb741de1d
+2026-06-30 12:00:01,506 [INFO] Processing batch queries for gpt-5.5-2026-04-23, batch size: 2048: 100%|##########| 1/1 [36:05<00:00, 2165.93s/it]
+2026-06-30 12:00:01,506 [INFO] Processing batch queries for gpt-5.5-2026-04-23, batch size: 2048: 100%|##########| 1/1 [36:05<00:00, 2165.93s/it]
+2026-06-30 12:00:01,507 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/sources-of-support/:   0%|          | 0/109 [00:00<?, ?it/s]
+2026-06-30 12:00:01,509 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/sources-of-support/: 100%|##########| 109/109 [00:00<00:00, 57133.11it/s]
+2026-06-30 12:00:01,509 [INFO] Total token usage: 66508
+2026-06-30 12:00:01,509 [INFO] Prompt token usage: 26156
+2026-06-30 12:00:01,509 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/sc/sources-of-support/', 'model': 'gpt-5.5-2026-04-23', 'entry_idx': 0, 'output': 'REASONING: Bureaucrats in Plantagenet England were supported primarily through salaries, with higher officials sometimes receiving land or lucrative appointments in addition. This indicates the salaried support characteristic was present.\nANSWER: A', 'reasoning': '', 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "During the period from 1154 CE to 1485 CE, what was the primary source of support for bureaucrats in \'Plantagenet England\', considering that bureaucrats were paid a salary and those in the highest positions may have been granted land or more lucrative appointments? Strictly choose the correct label from the unordered set: {C, A, B}. C = unknown, A = present, B = absent"}]', 'others': '{"usage.total_tokens": 527, "usage.prompt_tokens": 241, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true, "jsonl.output": "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat/jsonl/outputs/gpt-5.5-2026-04-23/30_06_2026_11_23_55_gpt-5.5-2026-04-23_https:__seshat-db.com_api_sc_sources-of-support__74.jsonl"}'}
+2026-06-30 12:00:01,513 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/30_06_2026/run_2_gpt-5.5-2026-04-23/sc/multiple_choice/sc_sources-of-support_answers.csv

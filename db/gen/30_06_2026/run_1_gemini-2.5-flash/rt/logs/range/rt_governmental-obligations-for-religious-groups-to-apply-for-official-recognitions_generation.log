@@ -1,0 +1,75 @@
+2026-06-30 08:53:09,048 [INFO] Starting question generation for rt/governmental-obligations-for-religious-groups-to-apply-for-official-recognitions.
+2026-06-30 08:53:09,048 [INFO] 
+
+Generating questions for dataset at endpoint: governmental-obligations-for-religious-groups-to-apply-for-official-recognitions
+2026-06-30 08:53:09,059 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-30 08:53:09,059 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:09,059 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:09,059 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:09,061 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:09,061 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:09,061 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:09,061 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:09,063 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:09,063 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:09,063 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:09,064 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:09,064 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:09,064 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:09,064 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:09,065 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:09,065 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:09,065 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:09,066 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:09,066 [INFO]     Querying model gemini-2.5-flash with 9 message(s), temperature: 0.2
+2026-06-30 08:53:09,071 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-30 08:53:09,071 [ERROR] Execution failed: 'list' object cannot be interpreted as an integer
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 257, in _single
+    llm_interface.generate_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule = dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        allowed_question_type=allowed_question_type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 56, in generate_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        logger=logger,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 134, in _query_generic
+    output_buffer: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self._batch_query\
+                                                                                           ~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            dataset=dataset,
+            ^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+            manual_reasoning=manual_reasoning
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 212, in _batch_query
+    raw_outs: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self.query_model\
+                                                                                      ~~~~~~~~~~~~~~~~~
+        (
+        ^
+            messages=input,
+            ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            endpoint=sub_dir
+            ^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/gemini.py", line 71, in query_model
+    for itm in range(messages):
+               ~~~~~^^^^^^^^^^
+TypeError: 'list' object cannot be interpreted as an integer

@@ -71,9 +71,12 @@ class LLMInterfaceModule():
     def respond_to_questions(
             self,
             DatasetModule: DatasetModule,
+            allowed_question_type: QuestionType,
+            logger: logging.Logger,
             params: Optional[Dict[str, Any]] = None,
             output_path: str = "",
-            batch_size: int = 32,
+            batch_size: int = BATCH_SIZE,
+            manual_reasoning: bool = False,
             ) -> None:
         endpoint: str = DatasetModule.get_endpoint()
         dataset: pl.DataFrame = DatasetModule.get_questions()
@@ -82,12 +85,15 @@ class LLMInterfaceModule():
             dataset=dataset,
             output_path=output_path,
             endpoint=endpoint,
+            allowed_question_type=allowed_question_type,
             
             single_format_callable=self._format_single_response,
             params=params,
+            logger=logger,
 
             batch_size=batch_size,
-            sub_dir="",
+            sub_dir=endpoint,
+            manual_reasoning=manual_reasoning,
         )
 
     def _query_generic(
@@ -100,6 +106,8 @@ class LLMInterfaceModule():
             single_format_callable: Optional[Callable],
 
             logger: logging.Logger,
+            
+            manual_reasoning: Optional[bool] = False,
 
             params: Optional[Dict[str, Any]] = None,
             batch_size: Optional[int] = BATCH_SIZE,
@@ -134,6 +142,8 @@ class LLMInterfaceModule():
                 batch_size=batch_size,
 
                 logger=logger,
+
+                manual_reasoning=manual_reasoning
             )
 
         question_outputs: List[Dict[str, Any]] = self._batch_format_outputs\
@@ -169,6 +179,8 @@ class LLMInterfaceModule():
             params: Dict[str, Any] = {},
             batch_size: int = 32,
 
+            manual_reasoning: Optional[bool] = False,
+
     ) -> List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]]:
         height: int = dataset.height
         batch_count: int = height // batch_size
@@ -193,7 +205,8 @@ class LLMInterfaceModule():
                     params=params,
                     sub_dir=sub_dir,
                     logger=logger,
-                    allowed_question_type=allowed_question_type
+                    allowed_question_type=allowed_question_type,
+                    manual_reasoning=manual_reasoning,
                 ) for itm in batch_slice]
 
             raw_outs: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self.query_model\
@@ -201,7 +214,8 @@ class LLMInterfaceModule():
                     messages=input,
                     temperature = params.get("temperature", GENERATION_TEMPERATURE),
                     max_tokens = params.get("max_tokens", GENERATION_MAXTOKENS_PER_PROMPT),
-                    logger=logger
+                    logger=logger,
+                    endpoint=sub_dir
                 )
             
             output_buffer.extend(raw_outs)
@@ -219,17 +233,32 @@ class LLMInterfaceModule():
 
         total_token_sum: int = 0
         prompt_token_sum: int = 0
+        cached_token_sum: int = 0
 
-        for idx, (itm, reasoning, message, others) in tqdm\
+        for idx, entry in tqdm\
             (
                 enumerate(itms), 
                 desc=f"Formatting items for endpoint: {endpoint}",
                 total = len(itms),
                 file = tqdm_outs,
             ):
+            try:
+                (itm, reasoning, message, others) = entry
+            except:
+                question_outputs[idx] = format_callable\
+                    (
+                    itm="",
+                    endpoint=endpoint,
+                    idx=idx,
+                    reasoning={},
+                    message={},
+                    others={},
+                )
+                continue
+
             if itm is None:
                 itm = ""
-
+            
             question_outputs[idx] = format_callable(
                 itm=itm,
                 endpoint=endpoint,
@@ -239,14 +268,17 @@ class LLMInterfaceModule():
                 others=others,
             )
 
-            if "usage.total_tokens" in others and "usage.prompt_tokens" in others:
+            if "usage.total_tokens" in others and "usage.prompt_tokens" in others and "usage.cached_tokens":
                 total_token_sum += others["usage.total_tokens"]
                 prompt_token_sum += others["usage.prompt_tokens"]
+                cached_token_sum += others["usage.cached_tokens"]
         
         if total_token_sum > 0:
             logger.info(f"Total token usage: {total_token_sum}")
         if prompt_token_sum > 0:
             logger.info(f"Prompt token usage: {prompt_token_sum}")
+        if cached_token_sum > 0:
+            logger.info(f"Cached token usage: {cached_token_sum}")
 
         return question_outputs
         
@@ -256,7 +288,8 @@ class LLMInterfaceModule():
             params: Dict[str, Any],
             sub_dir: str,
             logger: logging.Logger,
-            allowed_question_type: QuestionType
+            allowed_question_type: QuestionType,
+            manual_reasoning: Optional[bool] = False,
         ) -> str:
         
         if not self.check_if_question_in_filter(itm, params, logger=logger):
@@ -294,11 +327,14 @@ class LLMInterfaceModule():
             itm: Dict[str, Any],
             params: Dict[str, Any],
             sub_dir: str,  
+            logger: logging.Logger,
+            allowed_question_type: QuestionType,
+            manual_reasoning: Optional[bool] = False,
     ) -> str:
         question: str = itm.get("output", "")
         if not question:
             return ""
-        message_single: Dict[str, Any] = eval_tmps.multichoice(question)
+        message_single: Dict[str, Any] = eval_tmps.multichoice(question, manual_reasoning)
         
         return message_single
     
@@ -311,16 +347,18 @@ class LLMInterfaceModule():
             message: List[Dict[str, Any]],
             others: Dict[str, Any]
         ) -> Dict[str, Any]:
-        result: Dict[str, Any] = {
+        msg_val = json.dumps(message) if not isinstance(message, str) else message
+        oth_val = json.dumps(others) if isinstance(others, (dict, list)) else others
+        
+        return {
             "endpoint_identifier": endpoint, 
             "model": self.model_name,
             "entry_idx": idx,
             "output": itm,
-            "reasoning": reasoning,
-            "message": json.dumps(message) if isinstance(message, list) else message,
-            "others": json.dumps(others) if isinstance(others, dict) else others,
-            }
-        return result
+            "reasoning": reasoning if reasoning else "",
+            "message": msg_val,
+            "others": oth_val,
+        }
         
     
 

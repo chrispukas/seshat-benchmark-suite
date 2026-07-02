@@ -1,0 +1,55 @@
+2026-06-29 13:01:45,462 [INFO] Starting question evaluation for sc/professional-priesthoods.
+2026-06-29 13:01:45,501 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-29 13:01:45,506 [INFO]     Querying model gpt-3.5-turbo-0125 with 467 message(s), temperature: 1
+2026-06-29 13:02:18,022 [INFO] Current time: 30, polling batch id: batch_6a425eabb0788190976ff21cbf1bef5d
+2026-06-29 13:02:48,203 [INFO] Current time: 60, polling batch id: batch_6a425eabb0788190976ff21cbf1bef5d
+2026-06-29 13:03:18,403 [INFO] Current time: 90, polling batch id: batch_6a425eabb0788190976ff21cbf1bef5d
+2026-06-29 13:03:48,584 [INFO] Current time: 120, polling batch id: batch_6a425eabb0788190976ff21cbf1bef5d
+2026-06-29 13:04:18,784 [INFO] Current time: 150, polling batch id: batch_6a425eabb0788190976ff21cbf1bef5d
+2026-06-29 13:04:49,001 [INFO] Current time: 180, polling batch id: batch_6a425eabb0788190976ff21cbf1bef5d
+2026-06-29 13:05:19,210 [INFO] Current time: 210, polling batch id: batch_6a425eabb0788190976ff21cbf1bef5d
+2026-06-29 13:05:49,406 [INFO] Current time: 240, polling batch id: batch_6a425eabb0788190976ff21cbf1bef5d
+2026-06-29 13:06:19,601 [INFO] Current time: 270, polling batch id: batch_6a425eabb0788190976ff21cbf1bef5d
+2026-06-29 13:06:49,816 [INFO] Current time: 300, polling batch id: batch_6a425eabb0788190976ff21cbf1bef5d
+2026-06-29 13:06:51,178 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048: 100%|##########| 1/1 [05:05<00:00, 305.68s/it]
+2026-06-29 13:06:51,178 [INFO] Processing batch queries for gpt-3.5-turbo-0125, batch size: 2048: 100%|##########| 1/1 [05:05<00:00, 305.68s/it]
+2026-06-29 13:06:51,179 [INFO] ... (more hidden) ...
+2026-06-29 13:06:51,179 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/professional-priesthoods/:  16%|#6        | 75/467 [00:00<00:00, 123168.68it/s]
+2026-06-29 13:06:51,179 [ERROR] Execution failed: not enough values to unpack (expected 4, got 0)
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 163, in _single
+    llm_instance.respond_to_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule=dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 84, in respond_to_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 149, in _query_generic
+    question_outputs: List[Dict[str, Any]] = self._batch_format_outputs\
+                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            itms=output_buffer,
+            ^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            logger=logger
+            ^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 238, in _batch_format_outputs
+    for idx, (itm, reasoning, message, others) in tqdm\
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 4, got 0)

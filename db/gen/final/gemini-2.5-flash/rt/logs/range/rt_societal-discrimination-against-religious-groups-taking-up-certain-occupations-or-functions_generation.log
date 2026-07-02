@@ -1,0 +1,48 @@
+2026-06-30 16:06:26,977 [INFO] Starting question generation for rt/societal-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions.
+2026-06-30 16:06:26,977 [INFO] 
+
+Generating questions for dataset at endpoint: societal-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions
+2026-06-30 16:06:26,984 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-30 16:06:26,984 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,985 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,985 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,986 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,986 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,987 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,987 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,988 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,988 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,988 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,988 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,988 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,988 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,989 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,989 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,989 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,989 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,989 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,990 [INFO]     Querying model gemini-2.5-flash with 9 message(s), temperature: 0.2
+2026-06-30 16:06:26,990 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,990 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,990 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,990 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,991 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,991 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,991 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,991 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,992 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,992 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,992 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,993 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,993 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,993 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,993 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,993 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,993 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,994 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,998 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048: 100%|##########| 1/1 [00:00<00:00, 72.02it/s]
+2026-06-30 16:06:27,007 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/societal-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions/:   0%|          | 0/9 [00:00<?, ?it/s]
+2026-06-30 16:06:27,012 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/societal-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions/: 100%|##########| 9/9 [00:00<00:00, 1641.46it/s]
+2026-06-30 16:06:27,012 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/rt/societal-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions/', 'model': 'gemini-2.5-flash', 'entry_idx': 0, 'output': '', 'reasoning': '', 'message': '[{}]', 'others': '{"error": "Message is empty"}'}
+2026-06-30 16:06:27,016 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/30_06_2026/run_8_gemini-2.5-flash/rt/range/rt_societal-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions_questions.csv
+2026-06-30 16:06:27,016 [INFO] Successfully completed question generation for rt/societal-discrimination-against-religious-groups-taking-up-certain-occupations-or-functions.

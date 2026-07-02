@@ -1,0 +1,35 @@
+2026-06-30 00:44:08,565 [INFO] Starting question evaluation for wf/sling-siege-engines.
+2026-06-30 00:44:08,593 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-30 00:44:08,597 [INFO]     Querying model gpt-4-0613 with 353 message(s), temperature: 1
+2026-06-30 00:46:10,918 [INFO] Current time: 120, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 00:48:11,124 [INFO] Current time: 240, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 00:50:11,320 [INFO] Current time: 360, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 00:52:11,592 [INFO] Current time: 480, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 00:54:11,793 [INFO] Current time: 600, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 00:56:11,992 [INFO] Current time: 720, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 00:58:12,208 [INFO] Current time: 840, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:00:12,416 [INFO] Current time: 960, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:02:12,592 [INFO] Current time: 1080, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:04:12,761 [INFO] Current time: 1200, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:06:12,975 [INFO] Current time: 1320, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:08:16,413 [INFO] Current time: 1440, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:10:16,619 [INFO] Current time: 1560, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:12:17,807 [INFO] Current time: 1680, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:14:17,984 [INFO] Current time: 1800, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:16:18,195 [INFO] Current time: 1920, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:18:18,388 [INFO] Current time: 2040, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:20:18,595 [INFO] Current time: 2160, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:22:22,076 [INFO] Current time: 2280, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:24:22,268 [INFO] Current time: 2400, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:26:22,478 [INFO] Current time: 2520, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:28:22,657 [INFO] Current time: 2640, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:30:22,831 [INFO] Current time: 2760, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:32:23,021 [INFO] Current time: 2880, polling batch id: batch_6a43034a62948190ab88157c7153f8c7
+2026-06-30 01:32:24,084 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [48:15<00:00, 2895.49s/it]
+2026-06-30 01:32:24,085 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [48:15<00:00, 2895.49s/it]
+2026-06-30 01:32:24,085 [INFO] ... (more hidden) ...
+2026-06-30 01:32:24,090 [INFO] Formatting items for endpoint: https://seshat-db.com/api/wf/sling-siege-engines/: 100%|##########| 353/353 [00:00<00:00, 80800.55it/s]
+2026-06-30 01:32:24,090 [INFO] Total token usage: 111027
+2026-06-30 01:32:24,090 [INFO] Prompt token usage: 85829
+2026-06-30 01:32:24,090 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/wf/sling-siege-engines/', 'model': 'gpt-4-0613', 'entry_idx': 0, 'output': 'REASONING: During the period from 1747 CE to 1826 CE, the Durrani Empire primarily used firearms and artillery in warfare. The sling siege engine was not prevalent as a military technology during this period. Siege engines like the trebuchet had become outdated due to advancements in technology.\nANSWER: B', 'reasoning': '', 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "During the period from 1747 CE to 1826 CE, was the sling siege engine, defined as a mechanical device used in warfare to hurl projectiles using a sling mechanism, present or absent as a military technology in \'Durrani Empire\'? Strictly choose the correct label from the unordered set: {A, B, C}. A = present, B = absent, C = unknown"}]', 'others': '{"usage.total_tokens": 306, "usage.prompt_tokens": 240, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true, "jsonl.output": "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat/jsonl/outputs/gpt-4-0613/30_06_2026_00_44_08_gpt-4-0613_https:__seshat-db.com_api_wf_sling-siege-engines__306.jsonl"}'}
+2026-06-30 01:32:24,093 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/29_06_2026/run_16_gpt-4-0613/wf/multiple_choice/wf_sling-siege-engines_answers.csv

@@ -1,0 +1,64 @@
+2026-06-30 20:12:20,623 [INFO] Starting question generation for sc/other-utilitarian-public-buildings.
+2026-06-30 20:12:20,623 [INFO] 
+
+Generating questions for dataset at endpoint: other-utilitarian-public-buildings
+2026-06-30 20:12:20,625 [INFO] Processing batch queries for gemini-3.5-flash, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-30 20:12:20,625 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 20:12:20,626 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 20:12:20,626 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 20:12:20,626 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 20:12:20,627 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 20:12:20,627 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 20:12:20,627 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 20:12:20,628 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 20:12:20,628 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 20:12:20,628 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 20:12:20,629 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 20:12:20,629 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 20:12:20,629 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 20:12:20,629 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 20:12:20,629 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 20:12:20,630 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 20:12:20,630 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 20:12:20,630 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 20:12:20,630 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 20:12:20,630 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 20:12:20,630 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 20:12:20,631 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 20:12:20,631 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 20:12:20,631 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 20:12:20,631 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 20:12:20,631 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 20:12:20,632 [INFO]     Querying model gemini-3.5-flash with 13 message(s), temperature: 0.2
+2026-06-30 20:12:20,632 [WARNING] Message is empty, skipping.
+2026-06-30 20:12:20,632 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 20:12:20,633 [WARNING] Message is empty, skipping.
+2026-06-30 20:12:20,633 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 20:12:20,633 [WARNING] Message is empty, skipping.
+2026-06-30 20:12:20,634 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 20:12:20,634 [WARNING] Message is empty, skipping.
+2026-06-30 20:12:20,634 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 20:12:20,634 [WARNING] Message is empty, skipping.
+2026-06-30 20:12:20,634 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 20:12:20,635 [WARNING] Message is empty, skipping.
+2026-06-30 20:12:20,635 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 20:12:20,635 [WARNING] Message is empty, skipping.
+2026-06-30 20:12:20,635 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 20:12:20,635 [WARNING] Message is empty, skipping.
+2026-06-30 20:12:20,636 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 20:12:20,636 [WARNING] Message is empty, skipping.
+2026-06-30 20:12:20,636 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 20:12:20,636 [WARNING] Message is empty, skipping.
+2026-06-30 20:12:20,636 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 20:12:20,636 [WARNING] Message is empty, skipping.
+2026-06-30 20:12:20,636 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 20:12:20,637 [WARNING] Message is empty, skipping.
+2026-06-30 20:12:20,637 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 20:12:20,637 [WARNING] Message is empty, skipping.
+2026-06-30 20:12:20,637 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 20:12:20,637 [INFO] Processing batch queries for gemini-3.5-flash, batch size: 2048: 100%|##########| 1/1 [00:00<00:00, 80.63it/s]
+2026-06-30 20:12:20,637 [INFO] ... (more hidden) ...
+2026-06-30 20:12:20,638 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/other-utilitarian-public-buildings/: 100%|##########| 13/13 [00:00<00:00, 245612.40it/s]
+2026-06-30 20:12:20,638 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/sc/other-utilitarian-public-buildings/', 'model': 'gemini-3.5-flash', 'entry_idx': 0, 'output': '', 'reasoning': '', 'message': '[{}]', 'others': '{"error": "Message is empty"}'}
+2026-06-30 20:12:20,640 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/30_06_2026/run_9_gemini-3.5-flash/sc/range/sc_other-utilitarian-public-buildings_questions.csv
+2026-06-30 20:12:20,640 [INFO] Successfully completed question generation for sc/other-utilitarian-public-buildings.

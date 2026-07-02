@@ -1,0 +1,882 @@
+2026-06-29 20:38:29,217 [INFO] Starting question generation for wf/long-walls.
+2026-06-29 20:38:29,218 [INFO] 
+
+Generating questions for dataset at endpoint: long-walls
+2026-06-29 20:38:29,218 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-29 20:38:29,219 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,221 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,222 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,224 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,224 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,224 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,224 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,225 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,225 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,227 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,227 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,227 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,228 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,229 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,229 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,229 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,230 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,230 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,231 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,231 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,232 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,232 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,232 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,232 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,234 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,234 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,234 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,234 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,234 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,234 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,235 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,235 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,236 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,236 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,236 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,236 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,237 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,237 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,237 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,237 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,243 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,244 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,244 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,245 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,245 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,245 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,245 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,245 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,245 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,245 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,245 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,245 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,245 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,247 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,247 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,247 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,247 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,248 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,248 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,248 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,250 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,251 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,251 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,252 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,252 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,252 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,252 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,252 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,252 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,252 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,252 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,252 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,252 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,252 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,252 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,252 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,252 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,252 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,253 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,255 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,255 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,255 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,256 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,256 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,257 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,257 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,257 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,259 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,259 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,260 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,260 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,260 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,260 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,260 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,260 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,264 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,265 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,265 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,267 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,267 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,267 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,267 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,267 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,267 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,267 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,267 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,267 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,267 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,267 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,267 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,267 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,267 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,267 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,267 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,269 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,269 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,269 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,273 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,273 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,273 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,273 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,273 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,273 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,273 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,273 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,273 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,276 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,276 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,276 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,276 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,276 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,276 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,279 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,279 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,279 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,279 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,279 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,279 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,279 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,279 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,279 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,280 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,280 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,280 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,280 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,280 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,280 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,280 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,280 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,280 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,280 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,280 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,283 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,283 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,285 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,285 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,289 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,292 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,292 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,292 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,292 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,292 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,292 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,292 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,292 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,292 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,292 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,292 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,292 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,292 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,292 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,292 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,292 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,292 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,292 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,292 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,292 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,292 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,292 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,292 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,292 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,292 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,292 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,292 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,292 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,293 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,293 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,293 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,293 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,293 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,293 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,299 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,299 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,300 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,301 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,302 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,302 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,303 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,303 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,305 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,305 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,305 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,305 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,306 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,306 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,306 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,306 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,306 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,307 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,307 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,307 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,307 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,307 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,307 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,307 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,307 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,307 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,307 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,307 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,307 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,307 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,307 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,307 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,307 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,307 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,307 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,308 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,308 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,308 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,308 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,308 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,308 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,308 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,311 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,311 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,311 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,311 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,311 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,311 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,311 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,311 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,311 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,311 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,311 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,311 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,311 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,311 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,311 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,311 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,311 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,311 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,311 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,311 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,311 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,311 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,311 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,311 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,311 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,311 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,311 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,311 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,311 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,311 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,311 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,311 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,311 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,311 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,311 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,311 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,312 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,312 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,312 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,312 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,312 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,312 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,312 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,312 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,312 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,312 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,313 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,313 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,313 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,313 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,313 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,316 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,316 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,316 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,316 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,316 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,316 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,316 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,316 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,316 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,316 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,316 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,316 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,316 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,316 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,317 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,317 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,317 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,328 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,328 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,330 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,330 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,330 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,330 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,330 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,336 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,340 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,340 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,340 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,340 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,341 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,341 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,341 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,342 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,343 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,343 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,346 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,346 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,352 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,352 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,355 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,355 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,360 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,363 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,363 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,365 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,365 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,365 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,365 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,367 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,367 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,367 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,367 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,367 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,367 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,367 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,367 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,367 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,367 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,367 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,367 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,367 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,367 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,367 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,367 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,367 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,367 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,367 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,367 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,367 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,367 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,367 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,367 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,375 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,375 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,375 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,375 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,380 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,380 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,381 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,381 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,381 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,381 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,381 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,382 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,382 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,382 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,382 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,382 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,382 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,382 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,382 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,382 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,382 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,382 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,382 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,384 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,384 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,384 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,390 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,390 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,391 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,391 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,391 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,391 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,391 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,391 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,391 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,391 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,391 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,391 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,391 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,391 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,394 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,394 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,394 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,394 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,394 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,394 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,394 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,395 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,395 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,395 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,395 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,395 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,395 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,395 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,395 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,396 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,396 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,397 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,398 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,398 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,398 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,400 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,400 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,401 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,401 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,402 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,402 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,403 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,404 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,404 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,405 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,405 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,406 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,407 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,407 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,407 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,408 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,409 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,409 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,410 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,410 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,411 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,411 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,412 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,412 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,413 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,414 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,414 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,415 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,415 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,416 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,416 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,417 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,418 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,418 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,419 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,419 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,420 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,420 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,421 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,421 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,422 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,422 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,423 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,424 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,424 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,425 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,425 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,426 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,426 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,427 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,430 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,430 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,430 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,431 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,431 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,431 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,440 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,440 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,440 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,446 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,446 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,452 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,453 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,453 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,453 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,453 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,453 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,453 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,453 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,453 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,453 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,456 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,456 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,456 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,456 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,456 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,460 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,460 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,460 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,460 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,460 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,460 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,460 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,461 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,461 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,461 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,461 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,461 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,461 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,461 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,461 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,466 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,466 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,466 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,466 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,466 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,471 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,471 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,474 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,474 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,476 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,476 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,476 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,476 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,476 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,476 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,476 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,476 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,478 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,478 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,478 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,478 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,479 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,479 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,479 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,479 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,479 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,505 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,507 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,507 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,507 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,507 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,510 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,510 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,510 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,514 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,514 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,514 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,514 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,514 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,514 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,514 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,514 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,514 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,520 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,520 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,527 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,527 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,527 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,527 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,527 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,527 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,527 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,527 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,528 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,528 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,528 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,528 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,528 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,532 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,532 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,532 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,532 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,532 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,534 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,535 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,535 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,536 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,536 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,537 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,538 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,538 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,539 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,539 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,540 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,541 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,542 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,543 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,545 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,545 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,546 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,546 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,547 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,547 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,548 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,548 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,549 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,552 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,552 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,553 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,553 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,574 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,574 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,574 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,574 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,575 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,575 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,576 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,582 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,582 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,582 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,582 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,582 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,583 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,583 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,586 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,586 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,588 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,588 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,588 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,588 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,588 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,588 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,588 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,588 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,590 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,591 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,591 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,591 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,591 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,591 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,591 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,592 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,592 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,592 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,593 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,593 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,596 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,596 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,596 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,596 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,596 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,596 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,596 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,596 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,596 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,597 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,597 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,602 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,602 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,603 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,603 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,608 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,608 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,615 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,615 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,617 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,617 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,618 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,619 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,620 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,621 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,622 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,623 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,624 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,624 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,625 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,625 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,626 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,627 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,628 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,628 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,630 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,633 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,634 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,635 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,636 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,637 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,638 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,639 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,640 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,640 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,641 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,641 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,642 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,644 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,644 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,646 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,646 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,647 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,649 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,650 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,650 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,650 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,650 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,651 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,653 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,655 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,655 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,656 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,656 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,656 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,657 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,658 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,659 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,659 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,660 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,660 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,660 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,671 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,671 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,673 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,673 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,676 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,676 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,678 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,678 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,678 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,678 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,678 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,678 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,680 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,681 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,681 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,682 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,682 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,685 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,686 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,688 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,689 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,690 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,691 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,692 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,692 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,693 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,693 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,695 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,695 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,696 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,696 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,697 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,699 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,699 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,701 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,701 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,701 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,701 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,701 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,701 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,701 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,701 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,701 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,701 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,701 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,701 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,701 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,701 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,702 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,703 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,703 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,705 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,706 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,706 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,707 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,707 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,708 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,708 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,709 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,709 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,710 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,711 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,711 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,712 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,713 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,714 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,714 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,715 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,715 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,716 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,716 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,717 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,717 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,718 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,718 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,719 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,719 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,720 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,721 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,721 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,721 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,722 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,722 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,723 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,723 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,724 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,724 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,725 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,725 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,726 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,726 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,726 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,727 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,727 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,727 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,727 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,727 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,727 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,727 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,727 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,727 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-29 20:38:29,727 [WARNING] Warning: Missing data for endpoint 'long-walls': 'polity_to' or 'polity_from' not found in row.
+2026-06-29 20:38:29,732 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-29 20:38:29,732 [INFO]     Querying model gemini-2.5-flash with 273 message(s), temperature: 0.2
+2026-06-29 20:38:29,756 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-29 20:38:29,758 [ERROR] Execution failed: Files.upload() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 257, in _single
+    llm_interface.generate_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule = dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        allowed_question_type=allowed_question_type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 56, in generate_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        logger=logger,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 134, in _query_generic
+    output_buffer: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self._batch_query\
+                                                                                           ~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            dataset=dataset,
+            ^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+            manual_reasoning=manual_reasoning
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 212, in _batch_query
+    raw_outs: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self.query_model\
+                                                                                      ~~~~~~~~~~~~~~~~~
+        (
+        ^
+            messages=input,
+            ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            endpoint=sub_dir
+            ^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/gemini.py", line 71, in query_model
+    response: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self._batch(
+                                                                                      ~~~~~~~~~~~^
+        messages=messages,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        logger=logger,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/gemini.py", line 93, in _batch
+    file = self._create_jsonl(
+        messages=messages,
+    ...<2 lines>...
+        temperate=temperature,
+    )
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/gemini.py", line 218, in _create_jsonl
+    return self.client.files.upload(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+TypeError: Files.upload() takes 1 positional argument but 2 were given

@@ -1,0 +1,48 @@
+2026-06-30 16:06:26,963 [INFO] Starting question generation for rt/government-pressure-to-converts.
+2026-06-30 16:06:26,964 [INFO] 
+
+Generating questions for dataset at endpoint: government-pressure-to-converts
+2026-06-30 16:06:26,968 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-30 16:06:26,969 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,969 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,969 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,969 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,969 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,969 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,969 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,969 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,969 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,969 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,969 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,969 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,970 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,970 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,970 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,970 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,970 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 16:06:26,970 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 16:06:26,970 [INFO]     Querying model gemini-2.5-flash with 9 message(s), temperature: 0.2
+2026-06-30 16:06:26,970 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,970 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,970 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,970 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,970 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,970 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,970 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,970 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,970 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,970 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,970 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,970 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,970 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,970 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,970 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,970 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,970 [WARNING] Message is empty, skipping.
+2026-06-30 16:06:26,970 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 16:06:26,970 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048: 100%|##########| 1/1 [00:00<00:00, 493.85it/s]
+2026-06-30 16:06:26,970 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/government-pressure-to-converts/:   0%|          | 0/9 [00:00<?, ?it/s]
+2026-06-30 16:06:26,970 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/government-pressure-to-converts/: 100%|##########| 9/9 [00:00<00:00, 256794.12it/s]
+2026-06-30 16:06:26,970 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/rt/government-pressure-to-converts/', 'model': 'gemini-2.5-flash', 'entry_idx': 0, 'output': '', 'reasoning': '', 'message': '[{}]', 'others': '{"error": "Message is empty"}'}
+2026-06-30 16:06:26,974 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/30_06_2026/run_8_gemini-2.5-flash/rt/range/rt_government-pressure-to-converts_questions.csv
+2026-06-30 16:06:26,975 [INFO] Successfully completed question generation for rt/government-pressure-to-converts.

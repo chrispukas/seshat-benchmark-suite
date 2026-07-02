@@ -1,0 +1,28 @@
+2026-06-30 00:01:44,305 [INFO] Starting question evaluation for sc/communal-buildings.
+2026-06-30 00:01:44,305 [INFO] ... (more hidden) ...
+2026-06-30 00:01:44,307 [INFO]     Querying model gpt-4-0613 with 132 message(s), temperature: 1
+2026-06-30 00:03:45,530 [INFO] Current time: 120, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:05:45,729 [INFO] Current time: 240, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:07:47,549 [INFO] Current time: 360, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:09:47,765 [INFO] Current time: 480, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:11:47,969 [INFO] Current time: 600, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:13:52,286 [INFO] Current time: 720, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:15:52,485 [INFO] Current time: 840, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:17:52,702 [INFO] Current time: 960, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:19:52,909 [INFO] Current time: 1080, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:21:53,119 [INFO] Current time: 1200, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:23:56,411 [INFO] Current time: 1320, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:25:56,615 [INFO] Current time: 1440, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:27:56,827 [INFO] Current time: 1560, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:29:57,056 [INFO] Current time: 1680, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:31:57,288 [INFO] Current time: 1800, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:34:02,642 [INFO] Current time: 1920, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:36:02,851 [INFO] Current time: 2040, polling batch id: batch_6a42f9592fdc819099b9ca34b352592e
+2026-06-30 00:36:04,197 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [34:19<00:00, 2059.89s/it]
+2026-06-30 00:36:04,197 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [34:19<00:00, 2059.89s/it]
+2026-06-30 00:36:04,198 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/communal-buildings/:   0%|          | 0/132 [00:00<?, ?it/s]
+2026-06-30 00:36:04,200 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/communal-buildings/: 100%|##########| 132/132 [00:00<00:00, 58948.91it/s]
+2026-06-30 00:36:04,200 [INFO] Total token usage: 40514
+2026-06-30 00:36:04,200 [INFO] Prompt token usage: 31260
+2026-06-30 00:36:04,200 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/sc/communal-buildings/', 'model': 'gpt-4-0613', 'entry_idx': 0, 'output': 'REASONING: The history of West Burkina Faso is not especially well-documented for the period from 100 to 500 CE, when it was likely inhabited by hunter-gatherer groups. Archaeological evidence for large structural developments such as communal buildings during this time period is lacking.\n\nANSWER: B', 'reasoning': '', 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "According to the Seshat Codebook, this variable distinguishes between settlements consisting only of private households (code \'absent\') and those with communal buildings for a variety of uses (code \'present\'). For the period from 100 CE to 500 CE in \'West Burkina Faso Yellow I\', were communal buildings present or absent in settlements? Strictly choose the correct label from the unordered set: {A, B, C}. A = present, B = absent, C = unknown"}]', 'others': '{"usage.total_tokens": 324, "usage.prompt_tokens": 261, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true, "jsonl.output": "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat/jsonl/outputs/gpt-4-0613/30_06_2026_00_01_44_gpt-4-0613_https:__seshat-db.com_api_sc_communal-buildings__274.jsonl"}'}
+2026-06-30 00:36:04,202 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/29_06_2026/run_16_gpt-4-0613/sc/multiple_choice/sc_communal-buildings_answers.csv

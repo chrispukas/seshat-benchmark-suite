@@ -1,0 +1,30 @@
+2026-06-30 00:44:08,565 [INFO] Starting question evaluation for wf/crossbows.
+2026-06-30 00:44:08,599 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-30 00:44:08,603 [INFO]     Querying model gpt-4-0613 with 349 message(s), temperature: 1
+2026-06-30 00:46:11,208 [INFO] Current time: 120, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 00:48:11,389 [INFO] Current time: 240, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 00:50:11,587 [INFO] Current time: 360, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 00:52:11,771 [INFO] Current time: 480, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 00:54:11,938 [INFO] Current time: 600, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 00:56:12,103 [INFO] Current time: 720, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 00:58:12,318 [INFO] Current time: 840, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 01:00:12,521 [INFO] Current time: 960, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 01:02:12,742 [INFO] Current time: 1080, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 01:04:12,958 [INFO] Current time: 1200, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 01:06:13,144 [INFO] Current time: 1320, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 01:08:16,389 [INFO] Current time: 1440, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 01:10:16,610 [INFO] Current time: 1560, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 01:12:16,816 [INFO] Current time: 1680, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 01:14:17,024 [INFO] Current time: 1800, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 01:16:17,241 [INFO] Current time: 1920, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 01:18:17,452 [INFO] Current time: 2040, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 01:20:17,631 [INFO] Current time: 2160, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 01:22:21,111 [INFO] Current time: 2280, polling batch id: batch_6a43034ae8fc8190aedfa438bae92364
+2026-06-30 01:22:22,458 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [38:13<00:00, 2293.86s/it]
+2026-06-30 01:22:22,459 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [38:13<00:00, 2293.86s/it]
+2026-06-30 01:22:22,460 [INFO] ... (more hidden) ...
+2026-06-30 01:22:22,465 [INFO] Formatting items for endpoint: https://seshat-db.com/api/wf/crossbows/: 100%|##########| 349/349 [00:00<00:00, 67193.58it/s]
+2026-06-30 01:22:22,465 [INFO] Total token usage: 106831
+2026-06-30 01:22:22,465 [INFO] Prompt token usage: 83217
+2026-06-30 01:22:22,465 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/wf/crossbows/', 'model': 'gpt-4-0613', 'entry_idx': 0, 'output': 'REASONING: The time period mentioned corresponds to the late 18th century to the early 19th century. By this time, gunpowder weapons, primarily muskets and cannons, were the main military technologies used in warfare worldwide, including in the Durrani Empire. Crossbows, a technology prevalent in medieval times, had been largely phased out.\n\nANSWER: B', 'reasoning': '', 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "During the period from 1747 CE to 1826 CE, was the crossbow present or absent as a military technology used in warfare by \'Durrani Empire\'? Strictly choose the correct label from the unordered set: {C, A, B}. C = unknown, A = present, B = absent"}]', 'others': '{"usage.total_tokens": 303, "usage.prompt_tokens": 225, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true, "jsonl.output": "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat/jsonl/outputs/gpt-4-0613/30_06_2026_00_44_08_gpt-4-0613_https:__seshat-db.com_api_wf_crossbows__297.jsonl"}'}
+2026-06-30 01:22:22,469 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/29_06_2026/run_16_gpt-4-0613/wf/multiple_choice/wf_crossbows_answers.csv

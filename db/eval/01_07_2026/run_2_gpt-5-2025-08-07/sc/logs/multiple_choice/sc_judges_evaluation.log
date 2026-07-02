@@ -1,0 +1,121 @@
+2026-07-01 01:04:39,888 [INFO] Starting question evaluation for sc/judges.
+2026-07-01 01:04:39,892 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   0%|          | 0/475 [00:00<?, ?it/s]
+2026-07-01 01:04:39,893 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:04:57,641 [INFO]     Metrics: total_token usage: 1340, prompt_token usage: 249cached_token usage: -1
+2026-07-01 01:04:57,641 [INFO] ('REASONING: The Durrani Empire maintained sharia courts in its urban centers, where qadis drawn from the Hanafi ulama adjudicated legal matters and issued rulings, complementing tribal customary justice. Thus, ulama served as judges within state governance.\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "In 'Durrani Empire' between 1747 CE and 1826 CE, did the Ulama—defined as scholars of Islamic thought who also served as lawyers, and explicitly not a specialized function—serve as judges (i.e., perform judicial/legal adjudication) as part of the polity’s governance? Strictly choose the correct label from the unordered set: {A, C, B}. A = present, C = unknown, B = absent"}], {'usage.total_tokens': 1340, 'usage.prompt_tokens': 249, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:04:57,641 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   0%|          | 1/475 [00:17<2:20:12, 17.75s/it]
+2026-07-01 01:04:57,641 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:05:38,468 [INFO]     Metrics: total_token usage: 2274, prompt_token usage: 276cached_token usage: -1
+2026-07-01 01:05:38,470 [INFO] ('REASONING: Sources on the Ghurids mention city qadis but do not clearly attest an empire-wide qadi al-qudat or a formal hierarchy with specialized judges like a qadi al-jaysh. Given the lack of explicit evidence for such an office between 1025–1215, its presence is uncertain.\nANSWER: C', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "“Judge” refers to the presence of a formal judicial hierarchy headed by a supreme judge (qāḍı̄ al-quḍāt) with subordinate judges (qāḍı̄s), including specialized judges such as a judge for the army; for 'Ghur Principality' between 1025 CE and 1215 CE, was such an office/institutional structure present or absent? Strictly choose the correct label from the unordered set: {C, A, B}. C = unknown, A = present, B = absent"}], {'usage.total_tokens': 2274, 'usage.prompt_tokens': 276, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:05:38,470 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   0%|          | 2/475 [00:58<4:06:56, 31.33s/it]
+2026-07-01 01:05:38,471 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:06:04,077 [INFO]     Metrics: total_token usage: 1386, prompt_token usage: 284cached_token usage: -1
+2026-07-01 01:06:04,077 [INFO] ('REASONING: Judges are attested under the Seleucids, and early Greco-Bactrian centers like Ai Khanoum likely retained Greek civic-judicial institutions, but direct evidence for a sustained, kingdom-wide judicial office across the whole period is lacking and may have lapsed later. Overall, the status is uncertain.\nANSWER: C', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "For 'Greco-Bactrian Kingdom' between 256 BCE and 125 BCE, assess the presence of the office or institutional role of a Judge (noting that it is recorded as present under the Seleucids and may have been present at the start of the period but later lost): provide exactly one of the following coded responses and nothing else—{A = present throughout, B = absent throughout, C = present at start then lost, D = absent at start then gained}? Strictly choose the correct label from the unordered set: {B, C, A}. B = absent, C = unknown, A = present"}], {'usage.total_tokens': 1386, 'usage.prompt_tokens': 284, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:06:04,078 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   1%|          | 3/475 [01:24<3:45:53, 28.71s/it]
+2026-07-01 01:06:04,078 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:06:07,615 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   1%|          | 3/475 [01:27<3:50:01, 29.24s/it]
+2026-07-01 01:06:07,616 [ERROR] Execution failed: ChatGPTInterfaceModule._create_with_retry() missing 1 required positional argument: 'seed'
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 345, in _create_with_retry
+    return self.client.chat.completions.create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        model=self.model_name,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        seed=seed,
+        ^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1251, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<52 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 169, in _single
+    llm_instance.respond_to_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule=dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        batch_size=batch_size
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 84, in respond_to_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 134, in _query_generic
+    output_buffer: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self._batch_query\
+                                                                                           ~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            dataset=dataset,
+            ^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+            manual_reasoning=manual_reasoning
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 212, in _batch_query
+    raw_outs: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self.query_model\
+                                                                                      ~~~~~~~~~~~~~~~~~
+        (
+        ^
+            messages=input,
+            ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            endpoint=sub_dir
+            ^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 61, in query_model
+    response: Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]] = self._single(
+                                                                                ~~~~~~~~~~~~^
+        message=messages[0],
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        logger=logger
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 290, in _single
+    response = self._create_with_retry(
+        max=3,
+    ...<4 lines>...
+        seed=seed
+    )
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 360, in _create_with_retry
+    return self._create_with_retry(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        max=max,
+        ^^^^^^^^
+    ...<5 lines>...
+        temperature=temperature
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: ChatGPTInterfaceModule._create_with_retry() missing 1 required positional argument: 'seed'

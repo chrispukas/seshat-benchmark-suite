@@ -1,0 +1,45 @@
+2026-06-29 16:04:39,083 [INFO] Starting question evaluation for sc/irrigation-systems.
+2026-06-29 16:04:39,215 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-29 16:04:39,222 [INFO]     Querying model gpt-4-0613 with 469 message(s), temperature: 1
+2026-06-29 16:05:11,285 [INFO] Current time: 30, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:05:41,455 [INFO] Current time: 60, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:06:11,674 [INFO] Current time: 90, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:06:41,864 [INFO] Current time: 120, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:07:12,058 [INFO] Current time: 150, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:07:42,259 [INFO] Current time: 180, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:08:12,458 [INFO] Current time: 210, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:08:42,927 [INFO] Current time: 240, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:09:13,101 [INFO] Current time: 270, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:09:43,312 [INFO] Current time: 300, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:10:13,519 [INFO] Current time: 330, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:10:43,708 [INFO] Current time: 360, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:11:13,883 [INFO] Current time: 390, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:11:44,079 [INFO] Current time: 420, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:12:14,310 [INFO] Current time: 450, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:12:44,525 [INFO] Current time: 480, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:13:14,729 [INFO] Current time: 510, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:13:44,947 [INFO] Current time: 540, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:14:15,145 [INFO] Current time: 570, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:14:45,346 [INFO] Current time: 600, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:15:15,600 [INFO] Current time: 630, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:15:45,813 [INFO] Current time: 660, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:16:16,009 [INFO] Current time: 690, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:16:46,206 [INFO] Current time: 720, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:17:16,438 [INFO] Current time: 750, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:17:46,655 [INFO] Current time: 780, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:18:16,893 [INFO] Current time: 810, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:18:47,104 [INFO] Current time: 840, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:19:17,332 [INFO] Current time: 870, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:19:47,559 [INFO] Current time: 900, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:20:17,774 [INFO] Current time: 930, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:20:47,980 [INFO] Current time: 960, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:21:18,166 [INFO] Current time: 990, polling batch id: batch_6a428988da588190922955128faf9dd2
+2026-06-29 16:21:19,486 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [16:40<00:00, 1000.27s/it]
+2026-06-29 16:21:19,487 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [16:40<00:00, 1000.27s/it]
+2026-06-29 16:21:19,487 [INFO] ... (more hidden) ...
+2026-06-29 16:21:19,492 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/irrigation-systems/: 100%|##########| 469/469 [00:00<00:00, 115945.34it/s]
+2026-06-29 16:21:19,492 [INFO] Total token usage: 146435
+2026-06-29 16:21:19,492 [INFO] Prompt token usage: 113058
+2026-06-29 16:21:19,492 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/sc/irrigation-systems/', 'model': 'gpt-4-0613', 'entry_idx': 0, 'output': 'REASONING: The Durrani Empire during the period from 1747 CE to 1826 CE did have a system of taxation but it may not have been specifically for maintaining an irrigation network. Additionally, evidence shows that areas conquered by this empire had pre-existing irrigation networks.\n\nANSWER: A', 'reasoning': None, 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "During the period from 1747 CE to 1826 CE, did \'Durrani Empire\' utilize taxes to maintain a vital irrigation network in the southern part of Afghanistan, and were existing networks of irrigation present in conquered areas? Strictly choose the correct label from the unordered set: {B, C, A}. B = absent, C = unknown, A = present"}]', 'others': '{"usage.total_tokens": 298, "usage.prompt_tokens": 237, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true}'}
+2026-06-29 16:21:19,492 [WARNING] Warning: Error occurred while writing outputs to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/29_06_2026/run_15_gpt-4-0613/sc/multiple_choice/sc_irrigation-systems_answers.csv: 'str' object is not an instance of 'dict'
+2026-06-29 16:21:19,492 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/29_06_2026/run_15_gpt-4-0613/sc/multiple_choice/sc_irrigation-systems_answers.csv

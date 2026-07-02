@@ -40,11 +40,12 @@ def tag_remap(tag: str,
     return dict_map.get(tag, 
                         Tags.UNKNOWN)
 
-def question_types_remap(tag: str, 
-                        row: Dict,
-                        logger: logging.Logger,
-                        endpoint: Optional[str] = "",
-                        ) -> set[QuestionType]:
+def question_types_remap(
+        tag: str, 
+        row: Dict,
+        logger: logging.Logger,
+        endpoint: Optional[str] = "",
+        ) -> set[QuestionType]:
     """Remap tag strings to Tags enum values."""
 
     DEFAULT: QuestionType = QuestionType.MULTIPLE_CHOICE

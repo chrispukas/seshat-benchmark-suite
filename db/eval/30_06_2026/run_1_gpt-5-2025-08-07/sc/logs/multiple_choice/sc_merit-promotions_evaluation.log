@@ -1,0 +1,25 @@
+2026-06-30 03:01:11,071 [INFO] Starting question evaluation for sc/merit-promotions.
+2026-06-30 03:01:11,131 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-30 03:01:11,136 [INFO]     Querying model gpt-5-2025-08-07 with 401 message(s), temperature: 1
+2026-06-30 03:03:14,195 [INFO] Current time: 120, polling batch id: batch_6a432369df448190824de90d68f459d9
+2026-06-30 03:05:14,402 [INFO] Current time: 240, polling batch id: batch_6a432369df448190824de90d68f459d9
+2026-06-30 03:07:14,583 [INFO] Current time: 360, polling batch id: batch_6a432369df448190824de90d68f459d9
+2026-06-30 03:09:14,760 [INFO] Current time: 480, polling batch id: batch_6a432369df448190824de90d68f459d9
+2026-06-30 03:11:21,930 [INFO] Current time: 600, polling batch id: batch_6a432369df448190824de90d68f459d9
+2026-06-30 03:13:22,118 [INFO] Current time: 720, polling batch id: batch_6a432369df448190824de90d68f459d9
+2026-06-30 03:15:22,532 [INFO] Current time: 840, polling batch id: batch_6a432369df448190824de90d68f459d9
+2026-06-30 03:17:22,734 [INFO] Current time: 960, polling batch id: batch_6a432369df448190824de90d68f459d9
+2026-06-30 03:19:22,936 [INFO] Current time: 1080, polling batch id: batch_6a432369df448190824de90d68f459d9
+2026-06-30 03:21:23,147 [INFO] Current time: 1200, polling batch id: batch_6a432369df448190824de90d68f459d9
+2026-06-30 03:23:23,441 [INFO] Current time: 1320, polling batch id: batch_6a432369df448190824de90d68f459d9
+2026-06-30 03:25:26,605 [INFO] Current time: 1440, polling batch id: batch_6a432369df448190824de90d68f459d9
+2026-06-30 03:27:30,917 [INFO] Current time: 1560, polling batch id: batch_6a432369df448190824de90d68f459d9
+2026-06-30 03:29:31,094 [INFO] Current time: 1680, polling batch id: batch_6a432369df448190824de90d68f459d9
+2026-06-30 03:29:35,330 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048: 100%|##########| 1/1 [28:24<00:00, 1704.20s/it]
+2026-06-30 03:29:35,331 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048: 100%|##########| 1/1 [28:24<00:00, 1704.20s/it]
+2026-06-30 03:29:35,331 [INFO] ... (more hidden) ...
+2026-06-30 03:29:35,337 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/merit-promotions/: 100%|##########| 401/401 [00:00<00:00, 75503.50it/s]
+2026-06-30 03:29:35,337 [INFO] Total token usage: 291492
+2026-06-30 03:29:35,337 [INFO] Prompt token usage: 97726
+2026-06-30 03:29:35,337 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/sc/merit-promotions/', 'model': 'gpt-5-2025-08-07', 'entry_idx': 0, 'output': '', 'reasoning': '', 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "During the period from 1747 CE to 1826 CE, did \'Durrani Empire\' utilize a system of merit promotion in its military, defined as a fluid hierarchy where ranks were assigned based on military skill rather than regular, institutionalized procedures for promotion based on performance? Strictly choose the correct label from the unordered set: {C, A, B}. C = unknown, A = present, B = absent"}]', 'others': '{"usage.total_tokens": 755, "usage.prompt_tokens": 243, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true, "jsonl.output": "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat/jsonl/outputs/gpt-5-2025-08-07/30_06_2026_03_01_11_gpt-5-2025-08-07_https:__seshat-db.com_api_sc_merit-promotions__16.jsonl"}'}
+2026-06-30 03:29:35,341 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/30_06_2026/run_1_gpt-5-2025-08-07/sc/multiple_choice/sc_merit-promotions_answers.csv

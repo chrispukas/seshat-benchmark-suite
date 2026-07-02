@@ -1,0 +1,44 @@
+2026-06-30 08:53:34,175 [INFO] Starting question generation for rt/government-restrictions-on-religious-educations.
+2026-06-30 08:53:34,175 [INFO] 
+
+Generating questions for dataset at endpoint: government-restrictions-on-religious-educations
+2026-06-30 08:53:34,188 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-30 08:53:34,189 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,189 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,189 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,190 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,190 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,190 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,190 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,191 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,193 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,193 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,193 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,193 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,193 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,193 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,193 [WARNING] Warning: No endpoint provided for question type remapping.
+2026-06-30 08:53:34,193 [WARNING] Skipping QuestionType.RANGE due to filter settings.
+2026-06-30 08:53:34,195 [INFO]     Querying model gemini-2.5-flash with 8 message(s), temperature: 0.2
+2026-06-30 08:53:34,196 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,196 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,197 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,197 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,197 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,197 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,197 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,197 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,197 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,197 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,197 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,197 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,197 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,197 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,197 [WARNING] Message is empty, skipping.
+2026-06-30 08:53:34,197 [INFO] ('', None, [{}], {'error': 'Message is empty'})
+2026-06-30 08:53:34,209 [INFO] Processing batch queries for gemini-2.5-flash, batch size: 2048: 100%|##########| 1/1 [00:00<00:00, 49.68it/s]
+2026-06-30 08:53:34,217 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/government-restrictions-on-religious-educations/:   0%|          | 0/8 [00:00<?, ?it/s]
+2026-06-30 08:53:34,225 [INFO] Formatting items for endpoint: https://seshat-db.com/api/rt/government-restrictions-on-religious-educations/: 100%|##########| 8/8 [00:00<00:00, 1057.93it/s]
+2026-06-30 08:53:34,225 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/rt/government-restrictions-on-religious-educations/', 'model': 'gemini-2.5-flash', 'entry_idx': 0, 'output': '', 'reasoning': '', 'message': '[{}]', 'others': '{"error": "Message is empty"}'}
+2026-06-30 08:53:34,227 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/gen/30_06_2026/run_2_gemini-2.5-flash/rt/range/rt_government-restrictions-on-religious-educations_questions.csv
+2026-06-30 08:53:34,228 [INFO] Successfully completed question generation for rt/government-restrictions-on-religious-educations.

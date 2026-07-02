@@ -1,0 +1,129 @@
+2026-07-01 01:04:52,929 [INFO] Starting question evaluation for sc/other-measurement-systems.
+2026-07-01 01:04:52,929 [INFO] ... (more hidden) ...
+2026-07-01 01:04:52,929 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:05:12,684 [INFO]     Metrics: total_token usage: 1275, prompt_token usage: 299cached_token usage: -1
+2026-07-01 01:05:12,685 [INFO] ('REASONING: As an Islamic polity integrated into Red Sea–Indian Ocean trade, the Adal Sultanate used the Islamic lunar calendar and prayer-time calculations and had exposure to Islamic astronomical learning transmitted via Arab scholars and merchants, which distinguished astronomy from astrology. This indicates the presence of a distinct, transmitted timekeeping/astronomical system.\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "“Other Measurement System” refers to the presence or absence, in 'Adal Sultanate' between 1375 CE and 1543 CE, of a distinct system for measuring time and/or scientific-astronomical knowledge plausibly transmitted through maritime commerce and religious influences from Arab travellers, including the Islamic distinction between astrology (“science of the decrees of the stars”) and astronomy proper (“science of the spheres/configurations”); strictly choose one option from {A, B} and give only that letter as your response: A = present, B = absent? Strictly choose the correct label from the unordered set: {C, A, B}. C = unknown, A = present, B = absent"}], {'usage.total_tokens': 1275, 'usage.prompt_tokens': 299, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:05:12,685 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   3%|3         | 1/29 [00:19<09:13, 19.76s/it]
+2026-07-01 01:05:12,685 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:05:25,709 [INFO]     Metrics: total_token usage: 925, prompt_token usage: 272cached_token usage: -1
+2026-07-01 01:05:25,709 [INFO] ('REASONING: The Tunni Sultanate was an Islamic coastal polity centered around Barawa with active Arab/Swahili maritime contacts and religious scholarship, implying use of the Islamic lunar calendar and related timekeeping/measurement practices introduced via Islam and trade. Therefore, a non-local (Islamic) measurement system was present.\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "“Other Measurement System” refers to the presence or absence of a non-local measurement system plausibly introduced through maritime commerce and religious influences from Arab travellers, including Medieval Islamic ideas about time and scientific reckoning (e.g., astronomical/astrological frameworks used to structure timekeeping or calendrical measurement); for 'Tunni Sultanate' between 800 CE and 1200 CE, was such an other measurement system present or absent? Strictly choose the correct label from the unordered set: {A, C, B}. A = present, C = unknown, B = absent"}], {'usage.total_tokens': 925, 'usage.prompt_tokens': 272, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:05:25,710 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   7%|6         | 2/29 [00:32<07:06, 15.80s/it]
+2026-07-01 01:05:25,710 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:05:50,127 [INFO]     Metrics: total_token usage: 1291, prompt_token usage: 302cached_token usage: -1
+2026-07-01 01:05:50,128 [INFO] ('REASONING: The Ajuran Sultanate was a strongly Islamic, maritime-oriented Somali polity centered on cities like Mogadishu that maintained close ties with Arabia and Persia, where Islamic scholarly traditions were standard. Such contexts typically involved use of ilm al-falak/miqat for prayer times, calendars, qibla determination, and navigation, indicating adoption of Medieval Islamic “science of the stars” concepts.\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "For 'Ajuran Sultanate' between 1250 CE and 1700 CE, assess the presence or absence of an “other measurement system,” defined here as the adoption or use of Medieval Islamic time/scientific measurement concepts associated with the “science of the stars” (including the differentiated traditions of astrology as “science of the decrees of the stars” and astronomy as “science of the spheres/configurations”) plausibly transmitted via maritime commerce and Arab religious influence; strictly choose an option from the unordered set {A, B}. A = present, B = absent? Strictly choose the correct label from the unordered set: {C, B, A}. C = unknown, B = absent, A = present"}], {'usage.total_tokens': 1291, 'usage.prompt_tokens': 302, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:05:50,128 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:  10%|#         | 3/29 [00:57<08:33, 19.73s/it]
+2026-07-01 01:05:50,128 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:06:09,927 [INFO]     Metrics: total_token usage: 1471, prompt_token usage: 241cached_token usage: -1
+2026-07-01 01:06:09,927 [INFO] ('REASONING: In Isaaq territories that include the Habr Yunis, veneration of local saints (e.g., Aw Barkhadle, Sheikh Isaaq) historically involved wadaads practicing divination, talismans, and related occult sciences often linked to astrology, and such practices persisted into the 19th century.\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "“Other Measurement System” refers to the association of local Somali saints with the mystical science of astrology and related practices of divination and magic; for the period from 1300 CE to 1886 CE in 'Habr Yunis', is this association present or absent? Strictly choose the correct label from the unordered set: {A, B, C}. A = present, B = absent, C = unknown"}], {'usage.total_tokens': 1471, 'usage.prompt_tokens': 241, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:06:09,928 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:  14%|#3        | 4/29 [01:16<08:13, 19.76s/it]
+2026-07-01 01:06:09,928 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:06:33,335 [INFO]     Metrics: total_token usage: 1549, prompt_token usage: 245cached_token usage: -1
+2026-07-01 01:06:33,335 [INFO] ('REASONING: The Geledi Sultanate was deeply intertwined with Sufi practices and the veneration of local saints, among whom the use of talismans, divination (ramal), and other occult/astrological arts was common in Benadir-Somali culture during this period. Such popular associations of holy men with astrology, divination, and magic were present.\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "“Other Measurement System” refers to the association of local Somali saints with the mystical science of astrology, including popular links to astrology, divination, and magic; for 'Sultanate of Geledi' between 1750 CE and 1911 CE, is this association present or absent? Strictly choose the correct label from the unordered set: {C, B, A}. C = unknown, B = absent, A = present"}], {'usage.total_tokens': 1549, 'usage.prompt_tokens': 245, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:06:33,335 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:  17%|#7        | 5/29 [01:40<08:25, 21.07s/it]
+2026-07-01 01:06:33,335 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:06:36,992 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:  17%|#7        | 5/29 [01:44<08:19, 20.81s/it]
+2026-07-01 01:06:36,992 [ERROR] Execution failed: ChatGPTInterfaceModule._create_with_retry() missing 1 required positional argument: 'seed'
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 345, in _create_with_retry
+    return self.client.chat.completions.create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        model=self.model_name,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        seed=seed,
+        ^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1251, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<52 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 169, in _single
+    llm_instance.respond_to_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule=dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        batch_size=batch_size
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 84, in respond_to_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 134, in _query_generic
+    output_buffer: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self._batch_query\
+                                                                                           ~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            dataset=dataset,
+            ^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+            manual_reasoning=manual_reasoning
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 212, in _batch_query
+    raw_outs: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self.query_model\
+                                                                                      ~~~~~~~~~~~~~~~~~
+        (
+        ^
+            messages=input,
+            ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            endpoint=sub_dir
+            ^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 61, in query_model
+    response: Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]] = self._single(
+                                                                                ~~~~~~~~~~~~^
+        message=messages[0],
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        logger=logger
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 290, in _single
+    response = self._create_with_retry(
+        max=3,
+    ...<4 lines>...
+        seed=seed
+    )
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 360, in _create_with_retry
+    return self._create_with_retry(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        max=max,
+        ^^^^^^^^
+    ...<5 lines>...
+        temperature=temperature
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: ChatGPTInterfaceModule._create_with_retry() missing 1 required positional argument: 'seed'

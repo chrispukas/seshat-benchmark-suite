@@ -1,0 +1,33 @@
+2026-06-29 16:04:39,099 [INFO] Starting question evaluation for sc/nonwritten-records.
+2026-06-29 16:04:39,268 [INFO]     Querying model gpt-4-0613 with 339 message(s), temperature: 1
+2026-06-29 16:05:11,791 [INFO] Current time: 30, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:05:41,970 [INFO] Current time: 60, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:06:12,156 [INFO] Current time: 90, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:06:42,349 [INFO] Current time: 120, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:07:12,519 [INFO] Current time: 150, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:07:42,687 [INFO] Current time: 180, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:08:12,895 [INFO] Current time: 210, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:08:43,089 [INFO] Current time: 240, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:09:13,307 [INFO] Current time: 270, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:09:43,500 [INFO] Current time: 300, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:10:13,672 [INFO] Current time: 330, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:10:43,854 [INFO] Current time: 360, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:11:14,061 [INFO] Current time: 390, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:11:44,223 [INFO] Current time: 420, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:12:14,392 [INFO] Current time: 450, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:12:44,576 [INFO] Current time: 480, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:13:14,745 [INFO] Current time: 510, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:13:44,966 [INFO] Current time: 540, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:14:15,172 [INFO] Current time: 570, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:14:45,383 [INFO] Current time: 600, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:15:15,579 [INFO] Current time: 630, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:15:45,773 [INFO] Current time: 660, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:16:15,983 [INFO] Current time: 690, polling batch id: batch_6a4289896c7481909d206ccda35da31b
+2026-06-29 16:16:17,054 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [11:37<00:00, 697.81s/it]
+2026-06-29 16:16:17,055 [INFO] ... (more hidden) ...
+2026-06-29 16:16:17,059 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/nonwritten-records/: 100%|##########| 339/339 [00:00<00:00, 77397.48it/s]
+2026-06-29 16:16:17,059 [INFO] Total token usage: 107334
+2026-06-29 16:16:17,059 [INFO] Prompt token usage: 82469
+2026-06-29 16:16:17,059 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/sc/nonwritten-records/', 'model': 'gpt-4-0613', 'entry_idx': 0, 'output': 'REASONING: The Durrani Empire was a significant empire in the region of Afghanistan, and like most empires at the time, it would have kept non-written records for administrative purposes - including tribute tabulations, tax receipts, and commercial records. This was typical of contemporary societies around the world.\n\nANSWER: A', 'reasoning': None, 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "During the period from 1747 CE to 1826 CE, were nonwritten records\\u2014such as tribute tabulations, tax receipts, or commercial records like those kept by Hindkis merchants\\u2014present or absent as a form of record-keeping in \'Durrani Empire\'? Strictly choose the correct label from the unordered set: {B, A, C}. B = absent, A = present, C = unknown"}]', 'others': '{"usage.total_tokens": 312, "usage.prompt_tokens": 247, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true}'}
+2026-06-29 16:16:17,061 [WARNING] Warning: Error occurred while writing outputs to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/29_06_2026/run_15_gpt-4-0613/sc/multiple_choice/sc_nonwritten-records_answers.csv: 'str' object is not an instance of 'dict'
+2026-06-29 16:16:17,061 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/29_06_2026/run_15_gpt-4-0613/sc/multiple_choice/sc_nonwritten-records_answers.csv

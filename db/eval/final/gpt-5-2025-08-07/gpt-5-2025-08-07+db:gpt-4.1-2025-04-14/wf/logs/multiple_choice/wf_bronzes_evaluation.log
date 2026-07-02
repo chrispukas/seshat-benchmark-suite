@@ -1,0 +1,129 @@
+2026-07-01 01:00:36,616 [INFO] Starting question evaluation for wf/bronzes.
+2026-07-01 01:00:36,616 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   0%|          | 0/364 [00:00<?, ?it/s]
+2026-07-01 01:00:36,618 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:00:47,484 [INFO]     Metrics: total_token usage: 740, prompt_token usage: 230cached_token usage: -1
+2026-07-01 01:00:47,484 [INFO] ('REASONING: The Durrani Empire employed artillery such as zamburaks and larger cannons, following regional Mughal-Persian traditions where gun barrels were often cast in bronze/brass. Hence bronze was used in their military technology.\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "During the period from 1747 CE to 1826 CE, was bronze, as inferred from the presence of higher metals, present or absent as a material used in the military technology of 'Durrani Empire'? Strictly choose the correct label from the unordered set: {C, B, A}. C = unknown, B = absent, A = present"}], {'usage.total_tokens': 740, 'usage.prompt_tokens': 230, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:00:47,484 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   0%|          | 1/364 [00:10<1:05:44, 10.87s/it]
+2026-07-01 01:00:47,484 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:00:57,691 [INFO]     Metrics: total_token usage: 744, prompt_token usage: 229cached_token usage: -1
+2026-07-01 01:00:57,691 [INFO] ('REASONING: The Ghurids (12th–early 13th century) used iron and steel weaponry and armor typical of Islamic armies. Given the presence of these higher metals, it is reasonable to infer the use of bronze for fittings or other military components.\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "During the period from 1025 CE to 1215 CE, was bronze, inferred from the presence of higher metals, present or absent as a material used in the military technology of 'Ghur Principality'? Strictly choose the correct label from the unordered set: {B, A, C}. B = absent, A = present, C = unknown"}], {'usage.total_tokens': 744, 'usage.prompt_tokens': 229, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:00:57,692 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   1%|          | 2/364 [00:21<1:03:13, 10.48s/it]
+2026-07-01 01:00:57,692 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:01:13,278 [INFO]     Metrics: total_token usage: 623, prompt_token usage: 238cached_token usage: -1
+2026-07-01 01:01:13,279 [INFO] ('REASONING: As a Hellenistic successor following Macedonian military traditions, the Greco-Bactrian army would have used typical Hellenistic equipment such as bronze helmets, greaves, and shield fittings. This indicates bronze was present in their military technology.\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "During the period from 256 BCE to 125 BCE, was bronze, as inferred from the Bactrian Greeks being equipped in the tradition of the Macedonians, present or absent as a material used in military technology within 'Greco-Bactrian Kingdom'? Strictly choose the correct label from the unordered set: {A, C, B}. A = present, C = unknown, B = absent"}], {'usage.total_tokens': 623, 'usage.prompt_tokens': 238, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:01:13,279 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   1%|          | 3/364 [00:36<1:17:05, 12.81s/it]
+2026-07-01 01:01:13,280 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:01:30,978 [INFO]     Metrics: total_token usage: 1417, prompt_token usage: 248cached_token usage: -1
+2026-07-01 01:01:30,979 [INFO] ('REASONING: While Hephthalite weapons were chiefly iron, steppe militaries of the 5th–6th centuries commonly used copper-alloy (bronze) for belt and harness fittings, mounts, and some armor components, and Hephthalite finds include such bronze gear. Therefore bronze was present in their military technology.\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "During the period from 408 CE to 561 CE, was bronze, defined as a metal alloy primarily consisting of copper and tin and known to have been used on the central steppes from 1500 BCE, present or absent as a material used in the military technology of 'Hephthalite Empire'? Strictly choose the correct label from the unordered set: {B, C, A}. B = absent, C = unknown, A = present"}], {'usage.total_tokens': 1417, 'usage.prompt_tokens': 248, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:01:30,979 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   1%|1         | 4/364 [00:54<1:28:26, 14.74s/it]
+2026-07-01 01:01:30,979 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:01:52,889 [INFO]     Metrics: total_token usage: 1290, prompt_token usage: 246cached_token usage: -1
+2026-07-01 01:01:52,890 [INFO] ('REASONING: Steppe and Central Asian militaries of the 4th–5th centuries commonly used copper-alloy (bronze) for armor scales, helmet components, and various fittings even as iron predominated for blades and points. As a steppe-derived polity in this milieu, the Kidarites would have employed bronze in their military equipment.\nANSWER: A', None, [{'role': 'system', 'content': '\n            You are a history expert with extensive knowledge of global history.\n        \n\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \n            The questions are always followed by the corresponding answer options.\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\n            \n            "Output your reasoning and answer in the following format:\n"\n            "REASONING: <1-3 sentences>\n"\n            "ANSWER: <letter>\n"\n            "Do not include any other text."\n        \n            Do not output anything after this line.\n        '}, {'role': 'user', 'content': "During the period from 388 CE to 477 CE, was bronze, defined as a metal alloy typically consisting of copper and tin and known to have been used on the central steppes from 1500 BCE, present or absent as a material in the military technology of 'Kidarite Kingdom'? Strictly choose the correct label from the unordered set: {B, C, A}. B = absent, C = unknown, A = present"}], {'usage.total_tokens': 1290, 'usage.prompt_tokens': 246, 'usage.cached_tokens': -1, 'temperature': 1, 'reasoning_effort': 'low', 'manual_reasoning': True, 'jsonl.output': ''})
+2026-07-01 01:01:52,890 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   1%|1         | 5/364 [01:16<1:43:40, 17.33s/it]
+2026-07-01 01:01:52,890 [INFO]     Querying model gpt-5-2025-08-07 with 1 message(s), temperature: 1
+2026-07-01 01:01:55,919 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048:   1%|1         | 5/364 [01:19<1:34:53, 15.86s/it]
+2026-07-01 01:01:55,920 [ERROR] Execution failed: ChatGPTInterfaceModule._create_with_retry() missing 1 required positional argument: 'seed'
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 345, in _create_with_retry
+    return self.client.chat.completions.create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        model=self.model_name,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        seed=seed,
+        ^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 1251, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<52 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/miniconda3/envs/openai/lib/python3.14/site-packages/openai/_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 169, in _single
+    llm_instance.respond_to_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule=dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        batch_size=batch_size
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 84, in respond_to_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 134, in _query_generic
+    output_buffer: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self._batch_query\
+                                                                                           ~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            dataset=dataset,
+            ^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+            manual_reasoning=manual_reasoning
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 212, in _batch_query
+    raw_outs: List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]] = self.query_model\
+                                                                                      ~~~~~~~~~~~~~~~~~
+        (
+        ^
+            messages=input,
+            ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            endpoint=sub_dir
+            ^^^^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 61, in query_model
+    response: Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]] = self._single(
+                                                                                ~~~~~~~~~~~~^
+        message=messages[0],
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        logger=logger
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 290, in _single
+    response = self._create_with_retry(
+        max=3,
+    ...<4 lines>...
+        seed=seed
+    )
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/models/remote/chatgpt.py", line 360, in _create_with_retry
+    return self._create_with_retry(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        max=max,
+        ^^^^^^^^
+    ...<5 lines>...
+        temperature=temperature
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: ChatGPTInterfaceModule._create_with_retry() missing 1 required positional argument: 'seed'

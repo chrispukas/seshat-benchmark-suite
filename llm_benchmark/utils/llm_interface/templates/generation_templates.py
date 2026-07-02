@@ -12,7 +12,7 @@ def multichoice_question(
         - '<polity>' for polity names (e.g. 'The Papal States')
         - '<time-start>' and '<time-end>' for temporal scope
     3. The question should make abundantly clear what the format of the desired response is and that only that response should be given.
-    4. The output must be exactly one question, and must end with a question mark (?).
+    4. The output must be exactly one question, ensuring that the question is fully complete in its length, and must end with a question mark (?).
 
     Structure your response with a clear question template.
     """

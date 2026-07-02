@@ -1,0 +1,24 @@
+2026-06-29 23:41:31,362 [INFO] Starting question evaluation for sc/written-records.
+2026-06-29 23:41:31,362 [INFO] ... (more hidden) ...
+2026-06-29 23:41:31,369 [INFO]     Querying model gpt-4-0613 with 586 message(s), temperature: 1
+2026-06-29 23:43:32,619 [INFO] Current time: 120, polling batch id: batch_6a42f49c3db48190ba8effc0984eb30f
+2026-06-29 23:45:32,811 [INFO] Current time: 240, polling batch id: batch_6a42f49c3db48190ba8effc0984eb30f
+2026-06-29 23:47:33,000 [INFO] Current time: 360, polling batch id: batch_6a42f49c3db48190ba8effc0984eb30f
+2026-06-29 23:49:33,190 [INFO] Current time: 480, polling batch id: batch_6a42f49c3db48190ba8effc0984eb30f
+2026-06-29 23:51:33,408 [INFO] Current time: 600, polling batch id: batch_6a42f49c3db48190ba8effc0984eb30f
+2026-06-29 23:53:37,805 [INFO] Current time: 720, polling batch id: batch_6a42f49c3db48190ba8effc0984eb30f
+2026-06-29 23:55:38,043 [INFO] Current time: 840, polling batch id: batch_6a42f49c3db48190ba8effc0984eb30f
+2026-06-29 23:57:38,243 [INFO] Current time: 960, polling batch id: batch_6a42f49c3db48190ba8effc0984eb30f
+2026-06-29 23:59:38,444 [INFO] Current time: 1080, polling batch id: batch_6a42f49c3db48190ba8effc0984eb30f
+2026-06-30 00:01:45,735 [INFO] Current time: 1200, polling batch id: batch_6a42f49c3db48190ba8effc0984eb30f
+2026-06-30 00:03:46,195 [INFO] Current time: 1320, polling batch id: batch_6a42f49c3db48190ba8effc0984eb30f
+2026-06-30 00:05:46,375 [INFO] Current time: 1440, polling batch id: batch_6a42f49c3db48190ba8effc0984eb30f
+2026-06-30 00:07:46,606 [INFO] Current time: 1560, polling batch id: batch_6a42f49c3db48190ba8effc0984eb30f
+2026-06-30 00:07:47,744 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [26:16<00:00, 1576.38s/it]
+2026-06-30 00:07:47,745 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [26:16<00:00, 1576.38s/it]
+2026-06-30 00:07:47,747 [INFO] ... (more hidden) ...
+2026-06-30 00:07:47,755 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/written-records/: 100%|##########| 586/586 [00:00<00:00, 80427.43it/s]
+2026-06-30 00:07:47,755 [INFO] Total token usage: 181809
+2026-06-30 00:07:47,755 [INFO] Prompt token usage: 140149
+2026-06-30 00:07:47,756 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/sc/written-records/', 'model': 'gpt-4-0613', 'entry_idx': 0, 'output': "REASONING: The Durrani Empire, an Afghan state that existed during the mid-18th to the mid-19th century, was heavily influenced by Persian culture and administrative practices. This was due to Ahmad Shah Durrani's close ties with Iran and adoption of Persian as the administrative language. Written administrative and economic records such as tax records and commercial documents were customary elements of Persian bureaucracy, making it plausible that the Durrani Empire followed suit.\nANSWER: A", 'reasoning': '', 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "During the period from 1747 CE to 1826 CE, were written records\\u2014such as tribute tabulations, tax receipts, or commercial records like those kept by Hindkis merchants\\u2014present or absent in the administrative or economic practices of \'Durrani Empire\'? Strictly choose the correct label from the unordered set: {C, A, B}. C = unknown, A = present, B = absent"}]', 'others': '{"usage.total_tokens": 342, "usage.prompt_tokens": 245, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true, "jsonl.output": "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat/jsonl/outputs/gpt-4-0613/29_06_2026_23_41_31_gpt-4-0613_https:__seshat-db.com_api_sc_written-records__242.jsonl"}'}
+2026-06-30 00:07:47,760 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/29_06_2026/run_16_gpt-4-0613/sc/multiple_choice/sc_written-records_answers.csv

@@ -1,0 +1,23 @@
+2026-06-30 03:17:24,955 [INFO] Starting question evaluation for sc/scripts.
+2026-06-30 03:17:24,955 [INFO] ... (more hidden) ...
+2026-06-30 03:17:24,959 [INFO]     Querying model gpt-5-2025-08-07 with 580 message(s), temperature: 1
+2026-06-30 03:19:26,061 [INFO] Current time: 120, polling batch id: batch_6a432735a6f48190bbd222ae89fd6675
+2026-06-30 03:21:26,239 [INFO] Current time: 240, polling batch id: batch_6a432735a6f48190bbd222ae89fd6675
+2026-06-30 03:23:26,413 [INFO] Current time: 360, polling batch id: batch_6a432735a6f48190bbd222ae89fd6675
+2026-06-30 03:25:26,653 [INFO] Current time: 480, polling batch id: batch_6a432735a6f48190bbd222ae89fd6675
+2026-06-30 03:27:30,946 [INFO] Current time: 600, polling batch id: batch_6a432735a6f48190bbd222ae89fd6675
+2026-06-30 03:29:31,160 [INFO] Current time: 720, polling batch id: batch_6a432735a6f48190bbd222ae89fd6675
+2026-06-30 03:31:33,532 [INFO] Current time: 840, polling batch id: batch_6a432735a6f48190bbd222ae89fd6675
+2026-06-30 03:33:33,772 [INFO] Current time: 960, polling batch id: batch_6a432735a6f48190bbd222ae89fd6675
+2026-06-30 03:35:33,968 [INFO] Current time: 1080, polling batch id: batch_6a432735a6f48190bbd222ae89fd6675
+2026-06-30 03:37:34,170 [INFO] Current time: 1200, polling batch id: batch_6a432735a6f48190bbd222ae89fd6675
+2026-06-30 03:39:34,379 [INFO] Current time: 1320, polling batch id: batch_6a432735a6f48190bbd222ae89fd6675
+2026-06-30 03:41:39,772 [INFO] Current time: 1440, polling batch id: batch_6a432735a6f48190bbd222ae89fd6675
+2026-06-30 03:41:41,050 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048: 100%|##########| 1/1 [24:16<00:00, 1456.09s/it]
+2026-06-30 03:41:41,050 [INFO] Processing batch queries for gpt-5-2025-08-07, batch size: 2048: 100%|##########| 1/1 [24:16<00:00, 1456.10s/it]
+2026-06-30 03:41:41,051 [INFO] ... (more hidden) ...
+2026-06-30 03:41:41,059 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/scripts/: 100%|##########| 580/580 [00:00<00:00, 77096.29it/s]
+2026-06-30 03:41:41,059 [INFO] Total token usage: 377828
+2026-06-30 03:41:41,059 [INFO] Prompt token usage: 133998
+2026-06-30 03:41:41,059 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/sc/scripts/', 'model': 'gpt-5-2025-08-07', 'entry_idx': 0, 'output': 'REASONING: The Durrani Empire used Persian (Dari) as a primary administrative and literary language, and both Persian and Pashto were written in the Perso-Arabic (Persian) script. Thus, the Persian script was in active use during this period.\nANSWER: A', 'reasoning': '', 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "During the period from 1747 CE to 1826 CE, was the Persian script present or absent as a writing system in use within \'Durrani Empire\'? Strictly choose the correct label from the unordered set: {C, A, B}. C = unknown, A = present, B = absent"}]', 'others': '{"usage.total_tokens": 481, "usage.prompt_tokens": 220, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true, "jsonl.output": "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat/jsonl/outputs/gpt-5-2025-08-07/30_06_2026_03_17_24_gpt-5-2025-08-07_https:__seshat-db.com_api_sc_scripts__25.jsonl"}'}
+2026-06-30 03:41:41,063 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/30_06_2026/run_1_gpt-5-2025-08-07/sc/multiple_choice/sc_scripts_answers.csv

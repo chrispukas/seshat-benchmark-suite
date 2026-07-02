@@ -1,6 +1,7 @@
 import polars as pl
 import random
 import os
+import json
 
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -8,12 +9,14 @@ from llm_benchmark import config
 from llm_benchmark.utils.enums import QuestionHydrationOptions
 from llm_benchmark.utils.dataset import Dataset, DatasetModule
 
-def hydrate(dataset: Dataset, 
-            questions_dir: str,
-            evaluation_type: QuestionHydrationOptions,
-            write_path: Optional[str] = None,
-            link_to_dataset: Optional[bool] = False,
-            overwrite: Optional[bool] = False) -> pl.DataFrame:
+def hydrate(
+        dataset: Dataset, 
+        questions_dir: str,
+        evaluation_type: QuestionHydrationOptions,
+        write_path: Optional[str] = None,
+        link_to_dataset: Optional[bool] = False,
+        overwrite: Optional[bool] = False
+        ) -> pl.DataFrame:
     """
         Hydrate the question entries in the questions dataframe with the corresponding dataset entries, assuming datasets of one type per dataframe.
     """
@@ -99,7 +102,12 @@ def _map_hydrated_to_real(
         data: Dict[str, Any] = {}
 
     for key, (real_key, formatting_func) in mapping.items():
-        polity: Dict[str, Any] = data.get("polity", {})
+        polity = data.get("polity", {})
+        if polity is None:
+            polity = {}
+        elif not isinstance(polity, dict):
+            polity = json.loads(polity)
+        
         if polity is None:
             polity: Dict[str, Any] = {}
         

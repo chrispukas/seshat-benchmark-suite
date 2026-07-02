@@ -1,0 +1,38 @@
+2026-06-29 17:14:39,463 [INFO] Starting question evaluation for wf/war-clubs.
+2026-06-29 17:14:39,560 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048:   0%|          | 0/1 [00:00<?, ?it/s]
+2026-06-29 17:14:39,569 [INFO]     Querying model gpt-4-0613 with 362 message(s), temperature: 1
+2026-06-29 17:15:11,553 [INFO] Current time: 30, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:15:41,760 [INFO] Current time: 60, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:16:11,948 [INFO] Current time: 90, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:16:42,114 [INFO] Current time: 120, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:17:12,309 [INFO] Current time: 150, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:17:42,502 [INFO] Current time: 180, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:18:12,692 [INFO] Current time: 210, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:18:42,908 [INFO] Current time: 240, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:19:13,100 [INFO] Current time: 270, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:19:43,279 [INFO] Current time: 300, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:20:13,458 [INFO] Current time: 330, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:20:43,675 [INFO] Current time: 360, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:21:13,916 [INFO] Current time: 390, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:21:44,100 [INFO] Current time: 420, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:22:14,282 [INFO] Current time: 450, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:22:44,476 [INFO] Current time: 480, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:23:14,676 [INFO] Current time: 510, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:23:44,877 [INFO] Current time: 540, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:24:15,113 [INFO] Current time: 570, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:24:45,346 [INFO] Current time: 600, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:25:15,554 [INFO] Current time: 630, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:25:45,735 [INFO] Current time: 660, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:26:15,931 [INFO] Current time: 690, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:26:46,136 [INFO] Current time: 720, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:27:16,334 [INFO] Current time: 750, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:27:46,528 [INFO] Current time: 780, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:28:16,714 [INFO] Current time: 810, polling batch id: batch_6a4299f13af8819081bfe3ffca133b8f
+2026-06-29 17:28:17,923 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [13:38<00:00, 818.36s/it]
+2026-06-29 17:28:17,923 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [13:38<00:00, 818.36s/it]
+2026-06-29 17:28:17,923 [INFO] ... (more hidden) ...
+2026-06-29 17:28:17,927 [INFO] Formatting items for endpoint: https://seshat-db.com/api/wf/war-clubs/: 100%|##########| 362/362 [00:00<00:00, 98721.59it/s]
+2026-06-29 17:28:17,927 [INFO] Total token usage: 113989
+2026-06-29 17:28:17,927 [INFO] Prompt token usage: 87181
+2026-06-29 17:28:17,927 [INFO] {'endpoint_identifier': 'https://seshat-db.com/api/wf/war-clubs/', 'model': 'gpt-4-0613', 'entry_idx': 0, 'output': "REASONING: The Durrani Empire (1747-1826), based in present-day Afghanistan, frequently engaged in military conflicts. They mostly used common 18th-century weaponry like swords, spears, bows, and muskets. There's no specific historical record showing the use of war clubs in their warfare.\n\nANSWER: B", 'reasoning': None, 'message': '[{"role": "system", "content": "\\n            You are a history expert with extensive knowledge of global history.\\n        \\n\\n            You will be tasked to answer multiple-choice questions concerning the historical presence or absence of characteristics within the specified polity and time-frame, considering both direct evidence and historical inference. \\n            The questions are always followed by the corresponding answer options.\\n            Even if you are unsure always provide an answer based on the schema, only provide the corresponding letter, and don\'t continue writing after giving an answer.\\n            \\n            \\"Output your reasoning and answer in the following format:\\n\\"\\n            \\"REASONING: <1-3 sentences>\\n\\"\\n            \\"ANSWER: <letter>\\n\\"\\n            \\"Do not include any other text.\\"\\n        \\n            Do not output anything after this line.\\n        "}, {"role": "user", "content": "During the period from 1747 CE to 1826 CE, was the war club present or absent as a military technology used in warfare by \'Durrani Empire\'? Strictly choose the correct label from the unordered set: {A, B, C}. A = present, B = absent, C = unknown"}]', 'others': '{"usage.total_tokens": 295, "usage.prompt_tokens": 225, "usage.cached_tokens": 0, "temperature": 1, "reasoning_effort": "low", "manual_reasoning": true}'}
+2026-06-29 17:28:17,931 [INFO] Questions generated and saved to /Users/apple/Documents/github/neurips_llms/llm-bechmark/db/eval/29_06_2026/run_15_gpt-4-0613/wf/multiple_choice/wf_war-clubs_answers.csv

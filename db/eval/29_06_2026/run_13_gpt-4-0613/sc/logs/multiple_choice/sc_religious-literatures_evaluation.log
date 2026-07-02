@@ -1,0 +1,72 @@
+2026-06-29 14:30:21,059 [INFO] Starting question evaluation for sc/religious-literatures.
+2026-06-29 14:30:21,064 [INFO]     Querying model gpt-4-0613 with 563 message(s), temperature: 1
+2026-06-29 14:30:52,091 [INFO] Current time: 30, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:31:22,277 [INFO] Current time: 60, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:31:52,493 [INFO] Current time: 90, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:32:22,655 [INFO] Current time: 120, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:32:52,967 [INFO] Current time: 150, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:33:23,164 [INFO] Current time: 180, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:33:53,348 [INFO] Current time: 210, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:34:23,513 [INFO] Current time: 240, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:34:53,693 [INFO] Current time: 270, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:35:23,874 [INFO] Current time: 300, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:35:54,042 [INFO] Current time: 330, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:36:24,248 [INFO] Current time: 360, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:36:54,459 [INFO] Current time: 390, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:37:24,627 [INFO] Current time: 420, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:37:54,839 [INFO] Current time: 450, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:38:25,011 [INFO] Current time: 480, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:38:55,190 [INFO] Current time: 510, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:39:25,366 [INFO] Current time: 540, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:39:55,550 [INFO] Current time: 570, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:40:25,741 [INFO] Current time: 600, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:40:56,187 [INFO] Current time: 630, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:41:26,370 [INFO] Current time: 660, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:41:56,546 [INFO] Current time: 690, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:42:26,713 [INFO] Current time: 720, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:42:56,878 [INFO] Current time: 750, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:43:27,067 [INFO] Current time: 780, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:43:57,262 [INFO] Current time: 810, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:44:27,439 [INFO] Current time: 840, polling batch id: batch_6a42736db7a88190a4fbe3127413a354
+2026-06-29 14:44:28,830 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [14:07<00:00, 847.77s/it]
+2026-06-29 14:44:28,831 [INFO] Processing batch queries for gpt-4-0613, batch size: 2048: 100%|##########| 1/1 [14:07<00:00, 847.77s/it]
+2026-06-29 14:44:28,831 [INFO] ... (more hidden) ...
+2026-06-29 14:44:28,832 [INFO] Formatting items for endpoint: https://seshat-db.com/api/sc/religious-literatures/:  14%|#4        | 81/563 [00:00<00:00, 118789.73it/s]
+2026-06-29 14:44:28,832 [ERROR] Execution failed: not enough values to unpack (expected 4, got 0)
+Traceback (most recent call last):
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/benchmark.py", line 163, in _single
+    llm_instance.respond_to_questions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        DatasetModule=dataset_module,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 84, in respond_to_questions
+    success: bool = self._query_generic(
+                    ~~~~~~~~~~~~~~~~~~~^
+        dataset=dataset,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        manual_reasoning=manual_reasoning,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 149, in _query_generic
+    question_outputs: List[Dict[str, Any]] = self._batch_format_outputs\
+                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        (
+        ^
+            itms=output_buffer,
+            ^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+            logger=logger
+            ^^^^^^^^^^^^^
+        )
+        ^
+  File "/Users/apple/Documents/github/neurips_llms/llm-bechmark/llm_benchmark/utils/llm_interface/query_core.py", line 238, in _batch_format_outputs
+    for idx, (itm, reasoning, message, others) in tqdm\
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 4, got 0)

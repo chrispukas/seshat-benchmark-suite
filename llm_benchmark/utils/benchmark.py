@@ -28,12 +28,16 @@ def evaluate(
 
         seshat_cache_dir: Optional[str] = None,
         categories_to_evaluate: Optional[List[str]] = ["wf"],
+        allowed_question_types: List[QuestionType] = [QuestionType.MULTIPLE_CHOICE],
+
+        batch_size: int = config.BATCH_SIZE,
 
         unhydrated_question_save_path: str = "",
         hydrated_question_save_path: str = "",
         answer_save_path: str = "",
 
         overwrite: Optional[bool] = False,
+        manual_reasoning: Optional[bool] = False,
 ) -> None:
     """
         LLM evaluation function, checking LLM accuracy based on pre-hydrated questions, and corresponding dataset entries.
@@ -61,53 +65,39 @@ def evaluate(
         raise ValueError("No polities to evaluate provided, set variable {List[str]: polities_to_evaluate}.")
 
     seshat_ds: dataset.Dataset = seshat_setup(seshat_cache_dir=seshat_cache_dir, polity_mapping=polity_mapping)
-    
-    hydrate_per_polity(
-        dataset=seshat_ds,
-        evaluation_type=evaluation_type,
-        unhydrated_save_path=unhydrated_question_save_path,
-        hydrated_save_path=hydrated_question_save_path,
-        categories_to_evaluate=categories_to_evaluate,
-        overwrite=overwrite
-        )
-
 
     for category in categories_to_evaluate:
-        _run_per_polity_evaluate(
-            dataset = seshat_ds,
-            llm_instance=llm_interface,
-            polity = category,
+        for question_type in allowed_question_types:
+            _hydrate_per_category(
+                dataset=seshat_ds,
+                evaluation_type=evaluation_type,
+                polity=category,
+                allowed_question_type=question_type,
 
-            hydrated_question_dir=os.path.join(answer_save_path, f"{category}_hydrated"),
-            answer_dir = os.path.join(answer_save_path, f"{category}_answers"),
-        )  
+                unhydrated_question_dir=unhydrated_question_save_path,
+                hydrated_question_dir=hydrated_question_save_path,
 
-def hydrate_per_polity(dataset: dataset.Dataset,
-                       evaluation_type: QuestionHydrationOptions,
-                    
-                       unhydrated_save_path: str,
-                       hydrated_save_path: str,
+                overwrite=overwrite,
+            )
 
-                       categories_to_evaluate: Optional[List[str]] = ["wf"],
+            _run_per_polity_evaluate(
+                ds = seshat_ds,
+                llm_instance=llm_interface,
+                polity = category,
+                allowed_question_type=question_type,
 
-                       overwrite: Optional[bool] = False,
-                       ):
-    for category in categories_to_evaluate:
-        _hydrate_per_category(
-            dataset=dataset,
-            evaluation_type=evaluation_type,
-            polity=category,
+                hydrated_question_dir=hydrated_question_save_path,
+                answer_dir=answer_save_path,
+                manual_reasoning=manual_reasoning,
 
-            unhydrated_question_dir=os.path.join(unhydrated_save_path, category),
-            hydrated_question_dir=os.path.join(hydrated_save_path, f"{category}_hydrated"),
-
-            overwrite=overwrite,
-        )
+                batch_size=batch_size,
+            )  
 
 
 def _hydrate_per_category(dataset: dataset.Dataset,
                           evaluation_type: QuestionHydrationOptions,
                           polity: str,
+                          allowed_question_type: QuestionType,
 
                           unhydrated_question_dir: str,
                           hydrated_question_dir: str,
@@ -118,43 +108,95 @@ def _hydrate_per_category(dataset: dataset.Dataset,
 
     for identifier in tqdm(subpolity_identifiers, desc=f"Loading hydrated questions for category {polity}: "):
         csv_question_name: str = f"{identifier.replace('/', '_')}_questions.csv"
+        final: str = os.path.join(polity, allowed_question_type.name.lower(), csv_question_name)
+
+        questions_dir: str = os.path.join(unhydrated_question_dir, final)
+
+        if not questions_dir or not os.path.isfile(questions_dir):
+            print(f"Warning: no filepath found for the directory: {questions_dir} ")
+            continue
+
+        df: pl.DataFrame = pl.read_csv(questions_dir)
+        model: str = df.select("model").item(0, 0)
 
         hydrated_df: pl.DataFrame = eutils.hydrate(
             dataset, 
-            questions_dir=os.path.join(unhydrated_question_dir, csv_question_name),
+            questions_dir=questions_dir,
             evaluation_type=evaluation_type,
-            write_path=os.path.join(hydrated_question_dir, csv_question_name),
+            write_path=os.path.join(hydrated_question_dir, model, final),
             link_to_dataset=True,
-            overwrite=overwrite
+            overwrite=overwrite,
             ) 
+        
+        print(f"Hydrated {questions_dir}")
 
 
 def _run_per_polity_evaluate(
-        dataset: dataset.Dataset,
+        ds: dataset.Dataset,
         llm_instance: LLMInterfaceModule,
         polity: str, 
+        allowed_question_type: QuestionType,
 
         hydrated_question_dir: str,
-        answer_dir: str
+        answer_dir: str,
+        manual_reasoning: bool,
+
+        batch_size: int = config.BATCH_SIZE
         ) -> None:
     
-    subpolity_identifiers: List[str] = dataset.get_identifiers_by_parent(polity)
+    def _single(
+            identifier: str
+    ):
+        logger: logging.Logger = logging.getLogger(identifier)
+        logger.setLevel(logging.INFO)
+        logger.propagate = False
 
+        home_dir: str = os.path.join(answer_dir, polity)
+        safe_filename: str = identifier.replace("/", "_")
+        log_path: str = os.path.join(home_dir, "logs", allowed_question_type.name.lower(), f"{safe_filename}_evaluation.log")
+        os.makedirs(os.path.dirname(log_path), exist_ok=True)
+
+        file_handler: logging.FileHandler = logging.FileHandler(log_path, mode="a")
+        file_handler.setFormatter(
+            logging.Formatter("%(asctime)s [%(levelname)s] %(message)s")
+        )
+
+        logger.addHandler(file_handler)
+        logger.info(f"Starting question evaluation for {identifier}.")
+
+        try: 
+            dataset_module: dataset.DatasetModule = ds.dataset_modules[identifier]
+            llm_instance.respond_to_questions(
+                DatasetModule=dataset_module,
+                params=\
+                    {
+                        "max_new_tokens": config.EVALUATION_MAXTOKENS_PER_PROMPT, 
+                        "temperature":    config.EVALUATION_TEMPERATURE
+                    },
+                output_path=os.path.join(answer_dir, polity, allowed_question_type.name.lower(), f"{identifier.replace('/', '_')}_answers.csv"), 
+
+                logger=logger,
+                allowed_question_type=allowed_question_type,
+                manual_reasoning=manual_reasoning,
+                batch_size=batch_size
+            )
+        except Exception as e:
+            logger.error(f"Execution failed: {str(e)}", exc_info=True)
+        finally:
+            file_handler.close()
+            logger.removeHandler(file_handler)
+        print(f"Saved log for identifier: {identifier} in path: {log_path}")
+    
     os.makedirs(hydrated_question_dir, exist_ok=True)
     os.makedirs(answer_dir, exist_ok=True)
 
-    for identifier in tqdm(subpolity_identifiers):
-        csv_answers_name: str = f"{identifier.replace('/', '_')}_answers.csv"
-        
-        llm_instance.respond_to_questions(
-            DatasetModule = dataset.dataset_modules[identifier],
-            params = \
-                {
-                    "max_new_tokens": config.EVALUATION_MAXTOKENS_PER_PROMPT, 
-                    "temperature":    config.EVALUATION_TEMPERATURE
-                },
-            output_path = os.path.join(answer_dir, csv_answers_name),
-        )
+    polity_identifiers: List[str] = ds.get_identifiers_by_parent(polity)
+    with ThreadPoolExecutor(max_workers=config.CONCURRENT_THREADS) as executor:
+        for t in executor._threads:
+            t.daemon = True
+
+        executor.map(_single, polity_identifiers)
+
 
 # ---------------
 # -- GENERATE ---

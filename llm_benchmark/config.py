@@ -8,6 +8,7 @@ from typing import Dict, Any, Tuple, List, Callable
 
 ENDPOINT_URL: str = "https://seshat-db.com/api/"
 CACHE_PATH: str = "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat"
+DATABASE_PATH: str = "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db"
 
 GENERATION_MAXTOKENS_PER_PROMPT: int = 2048
 GENERATION_TEMPERATURE: int = 0.2
@@ -15,12 +16,15 @@ GENERATION_TEMPERATURE: int = 0.2
 EVALUATION_MAXTOKENS_PER_PROMPT: int = 2048
 EVALUATION_TEMPERATURE: int = 1
 
-BATCH_SIZE: int = 1
+BATCH_SIZE: int = 2048
 SEED: int = 42
 
-CONCURRENT_THREADS: int = 25
+CONCURRENT_THREADS: int = 30
+OPENAI_REASONING_EFFORT: str = "low"
+MANUAL_REASONING: bool = True
 
 ENABLE_API_CALLS: bool = True
+BATCH_POLLING_FREQUENCY_SECONDS: int = 120
 
 year_ranges: List[int] = [-10000, -8000, -6000, -4000, -3500, -3000, -2500, -2000, -1500, -1000, -500, 0, 500, 1000, 1500, 2000]
 
@@ -52,7 +56,7 @@ hydration_answeroptions: Dict[QuestionHydrationOptions, Dict[str, str]] = \
             {
              "A": "present", 
              "B": "absent",
-             "C": "unsure (cannot determine from current evidence)",
+             "C": "unknown",
              },
         QuestionHydrationOptions.PRESENT_ABSENT_INFERREDPRESENT_INFERREDABSENT: \
             {
