@@ -350,7 +350,7 @@ class ChatGPTInterfaceModule(LLMInterfaceModule):
                 temperature=temperature,
                 seed=seed,
             )
-        except RateLimitError, BadRequestError:
+        except (RateLimitError, BadRequestError):
             if curr > max:
                 return None
             else:

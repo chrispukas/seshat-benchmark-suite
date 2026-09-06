@@ -1,10 +1,22 @@
 __pycache__/
 .DS_Store
-*.egg-info
-./.vscode
-
-
-scripts/slurm/*
+.vscode/
 
 external/*
 huggingface/huggingface_cache/*
+
+*.egg-info/
+*.log
+
+# Generated cache/output files
+cache/*
+*.jsonl
+
+# Environment and local tooling
+.env
+.env.*
+!.env.example
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/

@@ -11,7 +11,7 @@ CACHE_PATH: str = "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/se
 DATABASE_PATH: str = "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db"
 
 GENERATION_MAXTOKENS_PER_PROMPT: int = 2048
-GENERATION_TEMPERATURE: int = 0.2
+GENERATION_TEMPERATURE: float = 0.2
 
 EVALUATION_MAXTOKENS_PER_PROMPT: int = 2048
 EVALUATION_TEMPERATURE: int = 1
@@ -19,7 +19,7 @@ EVALUATION_TEMPERATURE: int = 1
 BATCH_SIZE: int = 2048
 SEED: int = 42
 
-CONCURRENT_THREADS: int = 30
+CONCURRENT_THREADS: int = 20
 OPENAI_REASONING_EFFORT: str = "low"
 MANUAL_REASONING: bool = True
 
@@ -101,7 +101,7 @@ question_generation_params: Dict[str, Any] = \
 # --- DATABASE MAPPING ---
 # ------------------------
 
-params_to_question_mapping: Dict[str, str] = \
+params_to_question_mapping: Dict[str, tuple[str, Callable]] = \
     {
         "tag_filter": ("tag", tag_remap),
         "quality_filter": ("quality", quality_remap),
@@ -146,7 +146,7 @@ unit_mapping: Dict[str, str] = \
     }
 
 
-polity_mapping: Dict[str, str] = \
+polity_mapping: Dict[str, DatasetType] = \
     {
     # Core Datasets
     "core/polities": DatasetType.POLITY,

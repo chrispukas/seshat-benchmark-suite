@@ -1,129 +1,156 @@
-from email.mime import message
-import os
-import polars as pl
+import logging
+from typing import Any, Dict, List, Optional, Tuple
 
-from typing import Any, Dict, List, Optional, Tuple, List
-
-from llm_benchmark import config as cfg
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from llm_benchmark.utils.llm_interface.query_core import LLMInterfaceModule
-from llm_benchmark.utils.llm_interface import generation_utils as gen_utils 
-from llm_benchmark.utils import utility as util
-
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from transformers.generation import GenerationConfig
 
 
 class QwenInterfaceModule(LLMInterfaceModule):
-    def __init__(self,
-                 model_name: str = "Qwen/Qwen-7B-Chat",
-                 trust_remote_code: Optional[bool] = True,
-                 local: Optional[bool] = True,
-                 pull_model: Optional[bool] = False,
-                 test_mode: Optional[bool] = False,
-                 ) -> None:
-        
-        if model_name is None:
+    def __init__(
+        self,
+        model_name: str = "Qwen/Qwen-7B-Chat",
+        trust_remote_code: Optional[bool] = True,
+        local: Optional[bool] = True,
+        pull_model: Optional[bool] = False,
+        test_mode: Optional[bool] = False,
+    ) -> None:
+        if not model_name:
             raise ValueError("Model name must be provided.")
-        
-        super().__init__()
+
+        super().__init__(model_name=model_name)
 
         self.model_name = model_name
         self.trust_remote_code = trust_remote_code
         self.local = local
 
         if test_mode:
+            self.tokenizer = None
+            self.model = None
             return
 
-        try:
-            self.tokenizer, self.model = self._initialize_client(bf16=True, pull_model=pull_model)
-        except:
-             self.tokenizer, self.model = self._initialize_client(pull_model=pull_model)
+        self.tokenizer, self.model = self._initialize_client(
+            pull_model=pull_model
+        )
 
-    def _initialize_client(self,
-                          bf16: bool = False,
-                          pull_model: bool = False
-                          ) -> Any:
-        device_map: str = "meta" if pull_model else "auto"
-        
-        tokenizer = AutoTokenizer.from_pretrained(self.model_name, trust_remote_code=True, local_files_only=self.local)
-        if bf16:
-            model = AutoModelForCausalLM.from_pretrained(
-                self.model_name,
-                device_map=device_map,
-                trust_remote_code=True,
-                bf16=True,
-                local_files_only=self.local
-            ).eval()
-        else:
-            model = AutoModelForCausalLM.from_pretrained(
-                self.model_name,
-                device_map=device_map,
-                trust_remote_code=True,
-                local_files_only=self.local
-            ).eval()
+        if self.tokenizer.pad_token_id is None:
+            self.tokenizer.pad_token = self.tokenizer.eos_token
 
-        return tokenizer, model
-    
+        self.model.eval()
+
+    def _initialize_client(
+        self,
+        pull_model: bool = False,
+    ) -> Tuple[Any, Any]:
+        tokenizer = AutoTokenizer.from_pretrained(
+            self.model_name,
+            trust_remote_code=self.trust_remote_code,
+            local_files_only=self.local,
+        )
+
+        model = AutoModelForCausalLM.from_pretrained(
+            self.model_name,
+            device_map="meta" if pull_model else "auto",
+            torch_dtype="auto",
+            trust_remote_code=self.trust_remote_code,
+            local_files_only=self.local,
+        )
+
+        return tokenizer, model.eval()
+
     def query_model(
-            self, 
-            messages: List[str],
-            temperature: float = 0.7,
-            max_tokens: int = 300,
-            seed: int = 42,
+        self,
+        messages: List[List[Dict[str, Any]]],
+        logger: logging.Logger,
+        temperature: float = 0.7,
+        max_tokens: int = 300,
+        seed: int = 42,
+        endpoint: str = "",
+    ) -> List[
+        Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]
+    ]:
+        if self.model is None or self.tokenizer is None:
+            raise RuntimeError("Qwen model is not initialized.")
 
-            endpoint: str = ""
-            ) -> str:
-        print(f"\n\n\n")
-        print(f"Querying Qwen model, message: {messages}")
-        try:
-            response = self.new_chat(
-                temperature=temperature, 
-                max_tokens=max_tokens, 
-                batch_messages=messages, 
+        torch.manual_seed(seed)
+        if torch.cuda.is_available():
+            torch.cuda.manual_seed_all(seed)
+
+        outputs: List[
+            Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]
+        ] = []
+
+        for message in messages:
+            if not message:
+                outputs.append(("", None, message or [], {
+                    "error": "Message is empty"
+                }))
+                continue
+
+            try:
+                prompt = self.tokenizer.apply_chat_template(
+                    message,
+                    add_generation_prompt=True,
+                    tokenize=False,
                 )
-        except:
-            response = self.old_chat(
-                messages=messages)
-        print(f"       Output: {response}")
-        return response
-    
-    def old_chat(
-            self, 
-            messages: List[str]
-            ):
-        prompt = util.collapse_prompt(messages[0])
-        response, _ = self.model.chat(self.tokenizer, prompt, history=None)
-        return response
 
-    def new_chat(
-            self, 
-            temperature: Optional[int], 
-            max_tokens: Optional[int], 
-            batch_messages: List[str], 
-            ):
-        templated_texts: List[Any] = [
-            self.tokenizer.apply_chat_template(messages, add_generation_prompt=True, tokenize=False)
-            for messages in batch_messages
-        ]
-        inputs = self.tokenizer(
-            templated_texts,
-            return_tensors="pt",
-            padding=True,
-            return_dict=True
-        ).to(self.model.device)
-        
-        outputs = self.model.generate(
-            **inputs, 
-            max_new_tokens=max_tokens,
-            temperature=temperature,
-            pad_token_id=self.tokenizer.eos_token_id,
-            do_sample=True if temperature > 0 else False
-            )
-        input_length = inputs["input_ids"].shape[-1]
-        
-        return [
-            self.tokenizer.decode(output[input_length:], skip_special_tokens=True).strip()
-            for output in outputs
-        ]
+                inputs = self.tokenizer(
+                    prompt,
+                    return_tensors="pt",
+                    truncation=True,
+                )
 
+                device = next(self.model.parameters()).device
+                inputs = {
+                    key: value.to(device)
+                    for key, value in inputs.items()
+                }
+
+                generation_kwargs: Dict[str, Any] = {
+                    "max_new_tokens": max_tokens,
+                    "pad_token_id": self.tokenizer.pad_token_id,
+                    "eos_token_id": self.tokenizer.eos_token_id,
+                    "do_sample": temperature > 0,
+                }
+
+                if temperature > 0:
+                    generation_kwargs["temperature"] = temperature
+
+                with torch.inference_mode():
+                    generated = self.model.generate(
+                        **inputs,
+                        **generation_kwargs,
+                    )
+
+                prompt_length = inputs["input_ids"].shape[-1]
+                generated_tokens = generated[0, prompt_length:]
+
+                answer = self.tokenizer.decode(
+                    generated_tokens,
+                    skip_special_tokens=True,
+                ).strip()
+
+                metadata = {
+                    "model": self.model_name,
+                    "endpoint": endpoint,
+                    "temperature": temperature,
+                    "max_tokens": max_tokens,
+                }
+
+                outputs.append((answer, None, message, metadata))
+
+            except Exception as exc:
+                logger.exception("Qwen inference failed: %s", exc)
+                outputs.append((
+                    "",
+                    None,
+                    message,
+                    {
+                        "model": self.model_name,
+                        "endpoint": endpoint,
+                        "error": str(exc),
+                    },
+                ))
+
+        return outputs

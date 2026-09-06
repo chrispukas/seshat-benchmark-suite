@@ -265,24 +265,47 @@ class GeminiInterfaceModule(LLMInterfaceModule):
         seed: int,
 
         logger: logging.Logger,
+
+        max_tries: int = 3,
+        current_try: int = 0,
     ) -> Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]:
         
-        if message is None or message == []:
+        def error_result(msg: str) -> Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]:
+            return ("", None, message, {"error": msg})
+        
+        if message is None or message == [] or message == "":
             logger.warning(f"Message is empty, skipping.")
-            return ("", None, [{}], {"error": "Message is empty"})
+            return error_result(msg="Message is empty")
         if not ENABLE_API_CALLS:
             logger.warning(f"API calls are disabled for: {self.model_name}, enable ENABLE_API_CALLS in config.")
-            return ("", None, [{}], {"error": "API calls are disabled via config, enable ENABLE_API_CALLS."})
+            return error_result(msg="API calls are disabled via config, enable ENABLE_API_CALLS.")
         
-      
-        response = self.client.models.generate_content(
-            model=self.model_name,
-            contents=self._reformat_message(message),
-            config=types.GenerateContentConfig(
-                max_output_tokens=max_tokens,
-                temperature=temperature
-            )
-        )
+        try:
+            try:
+                response = self.client.models.generate_content(
+                    model=self.model_name,
+                    contents=self._reformat_message(message),
+                    config=types.GenerateContentConfig(
+                        max_output_tokens=max_tokens,
+                        temperature=temperature,
+                        seed=seed
+                    )
+                )
+            except google.genai.errors.ServerError: 
+                if current_try > max_tries:
+                    return error_result(msg="Exceeded the maximum number of tries!")
+                return self._single(
+                    message=message,
+                    max_tokens=max_tokens,
+                    temperature=temperature,
+                    seed=seed,
+                    logger=logger,
+                    max_tries=max_tries,
+                    current_try=current_try + 1
+                )
+
+        except Exception as e:
+            return error_result(msg=str(e))
         
         content = response.text
         usage = response.usage_metadata

@@ -26,6 +26,30 @@ def is_answer_valid(
             
     return "", False
 
+import re
+
+VALID_ANSWERS = {"present", "absent", "unknown"}
+
+def parse_answer(value: Any) -> Tuple[str, bool]:
+    if value is None:
+        return "inconclusive", False
+
+    text = str(value).strip().lower()
+    text = text.replace("<|im_end|>", "").replace("<|endoftext|>", "").strip()
+
+    # Prefer an explicit final answer.
+    matches = re.findall(r"\b(present|absent|unknown)\b", text)
+
+    if len(matches) != 1:
+        return "inconclusive", False
+
+    return matches[0], True
+
+
+def classify_quality(answer: str, is_valid: bool = True) -> str:
+    parsed, valid = parse_answer(answer)
+    return parsed if valid else "inconclusive"
+
 def format_answer(
         val: str
         ) -> str:
@@ -103,11 +127,13 @@ def tally_answers(
         entry: Dict[str, object] = {
             "seshat_entry_id": entry_idx,
             "question_entry_id": question_idx,
-            "model_answer": predicted.lower() if predicted is not None else None,
-            "actual_answer": actual.lower() if actual is not None else None,
+            "model_answer": predicted,
+            "actual_answer": (
+                str(actual).strip().lower()
+                if actual is not None else None
+            ),
         }
         entry.update(ids)
-
         data.append(entry)
     
     if data == [] or data == None:
@@ -117,20 +143,6 @@ def tally_answers(
     df_outs: pl.DataFrame = pl.DataFrame(data=data)
     return df_outs
 
-def classify_quality(
-        answer: str, 
-        is_valid: bool
-        ) -> str:
-    """
-        Classifying question by validation check. 
-        Intentionally returns strings to be compatible with dataframes.
-    """
-    if not is_valid:
-        return "inconclusive"
-    
-    clean_answer: str = format_answer(answer)
-    return clean_answer.split(" ")[0].lower()
-
 def get_ids_from_row(
         groupings: groupings.Groupings, 
         row: Dict[str, object],
@@ -138,7 +150,10 @@ def get_ids_from_row(
         ) -> Dict[str, Any]:
     """Pull grouping information from SESHAT, indexing errors are an intentional failure point."""
     polity_in_row: Dict[str, object] = row["polity"]
-    polity_idx: int = polity_in_row["id"]
+    if polity_in_row is None:
+        return {}
+
+    polity_idx: int = int(polity_in_row["id"])
 
     polity: Dict[str, Any] = groupings.get_table_by_tag(table_name="polities", tag_truthy=polity_idx)
     region: Dict[str, Any] = groupings.get_table_by_tag(table_name="regions", tag_truthy=polity["home_seshat_region"]["id"])
