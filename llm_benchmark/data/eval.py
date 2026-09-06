@@ -1,6 +1,7 @@
 import os
 
 import polars as pl
+import json
 
 from tqdm import tqdm
 
@@ -90,7 +91,8 @@ def aggregate_entry_per_hierarchy(
 
 def tally_answers(
         dataset: Dataset, 
-        answers_path: str
+        answers_path: str,
+        silent: bool = True,
         ) -> pl.DataFrame:
     """
         Tallies answers from a given path, returning dataframes of given structures.
@@ -137,7 +139,7 @@ def tally_answers(
         data.append(entry)
     
     if data == [] or data == None:
-        print(f"Warning: polity_validity not found for {answers_path}")
+        if not silent: print(f"Warning: polity_validity not found for {answers_path}")
         return pl.DataFrame({})
     
     df_outs: pl.DataFrame = pl.DataFrame(data=data)
@@ -149,11 +151,11 @@ def get_ids_from_row(
         endpoint: str
         ) -> Dict[str, Any]:
     """Pull grouping information from SESHAT, indexing errors are an intentional failure point."""
-    polity_in_row: Dict[str, object] = row["polity"]
-    if polity_in_row is None:
+    try:
+        polity_in_row = json.loads(row["polity"])
+        polity_idx: int = int(polity_in_row["id"])
+    except:
         return {}
-
-    polity_idx: int = int(polity_in_row["id"])
 
     polity: Dict[str, Any] = groupings.get_table_by_tag(table_name="polities", tag_truthy=polity_idx)
     region: Dict[str, Any] = groupings.get_table_by_tag(table_name="regions", tag_truthy=polity["home_seshat_region"]["id"])
@@ -169,20 +171,13 @@ def get_ids_from_row(
             f"{label}_str": entry["name"],
         }
     
-    outs: Dict[str, Any] = {}
-
-    outs.update(ground_entry(region, "region"))
-    outs.update(ground_entry(macro_region, "macro"))
-    outs.update(section_outs)
-    outs.update(subsection_outs)
-    outs.update({
-        "year_range": \
-            _get_year_range(
-                year_start=polity.get("start_year", None), 
-                year_end=  polity.get("end_year",   None),
-                )
-            })
-
+    outs: Dict[str, Any] = {
+        **ground_entry(region, "region"),
+        **ground_entry(macro_region, "macro"),
+        **section_outs,
+        **subsection_outs,
+        "year_range": _get_year_range(year_start=polity.get("start_year", None), year_end=  polity.get("end_year", None),)
+    }
     return outs
 
 def _get_year_range(
