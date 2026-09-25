@@ -52,6 +52,6 @@ models=(
 
 for model in "${models[@]}"; do
     echo "Downloading ${model}"
-    huggingface-cli download "${model}" \
+    hf download "${model}" \
         --cache-dir "${HF_HUB_CACHE}"
 done
