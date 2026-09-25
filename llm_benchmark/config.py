@@ -10,13 +10,13 @@ ENDPOINT_URL: str = "https://seshat-db.com/api/"
 CACHE_PATH: str = "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db/seshat"
 DATABASE_PATH: str = "/Users/apple/Documents/github/neurips_llms/llm-bechmark/db"
 
-GENERATION_MAXTOKENS_PER_PROMPT: int = 2048
+GENERATION_MAXTOKENS_PER_PROMPT: int = 8192
 GENERATION_TEMPERATURE: float = 0.2
 
-EVALUATION_MAXTOKENS_PER_PROMPT: int = 2048
+EVALUATION_MAXTOKENS_PER_PROMPT: int = 8192
 EVALUATION_TEMPERATURE: int = 1
 
-BATCH_SIZE: int = 2048
+BATCH_SIZE: int = 64
 SEED: int = 42
 
 CONCURRENT_THREADS: int = 20

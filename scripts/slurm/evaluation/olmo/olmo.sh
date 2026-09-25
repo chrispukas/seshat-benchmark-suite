@@ -1,8 +1,9 @@
+
 #!/bin/sh
 
 #PBS -l walltime=08:00:00
 #PBS -l select=1:ncpus=8:mem=32gb:ngpus=1
-#PBS -N QWEN
+#PBS -N OLMO
 
 # LOCATING PYTHON VERS.
 echo "Checking Python path:"
@@ -12,29 +13,28 @@ python -c "import sys; print('\n'.join(sys.path))"
 # SETTING HPC DIRS.
 LOCAL_DIR=/rds/general/user/cp824/home
 REPO_ROOT="${LOCAL_DIR}/neurips_llms/llm-benchmark"
-SCRIPT_DIR="${REPO_ROOT}/scripts/python/question_evaluation/qwen"
-PYTHON_SCRIPT="${SCRIPT_DIR}/qwen_query_template.py"
+SCRIPT_DIR="${REPO_ROOT}/scripts/python/question_evaluation/olmo"
+PYTHON_SCRIPT="${SCRIPT_DIR}/olmo_query_template.py"
 
 export PYTHONPATH="${REPO_ROOT}:${PYTHONPATH}"
 
 # INITIALIZING CONDA VENV
 echo "Activating conda environment"
 source "${LOCAL_DIR}/miniforge3/etc/profile.d/conda.sh"
-conda activate qwen
+conda activate olmo
 
 cd "${SCRIPT_DIR}"
 
 models=(
-    "Qwen/Qwen-7B" 
-    "Qwen/Qwen1.5-7B" 
-    "Qwen/Qwen2-7B" 
-    "Qwen/Qwen2.5-7B" 
-    "Qwen/Qwen3-4B" 
-    "Qwen/Qwen3-8B" 
-    "Qwen/Qwen3.5-4B" 
-    "Qwen/Qwen3.5-9B" 
-    "Qwen/Qwen3.6-27B"
-    "Qwen/Qwen3.8-27B"
+    "allenai/OLMo-1B-hf"
+    "allenai/OLMo-7B-hf"
+    "allenai/OLMo-2-1124-7B"
+    "allenai/OLMo-2-1124-13B"
+    "allenai/Olmo-3-1025-7B"
+    "allenai/Olmo-3-7B-Instruct"
+    "allenai/Olmo-3-1125-32B"
+    "allenai/Olmo-3-32B-Think"
+    "allenai/OLMoE-1B-7B-0924"
 )
 datasets=(
     "${REPO_ROOT}/db/gen/final/gpt-5.2-2025-12-11" 

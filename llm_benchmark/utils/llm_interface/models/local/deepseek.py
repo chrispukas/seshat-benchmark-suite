@@ -13,6 +13,8 @@ class DeepSeekInterfaceModule(LLMInterfaceModule):
         model_name: str = "deepseek-moe-16b-base",
         trust_remote_code: Optional[bool] = True,
         local: Optional[bool] = True,
+        **kwargs: Any,
+        
     ) -> None:
         if not model_name:
             raise ValueError("Model name must be provided.")

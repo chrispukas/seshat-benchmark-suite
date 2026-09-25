@@ -14,6 +14,7 @@ class OlmoInterfaceModule(LLMInterfaceModule):
         model_name: str = "allenai/Olmo-3-1025-7B",
         trust_remote_code: Optional[bool] = True,
         local: Optional[bool] = True,
+        **kwargs: Any,
     ) -> None:
         if not model_name:
             raise ValueError("Model name must be provided.")
