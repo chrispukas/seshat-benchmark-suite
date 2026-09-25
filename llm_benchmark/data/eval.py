@@ -120,6 +120,8 @@ def tally_answers(
         predicted: str = classify_quality(answer=answer, is_valid=is_valid)
         actual: str = row_actual.get("polity_validity", None)
 
+        assert actual
+
         try:
             ids: Dict[str, Any] = get_ids_from_row(dataset.grouping, row_actual, endpoint_identifier)
         except (IndexError, pl.exceptions.ColumnNotFoundError):
@@ -130,7 +132,7 @@ def tally_answers(
             "seshat_entry_id": entry_idx,
             "question_entry_id": question_idx,
             "model_answer": predicted,
-            "actual_answer": (
+            "ground_truth": (
                 str(actual).strip().lower()
                 if actual is not None else None
             ),
@@ -152,10 +154,18 @@ def get_ids_from_row(
         ) -> Dict[str, Any]:
     """Pull grouping information from SESHAT, indexing errors are an intentional failure point."""
     try:
-        polity_in_row = json.loads(row["polity"])
-        polity_idx: int = int(polity_in_row["id"])
-    except:
+        polity_value = row["polity"]
+        if isinstance(polity_value, str):
+            polity_in_row = json.loads(polity_value)
+        elif isinstance(polity_value, dict):
+            polity_in_row = polity_value
+        else:
+            return {}
+
+        polity_idx = int(polity_in_row["id"])
+    except (KeyError, TypeError, ValueError, json.JSONDecodeError):
         return {}
+
 
     polity: Dict[str, Any] = groupings.get_table_by_tag(table_name="polities", tag_truthy=polity_idx)
     region: Dict[str, Any] = groupings.get_table_by_tag(table_name="regions", tag_truthy=polity["home_seshat_region"]["id"])

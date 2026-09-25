@@ -47,6 +47,16 @@ class OlmoInterfaceModule(LLMInterfaceModule):
 
         return tokenizer, model
 
+    def _format_prompt(self, message: List[Dict[str, Any]]) -> str:
+        if getattr(self.tokenizer, "chat_template", None):
+            return self.tokenizer.apply_chat_template(
+                message,
+                tokenize=False,
+                add_generation_prompt=True,
+            )
+
+        return util.collapse_prompt(message)
+
     def query_model(
         self,
         messages: List[List[Dict[str, Any]]],
@@ -55,9 +65,7 @@ class OlmoInterfaceModule(LLMInterfaceModule):
         max_tokens: int = 300,
         seed: int = 42,
         endpoint: str = "",
-    ) -> List[
-        Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]
-    ]:
+    ) -> List[Tuple[str, Optional[str], List[Dict[str, Any]], Dict[str, Any]]]:
         torch.manual_seed(seed)
 
         if torch.cuda.is_available():
@@ -78,7 +86,7 @@ class OlmoInterfaceModule(LLMInterfaceModule):
                 continue
 
             try:
-                prompt = util.collapse_prompt(message)
+                prompt = self._format_prompt(message)
 
                 inputs = self.tokenizer(
                     prompt,
